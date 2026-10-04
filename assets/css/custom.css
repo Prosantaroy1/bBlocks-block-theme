@@ -1,0 +1,161 @@
+/*
+ * bBlocks — supplemental styles
+ *
+ * theme.json (Global Styles) drives color, typography and spacing.
+ * This file only covers what the Global Styles API cannot express:
+ * accessibility helpers, hover/focus states, and the card/pill/FAQ
+ * details used by the pattern library.
+ */
+
+/* ---------- Accessibility: skip link ---------- */
+.skip-link,
+.screen-reader-text {
+	background: var( --wp--preset--color--primary, #2954e3 );
+	color: var( --wp--preset--color--background, #fff );
+	padding: 0.75em 1.25em;
+	position: absolute;
+	left: 1rem;
+	top: -100px;
+	z-index: 100000;
+	border-radius: 0 0 0.5rem 0.5rem;
+	text-decoration: none;
+	font-weight: 600;
+	transition: top 0.2s ease;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect( 1px, 1px, 1px, 1px );
+	clip-path: inset( 50% );
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	top: auto;
+}
+
+.skip-link:focus,
+.screen-reader-text:focus {
+	top: 0;
+	clip: auto !important;
+	clip-path: none;
+	height: auto;
+	width: auto;
+}
+
+/* ---------- Focus visibility ---------- */
+a:focus-visible,
+button:focus-visible,
+.wp-block-button__link:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+	outline: 2px solid var( --wp--preset--color--primary, #2954e3 );
+	outline-offset: 2px;
+}
+
+/* ---------- Navigation keyboard accessibility ---------- */
+.wp-block-navigation .wp-block-navigation-item__content:focus,
+.wp-block-navigation .wp-block-navigation-submenu__toggle:focus,
+.wp-block-navigation a:focus {
+	outline: 2px solid var( --wp--preset--color--primary, #2954e3 );
+	outline-offset: 2px;
+}
+
+.wp-block-navigation .wp-block-navigation-item.has-child:focus-within > .wp-block-navigation__submenu-container {
+	opacity: 1;
+	visibility: visible;
+	display: block;
+}
+
+/* ---------- Card style (features, services, pricing, team, testimonials) ---------- */
+.is-style-card {
+	background: var( --wp--preset--color--background, #fff );
+	border: 1px solid var( --wp--preset--color--border-color, #e3e6ea );
+	border-radius: 0.85rem;
+	padding: var( --wp--preset--spacing--medium, 1.5rem );
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.is-style-card:hover {
+	border-color: var( --wp--preset--color--primary, #2954e3 );
+	box-shadow: 0 12px 28px rgba( 20, 23, 26, 0.06 );
+}
+
+/* ---------- Pill badge style ---------- */
+.is-style-pill {
+	display: inline-flex;
+	background: var( --wp--preset--color--surface, #f5f6f8 );
+	border: 1px solid var( --wp--preset--color--border-color, #e3e6ea );
+	border-radius: 999px;
+	padding: 0.35em 1em;
+}
+
+.bblocks-badge {
+	display: inline-flex;
+	align-items: center;
+	background: var( --wp--preset--color--surface, #f5f6f8 );
+	color: var( --wp--preset--color--primary, #2954e3 );
+	border-radius: 999px;
+	padding: 0.35em 1em;
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+	font-weight: 600;
+}
+
+/* ---------- FAQ (core/details) ---------- */
+.is-style-faq summary {
+	cursor: pointer;
+	font-weight: 600;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.is-style-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.is-style-faq summary::after {
+	content: '+';
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: var( --wp--preset--color--primary, #2954e3 );
+	flex-shrink: 0;
+	transition: transform 0.2s ease;
+}
+
+.is-style-faq[open] summary::after {
+	transform: rotate( 45deg );
+}
+
+.is-style-faq p {
+	color: var( --wp--preset--color--muted-text, #666e75 );
+	margin-top: 0.75rem;
+	margin-bottom: 0;
+}
+
+/* ---------- Star rating text (testimonials) ---------- */
+.bblocks-stars {
+	color: var( --wp--preset--color--accent, #f59e0b );
+	letter-spacing: 0.15em;
+	font-size: 0.9rem;
+}
+
+/* ---------- Avatar / people photos ---------- */
+.bblocks-avatar img {
+	border-radius: 999px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media ( prefers-reduced-motion: reduce ) {
+	.is-style-card,
+	.skip-link,
+	.is-style-faq summary::after {
+		transition: none !important;
+	}
+}

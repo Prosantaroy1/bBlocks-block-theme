@@ -1,0 +1,9 @@
+/*
+ * Editor-only styles so the block editor canvas matches the front end
+ * for the interactive/card/FAQ details defined in custom.css.
+ */
+@import url( 'custom.css' );
+
+.editor-styles-wrapper {
+	font-family: var( --wp--preset--font-family--inter );
+}
