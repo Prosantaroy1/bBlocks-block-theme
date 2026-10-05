@@ -34,6 +34,29 @@
 			"area": "footer"
 		}
 	],
+	"customTemplates": [
+		{
+			"name": "page-no-title",
+			"title": "Page No Title",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "page-with-sidebar",
+			"title": "Page with Sidebar",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "page-with-wide-image",
+			"title": "Page with Wide Image",
+			"postTypes": [
+				"page"
+			]
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"useRootPaddingAwareAlignments": true,

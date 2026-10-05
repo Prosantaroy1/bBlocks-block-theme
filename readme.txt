@@ -98,6 +98,7 @@ Please use the theme's support forum on WordPress.org.
 * Fixed JSON style key order (border -> padding -> margin) across template parts and pattern files to match Gutenberg block serialization.
 * Updated post-terms taxonomy attribute in templates and patterns.
 * Improved vertical alignment and card height consistency in pricing tier patterns.
+* Added 3 new custom page templates: Page No Title, Page with Sidebar, and Page with Wide Image.
 
 = 1.0.1 =
 * Fixed main navigation keyboard accessibility and focus states.
