@@ -3,7 +3,7 @@ Contributors: bplugins
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.0.1
+Version: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, entertainment, one-column, two-columns, grid-layout, custom-colors, custom-menu, editor-style, featured-images, full-site-editing, block-patterns, style-variations, rtl-language-support, translation-ready, wide-blocks, block-styles
@@ -89,6 +89,15 @@ Yes. Open the Site Editor and go to Styles to adjust colors, typography and layo
 Please use the theme's support forum on WordPress.org.
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed font library loading by placing fontFace inside fontFamilies inter definition in theme.json.
+* Fixed block validation ("Block contains unexpected or invalid content") across CTA, Hero, Team, Blog, and Pricing patterns.
+* Fixed button background color preset class name (has-background-background-color) for buttons with background color attributes.
+* Fixed button font size class placement on anchor element instead of wrapper div in template parts.
+* Fixed JSON style key order (border -> padding -> margin) across template parts and pattern files to match Gutenberg block serialization.
+* Updated post-terms taxonomy attribute in templates and patterns.
+* Improved vertical alignment and card height consistency in pricing tier patterns.
 
 = 1.0.1 =
 * Fixed main navigation keyboard accessibility and focus states.
