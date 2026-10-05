@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 			<!-- wp:group {"backgroundColor":"surface","style":{"border":{"radius":"1.25rem"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 			<div class="wp-block-group has-surface-background-color has-background" style="border-radius:1.25rem;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
-				<!-- wp:paragraph {"textColor":"primary","style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
+				<!-- wp:paragraph {"align":"center","textColor":"primary","style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
 				<p class="has-text-align-center has-primary-color has-text-color" style="font-size:2.5rem;line-height:1">▦</p>
 				<!-- /wp:paragraph -->
 			</div>
@@ -49,8 +49,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 			<!-- wp:group {"backgroundColor":"surface","style":{"border":{"radius":"1.25rem"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 			<div class="wp-block-group has-surface-background-color has-background" style="border-radius:1.25rem;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
-				<!-- wp:paragraph {"textColor":"secondary","style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
-				<p class="has-secondary-color has-text-color" style="font-size:2.5rem;line-height:1">⬢</p>
+				<!-- wp:paragraph {"align":"center","textColor":"secondary","style":{"typography":{"fontSize":"2.5rem","lineHeight":"1"}}} -->
+				<p class="has-text-align-center has-secondary-color has-text-color" style="font-size:2.5rem;line-height:1">⬢</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

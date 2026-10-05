@@ -14,11 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:group {"align":"wide","backgroundColor":"surface","style":{"border":{"radius":"1.25rem"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
-<div class="wp-block-group alignwide has-surface-background-color has-background" style="border-radius:1.25rem;margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+<!-- wp:group {"align":"wide","backgroundColor":"surface","style":{"border":{"radius":"1.25rem"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+<div class="wp-block-group alignwide is-content-justification-space-between has-surface-background-color has-background" style="border-radius:1.25rem;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)">
 
-	<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0"}}}} -->
-	<h3 class="wp-block-heading" style="margin-bottom:0"><?php echo esc_html__( 'Still have questions?', 'bblocks' ); ?></h3>
+	<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0px"}}}} -->
+	<h3 class="wp-block-heading" style="margin-bottom:0px"><?php echo esc_html__( 'Still have questions?', 'bblocks' ); ?></h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:buttons -->

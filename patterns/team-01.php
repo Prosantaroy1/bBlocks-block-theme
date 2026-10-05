@@ -26,8 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"bblocks-avatar","style":{"dimensions":{"minHeight":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="min-height:120px;border-radius:999px;width:120px">
+			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
+			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
 				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">JD</p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -44,8 +44,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"bblocks-avatar","style":{"dimensions":{"minHeight":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="min-height:120px;border-radius:999px;width:120px">
+			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
+			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
 				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">SK</p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -62,8 +62,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"bblocks-avatar","style":{"dimensions":{"minHeight":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
-			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="min-height:120px;border-radius:999px;width:120px">
+			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
+			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
 				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">RL</p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

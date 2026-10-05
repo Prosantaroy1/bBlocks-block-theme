@@ -29,9 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-		<div class="wp-block-buttons">
+		<div class="wp-block-buttons is-content-justification-center">
 			<!-- wp:button {"backgroundColor":"background","textColor":"text"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background-color has-background has-text-color wp-element-button"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background-background-color has-background wp-element-button"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

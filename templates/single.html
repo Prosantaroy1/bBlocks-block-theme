@@ -4,7 +4,8 @@
 <main id="main" class="wp-block-group alignfull">
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|large"},"blockGap":"0.85rem"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
-	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--large)">
+	<div class="wp-block-group alignwide"
+		style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--large)">
 
 		<!-- wp:post-terms {"term":"category","textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","textTransform":"uppercase"}}} /-->
 
@@ -32,11 +33,13 @@
 	<!-- /wp:group -->
 
 	<!-- wp:separator {"opacity":"css","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}}} -->
-	<hr class="wp-block-separator has-css-opacity" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)"/>
+	<hr class="wp-block-separator has-css-opacity"
+		style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)" />
 	<!-- /wp:separator -->
 
 	<!-- wp:group {"align":"wide","className":"is-style-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"blockGap":"1rem"},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-	<div class="wp-block-group alignwide is-style-card" style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
+	<div class="wp-block-group alignwide is-style-card"
+		style="padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 		<!-- wp:avatar {"size":64,"style":{"border":{"radius":"999px"}}} /-->
 
 		<!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -68,30 +71,30 @@
 			<!-- wp:comments-title {"fontSize":"x-large"} /-->
 
 			<!-- wp:comment-template -->
-				<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"1rem"}}}} -->
-				<div class="wp-block-columns">
-					<!-- wp:column {"width":"40px"} -->
-					<div class="wp-block-column" style="flex-basis:40px">
-						<!-- wp:avatar {"size":40,"style":{"border":{"radius":"999px"}}} /-->
-					</div>
-					<!-- /wp:column -->
-
-					<!-- wp:column -->
-					<div class="wp-block-column">
-						<!-- wp:comment-author-name {"fontSize":"small"} /-->
-						<!-- wp:comment-date {"fontSize":"small","textColor":"muted-text"} /-->
-						<!-- wp:comment-content /-->
-						<!-- wp:comment-reply-link {"fontSize":"small"} /-->
-					</div>
-					<!-- /wp:column -->
+			<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"1rem"}}}} -->
+			<div class="wp-block-columns">
+				<!-- wp:column {"width":"40px"} -->
+				<div class="wp-block-column" style="flex-basis:40px">
+					<!-- wp:avatar {"size":40,"style":{"border":{"radius":"999px"}}} /-->
 				</div>
-				<!-- /wp:columns -->
+				<!-- /wp:column -->
+
+				<!-- wp:column -->
+				<div class="wp-block-column">
+					<!-- wp:comment-author-name {"fontSize":"small"} /-->
+					<!-- wp:comment-date {"fontSize":"small","textColor":"muted-text"} /-->
+					<!-- wp:comment-content /-->
+					<!-- wp:comment-reply-link {"fontSize":"small"} /-->
+				</div>
+				<!-- /wp:column -->
+			</div>
+			<!-- /wp:columns -->
 			<!-- /wp:comment-template -->
 
 			<!-- wp:comments-pagination -->
-				<!-- wp:comments-pagination-previous /-->
-				<!-- wp:comments-pagination-numbers /-->
-				<!-- wp:comments-pagination-next /-->
+			<!-- wp:comments-pagination-previous /-->
+			<!-- wp:comments-pagination-numbers /-->
+			<!-- wp:comments-pagination-next /-->
 			<!-- /wp:comments-pagination -->
 
 			<!-- wp:post-comments-form /-->

@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%">
-			<!-- wp:group {"gradient":"primary-to-secondary","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"border":{"radius":"1.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","orientation":"vertical"}} -->
+			<!-- wp:group {"gradient":"primary-to-secondary","style":{"border":{"radius":"1.5rem"},"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","orientation":"vertical"}} -->
 			<div class="wp-block-group has-primary-to-secondary-gradient-background has-background" style="border-radius:1.5rem;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--large)">
 				<!-- wp:paragraph {"align":"center","textColor":"background","style":{"typography":{"fontSize":"3rem","lineHeight":"1"}}} -->
 				<p class="has-text-align-center has-background-color has-text-color" style="font-size:3rem;line-height:1">◆</p>
