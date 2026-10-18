@@ -1,0 +1,123 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Sweet Pixie",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "surface",
+					"color": "#f5f4fb",
+					"name": "Surface"
+				},
+				{
+					"slug": "border-color",
+					"color": "#e4e1ef",
+					"name": "Border"
+				},
+				{
+					"slug": "foreground",
+					"color": "#1c1b3a",
+					"name": "Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "#6d6a86",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "primary",
+					"color": "#1c1b4d",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#2f2a7c",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#e9b38c",
+					"name": "Accent"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #2f2a7c 0%, #1c1b4d 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--poppins)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)",
+					"fontWeight": "700",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.01em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"border": {
+					"radius": "0"
+				},
+				"typography": {
+					"textTransform": "uppercase",
+					"letterSpacing": "0.08em"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)"
+				}
+			}
+		}
+	}
+}

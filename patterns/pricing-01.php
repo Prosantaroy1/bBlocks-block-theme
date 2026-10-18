@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Pricing: 3-Tier Comparison
  * Slug: bblocks/pricing-01
- * Categories: bblocks, pricing
+ * Categories: bblocks, bblocks-pricing, pricing
  * Description: Three pricing tiers side by side with a highlighted middle plan, each listing a price, short feature list and a button.
  * Inserter: true
  *
@@ -14,22 +14,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);margin-top:0;margin-bottom:0">
 
 	<!-- wp:heading {"textAlign":"center","level":2} -->
 	<h2 class="wp-block-heading has-text-align-center"><?php echo esc_html__( 'Simple, transparent pricing', 'bblocks' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
-	<div class="wp-block-columns">
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
+	<div class="wp-block-columns alignwide">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"blockGap":"0.75rem"},"layout":{"type":"constrained"}} -->
+			<!-- wp:group {"className":"is-style-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"0.75rem"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group is-style-card" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
 				<!-- wp:heading {"level":4} --><h4 class="wp-block-heading"><?php echo esc_html__( 'Starter', 'bblocks' ); ?></h4><!-- /wp:heading -->
-				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800">$19<span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800"><?php /* translators: Plan price, including the currency symbol. */ echo esc_html__( '$19', 'bblocks' ); ?><span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:list -->
 				<ul class="wp-block-list">
 					<!-- wp:list-item --><li><?php echo esc_html__( '1 website', 'bblocks' ); ?></li><!-- /wp:list-item -->
@@ -47,11 +47,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-card","borderColor":"primary","style":{"border":{"width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"blockGap":"0.75rem"},"layout":{"type":"constrained"}} -->
+			<!-- wp:group {"className":"is-style-card","borderColor":"primary","style":{"border":{"width":"2px"},"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"0.75rem"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group is-style-card has-border-color has-primary-border-color" style="border-width:2px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
 				<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","textTransform":"uppercase"}}} --><p class="has-primary-color has-text-color has-small-font-size" style="font-weight:700;text-transform:uppercase"><?php echo esc_html__( 'Most popular', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 				<!-- wp:heading {"level":4} --><h4 class="wp-block-heading"><?php echo esc_html__( 'Growth', 'bblocks' ); ?></h4><!-- /wp:heading -->
-				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800">$49<span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800"><?php /* translators: Plan price, including the currency symbol. */ echo esc_html__( '$49', 'bblocks' ); ?><span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:list -->
 				<ul class="wp-block-list">
 					<!-- wp:list-item --><li><?php echo esc_html__( '3 websites', 'bblocks' ); ?></li><!-- /wp:list-item -->
@@ -70,10 +70,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"is-style-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"}},"blockGap":"0.75rem"},"layout":{"type":"constrained"}} -->
+			<!-- wp:group {"className":"is-style-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"0.75rem"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group is-style-card" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
 				<!-- wp:heading {"level":4} --><h4 class="wp-block-heading"><?php echo esc_html__( 'Scale', 'bblocks' ); ?></h4><!-- /wp:heading -->
-				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800">$99<span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800"><?php /* translators: Plan price, including the currency symbol. */ echo esc_html__( '$99', 'bblocks' ); ?><span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:list -->
 				<ul class="wp-block-list">
 					<!-- wp:list-item --><li><?php echo esc_html__( 'Unlimited websites', 'bblocks' ); ?></li><!-- /wp:list-item -->

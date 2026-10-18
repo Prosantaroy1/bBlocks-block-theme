@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Team: 3-Column Grid
  * Slug: bblocks/team-01
- * Categories: bblocks, team
+ * Categories: bblocks, bblocks-team, team
  * Description: A three-column team grid with a circular avatar placeholder, name, role and small social links for each person.
  * Inserter: true
  *
@@ -14,21 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);margin-top:0;margin-bottom:0">
 
 	<!-- wp:heading {"textAlign":"center","level":2} -->
 	<h2 class="wp-block-heading has-text-align-center"><?php echo esc_html__( 'Meet the team', 'bblocks' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
-	<div class="wp-block-columns">
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
+	<div class="wp-block-columns alignwide">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
-				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">JD</p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem"><?php /* translators: Initials of a team member. */ echo esc_html__( 'JD', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:heading {"level":5,"style":{"spacing":{"margin":{"top":"1rem"}}}} --><h5 class="wp-block-heading" style="margin-top:1rem"><?php echo esc_html__( 'Jamie Diaz', 'bblocks' ); ?></h5><!-- /wp:heading -->
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
-				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">SK</p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem"><?php /* translators: Initials of a team member. */ echo esc_html__( 'SK', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:heading {"level":5,"style":{"spacing":{"margin":{"top":"1rem"}}}} --><h5 class="wp-block-heading" style="margin-top:1rem"><?php echo esc_html__( 'Sam Kim', 'bblocks' ); ?></h5><!-- /wp:heading -->
@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"bblocks-avatar","style":{"border":{"radius":"999px"},"dimensions":{"minHeight":"120px","width":"120px"},"spacing":{"blockGap":"0"}},"backgroundColor":"surface","layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-group bblocks-avatar has-surface-background-color has-background" style="border-radius:999px;min-height:120px;width:120px">
-				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem">RL</p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"textColor":"muted-text","style":{"typography":{"fontSize":"1.75rem"}}} --><p class="has-muted-text-color has-text-color" style="font-size:1.75rem"><?php /* translators: Initials of a team member. */ echo esc_html__( 'RL', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 			<!-- wp:heading {"level":5,"style":{"spacing":{"margin":{"top":"1rem"}}}} --><h5 class="wp-block-heading" style="margin-top:1rem"><?php echo esc_html__( 'Riley Lang', 'bblocks' ); ?></h5><!-- /wp:heading -->

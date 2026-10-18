@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Blog: List with Meta
  * Slug: bblocks/blog-02
- * Categories: bblocks, query
+ * Categories: bblocks, bblocks-blog, query
  * Description: A stacked list of posts, each row combining a small featured image thumbnail with title, author, date and excerpt.
  * Inserter: true
  *
@@ -14,15 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
-<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);margin-top:0;margin-bottom:0">
 
-	<!-- wp:heading {"level":2} -->
-	<h2 class="wp-block-heading"><?php echo esc_html__( 'Recent articles', 'bblocks' ); ?></h2>
+	<!-- wp:heading {"align":"wide","level":2} -->
+	<h2 class="wp-block-heading alignwide"><?php echo esc_html__( 'Recent articles', 'bblocks' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:query {"queryId":2,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","sticky":"","inherit":true},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
-	<div class="wp-block-query">
+	<!-- wp:query {"queryId":2,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","sticky":"","inherit":true},"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
+	<div class="wp-block-query alignwide">
 		<!-- wp:post-template -->
 
 			<!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border-color","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"},"blockGap":"1.25rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->

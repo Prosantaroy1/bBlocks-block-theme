@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Testimonials: Single Featured Quote
  * Slug: bblocks/testimonials-02
- * Categories: bblocks, testimonials
+ * Categories: bblocks, bblocks-testimonials, testimonials
  * Description: A single large, centered quote for a featured testimonial, with a name, role and company underneath.
  * Inserter: true
  *

@@ -3,7 +3,7 @@
 <!-- wp:group {"tagName":"main","align":"full","layout":{"type":"constrained"}} -->
 <main id="main" class="wp-block-group alignfull">
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"constrained"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide"
 		style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--medium)">
 		<!-- wp:heading {"level":1,"fontSize":"xx-large"} -->
@@ -16,18 +16,18 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}},"layout":{"type":"constrained"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|large"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide" style="margin-bottom:var(--wp--preset--spacing--large)">
 
-		<!-- wp:query {"queryId":0,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","sticky":"","inherit":true},"layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:query {"queryId":0,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","sticky":"","inherit":true},"layout":{"type":"default"}} -->
 		<div class="wp-block-query">
-			<!-- wp:post-template -->
+			<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","columnCount":3}} -->
 
 			<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","style":{"border":{"radius":"0.75rem"}}} /-->
 
 			<!-- wp:post-terms {"term":"category","textColor":"primary","fontSize":"small","style":{"spacing":{"margin":{"top":"0.75rem"}},"typography":{"fontWeight":"700","textTransform":"uppercase"}}} /-->
 
-			<!-- wp:post-title {"level":3,"isLink":true} /-->
+			<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"large","style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground"},":hover":{"color":{"text":"var:preset|color|primary"}}}}}} /-->
 
 			<!-- wp:post-excerpt {"excerptLength":18,"textColor":"muted-text"} /-->
 

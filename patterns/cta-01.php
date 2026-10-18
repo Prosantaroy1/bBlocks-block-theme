@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: CTA: Centered Gradient Banner
  * Slug: bblocks/cta-01
- * Categories: bblocks, call-to-action
+ * Categories: bblocks, bblocks-cta, call-to-action
  * Description: A full-width gradient call-to-action band with a centered heading, short line and a single button.
  * Inserter: true
  *
@@ -29,8 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons is-content-justification-center">
-			<!-- wp:button {"backgroundColor":"background","textColor":"text"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background-background-color has-background wp-element-button"><?php echo esc_html__( 'Get in Touch', 'bblocks' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"background","textColor":"foreground"} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'Get in Touch', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

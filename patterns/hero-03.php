@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Hero: Full-width Gradient Banner
  * Slug: bblocks/hero-03
- * Categories: bblocks, banner
+ * Categories: bblocks, bblocks-hero, banner
  * Description: A bold, full-bleed gradient hero for SaaS and product landing pages, with a centered headline, subhead and a single primary call to action.
  * Inserter: true
  *
@@ -30,8 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons is-content-justification-center">
-			<!-- wp:button {"backgroundColor":"background","textColor":"text"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background-background-color has-background wp-element-button"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"background","textColor":"foreground"} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

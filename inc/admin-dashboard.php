@@ -1,0 +1,700 @@
+<?php
+/**
+ * bBlocks admin dashboard (Appearance → bBlocks).
+ *
+ * Theme welcome page with quick links, the module settings form, the
+ * starter site importer, recommended plugins and a feature overview.
+ *
+ * @package bBlocks
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * Register the theme dashboard under Appearance.
+ */
+function bblocks_admin_menu() {
+	add_theme_page(
+		__( 'bBlocks', 'bblocks' ),
+		__( 'bBlocks', 'bblocks' ),
+		'edit_theme_options',
+		'bblocks-dashboard',
+		'bblocks_admin_page_render'
+	);
+}
+add_action( 'admin_menu', 'bblocks_admin_menu' );
+
+/**
+ * Enqueue scripts and styles for the theme dashboard.
+ *
+ * @param string $hook_suffix The current admin page hook.
+ */
+function bblocks_admin_assets( $hook_suffix ) {
+	if ( 'appearance_page_bblocks-dashboard' !== $hook_suffix ) {
+		return;
+	}
+
+	$version = wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style( 'bblocks-admin', get_theme_file_uri( 'assets/css/admin-dashboard.css' ), array(), $version );
+	wp_enqueue_script( 'bblocks-admin', get_theme_file_uri( 'assets/js/admin-dashboard.js' ), array( 'jquery' ), $version, true );
+
+	wp_localize_script(
+		'bblocks-admin',
+		'bblocksDashboardVars',
+		array(
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'bblocks_starter_nonce' ),
+			'i18n'    => array(
+				/* translators: %s: starter site name. */
+				'confirm'     => __( 'Import the "%s" starter site? Its pages will be created (or updated if you imported it before) and your homepage settings will change.', 'bblocks' ),
+				'importing'   => __( 'Importing…', 'bblocks' ),
+				'imported'    => __( 'Imported!', 'bblocks' ),
+				'failed'      => __( 'Import failed. Please try again.', 'bblocks' ),
+				'error'       => __( 'An unexpected server error occurred during import.', 'bblocks' ),
+				'visit'       => __( 'View site', 'bblocks' ),
+				'installing'  => __( 'Installing…', 'bblocks' ),
+				'activating'  => __( 'Activating…', 'bblocks' ),
+				'active'      => __( 'Active', 'bblocks' ),
+				'installFail' => __( 'Could not install. Opening the WordPress installer…', 'bblocks' ),
+			),
+		)
+	);
+}
+add_action( 'admin_enqueue_scripts', 'bblocks_admin_assets' );
+
+/**
+ * Count bundled theme assets for the overview (always accurate).
+ *
+ * @return array<string, int>
+ */
+function bblocks_asset_counts() {
+	$dir   = get_template_directory();
+	$count = array(
+		'patterns'   => 0,
+		'templates'  => count( (array) glob( $dir . '/templates/*.html' ) ),
+		'variations' => count( (array) glob( $dir . '/styles/*.json' ) ) + 1, // Plus the default style.
+		'headers'    => 0,
+		'footers'    => 0,
+		'modules'    => count( bblocks_module_definitions() ),
+		'starters'   => count( bblocks_starter_sites() ),
+	);
+
+	foreach ( WP_Block_Patterns_Registry::get_instance()->get_all_registered() as $pattern ) {
+		if ( 0 === strpos( $pattern['name'], 'bblocks/' ) && ( ! isset( $pattern['inserter'] ) || false !== $pattern['inserter'] ) ) {
+			++$count['patterns'];
+		}
+	}
+
+	foreach ( wp_get_theme_data_template_parts() as $part ) {
+		if ( isset( $part['area'] ) && 'header' === $part['area'] ) {
+			++$count['headers'];
+		} elseif ( isset( $part['area'] ) && 'footer' === $part['area'] ) {
+			++$count['footers'];
+		}
+	}
+
+	return $count;
+}
+
+/**
+ * Render a quick-action card.
+ *
+ * @param string $icon  Dashicon name (without the dashicons- prefix).
+ * @param string $title Card title.
+ * @param string $text  Card description.
+ * @param string $url   Link target.
+ */
+function bblocks_admin_card( $icon, $title, $text, $url ) {
+	?>
+	<a class="bblocks-card" href="<?php echo esc_url( $url ); ?>">
+		<span class="bblocks-card-icon" aria-hidden="true"><span class="dashicons dashicons-<?php echo esc_attr( $icon ); ?>"></span></span>
+		<span class="bblocks-card-body">
+			<span class="bblocks-card-title"><?php echo esc_html( $title ); ?></span>
+			<span class="bblocks-card-text"><?php echo esc_html( $text ); ?></span>
+		</span>
+		<span class="dashicons dashicons-arrow-right-alt2 bblocks-card-arrow" aria-hidden="true"></span>
+	</a>
+	<?php
+}
+
+/**
+ * Read the changelog from the theme's readme.txt.
+ *
+ * @return array<string, string[]> Version => list of entries, newest first.
+ */
+function bblocks_get_changelog() {
+	global $wp_filesystem;
+
+	if ( ! function_exists( 'WP_Filesystem' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+	}
+
+	if ( ! WP_Filesystem() || ! $wp_filesystem ) {
+		return array();
+	}
+
+	$readme = $wp_filesystem->get_contents( get_template_directory() . '/readme.txt' );
+
+	if ( ! $readme || ! preg_match( '/^==\s*Changelog\s*==\s*$(.*?)(?=^==[^=]|\z)/ims', $readme, $section ) ) {
+		return array();
+	}
+
+	$changelog = array();
+	$version   = '';
+
+	foreach ( preg_split( '/\R/', $section[1] ) as $line ) {
+		$line = trim( $line );
+
+		if ( preg_match( '/^=\s*(.+?)\s*=$/', $line, $match ) ) {
+			$version               = $match[1];
+			$changelog[ $version ] = array();
+		} elseif ( $version && 0 === strpos( $line, '* ' ) ) {
+			$changelog[ $version ][] = substr( $line, 2 );
+		}
+	}
+
+	return $changelog;
+}
+
+/**
+ * Render a help card for the welcome sidebar (community, support).
+ *
+ * @param string $title Card title.
+ * @param string $text  Card description.
+ * @param string $label Link text.
+ * @param string $url   External link target; opens in a new tab.
+ */
+function bblocks_admin_help_card( $title, $text, $label, $url ) {
+	?>
+	<div class="bblocks-help-card">
+		<h3><?php echo esc_html( $title ); ?></h3>
+		<p><?php echo esc_html( $text ); ?></p>
+		<a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener noreferrer">
+			<?php echo esc_html( $label ); ?>
+			<span class="screen-reader-text"><?php esc_html_e( '(opens in a new tab)', 'bblocks' ); ?></span>
+		</a>
+	</div>
+	<?php
+}
+
+/**
+ * Render a decorative mini mockup of a starter site's homepage.
+ *
+ * Plain divs painted with the site's own design tokens (see
+ * bblocks_starter_site_tokens()), so no preview images ship with the theme
+ * and the cards follow the style variation each starter site uses.
+ *
+ * @param string $layout Starter site layout key.
+ * @param string $logo   Short brand name shown in the mock header.
+ */
+function bblocks_starter_mockup( $layout, $logo ) {
+	$lines  = function ( $widths, $modifier = '' ) {
+		foreach ( $widths as $width ) {
+			printf( '<span class="bbm-line %1$s" style="width:%2$d%%"></span>', esc_attr( $modifier ), (int) $width );
+		}
+	};
+	$header = function ( $modifier = '' ) use ( $logo ) {
+		echo '<div class="bbm-header ' . esc_attr( $modifier ) . '"><b class="bbm-logo">' . esc_html( $logo ) . '</b><span class="bbm-nav"><i></i><i></i><i></i><i></i></span><span class="bbm-btn is-small"></span></div>';
+	};
+	$cards  = function ( $count, $modifier = '' ) use ( $lines ) {
+		echo '<div class="bbm-grid is-' . (int) $count . ' ' . esc_attr( $modifier ) . '">';
+		for ( $i = 0; $i < $count; $i++ ) {
+			echo '<div class="bbm-card"><span class="bbm-icon"></span>';
+			$lines( array( 70 ), 'is-strong' );
+			$lines( array( 92, 76 ) );
+			echo '</div>';
+		}
+		echo '</div>';
+	};
+	?>
+	<div class="bbm-chrome"><i></i><i></i><i></i><span class="bbm-url"></span></div>
+	<div class="bbm-screen">
+		<div class="bbm-page bbm-<?php echo esc_attr( $layout ); ?>">
+			<?php if ( 'agency' === $layout ) : ?>
+				<div class="bbm-cover">
+					<?php $header( 'is-inverse' ); ?>
+					<span class="bbm-kicker"></span>
+					<b class="bbm-title is-lg"><?php esc_html_e( 'We build brands people remember', 'bblocks' ); ?></b>
+					<?php $lines( array( 60 ) ); ?>
+					<span class="bbm-actions"><span class="bbm-btn"></span><span class="bbm-btn is-ghost"></span></span>
+				</div>
+				<?php $cards( 4 ); ?>
+				<div class="bbm-split"><span class="bbm-visual"></span><div><?php $lines( array( 80 ), 'is-strong' ); ?><?php $lines( array( 95, 88, 70 ) ); ?></div></div>
+				<div class="bbm-grid is-4 bbm-team"><i></i><i></i><i></i><i></i></div>
+
+			<?php elseif ( 'saas' === $layout ) : ?>
+				<?php $header(); ?>
+				<div class="bbm-hero is-center">
+					<span class="bbm-pill"></span>
+					<b class="bbm-title"><?php esc_html_e( 'Ship faster with less busywork', 'bblocks' ); ?></b>
+					<?php $lines( array( 70, 50 ) ); ?>
+					<span class="bbm-actions"><span class="bbm-btn"></span><span class="bbm-btn is-ghost"></span></span>
+				</div>
+				<?php $cards( 3, 'is-boxed' ); ?>
+				<div class="bbm-grid is-3 bbm-pricing">
+					<?php for ( $i = 0; $i < 3; $i++ ) : ?>
+						<div class="bbm-card is-boxed<?php echo 1 === $i ? ' is-featured' : ''; ?>"><?php $lines( array( 40 ) ); ?><b class="bbm-price"></b><?php $lines( array( 80, 70, 75 ) ); ?><span class="bbm-btn is-block"></span></div>
+					<?php endfor; ?>
+				</div>
+
+			<?php elseif ( 'architecture' === $layout ) : ?>
+				<div class="bbm-cover is-dark">
+					<?php $header( 'is-inverse' ); ?>
+					<span class="bbm-kicker is-center"></span>
+					<b class="bbm-title is-center"><?php esc_html_e( 'Architecture Solution', 'bblocks' ); ?></b>
+					<span class="bbm-actions is-center"><span class="bbm-btn"></span><span class="bbm-btn is-ghost"></span></span>
+				</div>
+				<div class="bbm-split"><div><?php $lines( array( 30, 30, 30 ), 'is-strong' ); ?><?php $lines( array( 90, 80 ) ); ?></div><div><?php $lines( array( 85, 70 ), 'is-strong' ); ?></div></div>
+				<div class="bbm-split is-tight"><span class="bbm-visual"></span><div><?php $lines( array( 70 ), 'is-strong' ); ?><?php $lines( array( 90, 80, 60 ) ); ?></div></div>
+				<div class="bbm-grid is-3"><span class="bbm-visual is-tall"></span><span class="bbm-visual is-tall"></span><span class="bbm-visual is-tall"></span></div>
+
+			<?php elseif ( 'marketplace' === $layout ) : ?>
+				<?php $header(); ?>
+				<div class="bbm-hero is-center">
+					<b class="bbm-title"><?php esc_html_e( 'Enhance Website Aesthetics', 'bblocks' ); ?></b>
+					<?php $lines( array( 60 ) ); ?>
+					<span class="bbm-btn"></span>
+				</div>
+				<div class="bbm-card bbm-split"><div><?php $lines( array( 80 ), 'is-strong' ); ?><?php $lines( array( 90, 70 ) ); ?></div><span class="bbm-visual"></span></div>
+				<div class="bbm-grid is-2"><span class="bbm-visual"></span><span class="bbm-visual"></span><span class="bbm-visual"></span><span class="bbm-visual"></span></div>
+
+			<?php elseif ( 'resort' === $layout ) : ?>
+				<div class="bbm-cover is-photo">
+					<?php $header( 'is-inverse' ); ?>
+					<b class="bbm-wordmark"><?php esc_html_e( 'Naturexplo', 'bblocks' ); ?></b>
+				</div>
+				<div class="bbm-split"><div><b class="bbm-title is-sm"><?php esc_html_e( 'About Us', 'bblocks' ); ?></b><?php $lines( array( 90, 70 ) ); ?><span class="bbm-visual"></span></div><div><?php $lines( array( 50, 40, 50, 40 ) ); ?></div></div>
+				<span class="bbm-visual is-wide"></span>
+				<div class="bbm-grid is-4"><span class="bbm-visual is-tall"></span><span class="bbm-visual is-tall"></span><span class="bbm-visual is-tall"></span><span class="bbm-visual is-tall"></span></div>
+
+			<?php elseif ( 'spa' === $layout ) : ?>
+				<?php $header(); ?>
+				<div class="bbm-cover is-dark">
+					<span class="bbm-kicker is-center"></span>
+					<b class="bbm-title is-center"><?php esc_html_e( 'Gain The Peace', 'bblocks' ); ?></b>
+					<span class="bbm-actions is-center"><span class="bbm-btn"></span></span>
+				</div>
+				<div class="bbm-split"><div><?php $lines( array( 80 ), 'is-strong' ); ?><?php $lines( array( 90, 85, 60 ) ); ?><span class="bbm-btn is-small"></span></div><span class="bbm-visual is-framed"></span></div>
+				<div class="bbm-split"><span class="bbm-visual is-framed"></span><div><?php $lines( array( 80 ), 'is-strong' ); ?><?php $lines( array( 90, 85, 60 ) ); ?><span class="bbm-btn is-small"></span></div></div>
+
+			<?php elseif ( 'consulting' === $layout ) : ?>
+				<div class="bbm-cover is-dark">
+					<?php $header( 'is-inverse' ); ?>
+					<div class="bbm-split"><div><b class="bbm-title is-sm"><?php esc_html_e( 'With Strategic Direction', 'bblocks' ); ?></b><span class="bbm-btn is-small"></span></div><span class="bbm-visual is-tall"></span></div>
+				</div>
+				<div class="bbm-hero is-center"><?php $lines( array( 80, 70 ), 'is-strong' ); ?><span class="bbm-btn is-small"></span></div>
+				<div class="bbm-panel"><?php $lines( array( 60, 90, 60, 90, 60, 90 ) ); ?></div>
+
+			<?php elseif ( 'freelancer' === $layout ) : ?>
+				<?php $header(); ?>
+				<div class="bbm-hero">
+					<span class="bbm-kicker"></span>
+					<b class="bbm-title is-lg"><?php esc_html_e( 'Hi, I design and build', 'bblocks' ); ?> <em><?php esc_html_e( 'websites.', 'bblocks' ); ?></em></b>
+					<?php $lines( array( 64 ) ); ?>
+					<span class="bbm-btn"></span>
+				</div>
+				<div class="bbm-list">
+					<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
+						<div class="bbm-row"><b class="bbm-num"><?php echo esc_html( number_format_i18n( $i ) ); ?></b><div><?php $lines( array( 50 ), 'is-strong' ); ?><?php $lines( array( 88 ) ); ?></div></div>
+					<?php endfor; ?>
+				</div>
+				<div class="bbm-quote"><?php $lines( array( 90, 75 ), 'is-strong' ); ?><span class="bbm-avatar"></span></div>
+
+			<?php else : ?>
+				<?php $header(); ?>
+				<div class="bbm-split is-hero">
+					<div class="bbm-hero">
+						<span class="bbm-pill"></span>
+						<b class="bbm-title"><?php esc_html_e( 'Grow your business with confidence', 'bblocks' ); ?></b>
+						<?php $lines( array( 90, 70 ) ); ?>
+						<span class="bbm-actions"><span class="bbm-btn"></span><span class="bbm-btn is-ghost"></span></span>
+					</div>
+					<span class="bbm-visual"></span>
+				</div>
+				<?php $cards( 3, 'is-boxed' ); ?>
+				<div class="bbm-stats"><b></b><b></b><b></b></div>
+				<div class="bbm-band"><b class="bbm-title is-sm"><?php esc_html_e( 'Ready to get started?', 'bblocks' ); ?></b><span class="bbm-btn"></span></div>
+			<?php endif; ?>
+		</div>
+	</div>
+	<?php
+}
+
+/**
+ * Render the main theme dashboard page.
+ */
+function bblocks_admin_page_render() {
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
+		return;
+	}
+
+	$theme   = wp_get_theme();
+	$counts  = bblocks_asset_counts();
+	$modules = bblocks_get_modules();
+	?>
+	<div class="wrap bblocks-dashboard-wrap">
+		<h1 class="screen-reader-text"><?php esc_html_e( 'bBlocks', 'bblocks' ); ?></h1>
+
+		<div class="bblocks-dashboard-navbar">
+			<div class="bblocks-dashboard-brand">
+				<div class="bblocks-brand-logo" aria-hidden="true">b</div>
+				<span class="bblocks-brand-title"><?php esc_html_e( 'bBlocks', 'bblocks' ); ?></span>
+			</div>
+			<div class="bblocks-nav-tabs" role="tablist" aria-label="<?php esc_attr_e( 'Theme dashboard sections', 'bblocks' ); ?>">
+				<?php
+				$tabs  = array(
+					'welcome'             => __( 'Welcome', 'bblocks' ),
+					'modules'             => __( 'Modules', 'bblocks' ),
+					'starter-sites'       => __( 'Starter Sites', 'bblocks' ),
+					'recommended-plugins' => __( 'Recommended Plugins', 'bblocks' ),
+					'features'            => __( 'All Features', 'bblocks' ),
+					'changelog'           => __( 'Changelog', 'bblocks' ),
+				);
+				$first = true;
+				foreach ( $tabs as $id => $label ) {
+					printf(
+						'<button type="button" role="tab" id="bblocks-tab-%1$s" class="nav-tab%2$s" data-tab="%1$s" aria-controls="%1$s" aria-selected="%3$s"%4$s>%5$s</button>',
+						esc_attr( $id ),
+						$first ? ' nav-tab-active' : '',
+						$first ? 'true' : 'false',
+						$first ? '' : ' tabindex="-1"',
+						esc_html( $label )
+					);
+					$first = false;
+				}
+				?>
+			</div>
+		</div>
+
+		<?php settings_errors(); ?>
+		<div id="bblocks-import-notice" class="bblocks-notice-toast" role="status" aria-live="polite"></div>
+
+		<!-- TAB 1: WELCOME -->
+		<div id="welcome" class="bblocks-tab-panel active" role="tabpanel" aria-labelledby="bblocks-tab-welcome" tabindex="0">
+			<div class="bblocks-dashboard-banner">
+				<div class="bblocks-banner-content">
+					<h2>
+						<?php esc_html_e( 'Welcome to bBlocks', 'bblocks' ); ?>
+						<span class="bblocks-version-badge">
+							<?php
+							/* translators: %s: Theme version number. */
+							echo esc_html( sprintf( __( 'v%s', 'bblocks' ), $theme->get( 'Version' ) ) );
+							?>
+						</span>
+					</h2>
+					<p><?php esc_html_e( 'Build a business, agency or SaaS site from core blocks — start from a starter site or mix the patterns yourself.', 'bblocks' ); ?></p>
+				</div>
+				<button type="button" class="bblocks-btn-primary bblocks-btn-browse-starters">
+					<?php esc_html_e( 'Browse Starter Sites', 'bblocks' ); ?>
+				</button>
+			</div>
+
+			<div class="bblocks-welcome-layout">
+			<div class="bblocks-welcome-main">
+
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'Quick Actions', 'bblocks' ); ?></h2>
+			</div>
+			<div class="bblocks-grid-3">
+				<?php
+				bblocks_admin_card( 'admin-appearance', __( 'Global styles', 'bblocks' ), __( 'Switch between the Default, Modern and Dark styles or fine-tune colors and fonts.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fstyles' ) );
+				bblocks_admin_card( 'layout', __( 'Templates', 'bblocks' ), __( 'Browse page, post, archive and landing page templates.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Ftemplate' ) );
+				bblocks_admin_card( 'screenoptions', __( 'Patterns', 'bblocks' ), __( 'Insert hero, features, pricing, team and other sections.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fpattern' ) );
+				bblocks_admin_card( 'heading', __( 'Header', 'bblocks' ), __( 'Swap or edit the site header template part.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fpattern&categoryId=header' ) );
+				bblocks_admin_card( 'editor-insertmore', __( 'Footer', 'bblocks' ), __( 'Swap or edit the site footer template part.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fpattern&categoryId=footer' ) );
+				bblocks_admin_card( 'menu', __( 'Navigation', 'bblocks' ), __( 'Manage the menus used in headers and footers.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fnavigation' ) );
+				?>
+			</div>
+
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'What is included', 'bblocks' ); ?></h2>
+			</div>
+			<ul class="bblocks-stats">
+				<?php
+				$stats = array(
+					array( $counts['patterns'], __( 'Block patterns', 'bblocks' ) ),
+					array( $counts['templates'], __( 'Templates', 'bblocks' ) ),
+					array( $counts['headers'] + $counts['footers'], __( 'Headers & footers', 'bblocks' ) ),
+					array( $counts['variations'], __( 'Style variations', 'bblocks' ) ),
+					array( $counts['modules'], __( 'Modules', 'bblocks' ) ),
+					array( $counts['starters'], __( 'Starter sites', 'bblocks' ) ),
+				);
+				foreach ( $stats as $stat ) {
+					printf( '<li><strong>%1$s</strong><span>%2$s</span></li>', esc_html( number_format_i18n( $stat[0] ) ), esc_html( $stat[1] ) );
+				}
+				?>
+			</ul>
+
+			</div><!-- .bblocks-welcome-main -->
+
+			<aside class="bblocks-welcome-aside" aria-label="<?php esc_attr_e( 'Community and support', 'bblocks' ); ?>">
+				<?php
+				bblocks_admin_help_card(
+					__( 'Web Creators Community', 'bblocks' ),
+					__( 'Join our community of fellow bBlocks users creating effective websites! Share your site, ask a question and help others.', 'bblocks' ),
+					__( 'Join our Facebook Group', 'bblocks' ),
+					'https://www.facebook.com/share/g/1drGNCe6d7/'
+				);
+				bblocks_admin_help_card(
+					__( 'Support', 'bblocks' ),
+					__( 'Have a question? We are happy to help! Get in touch with our support team on the WordPress.org forum.', 'bblocks' ),
+					__( 'Submit a Ticket', 'bblocks' ),
+					'https://wordpress.org/support/theme/bblocks/'
+				);
+				?>
+			</aside>
+			</div><!-- .bblocks-welcome-layout -->
+		</div>
+
+		<!-- TAB 2: MODULES -->
+		<div id="modules" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-modules" tabindex="0">
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'Modules', 'bblocks' ); ?></h2>
+			</div>
+			<p class="bblocks-intro"><?php esc_html_e( 'Optional front-end extras. Every module is off by default and its files load only when at least one module is on.', 'bblocks' ); ?></p>
+			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
+				<?php settings_fields( 'bblocks_modules_group' ); ?>
+				<div class="bblocks-grid-3">
+					<?php foreach ( bblocks_module_definitions() as $key => $module ) : ?>
+						<div class="bblocks-module-card">
+							<div class="bblocks-module-info">
+								<h3 id="bblocks-module-<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $module['label'] ); ?></h3>
+								<p id="bblocks-module-<?php echo esc_attr( $key ); ?>-desc"><?php echo esc_html( $module['description'] ); ?></p>
+							</div>
+							<label class="bblocks-switch">
+								<input type="checkbox" role="switch" name="bblocks_modules[<?php echo esc_attr( $key ); ?>]" value="1" aria-labelledby="bblocks-module-<?php echo esc_attr( $key ); ?>" aria-describedby="bblocks-module-<?php echo esc_attr( $key ); ?>-desc" <?php checked( ! empty( $modules[ $key ] ) ); ?>>
+								<span class="bblocks-slider" aria-hidden="true"></span>
+							</label>
+						</div>
+					<?php endforeach; ?>
+				</div>
+
+				<div class="bblocks-section-header">
+					<h2><?php esc_html_e( 'Module settings', 'bblocks' ); ?></h2>
+				</div>
+				<div class="bblocks-settings-panel">
+					<p>
+						<label for="bblocks-dark-default"><?php esc_html_e( 'Default color scheme for new visitors', 'bblocks' ); ?></label>
+						<select id="bblocks-dark-default" name="bblocks_modules[dark_mode_default]">
+							<option value="light" <?php selected( $modules['dark_mode_default'], 'light' ); ?>><?php esc_html_e( 'Light', 'bblocks' ); ?></option>
+							<option value="dark" <?php selected( $modules['dark_mode_default'], 'dark' ); ?>><?php esc_html_e( 'Dark', 'bblocks' ); ?></option>
+							<option value="auto" <?php selected( $modules['dark_mode_default'], 'auto' ); ?>><?php esc_html_e( 'Follow the visitor\'s device', 'bblocks' ); ?></option>
+						</select>
+					</p>
+					<p>
+						<label for="bblocks-contact-phone"><?php esc_html_e( 'Phone number (floating contact)', 'bblocks' ); ?></label>
+						<input type="tel" id="bblocks-contact-phone" class="regular-text" name="bblocks_modules[contact_phone]" value="<?php echo esc_attr( $modules['contact_phone'] ); ?>" placeholder="+1 555 010 0199">
+					</p>
+					<p>
+						<label for="bblocks-contact-email"><?php esc_html_e( 'Email address (floating contact)', 'bblocks' ); ?></label>
+						<input type="email" id="bblocks-contact-email" class="regular-text" name="bblocks_modules[contact_email]" value="<?php echo esc_attr( $modules['contact_email'] ); ?>" placeholder="hello@example.com">
+					</p>
+					<p>
+						<label for="bblocks-contact-whatsapp"><?php esc_html_e( 'WhatsApp number with country code, digits only', 'bblocks' ); ?></label>
+						<input type="text" inputmode="numeric" pattern="[0-9]*" id="bblocks-contact-whatsapp" class="regular-text" name="bblocks_modules[contact_whatsapp]" value="<?php echo esc_attr( $modules['contact_whatsapp'] ); ?>" placeholder="15550100199">
+					</p>
+					<p class="description"><?php esc_html_e( 'Tip: while dark mode is on, any Button block can become a light/dark switch — pick the "Dark mode toggle" style in its Styles panel.', 'bblocks' ); ?></p>
+				</div>
+				<?php submit_button( __( 'Save modules', 'bblocks' ) ); ?>
+			</form>
+		</div>
+
+		<!-- TAB 3: STARTER SITES -->
+		<div id="starter-sites" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-starter-sites" tabindex="0">
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'Starter Sites', 'bblocks' ); ?></h2>
+			</div>
+			<p class="bblocks-intro"><?php esc_html_e( 'Each starter site stacks the theme\'s own patterns into ready-made pages and sets your homepage. Nothing is downloaded and your posts are never changed. Importing again updates the same pages instead of duplicating them.', 'bblocks' ); ?></p>
+			<label class="bblocks-option">
+				<input type="checkbox" id="bblocks-apply-style" value="1" checked>
+				<?php esc_html_e( 'Also apply the matching style (replaces your current Global Styles colors and fonts)', 'bblocks' ); ?>
+			</label>
+			<label class="bblocks-option">
+				<input type="checkbox" id="bblocks-with-menu" value="1" checked>
+				<?php esc_html_e( 'Create a navigation menu with the new pages', 'bblocks' ); ?>
+			</label>
+
+			<div class="bblocks-starter-grid">
+				<?php
+				$imported_sites = get_option( 'bblocks_imported_pages', array() );
+				$imported_sites = is_array( $imported_sites ) ? $imported_sites : array();
+				$site_name      = get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'bBlocks';
+
+				foreach ( bblocks_starter_sites() as $slug => $site ) :
+					$tokens   = bblocks_starter_site_tokens( $site['style'] );
+					$imported = ! empty( $imported_sites[ $slug ] );
+					$vars     = sprintf(
+						'--bb-bg:%1$s;--bb-bg2:%2$s;--bb-fg:%3$s;--bb-fg2:%4$s;--bb-ac:%5$s;--bb-ac2:%6$s;--bb-r:%7$s',
+						$tokens['background'],
+						$tokens['surface'],
+						$tokens['text'],
+						$tokens['muted'],
+						$tokens['primary'],
+						$tokens['secondary'],
+						$tokens['radius']
+					);
+					?>
+					<article class="bblocks-starter-card<?php echo $imported ? ' is-imported' : ''; ?>" style="<?php echo esc_attr( $vars ); ?>" aria-labelledby="bblocks-starter-<?php echo esc_attr( $slug ); ?>">
+						<div class="bblocks-starter-preview-wrap" aria-hidden="true">
+							<?php bblocks_starter_mockup( $site['layout'], $site_name ); ?>
+						</div>
+						<div class="bblocks-starter-footer">
+							<div class="bblocks-starter-head">
+								<h3 class="bblocks-starter-title" id="bblocks-starter-<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $site['title'] ); ?></h3>
+								<?php if ( $imported ) : ?>
+									<span class="bblocks-starter-status"><span class="dashicons dashicons-yes" aria-hidden="true"></span><?php esc_html_e( 'Imported', 'bblocks' ); ?></span>
+								<?php endif; ?>
+							</div>
+							<p class="bblocks-starter-desc"><?php echo esc_html( $site['description'] ); ?></p>
+
+							<dl class="bblocks-starter-meta">
+								<div>
+									<dt><?php esc_html_e( 'Style', 'bblocks' ); ?></dt>
+									<dd>
+										<span class="bblocks-starter-swatches" aria-hidden="true"><i style="background:var(--bb-bg)"></i><i style="background:var(--bb-fg)"></i><i style="background:var(--bb-ac)"></i><i style="background:var(--bb-ac2)"></i></span>
+										<?php echo esc_html( $site['style'] ? $site['style'] : __( 'Default', 'bblocks' ) ); ?>
+									</dd>
+								</div>
+								<div>
+									<dt><?php esc_html_e( 'Pages', 'bblocks' ); ?></dt>
+									<dd>
+										<ul class="bblocks-starter-pages">
+											<?php foreach ( $site['pages'] as $page ) : ?>
+												<li><?php echo esc_html( $page[0] ); ?></li>
+											<?php endforeach; ?>
+										</ul>
+									</dd>
+								</div>
+							</dl>
+
+							<div class="bblocks-starter-actions">
+								<button type="button" class="bblocks-btn-import" data-site="<?php echo esc_attr( $slug ); ?>" data-title="<?php echo esc_attr( $site['title'] ); ?>">
+									<span class="dashicons dashicons-<?php echo $imported ? 'update' : 'download'; ?>" aria-hidden="true"></span>
+									<?php $imported ? esc_html_e( 'Re-import', 'bblocks' ) : esc_html_e( 'Import', 'bblocks' ); ?>
+								</button>
+							</div>
+						</div>
+					</article>
+				<?php endforeach; ?>
+			</div>
+		</div>
+
+		<!-- TAB 4: RECOMMENDED PLUGINS -->
+		<div id="recommended-plugins" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-recommended-plugins" tabindex="0">
+			<?php bblocks_render_recommended_plugins(); ?>
+		</div>
+
+		<!-- TAB 5: ALL FEATURES -->
+		<div id="features" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-features" tabindex="0">
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'All Features — Included Free', 'bblocks' ); ?></h2>
+			</div>
+			<p class="bblocks-intro"><?php esc_html_e( 'Everything below is part of the free theme. There is nothing to unlock.', 'bblocks' ); ?></p>
+
+			<table class="bblocks-comparison-table">
+				<thead>
+					<tr>
+						<th scope="col"><?php esc_html_e( 'Feature', 'bblocks' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'What you get', 'bblocks' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Availability', 'bblocks' ); ?></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					$rows = array(
+						array(
+							__( 'Block patterns', 'bblocks' ),
+							/* translators: %d: number of patterns. */
+							sprintf( __( '%d sections: hero, about, features, services, team, testimonials, pricing, call to action, contact and blog', 'bblocks' ), $counts['patterns'] ),
+						),
+						array(
+							__( 'Templates', 'bblocks' ),
+							/* translators: %d: number of templates. */
+							sprintf( __( '%d templates, including a full-width landing page, page with sidebar and page without title', 'bblocks' ), $counts['templates'] ),
+						),
+						array(
+							__( 'Headers & footers', 'bblocks' ),
+							/* translators: 1: number of headers, 2: number of footers. */
+							sprintf( __( '%1$d headers and %2$d footers, all swappable template parts', 'bblocks' ), $counts['headers'], $counts['footers'] ),
+						),
+						array(
+							__( 'Styles', 'bblocks' ),
+							/* translators: %d: number of style variations. */
+							sprintf( __( '%d one-click style variations and a named design system in Global Styles', 'bblocks' ), $counts['variations'] ),
+						),
+						array(
+							__( 'Modules', 'bblocks' ),
+							/* translators: %d: number of modules. */
+							sprintf( __( '%d optional modules: back to top, dark mode, reading progress, smart header, scroll animations, footer reveal and floating contact', 'bblocks' ), $counts['modules'] ),
+						),
+						array(
+							__( 'Starter sites', 'bblocks' ),
+							/* translators: %d: number of starter sites. */
+							sprintf( __( '%d one-click starter sites built from the bundled patterns', 'bblocks' ), $counts['starters'] ),
+						),
+						array(
+							__( 'Fonts', 'bblocks' ),
+							__( 'Self-hosted Inter variable font — no requests to third-party font services', 'bblocks' ),
+						),
+						array(
+							__( 'WooCommerce', 'bblocks' ),
+							__( 'Basic compatibility with WooCommerce\'s block templates and product gallery', 'bblocks' ),
+						),
+						array(
+							__( 'Support', 'bblocks' ),
+							__( 'Community support forum on WordPress.org', 'bblocks' ),
+						),
+					);
+					foreach ( $rows as $row ) {
+						printf(
+							'<tr><th scope="row">%1$s</th><td>%2$s</td><td><span class="bblocks-check-green"><span aria-hidden="true">✓</span> %3$s</span></td></tr>',
+							esc_html( $row[0] ),
+							esc_html( $row[1] ),
+							esc_html__( 'Free', 'bblocks' )
+						);
+					}
+					?>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- TAB 6: CHANGELOG -->
+		<div id="changelog" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-changelog" tabindex="0">
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'Changelog', 'bblocks' ); ?></h2>
+			</div>
+			<p class="bblocks-intro"><?php esc_html_e( 'What changed in each version of the theme.', 'bblocks' ); ?></p>
+
+			<?php $changelog = bblocks_get_changelog(); ?>
+			<?php if ( $changelog ) : ?>
+				<div class="bblocks-changelog">
+					<?php foreach ( $changelog as $version => $entries ) : ?>
+						<section class="bblocks-changelog-version<?php echo $version === $theme->get( 'Version' ) ? ' is-current' : ''; ?>">
+							<h3>
+								<?php
+								/* translators: %s: Theme version number. */
+								echo esc_html( sprintf( __( 'Version %s', 'bblocks' ), $version ) );
+								?>
+								<?php if ( $version === $theme->get( 'Version' ) ) : ?>
+									<span class="bblocks-version-badge"><?php esc_html_e( 'Current', 'bblocks' ); ?></span>
+								<?php endif; ?>
+							</h3>
+							<ul>
+								<?php foreach ( $entries as $entry ) : ?>
+									<li><?php echo esc_html( $entry ); ?></li>
+								<?php endforeach; ?>
+							</ul>
+						</section>
+					<?php endforeach; ?>
+				</div>
+			<?php else : ?>
+				<p><?php esc_html_e( 'The changelog could not be loaded. You can find it in the theme\'s readme.txt file.', 'bblocks' ); ?></p>
+			<?php endif; ?>
+		</div>
+
+	</div>
+	<?php
+}

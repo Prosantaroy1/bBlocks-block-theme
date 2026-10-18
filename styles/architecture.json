@@ -1,0 +1,118 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Nirman",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "surface",
+					"color": "#f8f4fb",
+					"name": "Surface"
+				},
+				{
+					"slug": "border-color",
+					"color": "#ebe5f0",
+					"name": "Border"
+				},
+				{
+					"slug": "foreground",
+					"color": "#1e1b2e",
+					"name": "Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "#67637a",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "primary",
+					"color": "#a43fd6",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#e64b8b",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#f5a524",
+					"name": "Accent"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(90deg, #a43fd6 0%, #e64b8b 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--poppins)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--poppins)",
+					"fontWeight": "600",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "600"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "600"
+				}
+			},
+			"button": {
+				"color": {
+					"gradient": "var(--wp--preset--gradient--primary-to-secondary)",
+					"text": "#ffffff"
+				},
+				"border": {
+					"radius": "999px"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--poppins)"
+				}
+			}
+		}
+	}
+}

@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Hero: Centered Statement
  * Slug: bblocks/hero-01
- * Categories: bblocks, banner
+ * Categories: bblocks, bblocks-hero, banner
  * Description: A centered hero with an eyebrow badge, large headline, supporting paragraph, two buttons and a small star-rating trust line. No imagery required.
  * Inserter: true
  *

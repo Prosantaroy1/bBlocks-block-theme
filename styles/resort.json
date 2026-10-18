@@ -1,0 +1,118 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Naturexplo",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#fbf7e6",
+					"name": "Background"
+				},
+				{
+					"slug": "surface",
+					"color": "#f2ecd2",
+					"name": "Surface"
+				},
+				{
+					"slug": "border-color",
+					"color": "#ddd5b8",
+					"name": "Border"
+				},
+				{
+					"slug": "foreground",
+					"color": "#1b2a17",
+					"name": "Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "#5c6553",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "primary",
+					"color": "#2f4a27",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#93a66f",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#ef9f2f",
+					"name": "Accent"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #2f4a27 0%, #93a66f 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)",
+					"fontWeight": "400",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--accent)",
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"border": {
+					"radius": "999px"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)"
+				}
+			}
+		}
+	}
+}

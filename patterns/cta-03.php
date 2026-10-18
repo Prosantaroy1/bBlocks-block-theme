@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: CTA: Minimal Strip
  * Slug: bblocks/cta-03
- * Categories: bblocks, call-to-action
+ * Categories: bblocks, bblocks-cta, call-to-action
  * Description: A minimal, bordered call-to-action strip with a short heading, one line of supporting text and a single button — suited to sitting above a footer.
  * Inserter: true
  *

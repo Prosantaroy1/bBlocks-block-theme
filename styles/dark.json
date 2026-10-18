@@ -8,7 +8,7 @@
 				{ "slug": "background", "color": "#0f1115", "name": "Background" },
 				{ "slug": "surface", "color": "#171a21", "name": "Surface" },
 				{ "slug": "border-color", "color": "#2a2e37", "name": "Border" },
-				{ "slug": "text", "color": "#f3f4f6", "name": "Text" },
+				{ "slug": "foreground", "color": "#f3f4f6", "name": "Text" },
 				{ "slug": "muted-text", "color": "#9aa1ac", "name": "Muted Text" },
 				{ "slug": "primary", "color": "#5b8def", "name": "Primary" },
 				{ "slug": "secondary", "color": "#2dd4bf", "name": "Secondary" },
@@ -26,7 +26,7 @@
 	"styles": {
 		"color": {
 			"background": "var(--wp--preset--color--background)",
-			"text": "var(--wp--preset--color--text)"
+			"text": "var(--wp--preset--color--foreground)"
 		},
 		"elements": {
 			"link": {
@@ -42,7 +42,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--text)",
+						"background": "var(--wp--preset--color--foreground)",
 						"text": "var(--wp--preset--color--background)"
 					}
 				}

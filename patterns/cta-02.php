@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: CTA: Split with Two Buttons
  * Slug: bblocks/cta-02
- * Categories: bblocks, call-to-action
+ * Categories: bblocks, bblocks-cta, call-to-action
  * Description: A bordered call-to-action row with a heading on the left and two buttons on the right, for a lower-key section break.
  * Inserter: true
  *

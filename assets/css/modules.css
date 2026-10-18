@@ -1,0 +1,202 @@
+/*
+ * bBlocks — front-end modules.
+ * Loaded only when at least one module is enabled in the theme dashboard.
+ */
+
+/* ---------- Floating buttons ---------- */
+.bblocks-floating {
+	position: fixed;
+	bottom: max(1.25rem, env(safe-area-inset-bottom));
+	z-index: 90;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.bblocks-floating--end {
+	right: max(1.25rem, env(safe-area-inset-right));
+}
+
+.bblocks-floating--start {
+	left: max(1.25rem, env(safe-area-inset-left));
+}
+
+.bblocks-fab {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--foreground, #14171a);
+	color: var(--wp--preset--color--background, #fff);
+	/* The thin ring keeps the button visible over a footer of the same color. */
+	box-shadow: 0 0 0 1px color-mix(in srgb, var(--wp--preset--color--background, #fff) 22%, transparent), 0 12px 24px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	text-decoration: none;
+	transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.bblocks-fab:hover {
+	background: var(--wp--preset--color--primary, #2954e3);
+	color: var(--wp--preset--color--background, #fff);
+	transform: translateY(-2px);
+}
+
+.bblocks-fab:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary, #2954e3);
+	outline-offset: 3px;
+}
+
+.bblocks-fab[hidden] {
+	display: none;
+}
+
+.bblocks-fab--chat {
+	background: #128c4b;
+}
+
+/* ---------- Back to top ---------- */
+.bblocks-back-to-top.is-entering {
+	opacity: 0;
+	transform: translateY(8px);
+}
+
+/* ---------- Dark mode toggle ---------- */
+/* Moon while the page is light, sun while it is dark. */
+.bblocks-theme-toggle span {
+	display: inline-flex;
+}
+
+.bblocks-theme-toggle .bblocks-theme-toggle__light,
+.bblocks-is-dark .bblocks-theme-toggle .bblocks-theme-toggle__dark {
+	display: none;
+}
+
+.bblocks-is-dark .bblocks-theme-toggle .bblocks-theme-toggle__light {
+	display: inline-flex;
+}
+
+/* Button block style "Dark mode toggle". */
+.wp-block-button.is-style-theme-toggle .wp-block-button__link {
+	cursor: pointer;
+}
+
+html.bblocks-scheme-transition,
+html.bblocks-scheme-transition * {
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ---------- Reading progress ---------- */
+.bblocks-reading-progress {
+	position: fixed;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	left: 0;
+	right: 0;
+	height: 4px;
+	z-index: 100;
+	pointer-events: none;
+}
+
+.bblocks-reading-progress__bar {
+	display: block;
+	height: 100%;
+	width: 100%;
+	transform: scaleX(var(--bblocks-progress, 0));
+	transform-origin: 0 50%;
+	background: linear-gradient(90deg, var(--wp--preset--color--primary, #2954e3), var(--wp--preset--color--secondary, #0ea5a4));
+}
+
+/* ---------- Smart sticky header ---------- */
+.bblocks-has-smart-header .wp-site-blocks > header.wp-block-template-part {
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 60;
+	background-color: var(--wp--preset--color--background, #fff);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bblocks-has-smart-header .wp-site-blocks > header.wp-block-template-part.is-scrolled {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bblocks-has-smart-header .wp-site-blocks > header.wp-block-template-part.is-hidden {
+	transform: translateY(-100%);
+}
+
+/* ---------- Scroll animations ---------- */
+.bblocks-animations-ready .bblocks-reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.bblocks-animations-ready .bblocks-reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* ---------- Footer reveal ---------- */
+.bblocks-footer-reveal-ready .wp-site-blocks > :not(footer) {
+	/* flow-root keeps the last section's bottom margin inside this painted
+	   area, so content never sits flush against the revealed footer. */
+	display: flow-root;
+	position: relative;
+	z-index: 1;
+	background-color: var(--wp--preset--color--background, #fff);
+}
+
+.bblocks-footer-reveal-ready .wp-site-blocks > footer.wp-block-template-part {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.bblocks-footer-reveal-ready .wp-site-blocks {
+	margin-bottom: var(--bblocks-footer-height, 0px);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+	.bblocks-floating {
+		gap: 0.45rem;
+		bottom: max(0.75rem, env(safe-area-inset-bottom));
+	}
+
+	.bblocks-floating--end {
+		right: max(0.75rem, env(safe-area-inset-right));
+	}
+
+	.bblocks-floating--start {
+		left: max(0.75rem, env(safe-area-inset-left));
+	}
+
+	.bblocks-fab {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}
+
+@media print {
+	.bblocks-floating,
+	.bblocks-reading-progress {
+		display: none !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bblocks-fab,
+	.bblocks-animations-ready .bblocks-reveal,
+	.bblocks-has-smart-header .wp-site-blocks > header.wp-block-template-part {
+		transition: none !important;
+	}
+
+	.bblocks-animations-ready .bblocks-reveal {
+		opacity: 1;
+		transform: none;
+	}
+}

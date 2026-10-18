@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: About: Story with Stat Row
  * Slug: bblocks/about-01
- * Categories: bblocks, about
+ * Categories: bblocks, bblocks-about, about
  * Description: An about-page introduction pairing a story paragraph with a visual panel, followed by a row of three key statistics.
  * Inserter: true
  *
@@ -14,11 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--x-large)">
+<!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|large","padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);margin-top:0;margin-bottom:0">
 
-	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
-	<div class="wp-block-columns are-vertically-aligned-center">
+	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|large"}}}} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
 
 		<!-- wp:column {"verticalAlignment":"center","width":"55%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%">
@@ -51,13 +51,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<!-- /wp:columns -->
 
-	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|medium"}}}} -->
-	<div class="wp-block-columns">
+	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|medium"}}}} -->
+	<div class="wp-block-columns alignwide">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"align":"center","fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}},"textColor":"primary"} -->
-			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800">12+</p>
+			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800"><?php echo esc_html__( '12+', 'bblocks' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"align":"center","fontSize":"small","textColor":"muted-text"} -->
 			<p class="has-text-align-center has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Years in business', 'bblocks' ); ?></p>
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"align":"center","fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}},"textColor":"primary"} -->
-			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800">240</p>
+			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800"><?php echo esc_html__( '240', 'bblocks' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"align":"center","fontSize":"small","textColor":"muted-text"} -->
 			<p class="has-text-align-center has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Projects delivered', 'bblocks' ); ?></p>
@@ -79,7 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:paragraph {"align":"center","fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}},"textColor":"primary"} -->
-			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800">98%</p>
+			<p class="has-text-align-center has-primary-color has-text-color has-xx-large-font-size" style="font-weight:800"><?php echo esc_html__( '98%', 'bblocks' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"align":"center","fontSize":"small","textColor":"muted-text"} -->
 			<p class="has-text-align-center has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Client satisfaction', 'bblocks' ); ?></p>

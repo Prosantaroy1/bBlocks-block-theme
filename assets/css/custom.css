@@ -139,6 +139,14 @@ summary:focus-visible {
 	margin-bottom: 0;
 }
 
+/* ---------- Large text rhythm ---------- */
+/* Body copy uses a loose 1.65 line height; at lead/quote sizes that looks
+   gappy. :where() keeps this at zero specificity so a line height set on the
+   block itself still wins. */
+:where( p.has-large-font-size, p.has-x-large-font-size, blockquote.has-large-font-size, .wp-block-quote p ) {
+	line-height: 1.5;
+}
+
 /* ---------- Star rating text (testimonials) ---------- */
 .bblocks-stars {
 	color: var( --wp--preset--color--accent, #f59e0b );
@@ -151,11 +159,311 @@ summary:focus-visible {
 	border-radius: 999px;
 }
 
+/* ---------- Decorative dot strip (about-04) ---------- */
+.bblocks-dots {
+	min-height: 2.5rem;
+	background-image: radial-gradient( circle, var( --wp--preset--color--border-color, #e3e6ea ) 1.5px, transparent 1.6px );
+	background-size: 16px 16px;
+}
+
+/* ---------- Icon tile: a symbol on a tinted rounded square ---------- */
+.bblocks-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-bottom: 0;
+	border-radius: 0.6rem;
+	background: color-mix( in srgb, var( --wp--preset--color--primary, #2954e3 ) 22%, var( --wp--preset--color--background, #fff ) );
+	color: var( --wp--preset--color--primary, #2954e3 );
+	font-size: 1.1rem;
+	line-height: 1;
+}
+
+.bblocks-icon.is-small {
+	width: 2rem;
+	height: 2rem;
+	font-size: 0.9rem;
+}
+
+/* ---------- Chevron list (pricing highlights) ---------- */
+.bblocks-list-chevron {
+	list-style: none;
+	padding-left: 0;
+}
+
+.bblocks-list-chevron li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.6rem;
+}
+
+.bblocks-list-chevron li::before {
+	content: "›";
+	position: absolute;
+	left: 0.2rem;
+	top: -0.05em;
+	color: var( --wp--preset--color--primary, #2954e3 );
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+/* Lists inside a dark card pick up the card's text color for their marker. */
+.has-foreground-background-color .bblocks-list-chevron li::before {
+	color: currentColor;
+}
+
+/* ---------- Pricing plan cards (pricing-03) ---------- */
+/* Cards fill their column and keep the button + guarantee at the bottom,
+   so plans with fewer highlights still line up. */
+.wp-block-column > .bblocks-plan {
+	height: 100%;
+}
+
+.bblocks-plan > .wp-block-buttons {
+	margin-top: auto;
+	padding-top: var( --wp--preset--spacing--medium, 1.5rem );
+}
+
+.bblocks-plan > .wp-block-separator {
+	width: 100%;
+	opacity: 0.25;
+}
+
+/* ---------- Portfolio grid (portfolio-01) ---------- */
+.bblocks-portfolio .wp-block-image,
+.bblocks-portfolio .wp-block-cover {
+	overflow: hidden;
+	border-radius: 1rem;
+	margin-bottom: 0;
+}
+
+.bblocks-portfolio .wp-block-image img,
+.bblocks-portfolio .wp-block-cover__image-background {
+	transition: transform 0.6s ease;
+}
+
+.bblocks-portfolio .wp-block-image:hover img,
+.bblocks-portfolio .wp-block-cover:hover .wp-block-cover__image-background {
+	transform: scale( 1.04 );
+}
+
+/* ---------- Logo row ---------- */
+.bblocks-logos .wp-block-image {
+	margin-bottom: 0;
+	opacity: 0.8;
+	transition: opacity 0.2s ease;
+}
+
+.bblocks-logos .wp-block-image:hover {
+	opacity: 1;
+}
+
+/* ==========================================================================
+   Starter-site sections
+   All of these are core blocks; the classes below only add decoration the
+   block settings cannot express.
+   ========================================================================== */
+
+/* Eyebrow label above section headings. */
+.bblocks-eyebrow {
+	margin-bottom: 0;
+	color: var( --wp--preset--color--secondary, #0ea5a4 );
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Circled check list (architecture expertise). */
+.bblocks-list-check {
+	list-style: none;
+	padding-left: 0;
+}
+
+.bblocks-list-check li {
+	position: relative;
+	padding: 0.35rem 0 0.35rem 2.75rem;
+	margin-bottom: 0.75rem;
+}
+
+.bblocks-list-check li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid color-mix( in srgb, var( --wp--preset--color--primary, #2954e3 ) 40%, transparent );
+	border-radius: 999px;
+	color: var( --wp--preset--color--primary, #2954e3 );
+	font-size: 0.8rem;
+	transform: translateY( -50% );
+}
+
+/* Gradient line under a card (architecture testimonial). */
+.bblocks-gradient-bottom {
+	position: relative;
+}
+
+.bblocks-gradient-bottom::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 3px;
+	background: var( --wp--preset--gradient--primary-to-secondary, linear-gradient( 90deg, #2954e3, #0ea5a4 ) );
+}
+
+/* Faded watermark word behind a section (spa). */
+.bblocks-has-watermark {
+	position: relative;
+	overflow: hidden;
+}
+
+.bblocks-has-watermark > * {
+	position: relative;
+	z-index: 1;
+}
+
+.bblocks-has-watermark > .bblocks-watermark {
+	position: absolute;
+	top: 0.5rem;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	margin: 0;
+	color: currentColor;
+	opacity: 0.05;
+	font-size: clamp( 4rem, 14vw, 11rem );
+	font-weight: 800;
+	line-height: 1;
+	white-space: nowrap;
+	text-transform: uppercase;
+	pointer-events: none;
+	user-select: none;
+}
+
+/* Offset outline frame behind an image (spa). */
+.bblocks-frame {
+	margin-right: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.bblocks-frame img {
+	box-shadow:
+		1.5rem 1.5rem 0 -1px var( --wp--preset--color--background, #fff ),
+		1.5rem 1.5rem 0 0 var( --wp--preset--color--border-color, #e3e6ea );
+}
+
+/* Giant wordmark (resort). */
+.bblocks-giant-title {
+	margin: 0;
+	font-size: clamp( 3rem, 12.5vw, 13.5rem ) !important;
+	line-height: 0.85;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/* Outlined marquee words (consulting). */
+.bblocks-outline-text {
+	color: transparent;
+	-webkit-text-stroke: 1px var( --wp--preset--color--muted-text, #666e75 );
+	font-size: clamp( 1.5rem, 3vw, 2.5rem );
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+/* Keep the no-wrap topic strip from causing sideways scrolling. */
+.bblocks-marquee {
+	overflow: hidden;
+}
+
+/* Stacked card effect (consulting testimonial). */
+.bblocks-stack-card {
+	position: relative;
+	box-shadow: 0 20px 40px -24px rgba( 0, 0, 0, 0.25 );
+}
+
+.bblocks-stack-card::before,
+.bblocks-stack-card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	border-radius: inherit;
+	background: var( --wp--preset--color--background, #fff );
+	box-shadow: 0 10px 30px -20px rgba( 0, 0, 0, 0.3 );
+}
+
+.bblocks-stack-card::before {
+	transform: rotate( -3deg );
+}
+
+.bblocks-stack-card::after {
+	transform: rotate( 2deg );
+}
+
+/* Round play button over a video poster. */
+.bblocks-play {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin: 0;
+	border-radius: 999px;
+	background: var( --wp--preset--color--primary, #2954e3 );
+	color: var( --wp--preset--color--foreground, #14171a );
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+/* Read More link drawn as an outlined pill (blog cards). */
+.wp-block-read-more.bblocks-pill-link {
+	display: inline-block;
+	width: auto;
+	padding: 0.45rem 1.25rem;
+	border: 1px solid var( --wp--preset--color--border-color, #e3e6ea );
+	border-radius: 999px;
+	color: var( --wp--preset--color--foreground, #14171a );
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+	text-decoration: none;
+}
+
+.wp-block-read-more.bblocks-pill-link:hover,
+.wp-block-read-more.bblocks-pill-link:focus {
+	border-color: var( --wp--preset--color--primary, #2954e3 );
+	color: var( --wp--preset--color--primary, #2954e3 );
+}
+
+/* Images that should fill their column edge to edge (zig-zag rows). */
+.bblocks-fill img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 /* ---------- Reduced motion ---------- */
 @media ( prefers-reduced-motion: reduce ) {
 	.is-style-card,
 	.skip-link,
-	.is-style-faq summary::after {
+	.is-style-faq summary::after,
+	.bblocks-portfolio .wp-block-image img,
+	.bblocks-portfolio .wp-block-cover__image-background,
+	.bblocks-logos .wp-block-image {
 		transition: none !important;
+	}
+
+	.bblocks-portfolio .wp-block-image:hover img,
+	.bblocks-portfolio .wp-block-cover:hover .wp-block-cover__image-background {
+		transform: none;
 	}
 }

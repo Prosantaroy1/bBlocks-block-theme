@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Hero: Minimal with Checklist
  * Slug: bblocks/hero-04
- * Categories: bblocks, banner
+ * Categories: bblocks, bblocks-hero, banner
  * Description: A left-aligned, text-first hero with a small eyebrow badge, headline, short checklist of value points and a single button. Suited to freelancers and small agencies.
  * Inserter: true
  *
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--small)">
 
-	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"constrained","contentSize":"620px"}} -->
+	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->
 	<div class="wp-block-group alignwide">
 
 		<!-- wp:paragraph {"className":"bblocks-badge"} -->

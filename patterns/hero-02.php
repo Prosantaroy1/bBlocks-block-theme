@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Title: Hero: Split with Visual Panel
  * Slug: bblocks/hero-02
- * Categories: bblocks, banner
+ * Categories: bblocks, bblocks-hero, banner
  * Description: A two-column hero with headline, paragraph and buttons on the left, and a decorative gradient panel on the right in place of a photo.
  * Inserter: true
  *
