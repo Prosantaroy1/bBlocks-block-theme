@@ -16,14 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $bblocks_rows = array(
 	array(
-		array( array( 'architecture-1.svg', '3/4', __( 'A tapered glass tower', 'bblocks' ) ) ),
-		array( array( 'architecture-2.svg', '3/4', __( 'Stacked yellow cube houses', 'bblocks' ) ) ),
-		array( array( 'architecture-3.svg', '16/10', __( 'A white office with long windows', 'bblocks' ) ), array( 'architecture-4.svg', '16/10', __( 'A brick skyscraper seen from below', 'bblocks' ) ) ),
+		array( array( 'architecture-1.jpg', '3/4', __( 'Looking up at a glass tower', 'bblocks' ) ) ),
+		array( array( 'architecture-2.jpg', '3/4', __( 'A building with a colorful glass facade', 'bblocks' ) ) ),
+		array( array( 'architecture-3.jpg', '16/10', __( 'A dark facade with rows of angled windows', 'bblocks' ) ), array( 'architecture-4.jpg', '16/10', __( 'Brick and glass skyscrapers in the mist', 'bblocks' ) ) ),
 	),
 	array(
-		array( array( 'arch-skyline.svg', '16/10', __( 'Dark towers against the sky', 'bblocks' ) ), array( 'arch-classic.svg', '16/10', __( 'An ornate classic building', 'bblocks' ) ) ),
-		array( array( 'arch-tower.svg', '3/4', __( 'A white tower with blue glass', 'bblocks' ) ) ),
-		array( array( 'arch-house.svg', '3/4', __( 'A white house with an orange door', 'bblocks' ) ) ),
+		array( array( 'arch-skyline.jpg', '16/10', __( 'City towers lit by the morning sun', 'bblocks' ) ), array( 'arch-classic.jpg', '16/10', __( 'A classical brick villa with a white portico', 'bblocks' ) ) ),
+		array( array( 'arch-tower.jpg', '3/4', __( 'A glass tower reflecting the clouds', 'bblocks' ) ) ),
+		array( array( 'arch-house.jpg', '3/4', __( 'A bright living room with a blue sofa', 'bblocks' ) ) ),
 	),
 );
 ?>
@@ -58,7 +58,7 @@ $bblocks_rows = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
 		<!-- wp:button {"gradient":"primary-to-secondary"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button"><?php echo esc_html__( 'View All', 'bblocks' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>"><?php echo esc_html__( 'View All', 'bblocks' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

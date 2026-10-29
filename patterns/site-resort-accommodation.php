@@ -32,13 +32,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Explore All ↗', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/stay/' ) ); ?>"><?php echo esc_html__( 'Explore All ↗', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
 
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"spacing":{"margin":{"top":"var:preset|spacing|large"}}}} -->
-			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-room.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A suite with a large bed and soft linen', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-room.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A bright bedroom with soft linen and tall windows', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -46,11 +46,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:column {"verticalAlignment":"bottom","width":"40%","style":{"spacing":{"blockGap":"var:preset|spacing|large"}}} -->
 		<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:40%">
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A reading corner with forest views', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A wood-panelled lounge with lake views', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-forest.svg' ) ); ?>" alt="<?php echo esc_attr__( 'Misty forest hills around the resort', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-forest.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'Sunlight streaming through the pine forest', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

@@ -76,6 +76,51 @@
 			openTab( 'starter-sites', true, true );
 		} );
 
+		// Checklist steps that point to another dashboard tab.
+		$( document ).on( 'click', '.bblocks-open-tab', function ( e ) {
+			e.preventDefault();
+			openTab( $( this ).attr( 'data-tab' ), true, true );
+		} );
+
+		// Design tab: apply a style variation or a header/footer design.
+		$( document ).on( 'click', '.bblocks-apply-design', function ( e ) {
+			e.preventDefault();
+
+			var $btn = $( this );
+			var confirmText = ( i18n.confirmDesign || '%s' ).replace( '%s', String( $btn.data( 'title' ) ) );
+
+			if ( ! window.confirm( confirmText ) ) {
+				return;
+			}
+
+			var $notice = $( '#bblocks-import-notice' );
+
+			$( '.bblocks-apply-design' ).prop( 'disabled', true );
+			$btn.text( i18n.applying || '…' );
+			$notice.removeClass( 'success error' ).empty();
+
+			$.post( vars.ajaxUrl, {
+				action: 'bblocks_apply_design',
+				kind: $btn.data( 'kind' ),
+				value: $btn.data( 'value' ),
+				security: vars.nonce,
+			} )
+				.done( function ( response ) {
+					if ( response && response.success ) {
+						// Reload so every "Active" badge and the checklist reflect the change.
+						window.location.hash = 'design';
+						window.location.reload();
+					} else {
+						$( '.bblocks-apply-design' ).prop( 'disabled', false );
+						$notice.addClass( 'error' ).text( ( response && response.data && response.data.message ) || i18n.failed || '' );
+					}
+				} )
+				.fail( function () {
+					$( '.bblocks-apply-design' ).prop( 'disabled', false );
+					$notice.addClass( 'error' ).text( i18n.error || '' );
+				} );
+		} );
+
 		// Recommended plugins: install with core's wp.updates, then activate,
 		// all without leaving the page. Without JS the link opens core's installer.
 		function markActive( $btn ) {

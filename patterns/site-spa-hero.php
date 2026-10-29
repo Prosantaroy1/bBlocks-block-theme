@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-face.svg' ) ); ?>","dimRatio":50,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":640,"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull" style="margin-top:0;margin-bottom:0;min-height:640px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-face.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-hero.jpg' ) ); ?>","dimRatio":50,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":640,"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull" style="margin-top:0;margin-bottom:0;min-height:640px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-hero.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 	<!-- wp:paragraph {"align":"center","textColor":"background","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"}}} -->
 	<p class="has-text-align-center has-background-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.12em;text-transform:uppercase"><?php echo esc_html__( 'Sweet Pixie Spa', 'bblocks' ); ?></p>
 	<!-- /wp:paragraph -->
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
 		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Book Appointment', 'bblocks' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Book Appointment', 'bblocks' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

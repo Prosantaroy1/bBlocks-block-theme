@@ -35,8 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} --><p class="has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Founder & Creative Director', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:social-links {"iconColor":"muted-text","size":"has-small-icon-size","className":"is-style-logos-only"} -->
 			<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
-				<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
-				<!-- wp:social-link {"url":"#","service":"x"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
+				<!-- wp:social-link {"url":"https://x.com/","service":"x"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 		</div>
@@ -53,8 +53,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} --><p class="has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Lead Developer', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:social-links {"iconColor":"muted-text","size":"has-small-icon-size","className":"is-style-logos-only"} -->
 			<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
-				<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
-				<!-- wp:social-link {"url":"#","service":"github"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
+				<!-- wp:social-link {"url":"https://github.com/","service":"github"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 		</div>
@@ -71,8 +71,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} --><p class="has-muted-text-color has-text-color has-small-font-size"><?php echo esc_html__( 'Client Success', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:social-links {"iconColor":"muted-text","size":"has-small-icon-size","className":"is-style-logos-only"} -->
 			<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only">
-				<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
-				<!-- wp:social-link {"url":"#","service":"instagram"} /-->
+				<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
+				<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 			</ul>
 			<!-- /wp:social-links -->
 		</div>

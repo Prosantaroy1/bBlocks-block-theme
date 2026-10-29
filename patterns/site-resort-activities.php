@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $bblocks_acts = array(
-	array( 'climb', __( 'Hiking', 'bblocks' ) ),
-	array( 'zip', __( 'Zip Line', 'bblocks' ) ),
+	array( 'hike', __( 'Hiking', 'bblocks' ) ),
+	array( 'bike', __( 'Mountain Biking', 'bblocks' ) ),
 	array( 'rock', __( 'Rock Climbing', 'bblocks' ) ),
 	array( 'kayak', __( 'Kayaking', 'bblocks' ) ),
 );
@@ -30,8 +30,8 @@ $bblocks_acts = array(
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"grid","columnCount":4,"minimumColumnWidth":"14rem"}} -->
 	<div class="wp-block-group alignwide">
 		<?php foreach ( $bblocks_acts as $bblocks_act ) : ?>
-		<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/activity-' . $bblocks_act[0] . '.svg' ) ); ?>","dimRatio":10,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":420,"contentPosition":"top left","layout":{"type":"default"}} -->
-		<div class="wp-block-cover has-custom-content-position is-position-top-left" style="min-height:420px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/activity-' . $bblocks_act[0] . '.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+		<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/activity-' . $bblocks_act[0] . '.jpg' ) ); ?>","dimRatio":50,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":420,"contentPosition":"top left","layout":{"type":"default"}} -->
+		<div class="wp-block-cover has-custom-content-position is-position-top-left" style="min-height:420px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/activity-' . $bblocks_act[0] . '.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 			<!-- wp:heading {"level":3,"textColor":"background","fontSize":"large"} -->
 			<h3 class="wp-block-heading has-background-color has-text-color has-large-font-size"><?php echo esc_html( $bblocks_act[1] ); ?></h3>
 			<!-- /wp:heading -->

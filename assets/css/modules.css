@@ -200,3 +200,102 @@ html.bblocks-scheme-transition * {
 		transform: none;
 	}
 }
+
+/* ---------- Announcement bar ---------- */
+.bblocks-announcement {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	padding: 0.55rem 3rem 0.55rem 1rem;
+	position: relative;
+	background: var( --wp--preset--color--primary, #2954e3 );
+	color: var( --wp--preset--color--background, #fff );
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+	line-height: 1.4;
+	text-align: center;
+}
+
+.bblocks-announcement[hidden] {
+	display: none;
+}
+
+.bblocks-announcement__text {
+	margin: 0;
+}
+
+.bblocks-announcement__link {
+	color: inherit;
+	font-weight: 700;
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.bblocks-announcement__close {
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translateY( -50% );
+	width: 2rem;
+	height: 2rem;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	font-size: 1.25rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.bblocks-announcement__close:hover {
+	background: rgba( 255, 255, 255, 0.15 );
+}
+
+.bblocks-announcement a:focus-visible,
+.bblocks-announcement__close:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* ---------- Table of contents ---------- */
+.bblocks-toc {
+	max-width: var( --wp--style--global--content-size, 768px );
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-bottom: var( --wp--preset--spacing--large, 2.5rem );
+	padding: var( --wp--preset--spacing--small, 1rem ) var( --wp--preset--spacing--medium, 1.5rem );
+	border: 1px solid var( --wp--preset--color--border-color, #e3e6ea );
+	border-radius: 0.75rem;
+	background: var( --wp--preset--color--surface, #f5f6f8 );
+}
+
+.bblocks-toc summary {
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.bblocks-toc ol {
+	margin: 0.75rem 0 0;
+	padding-left: 1.25rem;
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+}
+
+.bblocks-toc li + li {
+	margin-top: 0.35rem;
+}
+
+.bblocks-toc .is-level-3 {
+	margin-left: 1rem;
+	list-style-type: circle;
+}
+
+/* Keep headings clear of a sticky header when jumping to them. */
+.wp-block-post-content :is( h2, h3 )[id] {
+	scroll-margin-top: 6rem;
+}
+
+@media print {
+	.bblocks-announcement {
+		display: none !important;
+	}
+}

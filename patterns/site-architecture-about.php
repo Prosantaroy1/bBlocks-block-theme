@@ -52,11 +52,11 @@ $bblocks_stats = array(
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"gradient":"primary-to-secondary"} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button"><?php echo esc_html__( 'Know More', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button" href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>"><?php echo esc_html__( 'Know More', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 
 				<!-- wp:button {"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Contact Now', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Contact Now', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

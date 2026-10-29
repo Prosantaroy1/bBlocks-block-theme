@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800"><?php /* translators: Plan price, including the currency symbol. */ echo esc_html__( '$39', 'bblocks' ); ?><span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:paragraph {"textColor":"muted-text"} --><p class="has-muted-text-color has-text-color"><?php echo esc_html__( 'Billed monthly, cancel any time.', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Start Monthly', 'bblocks' ); ?></a></div><!-- /wp:button --></div>
+				<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Start Monthly', 'bblocks' ); ?></a></div><!-- /wp:button --></div>
 				<!-- /wp:buttons -->
 			</div>
 			<!-- /wp:group -->
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- wp:paragraph {"fontSize":"xx-large","style":{"typography":{"fontWeight":"800"}}} --><p class="has-xx-large-font-size" style="font-weight:800"><?php /* translators: Plan price, including the currency symbol. */ echo esc_html__( '$29', 'bblocks' ); ?><span style="font-size:1rem;font-weight:400"><?php echo esc_html__( '/mo', 'bblocks' ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:paragraph {"textColor":"muted-text"} --><p class="has-muted-text-color has-text-color"><?php echo esc_html__( 'Billed yearly — save 25% versus monthly.', 'bblocks' ); ?></p><!-- /wp:paragraph -->
 				<!-- wp:buttons -->
-				<div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Start Annual', 'bblocks' ); ?></a></div><!-- /wp:button --></div>
+				<div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Start Annual', 'bblocks' ); ?></a></div><!-- /wp:button --></div>
 				<!-- /wp:buttons -->
 			</div>
 			<!-- /wp:group -->

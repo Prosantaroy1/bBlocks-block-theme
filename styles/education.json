@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Edunova",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "background", "color": "#ffffff", "name": "Background" },
+				{ "slug": "surface", "color": "#f4f1fe", "name": "Surface" },
+				{ "slug": "border-color", "color": "#e3ddf8", "name": "Border" },
+				{ "slug": "foreground", "color": "#1e1b4b", "name": "Text" },
+				{ "slug": "muted-text", "color": "#5d5a7e", "name": "Muted Text" },
+				{ "slug": "primary", "color": "#7c3aed", "name": "Primary" },
+				{ "slug": "secondary", "color": "#4f46e5", "name": "Secondary" },
+				{ "slug": "accent", "color": "#fcc419", "name": "Accent" }
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--poppins)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--secondary)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--poppins)",
+					"fontWeight": "700",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"border": {
+					"radius": "999px"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--poppins)"
+				}
+			}
+		}
+	}
+}

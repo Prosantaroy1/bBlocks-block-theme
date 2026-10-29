@@ -57,7 +57,7 @@ $bblocks_products = array(
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"backgroundColor":"secondary","textColor":"background","width":100} -->
-				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'View Options', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/browse-themes/' ) ); ?>"><?php echo esc_html__( 'View Options', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -70,7 +70,7 @@ $bblocks_products = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
 		<!-- wp:button -->
-		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Browse 15K+ Themes ↗', 'bblocks' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/browse-themes/' ) ); ?>"><?php echo esc_html__( 'Browse 15K+ Themes ↗', 'bblocks' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

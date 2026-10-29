@@ -16,15 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $bblocks_rows = array(
 	array(
-		'image'   => 'arch-tower.svg',
-		'alt'     => __( 'A white modern tower with a blue glass facade', 'bblocks' ),
+		'image'   => 'arch-tower.jpg',
+		'alt'     => __( 'A modern tower with a blue glass facade', 'bblocks' ),
 		'eyebrow' => __( 'Our chief expertise', 'bblocks' ),
 		'title'   => __( 'Architecture Design', 'bblocks' ),
 		'first'   => 'image',
 	),
 	array(
-		'image'   => 'arch-house.svg',
-		'alt'     => __( 'A white house with an orange front door and a cactus', 'bblocks' ),
+		'image'   => 'arch-house.jpg',
+		'alt'     => __( 'A bright living room with a blue sofa and a herringbone floor', 'bblocks' ),
 		'eyebrow' => __( 'What we specialize in', 'bblocks' ),
 		'title'   => __( 'Interior Design', 'bblocks' ),
 		'first'   => 'text',

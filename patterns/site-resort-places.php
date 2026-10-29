@@ -45,7 +45,7 @@ $bblocks_places = array( __( 'Reception', 'bblocks' ), __( 'Entrance', 'bblocks'
 		<!-- wp:column {"verticalAlignment":"center","width":"70%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:70%">
 			<!-- wp:image {"aspectRatio":"16/9","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-pool.svg' ) ); ?>" alt="<?php echo esc_attr__( 'Palm trees beside the resort pool', 'bblocks' ); ?>" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-pool.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'Lounge chairs and tables beside the resort pool', 'bblocks' ); ?>" style="aspect-ratio:16/9;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $bblocks_services = array(
-	array( __( 'Face', 'bblocks' ), __( 'Sweet Pixie Facial Massage', 'bblocks' ), 'spa-face.svg', __( 'A relaxing facial massage with a soft towel wrap', 'bblocks' ) ),
-	array( __( 'Body', 'bblocks' ), __( 'Sweet Pixie Body Massage', 'bblocks' ), 'spa-towels.svg', __( 'Rolled towels and warm massage oil', 'bblocks' ) ),
-	array( __( 'Foot', 'bblocks' ), __( 'Sweet Pixie Foot Massage', 'bblocks' ), 'spa-foot.svg', __( 'A soothing foot treatment with fresh flowers', 'bblocks' ) ),
+	array( __( 'Face', 'bblocks' ), __( 'Sweet Pixie Facial Massage', 'bblocks' ), 'spa-face.jpg', __( 'White orchids for a gentle facial', 'bblocks' ) ),
+	array( __( 'Body', 'bblocks' ), __( 'Sweet Pixie Body Massage', 'bblocks' ), 'spa-towels.jpg', __( 'A rose resting on soft white towels', 'bblocks' ) ),
+	array( __( 'Foot', 'bblocks' ), __( 'Sweet Pixie Foot Massage', 'bblocks' ), 'spa-foot.jpg', __( 'Hands holding fresh lavender for a foot soak', 'bblocks' ) ),
 );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -37,7 +37,7 @@ $bblocks_services = array(
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Book Appointment', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Book Appointment', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

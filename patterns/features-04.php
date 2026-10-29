@@ -35,7 +35,7 @@ $bblocks_features = array(
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Get Started Today', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/pricing/' ) ); ?>"><?php echo esc_html__( 'Get Started Today', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -62,7 +62,7 @@ $bblocks_features = array(
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|small"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--small)">
 				<!-- wp:button {"backgroundColor":"background","textColor":"foreground","fontSize":"small"} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button"><?php echo esc_html__( 'Read More', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button" href="<?php echo esc_url( home_url( '/features/' ) ); ?>"><?php echo esc_html__( 'Read More', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

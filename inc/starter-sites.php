@@ -19,7 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Starter site definitions.
  *
  * Each page is: title, list of pattern slugs stacked top to bottom (an empty
- * list makes it the posts page), page template slug.
+ * list makes it the posts page), page template slug. The optional 'header'
+ * key names the header design applied together with the matching style.
  *
  * @return array<string, array<string, mixed>>
  */
@@ -158,6 +159,155 @@ function bblocks_starter_sites() {
 				'pricing'  => array( __( 'Pricing', 'bblocks' ), array( 'site-consulting-pricing', 'site-consulting-faq' ), 'page-landing' ),
 				'blog'     => array( __( 'Blog', 'bblocks' ), array(), '' ),
 				'contact'  => array( __( 'Contact', 'bblocks' ), array( 'site-consulting-intro', 'site-consulting-connect' ), 'page-landing' ),
+			),
+		),
+		'magazine'     => array(
+			'title'       => __( 'Daily Ink Magazine', 'bblocks' ),
+			'description' => __( 'News and magazine blog with a lead-story hero, latest stories grid, numbered trending list, editor\'s picks band, newsletter signup and an editorial team page.', 'bblocks' ),
+			'style'       => 'Daily Ink',
+			'header'      => 'header-search',
+			'layout'      => 'consulting',
+			'front'       => 'home',
+			'posts'       => 'stories',
+			'pages'       => array(
+				'home'    => array( __( 'Home', 'bblocks' ), array( 'site-magazine-hero', 'site-magazine-latest', 'site-magazine-trending', 'site-magazine-picks', 'site-magazine-newsletter' ), 'page-landing' ),
+				'about'   => array( __( 'About', 'bblocks' ), array( 'site-magazine-team', 'site-magazine-picks', 'site-magazine-newsletter' ), 'page-landing' ),
+				'stories' => array( __( 'Stories', 'bblocks' ), array(), '' ),
+				'contact' => array( __( 'Contact', 'bblocks' ), array( 'contact-01' ), 'page-landing' ),
+			),
+		),
+		'restaurant'   => array(
+			'title'       => __( 'Savora Restaurant', 'bblocks' ),
+			'description' => __( 'Warm restaurant site with a dining photo hero, story and stats, a three-course menu, chef specials, guest reviews, gallery and opening hours with booking.', 'bblocks' ),
+			'style'       => 'Savora',
+			'header'      => 'header-cta',
+			'layout'      => 'resort',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'         => array( __( 'Home', 'bblocks' ), array( 'site-restaurant-hero', 'site-restaurant-about', 'site-restaurant-specials', 'site-restaurant-menu', 'site-restaurant-testimonials', 'site-restaurant-gallery', 'site-restaurant-visit' ), 'page-landing' ),
+				'menu'         => array( __( 'Menu', 'bblocks' ), array( 'site-restaurant-menu', 'site-restaurant-specials', 'site-restaurant-visit' ), 'page-landing' ),
+				'about'        => array( __( 'About', 'bblocks' ), array( 'site-restaurant-about', 'site-restaurant-gallery', 'site-restaurant-testimonials' ), 'page-landing' ),
+				'reservations' => array( __( 'Reservations', 'bblocks' ), array( 'site-restaurant-visit', 'site-restaurant-testimonials' ), 'page-landing' ),
+				'blog'         => array( __( 'Blog', 'bblocks' ), array(), '' ),
+			),
+		),
+		'photography'  => array(
+			'title'       => __( 'Lumen Photography Studio', 'bblocks' ),
+			'description' => __( 'Dark photographer portfolio with a full-height landscape hero, captioned gallery, session packages, an about section with signature, client words and a booking call to action.', 'bblocks' ),
+			'style'       => 'Lumen',
+			'header'      => 'header',
+			'layout'      => 'architecture',
+			'front'       => 'home',
+			'posts'       => 'journal',
+			'pages'       => array(
+				'home'      => array( __( 'Home', 'bblocks' ), array( 'site-photography-hero', 'site-photography-portfolio', 'site-photography-about', 'site-photography-packages', 'site-photography-testimonials', 'site-photography-contact' ), 'page-landing' ),
+				'portfolio' => array( __( 'Portfolio', 'bblocks' ), array( 'site-photography-portfolio', 'site-photography-testimonials', 'site-photography-contact' ), 'page-landing' ),
+				'packages'  => array( __( 'Packages', 'bblocks' ), array( 'site-photography-packages', 'site-photography-testimonials', 'site-photography-contact' ), 'page-landing' ),
+				'about'     => array( __( 'About', 'bblocks' ), array( 'site-photography-about', 'site-photography-testimonials' ), 'page-landing' ),
+				'contact'   => array( __( 'Contact', 'bblocks' ), array( 'site-photography-contact', 'site-photography-packages' ), 'page-landing' ),
+				'journal'   => array( __( 'Journal', 'bblocks' ), array(), '' ),
+			),
+		),
+		'education'    => array(
+			'title'       => __( 'Edunova Academy', 'bblocks' ),
+			'description' => __( 'Online academy with a split hero, course grid, benefits, instructors, a library stats band, membership plans, student stories, FAQ and contact.', 'bblocks' ),
+			'style'       => 'Edunova',
+			'header'      => 'header-cta',
+			'layout'      => 'saas',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'    => array( __( 'Home', 'bblocks' ), array( 'site-education-hero', 'site-education-courses', 'site-education-features', 'site-education-stats', 'site-education-instructors', 'site-education-testimonials', 'site-education-pricing', 'site-education-faq' ), 'page-landing' ),
+				'courses' => array( __( 'Courses', 'bblocks' ), array( 'site-education-courses', 'site-education-features', 'site-education-testimonials', 'site-education-faq' ), 'page-landing' ),
+				'pricing' => array( __( 'Pricing', 'bblocks' ), array( 'site-education-pricing', 'site-education-stats', 'site-education-faq' ), 'page-landing' ),
+				'about'   => array( __( 'About', 'bblocks' ), array( 'site-education-features', 'site-education-stats', 'site-education-instructors', 'site-education-testimonials' ), 'page-landing' ),
+				'contact' => array( __( 'Contact', 'bblocks' ), array( 'site-education-contact', 'site-education-faq' ), 'page-landing' ),
+				'blog'    => array( __( 'Blog', 'bblocks' ), array(), '' ),
+			),
+		),
+		'fitness'      => array(
+			'title'       => __( 'Pulsefit Gym', 'bblocks' ),
+			'description' => __( 'Bold dark gym site with a photo hero, programs, a weekly class timetable, trainers, results, membership plans and a free-trial call to action.', 'bblocks' ),
+			'style'       => 'Pulsefit',
+			'header'      => 'header-cta',
+			'layout'      => 'agency',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'       => array( __( 'Home', 'bblocks' ), array( 'site-fitness-hero', 'site-fitness-programs', 'site-fitness-stats', 'site-fitness-schedule', 'site-fitness-trainers', 'site-fitness-pricing', 'site-fitness-cta' ), 'page-landing' ),
+				'programs'   => array( __( 'Programs', 'bblocks' ), array( 'site-fitness-programs', 'site-fitness-trainers', 'site-fitness-cta' ), 'page-landing' ),
+				'schedule'   => array( __( 'Schedule', 'bblocks' ), array( 'site-fitness-schedule', 'site-fitness-cta' ), 'page-landing' ),
+				'membership' => array( __( 'Membership', 'bblocks' ), array( 'site-fitness-pricing', 'site-fitness-stats', 'site-fitness-cta' ), 'page-landing' ),
+				'contact'    => array( __( 'Contact', 'bblocks' ), array( 'site-fitness-contact' ), 'page-landing' ),
+				'blog'       => array( __( 'Blog', 'bblocks' ), array(), '' ),
+			),
+		),
+		'realestate'   => array(
+			'title'       => __( 'Homely Realty', 'bblocks' ),
+			'description' => __( 'Real estate agency with a photo hero and property search, featured listings, services, why-us stats, agents, neighborhoods, reviews and a free valuation call to action.', 'bblocks' ),
+			'style'       => 'Homely',
+			'header'      => 'header-topbar',
+			'layout'      => 'architecture',
+			'front'       => 'home',
+			'posts'       => 'news',
+			'pages'       => array(
+				'home'       => array( __( 'Home', 'bblocks' ), array( 'site-realestate-hero', 'site-realestate-listings', 'site-realestate-services', 'site-realestate-about', 'site-realestate-neighborhoods', 'site-realestate-agents', 'site-realestate-testimonials', 'site-realestate-cta' ), 'page-landing' ),
+				'properties' => array( __( 'Properties', 'bblocks' ), array( 'site-realestate-listings', 'site-realestate-neighborhoods', 'site-realestate-cta' ), 'page-landing' ),
+				'services'   => array( __( 'Services', 'bblocks' ), array( 'site-realestate-services', 'site-realestate-about', 'site-realestate-testimonials', 'site-realestate-cta' ), 'page-landing' ),
+				'agents'     => array( __( 'Agents', 'bblocks' ), array( 'site-realestate-agents', 'site-realestate-testimonials' ), 'page-landing' ),
+				'news'       => array( __( 'News', 'bblocks' ), array(), '' ),
+				'contact'    => array( __( 'Contact', 'bblocks' ), array( 'site-realestate-cta', 'contact-01' ), 'page-landing' ),
+			),
+		),
+		'shop'         => array(
+			'title'       => __( 'Shoplane Store', 'bblocks' ),
+			'description' => __( 'Online store showcase with a split product hero, categories, product grid, sale banner, store perks, reviews and a newsletter sign-up. No shop plugin required.', 'bblocks' ),
+			'style'       => 'Shoplane',
+			'header'      => 'header-search',
+			'layout'      => 'marketplace',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'    => array( __( 'Home', 'bblocks' ), array( 'site-shop-hero', 'site-shop-categories', 'site-shop-products', 'site-shop-promo', 'site-shop-features', 'site-shop-testimonials', 'site-shop-newsletter' ), 'page-landing' ),
+				'shop'    => array( __( 'Shop', 'bblocks' ), array( 'site-shop-products', 'site-shop-categories', 'site-shop-promo', 'site-shop-features' ), 'page-landing' ),
+				'about'   => array( __( 'About', 'bblocks' ), array( 'site-shop-about', 'site-shop-features', 'site-shop-testimonials', 'site-shop-newsletter' ), 'page-landing' ),
+				'blog'    => array( __( 'Blog', 'bblocks' ), array(), '' ),
+				'contact' => array( __( 'Contact', 'bblocks' ), array( 'contact-01', 'site-shop-features' ), 'page-landing' ),
+			),
+		),
+		'medical'      => array(
+			'title'       => __( 'Carely Clinic', 'bblocks' ),
+			'description' => __( 'Medical and dental clinic with a split hero, department grid, why-choose-us stats, doctors, opening hours and emergency band, patient reviews, FAQ and an appointment call to action.', 'bblocks' ),
+			'style'       => 'Carely',
+			'header'      => 'header-topbar',
+			'layout'      => 'spa',
+			'front'       => 'home',
+			'posts'       => 'health-blog',
+			'pages'       => array(
+				'home'        => array( __( 'Home', 'bblocks' ), array( 'site-medical-hero', 'site-medical-services', 'site-medical-why', 'site-medical-doctors', 'site-medical-hours', 'site-medical-testimonials', 'site-medical-faq', 'site-medical-cta' ), 'page-landing' ),
+				'services'    => array( __( 'Services', 'bblocks' ), array( 'site-medical-services', 'site-medical-hours', 'site-medical-faq', 'site-medical-cta' ), 'page-landing' ),
+				'doctors'     => array( __( 'Doctors', 'bblocks' ), array( 'site-medical-doctors', 'site-medical-testimonials', 'site-medical-cta' ), 'page-landing' ),
+				'about'       => array( __( 'About', 'bblocks' ), array( 'site-medical-why', 'site-medical-doctors', 'site-medical-testimonials' ), 'page-landing' ),
+				'health-blog' => array( __( 'Health Blog', 'bblocks' ), array(), '' ),
+				'contact'     => array( __( 'Contact', 'bblocks' ), array( 'site-medical-hours', 'site-medical-faq' ), 'page-landing' ),
+			),
+		),
+		'law'          => array(
+			'title'       => __( 'Justica Law', 'bblocks' ),
+			'description' => __( 'Law firm site with a dark library hero, practice areas, firm story and stats, our approach, attorneys, case results, client testimonials and a free consultation with FAQ.', 'bblocks' ),
+			'style'       => 'Justica',
+			'header'      => 'header-topbar',
+			'layout'      => 'consulting',
+			'front'       => 'home',
+			'posts'       => 'insights',
+			'pages'       => array(
+				'home'           => array( __( 'Home', 'bblocks' ), array( 'site-law-hero', 'site-law-practice', 'site-law-about', 'site-law-results', 'site-law-attorneys', 'site-law-testimonials', 'site-law-consultation' ), 'page-landing' ),
+				'practice-areas' => array( __( 'Practice Areas', 'bblocks' ), array( 'site-law-practice', 'site-law-approach', 'site-law-results', 'site-law-consultation' ), 'page-landing' ),
+				'attorneys'      => array( __( 'Attorneys', 'bblocks' ), array( 'site-law-attorneys', 'site-law-testimonials' ), 'page-landing' ),
+				'about'          => array( __( 'About', 'bblocks' ), array( 'site-law-about', 'site-law-approach', 'site-law-attorneys' ), 'page-landing' ),
+				'insights'       => array( __( 'Insights', 'bblocks' ), array(), '' ),
+				'contact'        => array( __( 'Contact', 'bblocks' ), array( 'site-law-consultation' ), 'page-landing' ),
 			),
 		),
 	);
@@ -432,6 +582,10 @@ function bblocks_import_starter_site( $slug, $apply_style = false, $with_menu = 
 	$style_applied = false;
 	if ( $apply_style ) {
 		$style_applied = bblocks_apply_style_variation( $site['style'] );
+
+		if ( function_exists( 'bblocks_apply_part_design' ) ) {
+			bblocks_apply_part_design( 'header', isset( $site['header'] ) ? $site['header'] : 'header' );
+		}
 	}
 
 	return array(

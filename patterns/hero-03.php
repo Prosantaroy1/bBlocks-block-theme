@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons is-content-justification-center">
 			<!-- wp:button {"backgroundColor":"background","textColor":"foreground"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Try It Free', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

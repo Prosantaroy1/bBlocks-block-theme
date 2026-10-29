@@ -148,6 +148,10 @@ if ( ! function_exists( 'bblocks_pattern_categories' ) ) {
 				'label'       => _x( 'bBlocks — Portfolio', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Project galleries and case study showcases.', 'bblocks' ),
 			),
+			'bblocks-utility'      => array(
+				'label'       => _x( 'bBlocks — Utility', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Coming soon, maintenance, newsletter and not-found sections.', 'bblocks' ),
+			),
 			// One category per starter site, holding that site's sections.
 			'bblocks-site-architecture' => array(
 				'label'       => _x( 'bBlocks Site — Architecture', 'Block pattern category', 'bblocks' ),
@@ -168,6 +172,42 @@ if ( ! function_exists( 'bblocks_pattern_categories' ) ) {
 			'bblocks-site-consulting'   => array(
 				'label'       => _x( 'bBlocks Site — Consulting', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Sections from the Conselta consulting starter site.', 'bblocks' ),
+			),
+			'bblocks-site-restaurant'   => array(
+				'label'       => _x( 'bBlocks Site — Restaurant', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Savora restaurant starter site.', 'bblocks' ),
+			),
+			'bblocks-site-photography'  => array(
+				'label'       => _x( 'bBlocks Site — Photography', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Lumen photography starter site.', 'bblocks' ),
+			),
+			'bblocks-site-medical'      => array(
+				'label'       => _x( 'bBlocks Site — Medical Clinic', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Carely medical clinic starter site.', 'bblocks' ),
+			),
+			'bblocks-site-law'          => array(
+				'label'       => _x( 'bBlocks Site — Law Firm', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Justica law firm starter site.', 'bblocks' ),
+			),
+			'bblocks-site-education'    => array(
+				'label'       => _x( 'bBlocks Site — Education', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Edunova online academy starter site.', 'bblocks' ),
+			),
+			'bblocks-site-fitness'      => array(
+				'label'       => _x( 'bBlocks Site — Gym & Fitness', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Pulsefit gym starter site.', 'bblocks' ),
+			),
+			'bblocks-site-realestate'   => array(
+				'label'       => _x( 'bBlocks Site — Real Estate', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Homely real estate starter site.', 'bblocks' ),
+			),
+			'bblocks-site-shop'         => array(
+				'label'       => _x( 'bBlocks Site — Shop', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Shoplane online store starter site.', 'bblocks' ),
+			),
+			'bblocks-site-magazine'     => array(
+				'label'       => _x( 'bBlocks Site — Magazine', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Daily Ink magazine starter site.', 'bblocks' ),
 			),
 		);
 
@@ -211,7 +251,42 @@ if ( ! function_exists( 'bblocks_block_styles' ) ) {
 }
 add_action( 'init', 'bblocks_block_styles' );
 
+if ( ! function_exists( 'bblocks_related_posts_query' ) ) {
+	/**
+	 * Turn the "Keep reading" query on single posts into related posts:
+	 * same categories as the current post, current post excluded. The
+	 * Query block only supports excluding the current post natively from
+	 * WordPress 7.1, so both are set here for older versions too.
+	 *
+	 * @param array $parsed_block The block being rendered.
+	 * @return array
+	 */
+	function bblocks_related_posts_query( $parsed_block ) {
+		if (
+			'core/query' !== $parsed_block['blockName'] ||
+			empty( $parsed_block['attrs']['className'] ) ||
+			false === strpos( $parsed_block['attrs']['className'], 'bblocks-related-posts' ) ||
+			! is_singular( 'post' )
+		) {
+			return $parsed_block;
+		}
+
+		$post_id    = get_queried_object_id();
+		$categories = wp_get_post_categories( $post_id );
+
+		$parsed_block['attrs']['query']['exclude'] = array( $post_id );
+
+		if ( $categories ) {
+			$parsed_block['attrs']['query']['taxQuery'] = array( 'category' => array_map( 'intval', $categories ) );
+		}
+
+		return $parsed_block;
+	}
+}
+add_filter( 'render_block_data', 'bblocks_related_posts_query' );
+
 require_once get_template_directory() . '/inc/modules.php';
 require_once get_template_directory() . '/inc/starter-sites.php';
+require_once get_template_directory() . '/inc/design.php';
 require_once get_template_directory() . '/inc/recommended-plugins.php';
 require_once get_template_directory() . '/inc/admin-dashboard.php';

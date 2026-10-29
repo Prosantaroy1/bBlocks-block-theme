@@ -40,7 +40,7 @@ $bblocks_sides = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"36%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:36%">
 			<!-- wp:image {"aspectRatio":"4/5","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A calm lounge with tall windows', 'bblocks' ); ?>" style="aspect-ratio:4/5;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A calm wood-panelled lounge with tall windows', 'bblocks' ); ?>" style="aspect-ratio:4/5;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

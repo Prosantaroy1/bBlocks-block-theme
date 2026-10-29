@@ -25,7 +25,7 @@ $bblocks_lines = array(
 	<!-- wp:column {"verticalAlignment":"stretch"} -->
 	<div class="wp-block-column is-vertically-aligned-stretch">
 		<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"bblocks-fill"} -->
-		<figure class="wp-block-image size-full bblocks-fill"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/arch-tower.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A white modern tower with a blue glass facade', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+		<figure class="wp-block-image size-full bblocks-fill"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/arch-tower.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A modern tower with a blue glass facade', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 		<!-- /wp:image -->
 	</div>
 	<!-- /wp:column -->
@@ -57,7 +57,7 @@ $bblocks_lines = array(
 		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)">
 			<!-- wp:button {"gradient":"primary-to-secondary"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button"><?php echo esc_html__( 'Get Directions', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link has-primary-to-secondary-gradient-background has-background wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Get Directions', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

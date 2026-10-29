@@ -25,7 +25,7 @@ $bblocks_strip = array( 'resort-hero', 'resort-cottage', 'resort-pool', 'resort-
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button {"backgroundColor":"accent","textColor":"foreground"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-accent-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'Book Now ↗', 'bblocks' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-accent-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Book Now ↗', 'bblocks' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
@@ -34,7 +34,7 @@ $bblocks_strip = array( 'resort-hero', 'resort-cottage', 'resort-pool', 'resort-
 	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--large)">
 		<?php foreach ( $bblocks_strip as $bblocks_img ) : ?>
 		<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-		<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $bblocks_img . '.svg' ) ); ?>" alt="" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+		<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/' . $bblocks_img . '.jpg' ) ); ?>" alt="" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 		<!-- /wp:image -->
 		<?php endforeach; ?>
 	</div>

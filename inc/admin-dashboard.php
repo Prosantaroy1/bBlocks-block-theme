@@ -59,6 +59,9 @@ function bblocks_admin_assets( $hook_suffix ) {
 				'activating'  => __( 'Activating…', 'bblocks' ),
 				'active'      => __( 'Active', 'bblocks' ),
 				'installFail' => __( 'Could not install. Opening the WordPress installer…', 'bblocks' ),
+				/* translators: %s: style, header or footer design name. */
+				'confirmDesign' => __( 'Apply "%s"? This changes the design of your whole site. You can switch back at any time.', 'bblocks' ),
+				'applying'      => __( 'Applying…', 'bblocks' ),
 			),
 		)
 	);
@@ -126,17 +129,13 @@ function bblocks_admin_card( $icon, $title, $text, $url ) {
  * @return array<string, string[]> Version => list of entries, newest first.
  */
 function bblocks_get_changelog() {
-	global $wp_filesystem;
+	$file = get_template_directory() . '/readme.txt';
 
-	if ( ! function_exists( 'WP_Filesystem' ) ) {
-		require_once ABSPATH . 'wp-admin/includes/file.php';
-	}
-
-	if ( ! WP_Filesystem() || ! $wp_filesystem ) {
+	if ( ! is_readable( $file ) ) {
 		return array();
 	}
 
-	$readme = $wp_filesystem->get_contents( get_template_directory() . '/readme.txt' );
+	$readme = file_get_contents( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- Reading a local theme file.
 
 	if ( ! $readme || ! preg_match( '/^==\s*Changelog\s*==\s*$(.*?)(?=^==[^=]|\z)/ims', $readme, $section ) ) {
 		return array();
@@ -347,8 +346,9 @@ function bblocks_admin_page_render() {
 				<?php
 				$tabs  = array(
 					'welcome'             => __( 'Welcome', 'bblocks' ),
-					'modules'             => __( 'Modules', 'bblocks' ),
 					'starter-sites'       => __( 'Starter Sites', 'bblocks' ),
+					'design'              => __( 'Design', 'bblocks' ),
+					'modules'             => __( 'Modules', 'bblocks' ),
 					'recommended-plugins' => __( 'Recommended Plugins', 'bblocks' ),
 					'features'            => __( 'All Features', 'bblocks' ),
 					'changelog'           => __( 'Changelog', 'bblocks' ),
@@ -395,12 +395,48 @@ function bblocks_admin_page_render() {
 			<div class="bblocks-welcome-layout">
 			<div class="bblocks-welcome-main">
 
+			<?php
+			$steps      = bblocks_onboarding_steps();
+			$steps_done = count( array_filter( wp_list_pluck( $steps, 'done' ) ) );
+			?>
+			<section class="bblocks-checklist" aria-labelledby="bblocks-checklist-title">
+				<div class="bblocks-checklist-head">
+					<h2 id="bblocks-checklist-title"><?php esc_html_e( 'Get your site ready', 'bblocks' ); ?></h2>
+					<span class="bblocks-checklist-count">
+						<?php
+						/* translators: 1: completed steps, 2: total steps. */
+						echo esc_html( sprintf( __( '%1$s of %2$s done', 'bblocks' ), number_format_i18n( $steps_done ), number_format_i18n( count( $steps ) ) ) );
+						?>
+					</span>
+				</div>
+				<progress class="bblocks-checklist-progress" max="<?php echo esc_attr( count( $steps ) ); ?>" value="<?php echo esc_attr( $steps_done ); ?>" aria-labelledby="bblocks-checklist-title"></progress>
+				<ol class="bblocks-checklist-steps">
+					<?php foreach ( $steps as $step ) : ?>
+						<li class="<?php echo $step['done'] ? 'is-done' : ''; ?>">
+							<span class="bblocks-checklist-mark" aria-hidden="true"><span class="dashicons dashicons-<?php echo $step['done'] ? 'yes' : 'marker'; ?>"></span></span>
+							<span class="bblocks-checklist-body">
+								<strong><?php echo esc_html( $step['title'] ); ?></strong>
+								<?php if ( $step['done'] ) : ?>
+									<span class="screen-reader-text"><?php esc_html_e( '(done)', 'bblocks' ); ?></span>
+								<?php endif; ?>
+								<span><?php echo esc_html( $step['text'] ); ?></span>
+							</span>
+							<?php if ( $step['tab'] ) : ?>
+								<button type="button" class="button bblocks-open-tab" data-tab="<?php echo esc_attr( $step['tab'] ); ?>"><?php echo esc_html( $step['label'] ); ?></button>
+							<?php else : ?>
+								<a class="button" href="<?php echo esc_url( $step['url'] ); ?>"><?php echo esc_html( $step['label'] ); ?></a>
+							<?php endif; ?>
+						</li>
+					<?php endforeach; ?>
+				</ol>
+			</section>
+
 			<div class="bblocks-section-header">
 				<h2><?php esc_html_e( 'Quick Actions', 'bblocks' ); ?></h2>
 			</div>
 			<div class="bblocks-grid-3">
 				<?php
-				bblocks_admin_card( 'admin-appearance', __( 'Global styles', 'bblocks' ), __( 'Switch between the Default, Modern and Dark styles or fine-tune colors and fonts.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fstyles' ) );
+				bblocks_admin_card( 'admin-appearance', __( 'Global styles', 'bblocks' ), __( 'Switch styles, color palettes and font pairings, or fine-tune colors and fonts.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fstyles' ) );
 				bblocks_admin_card( 'layout', __( 'Templates', 'bblocks' ), __( 'Browse page, post, archive and landing page templates.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Ftemplate' ) );
 				bblocks_admin_card( 'screenoptions', __( 'Patterns', 'bblocks' ), __( 'Insert hero, features, pricing, team and other sections.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fpattern' ) );
 				bblocks_admin_card( 'heading', __( 'Header', 'bblocks' ), __( 'Swap or edit the site header template part.', 'bblocks' ), admin_url( 'site-editor.php?p=%2Fpattern&categoryId=header' ) );
@@ -496,6 +532,18 @@ function bblocks_admin_page_render() {
 						<label for="bblocks-contact-whatsapp"><?php esc_html_e( 'WhatsApp number with country code, digits only', 'bblocks' ); ?></label>
 						<input type="text" inputmode="numeric" pattern="[0-9]*" id="bblocks-contact-whatsapp" class="regular-text" name="bblocks_modules[contact_whatsapp]" value="<?php echo esc_attr( $modules['contact_whatsapp'] ); ?>" placeholder="15550100199">
 					</p>
+					<p>
+						<label for="bblocks-announcement-text"><?php esc_html_e( 'Announcement text', 'bblocks' ); ?></label>
+						<input type="text" id="bblocks-announcement-text" class="large-text" name="bblocks_modules[announcement_text]" value="<?php echo esc_attr( $modules['announcement_text'] ); ?>" placeholder="<?php esc_attr_e( 'Free shipping on all orders this week!', 'bblocks' ); ?>">
+					</p>
+					<p>
+						<label for="bblocks-announcement-url"><?php esc_html_e( 'Announcement link (optional)', 'bblocks' ); ?></label>
+						<input type="url" id="bblocks-announcement-url" class="regular-text" name="bblocks_modules[announcement_url]" value="<?php echo esc_attr( $modules['announcement_url'] ); ?>" placeholder="https://">
+					</p>
+					<p>
+						<label for="bblocks-announcement-cta"><?php esc_html_e( 'Announcement link text', 'bblocks' ); ?></label>
+						<input type="text" id="bblocks-announcement-cta" class="regular-text" name="bblocks_modules[announcement_cta]" value="<?php echo esc_attr( $modules['announcement_cta'] ); ?>" placeholder="<?php esc_attr_e( 'Learn more', 'bblocks' ); ?>">
+					</p>
 					<p class="description"><?php esc_html_e( 'Tip: while dark mode is on, any Button block can become a light/dark switch — pick the "Dark mode toggle" style in its Styles panel.', 'bblocks' ); ?></p>
 				</div>
 				<?php submit_button( __( 'Save modules', 'bblocks' ) ); ?>
@@ -510,7 +558,7 @@ function bblocks_admin_page_render() {
 			<p class="bblocks-intro"><?php esc_html_e( 'Each starter site stacks the theme\'s own patterns into ready-made pages and sets your homepage. Nothing is downloaded and your posts are never changed. Importing again updates the same pages instead of duplicating them.', 'bblocks' ); ?></p>
 			<label class="bblocks-option">
 				<input type="checkbox" id="bblocks-apply-style" value="1" checked>
-				<?php esc_html_e( 'Also apply the matching style (replaces your current Global Styles colors and fonts)', 'bblocks' ); ?>
+				<?php esc_html_e( 'Also apply the matching style and header (replaces your current Global Styles colors and fonts, and your header design)', 'bblocks' ); ?>
 			</label>
 			<label class="bblocks-option">
 				<input type="checkbox" id="bblocks-with-menu" value="1" checked>
@@ -582,6 +630,74 @@ function bblocks_admin_page_render() {
 			</div>
 		</div>
 
+		<!-- TAB: DESIGN -->
+		<div id="design" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-design" tabindex="0">
+			<div class="bblocks-section-header">
+				<h2><?php esc_html_e( 'Style', 'bblocks' ); ?></h2>
+			</div>
+			<p class="bblocks-intro"><?php esc_html_e( 'Apply a complete style — colors, fonts and buttons — in one click. This replaces the colors and fonts in your Global Styles; separate color palettes and font pairings are also available in the Site Editor under Styles.', 'bblocks' ); ?></p>
+			<div class="bblocks-design-grid">
+				<?php
+				$active_style = bblocks_active_style_title();
+				foreach ( bblocks_full_style_variations() as $variation ) :
+					$is_default = __( 'Default', 'bblocks' ) === $variation['title'];
+					$tokens     = bblocks_starter_site_tokens( $is_default ? '' : $variation['title'] );
+					$is_active  = $active_style === $variation['title'];
+					?>
+					<div class="bblocks-design-card<?php echo $is_active ? ' is-active' : ''; ?>">
+						<span class="bblocks-design-swatch" aria-hidden="true" style="<?php echo esc_attr( sprintf( 'background:%1$s;color:%2$s;border-radius:%3$s', $tokens['background'], $tokens['text'], '0.6rem' ) ); ?>">
+							<b style="<?php echo esc_attr( 'color:' . $tokens['text'] ); ?>">Aa</b>
+							<i style="<?php echo esc_attr( 'background:' . $tokens['primary'] ); ?>"></i><i style="<?php echo esc_attr( 'background:' . $tokens['secondary'] ); ?>"></i><i style="<?php echo esc_attr( 'background:' . $tokens['surface'] ); ?>"></i>
+						</span>
+						<span class="bblocks-design-name"><?php echo esc_html( $variation['title'] ); ?></span>
+						<?php if ( $is_active ) : ?>
+							<span class="bblocks-design-status"><?php esc_html_e( 'Active', 'bblocks' ); ?></span>
+						<?php else : ?>
+							<button type="button" class="button bblocks-apply-design" data-kind="style" data-value="<?php echo esc_attr( $variation['title'] ); ?>" data-title="<?php echo esc_attr( $variation['title'] ); ?>">
+								<?php esc_html_e( 'Apply', 'bblocks' ); ?>
+								<span class="screen-reader-text"><?php echo esc_html( $variation['title'] ); ?></span>
+							</button>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
+
+			<?php
+			$areas = array(
+				'header' => array( __( 'Header', 'bblocks' ), __( 'Choose the header shown on every page. You can still edit it afterwards in the Site Editor; picking the first design restores the theme\'s original header.', 'bblocks' ) ),
+				'footer' => array( __( 'Footer', 'bblocks' ), __( 'Choose the footer shown on every page. Picking the first design restores the theme\'s original footer.', 'bblocks' ) ),
+			);
+			foreach ( $areas as $area => $labels ) :
+				$current = bblocks_current_part_design( $area );
+				?>
+				<div class="bblocks-section-header">
+					<h2><?php echo esc_html( $labels[0] ); ?></h2>
+				</div>
+				<p class="bblocks-intro">
+					<?php echo esc_html( $labels[1] ); ?>
+					<?php if ( '' === $current ) : ?>
+						<strong><?php esc_html_e( 'Your current design has been edited in the Site Editor — applying another one replaces those edits (a revision is kept).', 'bblocks' ); ?></strong>
+					<?php endif; ?>
+				</p>
+				<ul class="bblocks-part-list">
+					<?php foreach ( bblocks_part_designs( $area ) as $slug => $title ) : ?>
+						<li class="<?php echo $current === $slug ? 'is-active' : ''; ?>">
+							<span><?php echo esc_html( $title ); ?></span>
+							<?php if ( $current === $slug ) : ?>
+								<span class="bblocks-design-status"><?php esc_html_e( 'Active', 'bblocks' ); ?></span>
+							<?php else : ?>
+								<button type="button" class="button bblocks-apply-design" data-kind="<?php echo esc_attr( $area ); ?>" data-value="<?php echo esc_attr( $slug ); ?>" data-title="<?php echo esc_attr( $title ); ?>">
+									<?php esc_html_e( 'Use this', 'bblocks' ); ?>
+									<span class="screen-reader-text"><?php echo esc_html( $title ); ?></span>
+								</button>
+							<?php endif; ?>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+				<p><a href="<?php echo esc_url( admin_url( 'site-editor.php?p=%2Fwp_template_part%2Fall' ) ); ?>"><?php esc_html_e( 'Edit it in the Site Editor', 'bblocks' ); ?></a></p>
+			<?php endforeach; ?>
+		</div>
+
 		<!-- TAB 4: RECOMMENDED PLUGINS -->
 		<div id="recommended-plugins" class="bblocks-tab-panel" role="tabpanel" aria-labelledby="bblocks-tab-recommended-plugins" tabindex="0">
 			<?php bblocks_render_recommended_plugins(); ?>
@@ -628,7 +744,7 @@ function bblocks_admin_page_render() {
 						array(
 							__( 'Modules', 'bblocks' ),
 							/* translators: %d: number of modules. */
-							sprintf( __( '%d optional modules: back to top, dark mode, reading progress, smart header, scroll animations, footer reveal and floating contact', 'bblocks' ), $counts['modules'] ),
+							sprintf( __( '%d optional modules: back to top, dark mode, reading progress, smart header, scroll animations, footer reveal, floating contact, announcement bar and table of contents', 'bblocks' ), $counts['modules'] ),
 						),
 						array(
 							__( 'Starter sites', 'bblocks' ),
@@ -637,7 +753,7 @@ function bblocks_admin_page_render() {
 						),
 						array(
 							__( 'Fonts', 'bblocks' ),
-							__( 'Self-hosted Inter variable font — no requests to third-party font services', 'bblocks' ),
+							__( 'Self-hosted Inter, Poppins, Manrope and Playfair Display — no requests to third-party font services', 'bblocks' ),
 						),
 						array(
 							__( 'WooCommerce', 'bblocks' ),

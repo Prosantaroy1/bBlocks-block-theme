@@ -36,7 +36,7 @@ $bblocks_facts = array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A lounge chair beside a window overlooking the forest', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-lounge.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A wood-panelled lounge with tall windows overlooking the lake', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -62,7 +62,7 @@ $bblocks_facts = array(
 			<!-- /wp:group -->
 
 			<!-- wp:image {"aspectRatio":"16/10","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"spacing":{"margin":{"top":"var:preset|spacing|large"}}}} -->
-			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-room.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A bright suite with a large bed', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-room.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A bright bedroom with tall windows and soft linen', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

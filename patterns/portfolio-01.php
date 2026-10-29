@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @package bBlocks
  */
 
-$bblocks_cover = esc_url( get_theme_file_uri( 'assets/images/architecture-2.svg' ) );
+$bblocks_cover = esc_url( get_theme_file_uri( 'assets/images/architecture-2.jpg' ) );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
@@ -37,7 +37,7 @@ $bblocks_cover = esc_url( get_theme_file_uri( 'assets/images/architecture-2.svg'
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-1.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A tapered glass tower against a blue sky', 'bblocks' ); ?>" style="aspect-ratio:3/4;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-1.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'Looking up at a glass tower', 'bblocks' ); ?>" style="aspect-ratio:3/4;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -61,11 +61,11 @@ $bblocks_cover = esc_url( get_theme_file_uri( 'assets/images/architecture-2.svg'
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
 		<div class="wp-block-column">
 			<!-- wp:image {"aspectRatio":"16/10","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-3.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A white office building with long horizontal windows', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-3.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A dark facade with rows of angled windows', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"aspectRatio":"16/10","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-4.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A brick skyscraper seen from below', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/architecture-4.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'Brick and glass skyscrapers in the mist', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

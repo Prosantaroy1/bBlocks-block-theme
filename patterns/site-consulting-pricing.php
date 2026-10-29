@@ -59,7 +59,7 @@ $bblocks_plans = array(
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"textColor":"background","width":100,"className":"is-style-outline"} -->
-					<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link has-background-color has-text-color wp-element-button"><?php echo esc_html__( 'Get Started Today', 'bblocks' ); ?></a></div>
+					<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link has-background-color has-text-color wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Get Started Today', 'bblocks' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
@@ -88,7 +88,7 @@ $bblocks_plans = array(
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"backgroundColor":"background","textColor":"foreground"} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button"><?php echo esc_html__( 'Book a Call', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Book a Call', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

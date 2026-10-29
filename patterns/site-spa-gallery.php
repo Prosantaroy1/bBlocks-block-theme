@@ -15,10 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $bblocks_photos = array(
-	array( 'spa-stones.svg', __( 'Stacked stones, a candle and orange towels', 'bblocks' ) ),
-	array( 'spa-towels.svg', __( 'Soft rolled towels and massage oil', 'bblocks' ) ),
-	array( 'spa-bowl.svg', __( 'A bowl of flowers for a foot soak', 'bblocks' ) ),
-	array( 'spa-oil.svg', __( 'Fresh herbs and essential oils', 'bblocks' ) ),
+	array( 'spa-stones.jpg', __( 'Smooth dark stones for a hot stone massage', 'bblocks' ) ),
+	array( 'spa-towels.jpg', __( 'A red rose on soft white towels', 'bblocks' ) ),
+	array( 'spa-bowl.jpg', __( 'Red rose petals for a flower soak', 'bblocks' ) ),
+	array( 'spa-oil.jpg', __( 'A teapot of dried herbs and flowers', 'bblocks' ) ),
 );
 ?>
 <!-- wp:group {"align":"full","className":"bblocks-has-watermark","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->

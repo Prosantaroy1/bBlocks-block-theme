@@ -65,10 +65,21 @@ summary:focus-visible {
 	outline-offset: 2px;
 }
 
-.wp-block-navigation .wp-block-navigation-item.has-child:focus-within > .wp-block-navigation__submenu-container {
-	opacity: 1;
-	visibility: visible;
-	display: block;
+/*
+ * Submenus are opened with their own toggle button (the arrow next to a
+ * parent item), so the parent link keeps working as a normal link and
+ * Escape closes the submenu. Do not force submenus open on :focus-within,
+ * that would trap keyboard users inside every dropdown.
+ */
+.wp-block-navigation .wp-block-navigation-submenu__toggle {
+	min-width: 24px;
+	min-height: 24px;
+}
+
+.wp-block-navigation__responsive-container-open:focus-visible,
+.wp-block-navigation__responsive-container-close:focus-visible {
+	outline: 2px solid var( --wp--preset--color--primary, #2954e3 );
+	outline-offset: 2px;
 }
 
 /* ---------- Card style (features, services, pricing, team, testimonials) ---------- */

@@ -235,6 +235,43 @@
 		update();
 	}
 
+	/* ---------- Announcement bar ---------- */
+	function initAnnouncement() {
+		var bar = document.querySelector( '.bblocks-announcement' );
+		if ( ! bar ) {
+			return;
+		}
+
+		var key = 'bblocks-announcement-' + bar.getAttribute( 'data-bblocks-announcement' );
+		var close = bar.querySelector( '.bblocks-announcement__close' );
+
+		try {
+			if ( window.localStorage.getItem( key ) ) {
+				bar.hidden = true;
+				return;
+			}
+		} catch ( e ) {}
+
+		if ( ! close ) {
+			return;
+		}
+
+		close.hidden = false;
+		close.addEventListener( 'click', function () {
+			bar.hidden = true;
+			try {
+				window.localStorage.setItem( key, '1' );
+			} catch ( e ) {}
+
+			// Move focus somewhere sensible instead of losing it with the bar.
+			var skip = document.querySelector( '.skip-link' ) || document.body;
+			if ( skip === document.body && ! skip.hasAttribute( 'tabindex' ) ) {
+				skip.setAttribute( 'tabindex', '-1' );
+			}
+			skip.focus();
+		} );
+	}
+
 	function init() {
 		if ( config.backToTop ) {
 			initBackToTop();
@@ -253,6 +290,9 @@
 		}
 		if ( config.footerReveal ) {
 			initFooterReveal();
+		}
+		if ( config.announcement ) {
+			initAnnouncement();
 		}
 	}
 

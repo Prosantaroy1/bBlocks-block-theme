@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Book a Call', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Book a Call', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -61,8 +61,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<!-- /wp:columns -->
 
-	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/consult-wide.svg' ) ); ?>","dimRatio":20,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":440,"align":"wide","style":{"border":{"radius":"1rem"}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-cover alignwide" style="border-radius:1rem;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/consult-wide.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/consult-wide.jpg' ) ); ?>","dimRatio":20,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":440,"align":"wide","style":{"border":{"radius":"1rem"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-cover alignwide" style="border-radius:1rem;min-height:440px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-20 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/consult-wide.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 		<!-- wp:paragraph {"align":"center","className":"bblocks-play"} -->
 		<p class="has-text-align-center bblocks-play">▶</p>
 		<!-- /wp:paragraph -->

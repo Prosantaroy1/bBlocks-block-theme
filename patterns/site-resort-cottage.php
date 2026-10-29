@@ -26,15 +26,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"is-style-outline"} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Discover More ↗', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/stay/' ) ); ?>"><?php echo esc_html__( 'Discover More ↗', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-cottage.svg' ) ); ?>","dimRatio":40,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":520,"contentPosition":"bottom left","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->
-	<div class="wp-block-cover alignwide has-custom-content-position is-position-bottom-left" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);min-height:520px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-40 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-cottage.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-cottage.jpg' ) ); ?>","dimRatio":50,"overlayColor":"foreground","isUserOverlayColor":true,"minHeight":520,"contentPosition":"bottom left","align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}}},"layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->
+	<div class="wp-block-cover alignwide has-custom-content-position is-position-bottom-left" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large);min-height:520px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-cottage.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
 		<!-- wp:heading {"level":3,"textColor":"background","fontSize":"x-large"} -->
 		<h3 class="wp-block-heading has-background-color has-text-color has-x-large-font-size"><?php echo esc_html__( 'Lake Garden Suite', 'bblocks' ); ?></h3>
 		<!-- /wp:heading -->

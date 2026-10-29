@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Browse 15K+ Themes', 'bblocks' ); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/browse-themes/' ) ); ?>"><?php echo esc_html__( 'Browse 15K+ Themes', 'bblocks' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"className":"is-style-outline"} -->
-					<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Add to cart', 'bblocks' ); ?></a></div>
+					<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/browse-themes/' ) ); ?>"><?php echo esc_html__( 'Add to cart', 'bblocks' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

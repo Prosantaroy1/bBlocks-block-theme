@@ -47,6 +47,14 @@ function bblocks_module_definitions() {
 			'label'       => __( 'Floating contact buttons', 'bblocks' ),
 			'description' => __( 'Show call, email and WhatsApp buttons in the bottom corner. Fill in the details below.', 'bblocks' ),
 		),
+		'announcement_bar' => array(
+			'label'       => __( 'Announcement bar', 'bblocks' ),
+			'description' => __( 'Show a slim, dismissible message above the header, with an optional link. Fill in the text below.', 'bblocks' ),
+		),
+		'table_of_contents' => array(
+			'label'       => __( 'Table of contents', 'bblocks' ),
+			'description' => __( 'Add a collapsible list of section links to the top of long posts that have three or more headings.', 'bblocks' ),
+		),
 	);
 }
 
@@ -62,6 +70,9 @@ function bblocks_module_defaults() {
 	$defaults['contact_phone']     = '';
 	$defaults['contact_email']     = '';
 	$defaults['contact_whatsapp']  = '';
+	$defaults['announcement_text'] = '';
+	$defaults['announcement_url']  = '';
+	$defaults['announcement_cta']  = '';
 
 	return $defaults;
 }
@@ -107,6 +118,9 @@ function bblocks_sanitize_modules( $input ) {
 	$clean['contact_phone']     = isset( $input['contact_phone'] ) ? preg_replace( '/[^0-9+\-\s()]/', '', sanitize_text_field( $input['contact_phone'] ) ) : '';
 	$clean['contact_email']     = isset( $input['contact_email'] ) ? sanitize_email( $input['contact_email'] ) : '';
 	$clean['contact_whatsapp']  = isset( $input['contact_whatsapp'] ) ? preg_replace( '/\D/', '', (string) $input['contact_whatsapp'] ) : '';
+	$clean['announcement_text'] = isset( $input['announcement_text'] ) ? sanitize_text_field( $input['announcement_text'] ) : '';
+	$clean['announcement_url']  = isset( $input['announcement_url'] ) ? esc_url_raw( $input['announcement_url'] ) : '';
+	$clean['announcement_cta']  = isset( $input['announcement_cta'] ) ? sanitize_text_field( $input['announcement_cta'] ) : '';
 
 	return $clean;
 }
@@ -350,6 +364,7 @@ function bblocks_module_assets() {
 				'smartHeader'     => ! empty( $modules['smart_header'] ),
 				'animations'      => ! empty( $modules['animations'] ),
 				'footerReveal'    => ! empty( $modules['footer_reveal'] ),
+				'announcement'    => ! empty( $modules['announcement_bar'] ) && '' !== $modules['announcement_text'],
 			)
 		) . ';',
 		'before'
@@ -385,6 +400,128 @@ function bblocks_reading_progress_markup() {
 	echo '<div class="bblocks-reading-progress" aria-hidden="true"><span class="bblocks-reading-progress__bar"></span></div>';
 }
 add_action( 'wp_body_open', 'bblocks_reading_progress_markup' );
+
+/**
+ * Print the announcement bar at the top of the body.
+ *
+ * The dismiss button only appears once the script has loaded; the
+ * dismissal is remembered per visitor until the message text changes.
+ */
+function bblocks_announcement_markup() {
+	$modules = bblocks_get_modules();
+
+	if ( empty( $modules['announcement_bar'] ) || '' === $modules['announcement_text'] ) {
+		return;
+	}
+
+	$link = '';
+	if ( $modules['announcement_url'] ) {
+		$link = sprintf(
+			' <a class="bblocks-announcement__link" href="%1$s">%2$s</a>',
+			esc_url( $modules['announcement_url'] ),
+			esc_html( $modules['announcement_cta'] ? $modules['announcement_cta'] : __( 'Learn more', 'bblocks' ) )
+		);
+	}
+
+	printf(
+		'<div class="bblocks-announcement" role="region" aria-label="%1$s" data-bblocks-announcement="%2$s"><p class="bblocks-announcement__text">%3$s%4$s</p><button type="button" class="bblocks-announcement__close" aria-label="%5$s" hidden><span aria-hidden="true">&times;</span></button></div>',
+		esc_attr__( 'Announcement', 'bblocks' ),
+		esc_attr( md5( $modules['announcement_text'] . $modules['announcement_url'] ) ),
+		esc_html( $modules['announcement_text'] ),
+		$link, // Escaped above.
+		esc_attr__( 'Dismiss announcement', 'bblocks' )
+	);
+}
+add_action( 'wp_body_open', 'bblocks_announcement_markup', 5 );
+
+/**
+ * Add a table of contents to the top of single posts with three or more
+ * h2/h3 headings. Headings without an id get one so the links can target them.
+ *
+ * @param string   $content      Rendered Post Content block.
+ * @param array    $parsed_block Parsed block.
+ * @param WP_Block $block        Block instance.
+ * @return string
+ */
+function bblocks_table_of_contents( $content, $parsed_block, $block ) {
+	if (
+		! bblocks_module_enabled( 'table_of_contents' ) ||
+		! is_singular( 'post' ) ||
+		! isset( $block->context['postId'] ) ||
+		(int) $block->context['postId'] !== get_queried_object_id()
+	) {
+		return $content;
+	}
+
+	$items = array();
+	$used  = array();
+
+	$content = preg_replace_callback(
+		'#<h([23])([^>]*)>(.*?)</h\1>#is',
+		function ( $match ) use ( &$items, &$used ) {
+			$text = trim( wp_strip_all_tags( $match[3] ) );
+
+			if ( '' === $text ) {
+				return $match[0];
+			}
+
+			if ( preg_match( '/\sid=["\']([^"\']+)["\']/i', $match[2], $id_match ) ) {
+				$id    = $id_match[1];
+				$attrs = $match[2];
+			} else {
+				$base = sanitize_title( $text );
+				$base = $base ? $base : 'section';
+				$id   = $base;
+				$i    = 2;
+				while ( isset( $used[ $id ] ) ) {
+					$id = $base . '-' . $i++;
+				}
+				$attrs = ' id="' . esc_attr( $id ) . '"' . $match[2];
+			}
+
+			$used[ $id ] = true;
+			$items[]     = array( (int) $match[1], $id, $text );
+
+			return '<h' . $match[1] . $attrs . '>' . $match[3] . '</h' . $match[1] . '>';
+		},
+		$content
+	);
+
+	if ( count( $items ) < 3 ) {
+		return $content;
+	}
+
+	$list = '';
+	foreach ( $items as $item ) {
+		$list .= sprintf(
+			'<li class="bblocks-toc__item is-level-%1$d"><a href="#%2$s">%3$s</a></li>',
+			$item[0],
+			esc_attr( $item[1] ),
+			esc_html( $item[2] )
+		);
+	}
+
+	$toc = sprintf(
+		'<nav class="bblocks-toc" aria-label="%1$s"><details open><summary>%2$s</summary><ol>%3$s</ol></details></nav>',
+		esc_attr__( 'Table of contents', 'bblocks' ),
+		esc_html__( 'In this article', 'bblocks' ),
+		$list
+	);
+
+	// Place the list inside the Post Content wrapper, before the first block.
+	$placed = preg_replace_callback(
+		'#^\s*<div[^>]*>#',
+		function ( $opening ) use ( $toc ) {
+			return $opening[0] . $toc;
+		},
+		$content,
+		1,
+		$count
+	);
+
+	return $count ? $placed : $toc . $content;
+}
+add_filter( 'render_block_core/post-content', 'bblocks_table_of_contents', 10, 3 );
 
 /**
  * Inline SVG icons used by the floating buttons.

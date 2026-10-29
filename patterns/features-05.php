@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 $bblocks_cards = array(
-	array( 'scene-meeting.svg', __( 'Visual Page Builder', 'bblocks' ), __( 'Build sophisticated layouts and working prototypes with a drag-and-drop editor. Connect sections, set behaviors and preview in real time — all without touching code.', 'bblocks' ), __( 'A team planning a project around a table', 'bblocks' ) ),
-	array( 'scene-cafe.svg', __( 'Component Library', 'bblocks' ), __( 'Start from hundreds of responsive building blocks that adapt to your brand. Every piece is accessible, fully customizable and ready to drop into a page.', 'bblocks' ), __( 'Colleagues collaborating at a counter', 'bblocks' ) ),
-	array( 'scene-shop.svg', __( 'Design Library', 'bblocks' ), __( 'Browse ready-made templates that match any visual identity, from social graphics to full presentation layouts — each one professionally crafted and easy to edit.', 'bblocks' ), __( 'A small business team serving customers', 'bblocks' ) ),
+	array( 'scene-meeting.jpg', __( 'Visual Page Builder', 'bblocks' ), __( 'Build sophisticated layouts and working prototypes with a drag-and-drop editor. Connect sections, set behaviors and preview in real time — all without touching code.', 'bblocks' ), __( 'A bright meeting room with a long table', 'bblocks' ) ),
+	array( 'scene-cafe.jpg', __( 'Component Library', 'bblocks' ), __( 'Start from hundreds of responsive building blocks that adapt to your brand. Every piece is accessible, fully customizable and ready to drop into a page.', 'bblocks' ), __( 'Coffee cups on a long wooden café table', 'bblocks' ) ),
+	array( 'scene-shop.jpg', __( 'Design Library', 'bblocks' ), __( 'Browse ready-made templates that match any visual identity, from social graphics to full presentation layouts — each one professionally crafted and easy to edit.', 'bblocks' ), __( 'Shoes and goods on the shelves of a small shop', 'bblocks' ) ),
 );
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->

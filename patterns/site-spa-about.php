@@ -33,7 +33,7 @@ $bblocks_experts = array(
 			<!-- wp:column {"verticalAlignment":"center"} -->
 			<div class="wp-block-column is-vertically-aligned-center">
 				<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":{"bottomRight":"2rem"}}}} -->
-				<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-oil.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A mortar of fresh herbs beside bottles of essential oil', 'bblocks' ); ?>" style="border-bottom-right-radius:2rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/spa-oil.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A cast-iron teapot filled with dried herbs and flowers', 'bblocks' ); ?>" style="border-bottom-right-radius:2rem;aspect-ratio:4/3;object-fit:cover"/></figure>
 				<!-- /wp:image -->
 			</div>
 			<!-- /wp:column -->
@@ -51,7 +51,7 @@ $bblocks_experts = array(
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"textColor":"accent","className":"is-style-outline"} -->
-					<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-accent-color has-text-color wp-element-button"><?php echo esc_html__( 'Find Out More', 'bblocks' ); ?></a></div>
+					<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-accent-color has-text-color wp-element-button" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php echo esc_html__( 'Find Out More', 'bblocks' ); ?></a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

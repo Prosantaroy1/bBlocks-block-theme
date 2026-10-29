@@ -19,6 +19,16 @@
 			"area": "header"
 		},
 		{
+			"name": "header-topbar",
+			"title": "Header (Top Bar + Navigation + CTA)",
+			"area": "header"
+		},
+		{
+			"name": "header-search",
+			"title": "Header (Logo + Navigation + Search)",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer (Simple)",
 			"area": "footer"
@@ -43,6 +53,14 @@
 			]
 		},
 		{
+			"name": "page-blank",
+			"title": "Blank Canvas (No Header or Footer)",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
 			"name": "page-no-title",
 			"title": "Page No Title",
 			"postTypes": [
@@ -61,6 +79,20 @@
 			"title": "Page with Wide Image",
 			"postTypes": [
 				"page"
+			]
+		},
+		{
+			"name": "single-with-sidebar",
+			"title": "Post with Sidebar",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "single-cover",
+			"title": "Post with Cover Image",
+			"postTypes": [
+				"post"
 			]
 		}
 	],

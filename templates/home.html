@@ -6,13 +6,7 @@
 	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide"
 		style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--medium)">
-		<!-- wp:heading {"level":1,"fontSize":"xx-large"} -->
-		<h1 class="wp-block-heading has-xx-large-font-size">Latest Articles</h1>
-		<!-- /wp:heading -->
-
-		<!-- wp:paragraph {"textColor":"muted-text"} -->
-		<p class="has-muted-text-color has-text-color">News, updates and ideas from our team.</p>
-		<!-- /wp:paragraph -->
+		<!-- wp:pattern {"slug":"bblocks/template-blog-heading"} /-->
 	</div>
 	<!-- /wp:group -->
 
@@ -41,9 +35,7 @@
 			<!-- /wp:post-template -->
 
 			<!-- wp:query-no-results -->
-			<!-- wp:paragraph -->
-			<p>No posts have been published yet. Check back soon.</p>
-			<!-- /wp:paragraph -->
+				<!-- wp:pattern {"slug":"bblocks/template-no-results"} /-->
 			<!-- /wp:query-no-results -->
 
 			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->

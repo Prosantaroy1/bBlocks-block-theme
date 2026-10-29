@@ -22,11 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- wp:column {"width":"38%","style":{"spacing":{"blockGap":"var:preset|spacing|large"}}} -->
 		<div class="wp-block-column" style="flex-basis:38%">
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-food.svg' ) ); ?>" alt="<?php echo esc_attr__( 'Grilled salmon with fresh greens', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-food.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A plated dish of roasted vegetables and herbs', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-pool.svg' ) ); ?>" alt="<?php echo esc_attr__( 'Poolside dining under the palms', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-pool.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'Wicker chairs and tables beside the pool', 'bblocks' ); ?>" style="aspect-ratio:4/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -44,13 +44,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"><?php echo esc_html__( 'Explore All ↗', 'bblocks' ); ?></a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/dining-activities/' ) ); ?>"><?php echo esc_html__( 'Explore All ↗', 'bblocks' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
 
 			<!-- wp:image {"aspectRatio":"16/10","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"spacing":{"margin":{"top":"var:preset|spacing|large"}}}} -->
-			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-food.svg' ) ); ?>" alt="<?php echo esc_attr__( 'A plated dish served on the terrace', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
+			<figure class="wp-block-image size-full" style="margin-top:var(--wp--preset--spacing--large)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/resort-dish.jpg' ) ); ?>" alt="<?php echo esc_attr__( 'A colorful breakfast plate with eggs, greens and fresh vegetables', 'bblocks' ); ?>" style="aspect-ratio:16/10;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
