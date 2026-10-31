@@ -1,0 +1,197 @@
+/*
+ * bBlocks — WooCommerce
+ *
+ * Loaded only while WooCommerce is active. Shop blocks pick up the theme's
+ * color, spacing and button tokens, so every style variation also restyles
+ * the shop, cart and checkout.
+ */
+
+/* ---------- Product cards ---------- */
+.wc-block-product-template .wc-block-product,
+.wp-block-woocommerce-product-template .wc-block-product {
+	display: flex;
+	flex-direction: column;
+}
+
+.wc-block-components-product-image img,
+.wp-block-woocommerce-product-image img {
+	border-radius: 0.75rem;
+	background: var( --wp--preset--color--surface, #f5f6f8 );
+	transition: transform 0.3s ease;
+}
+
+.wc-block-components-product-image,
+.wp-block-woocommerce-product-image {
+	overflow: hidden;
+	border-radius: 0.75rem;
+}
+
+.wc-block-product:hover .wc-block-components-product-image img {
+	transform: scale( 1.03 );
+}
+
+.wc-block-product .wp-block-post-title a {
+	color: var( --wp--preset--color--foreground, #14171a );
+	text-decoration: none;
+}
+
+.wc-block-product .wp-block-post-title a:hover,
+.wc-block-product .wp-block-post-title a:focus-visible {
+	color: var( --wp--preset--color--primary, #2954e3 );
+}
+
+/* Keep "Add to cart" at the bottom of each card, aligned with the title, so rows line up. */
+.wc-block-product .wp-block-woocommerce-product-button {
+	margin-top: auto;
+	text-align: start;
+	justify-content: flex-start;
+}
+
+/* ---------- Prices, sale badge, rating ---------- */
+.wc-block-components-product-price,
+.wp-block-woocommerce-product-price {
+	color: var( --wp--preset--color--foreground, #14171a );
+	font-weight: 600;
+}
+
+.wc-block-components-product-price del {
+	color: var( --wp--preset--color--muted-text, #666e75 );
+	font-weight: 400;
+}
+
+.wc-block-components-product-price ins {
+	text-decoration: none;
+	color: var( --wp--preset--color--primary, #2954e3 );
+}
+
+.wc-block-components-product-sale-badge {
+	background: var( --wp--preset--color--accent, #f59e0b ) !important;
+	color: var( --wp--preset--color--foreground, #14171a ) !important;
+	border: 0 !important;
+	border-radius: 999px !important;
+	padding: 0.25em 0.75em !important;
+	font-size: var( --wp--preset--font-size--small, 0.875rem ) !important;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.woocommerce span.onsale {
+	min-width: 0;
+	min-height: 0;
+	padding: 0.25em 0.75em;
+	line-height: 1.5;
+	border-radius: 999px;
+	background: var( --wp--preset--color--accent, #f59e0b );
+	color: var( --wp--preset--color--foreground, #14171a );
+	font-size: var( --wp--preset--font-size--small, 0.875rem );
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.wc-block-components-product-rating__stars span::before,
+.wc-block-components-product-rating .star-rating span::before {
+	color: var( --wp--preset--color--accent, #f59e0b );
+}
+
+/* ---------- Buttons ---------- */
+.wc-block-components-button:not( .is-link ),
+.wp-block-woocommerce-product-button .wp-block-button__link,
+.single_add_to_cart_button {
+	border-radius: var( --wp--custom--button-radius, 0.5rem );
+}
+
+.wc-block-components-button:not( .is-link ):focus-visible,
+.single_add_to_cart_button:focus-visible {
+	outline: 2px solid var( --wp--preset--color--primary, #2954e3 );
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+/* ---------- Forms (quantity, sorting, cart & checkout fields) ---------- */
+.woocommerce .quantity .qty,
+.wc-block-catalog-sorting select,
+.woocommerce-ordering select,
+.wc-block-components-text-input input,
+.wc-block-components-select select,
+.wc-block-components-textarea {
+	border: 1px solid var( --wp--preset--color--border-color, #e3e6ea ) !important;
+	border-radius: 0.5rem !important;
+	background-color: var( --wp--preset--color--background, #fff ) !important;
+	color: var( --wp--preset--color--foreground, #14171a ) !important;
+}
+
+.woocommerce .quantity .qty:focus,
+.wc-block-catalog-sorting select:focus,
+.wc-block-components-text-input input:focus,
+.wc-block-components-select select:focus {
+	outline: 2px solid var( --wp--preset--color--primary, #2954e3 );
+	outline-offset: 1px;
+}
+
+.wc-block-components-text-input label,
+.wc-block-components-select label {
+	color: var( --wp--preset--color--muted-text, #666e75 ) !important;
+}
+
+/* ---------- Single product ---------- */
+.wp-block-woocommerce-product-image-gallery img,
+.woocommerce-product-gallery img {
+	border-radius: 0.75rem;
+}
+
+.wp-block-woocommerce-product-details .woocommerce-Tabs-panel > h2 {
+	font-size: var( --wp--preset--font-size--large, 1.5rem );
+	margin-top: 0;
+}
+
+.wp-block-woocommerce-product-details .wc-tabs li a {
+	color: var( --wp--preset--color--muted-text, #666e75 );
+}
+
+.wp-block-woocommerce-product-details .wc-tabs li.active a {
+	color: var( --wp--preset--color--foreground, #14171a );
+}
+
+.wp-block-woocommerce-product-details .wc-tabs li.active {
+	border-bottom-color: var( --wp--preset--color--primary, #2954e3 ) !important;
+}
+
+/* ---------- Cart, checkout and mini cart ---------- */
+.wc-block-cart .wc-block-components-sidebar,
+.wc-block-checkout .wc-block-components-sidebar {
+	background: var( --wp--preset--color--surface, #f5f6f8 );
+	border-radius: 0.85rem;
+	padding: var( --wp--preset--spacing--medium, 1.5rem );
+}
+
+.wc-block-components-totals-wrapper,
+.wc-block-cart-items,
+.wc-block-cart-items td,
+.wc-block-cart-items th {
+	border-color: var( --wp--preset--color--border-color, #e3e6ea ) !important;
+}
+
+.wc-block-mini-cart__badge {
+	background: var( --wp--preset--color--primary, #2954e3 );
+	color: var( --wp--preset--color--background, #fff );
+}
+
+/* ---------- Notices ---------- */
+.wc-block-components-notice-banner {
+	border-radius: 0.6rem;
+}
+
+/* ---------- Small screens ---------- */
+@media ( max-width: 600px ) {
+	.bblocks-product-grid .wc-block-product-template {
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) ) !important;
+		gap: 1rem;
+	}
+
+	.wc-block-product .wp-block-woocommerce-product-button .wp-block-button__link {
+		width: 100%;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+}

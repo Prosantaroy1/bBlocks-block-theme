@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-29T10:49:11+00:00\n"
+"POT-Creation-Date: 2026-10-31T11:29:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bblocks\n"
@@ -18,14 +18,14 @@ msgstr ""
 #: style.css
 #: inc/admin-dashboard.php:20
 #: inc/admin-dashboard.php:21
-#: inc/admin-dashboard.php:338
-#: inc/admin-dashboard.php:343
+#: inc/admin-dashboard.php:408
+#: inc/admin-dashboard.php:413
 msgid "bBlocks"
 msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "bBlocks is a multipurpose block theme made for the Site Editor and full site editing with WordPress core blocks. Its clean design system and flexible styles suit almost any website: business and corporate, agency, SaaS, restaurant and cafe, medical clinic, law firm, online course, gym and fitness, real estate, online store, magazine, photography, architecture, spa, hotel and resort, consulting, portfolio or blog. Eighteen one-click starter sites and more than 150 ready-made patterns cover every page, from hero, services, menu, pricing and team sections to testimonials, FAQ, portfolio and contact. Seventeen style variations, six color palettes, five font pairings, eight header and footer designs and self-hosted fonts make it easy to match your brand, while optional modules add dark mode, a smart sticky header, an announcement bar, a table of contents, scroll animations and floating contact buttons. bBlocks needs no page builder, works with WooCommerce, supports RTL languages and is fully translation-ready."
+msgid "bBlocks is a fast, lightweight block theme for building any website with the WordPress Site Editor — no page builder needed. Import one of 23 one-click starter sites for a business, agency, restaurant, clinic, school, real estate agency, blog or WooCommerce store, then make it yours with 150+ patterns, 22 style variations and ready-made headers and footers. Built entirely with core blocks, bBlocks is accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce."
 msgstr ""
 
 #. Author of the theme
@@ -283,24 +283,51 @@ msgstr ""
 
 #: functions.php:209
 msgctxt "Block pattern category"
-msgid "bBlocks Site — Magazine"
+msgid "bBlocks Site — Rental Homes"
 msgstr ""
 
 #: functions.php:210
+msgid "Sections from the Harbor Lane rental homes starter site."
+msgstr ""
+
+#: functions.php:213
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Commercial Real Estate"
+msgstr ""
+
+#: functions.php:214
+msgid "Sections from the Summit Ridge commercial real estate starter site."
+msgstr ""
+
+#: functions.php:217
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Cash Home Buyer"
+msgstr ""
+
+#: functions.php:218
+msgid "Sections from the QuickKey cash home buyer starter site."
+msgstr ""
+
+#: functions.php:221
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Magazine"
+msgstr ""
+
+#: functions.php:222
 msgid "Sections from the Daily Ink magazine starter site."
 msgstr ""
 
-#: functions.php:231
+#: functions.php:243
 msgctxt "Block style"
 msgid "Card"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:251
 msgctxt "Block style"
 msgid "Pill"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:259
 msgctxt "Block style"
 msgid "FAQ"
 msgstr ""
@@ -340,8 +367,8 @@ msgid "Activating…"
 msgstr ""
 
 #: inc/admin-dashboard.php:60
-#: inc/admin-dashboard.php:654
-#: inc/admin-dashboard.php:687
+#: inc/admin-dashboard.php:802
+#: inc/admin-dashboard.php:835
 #: inc/recommended-plugins.php:258
 msgid "Active"
 msgstr ""
@@ -360,483 +387,594 @@ msgstr ""
 msgid "Applying…"
 msgstr ""
 
-#: inc/admin-dashboard.php:176
+#. translators: 1: first item shown, 2: last item shown, 3: total number of starter sites.
+#: inc/admin-dashboard.php:66
+#, php-format
+msgid "Showing %1$s–%2$s of %3$s"
+msgstr ""
+
+#: inc/admin-dashboard.php:67
+msgid "Previous page"
+msgstr ""
+
+#: inc/admin-dashboard.php:68
+msgid "Next page"
+msgstr ""
+
+#. translators: %s: page number.
+#: inc/admin-dashboard.php:70
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/admin-dashboard.php:182
 msgid "(opens in a new tab)"
 msgstr ""
 
-#: inc/admin-dashboard.php:219
+#: inc/admin-dashboard.php:225
 msgid "We build brands people remember"
 msgstr ""
 
-#: inc/admin-dashboard.php:231
+#: inc/admin-dashboard.php:237
 msgid "Ship faster with less busywork"
 msgstr ""
 
-#: inc/admin-dashboard.php:246
+#: inc/admin-dashboard.php:252
 msgid "Architecture Solution"
 msgstr ""
 
-#: inc/admin-dashboard.php:256
+#: inc/admin-dashboard.php:262
 msgid "Enhance Website Aesthetics"
 msgstr ""
 
-#: inc/admin-dashboard.php:266
+#: inc/admin-dashboard.php:272
 #: patterns/site-resort-cta.php:46
 #: patterns/site-resort-hero.php:21
 msgid "Naturexplo"
 msgstr ""
 
-#: inc/admin-dashboard.php:268
+#: inc/admin-dashboard.php:274
 #: inc/starter-sites.php:98
 #: patterns/site-resort-about.php:31
 msgid "About Us"
 msgstr ""
 
-#: inc/admin-dashboard.php:276
+#: inc/admin-dashboard.php:282
 msgid "Gain The Peace"
 msgstr ""
 
-#: inc/admin-dashboard.php:285
+#: inc/admin-dashboard.php:291
 #: patterns/site-consulting-hero.php:25
 msgid "With Strategic Direction"
 msgstr ""
 
-#: inc/admin-dashboard.php:294
+#: inc/admin-dashboard.php:300
 msgid "Hi, I design and build"
 msgstr ""
 
-#: inc/admin-dashboard.php:294
+#: inc/admin-dashboard.php:300
 msgid "websites."
 msgstr ""
 
-#: inc/admin-dashboard.php:310
+#: inc/admin-dashboard.php:316
 msgid "Grow your business with confidence"
 msgstr ""
 
-#: inc/admin-dashboard.php:318
+#: inc/admin-dashboard.php:324
 #: patterns/cta-01.php:23
 msgid "Ready to get started?"
 msgstr ""
 
+#: inc/admin-dashboard.php:338
+#: inc/starter-sites.php:30
+#: patterns/site-consulting-marquee.php:17
+#: patterns/site-education-courses.php:22
+msgid "Business"
+msgstr ""
+
+#: inc/admin-dashboard.php:339
+msgid "Agency & Portfolio"
+msgstr ""
+
+#: inc/admin-dashboard.php:340
+msgid "eCommerce"
+msgstr ""
+
+#: inc/admin-dashboard.php:341
+msgid "Food & Hospitality"
+msgstr ""
+
+#: inc/admin-dashboard.php:342
+msgid "Health & Fitness"
+msgstr ""
+
+#: inc/admin-dashboard.php:343
+msgid "Education"
+msgstr ""
+
+#: inc/admin-dashboard.php:344
+msgid "Real Estate & Architecture"
+msgstr ""
+
 #: inc/admin-dashboard.php:345
+msgid "Professional Services"
+msgstr ""
+
+#: inc/admin-dashboard.php:346
+msgid "Blog & Magazine"
+msgstr ""
+
+#: inc/admin-dashboard.php:347
+msgid "Dark Designs"
+msgstr ""
+
+#: inc/admin-dashboard.php:415
 msgid "Theme dashboard sections"
 msgstr ""
 
-#: inc/admin-dashboard.php:348
+#: inc/admin-dashboard.php:418
 msgid "Welcome"
 msgstr ""
 
-#: inc/admin-dashboard.php:349
-#: inc/admin-dashboard.php:556
+#: inc/admin-dashboard.php:419
+#: inc/admin-dashboard.php:626
 msgid "Starter Sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:350
+#: inc/admin-dashboard.php:420
 #: patterns/services-02.php:38
 #: patterns/services-03.php:46
 #: patterns/site-education-courses.php:18
 msgid "Design"
 msgstr ""
 
-#: inc/admin-dashboard.php:351
-#: inc/admin-dashboard.php:458
-#: inc/admin-dashboard.php:491
-#: inc/admin-dashboard.php:745
+#: inc/admin-dashboard.php:421
+#: inc/admin-dashboard.php:528
+#: inc/admin-dashboard.php:561
+#: inc/admin-dashboard.php:893
 msgid "Modules"
 msgstr ""
 
-#: inc/admin-dashboard.php:352
+#: inc/admin-dashboard.php:422
 #: inc/recommended-plugins.php:224
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/admin-dashboard.php:353
+#: inc/admin-dashboard.php:423
 msgid "All Features"
 msgstr ""
 
-#: inc/admin-dashboard.php:354
-#: inc/admin-dashboard.php:783
+#: inc/admin-dashboard.php:424
+#: inc/admin-dashboard.php:931
 msgid "Changelog"
 msgstr ""
 
-#: inc/admin-dashboard.php:380
+#: inc/admin-dashboard.php:450
 msgid "Welcome to bBlocks"
 msgstr ""
 
 #. translators: %s: Theme version number.
-#: inc/admin-dashboard.php:384
+#: inc/admin-dashboard.php:454
 #, php-format
 msgid "v%s"
 msgstr ""
 
-#: inc/admin-dashboard.php:388
+#: inc/admin-dashboard.php:458
 msgid "Build a business, agency or SaaS site from core blocks — start from a starter site or mix the patterns yourself."
 msgstr ""
 
-#: inc/admin-dashboard.php:391
+#: inc/admin-dashboard.php:461
 msgid "Browse Starter Sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:404
+#: inc/admin-dashboard.php:474
 msgid "Get your site ready"
 msgstr ""
 
 #. translators: 1: completed steps, 2: total steps.
-#: inc/admin-dashboard.php:408
+#: inc/admin-dashboard.php:478
 #, php-format
 msgid "%1$s of %2$s done"
 msgstr ""
 
-#: inc/admin-dashboard.php:420
+#: inc/admin-dashboard.php:490
 msgid "(done)"
 msgstr ""
 
-#: inc/admin-dashboard.php:435
+#: inc/admin-dashboard.php:505
 msgid "Quick Actions"
 msgstr ""
 
-#: inc/admin-dashboard.php:439
+#: inc/admin-dashboard.php:509
 msgid "Global styles"
 msgstr ""
 
-#: inc/admin-dashboard.php:439
+#: inc/admin-dashboard.php:509
 msgid "Switch styles, color palettes and font pairings, or fine-tune colors and fonts."
 msgstr ""
 
-#: inc/admin-dashboard.php:440
-#: inc/admin-dashboard.php:455
-#: inc/admin-dashboard.php:730
+#: inc/admin-dashboard.php:510
+#: inc/admin-dashboard.php:525
+#: inc/admin-dashboard.php:878
 #: patterns/site-marketplace-stats.php:18
 msgid "Templates"
 msgstr ""
 
-#: inc/admin-dashboard.php:440
+#: inc/admin-dashboard.php:510
 msgid "Browse page, post, archive and landing page templates."
 msgstr ""
 
-#: inc/admin-dashboard.php:441
+#: inc/admin-dashboard.php:511
 msgid "Patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:441
+#: inc/admin-dashboard.php:511
 msgid "Insert hero, features, pricing, team and other sections."
 msgstr ""
 
-#: inc/admin-dashboard.php:442
-#: inc/admin-dashboard.php:667
+#: inc/admin-dashboard.php:512
+#: inc/admin-dashboard.php:815
 msgid "Header"
 msgstr ""
 
-#: inc/admin-dashboard.php:442
+#: inc/admin-dashboard.php:512
 msgid "Swap or edit the site header template part."
 msgstr ""
 
-#: inc/admin-dashboard.php:443
-#: inc/admin-dashboard.php:668
+#: inc/admin-dashboard.php:513
+#: inc/admin-dashboard.php:816
 msgid "Footer"
 msgstr ""
 
-#: inc/admin-dashboard.php:443
+#: inc/admin-dashboard.php:513
 msgid "Swap or edit the site footer template part."
 msgstr ""
 
-#: inc/admin-dashboard.php:444
+#: inc/admin-dashboard.php:514
 msgid "Navigation"
 msgstr ""
 
-#: inc/admin-dashboard.php:444
+#: inc/admin-dashboard.php:514
 msgid "Manage the menus used in headers and footers."
 msgstr ""
 
-#: inc/admin-dashboard.php:449
+#: inc/admin-dashboard.php:519
 msgid "What is included"
 msgstr ""
 
-#: inc/admin-dashboard.php:454
-#: inc/admin-dashboard.php:725
+#: inc/admin-dashboard.php:524
+#: inc/admin-dashboard.php:873
 msgid "Block patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:456
-#: inc/admin-dashboard.php:735
+#: inc/admin-dashboard.php:526
+#: inc/admin-dashboard.php:883
 msgid "Headers & footers"
 msgstr ""
 
-#: inc/admin-dashboard.php:457
+#: inc/admin-dashboard.php:527
 msgid "Style variations"
 msgstr ""
 
-#: inc/admin-dashboard.php:459
-#: inc/admin-dashboard.php:750
+#: inc/admin-dashboard.php:529
+#: inc/admin-dashboard.php:898
 msgid "Starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:469
+#: inc/admin-dashboard.php:539
 msgid "Community and support"
 msgstr ""
 
-#: inc/admin-dashboard.php:472
+#: inc/admin-dashboard.php:542
 msgid "Web Creators Community"
 msgstr ""
 
-#: inc/admin-dashboard.php:473
+#: inc/admin-dashboard.php:543
 msgid "Join our community of fellow bBlocks users creating effective websites! Share your site, ask a question and help others."
 msgstr ""
 
-#: inc/admin-dashboard.php:474
+#: inc/admin-dashboard.php:544
 msgid "Join our Facebook Group"
 msgstr ""
 
-#: inc/admin-dashboard.php:478
-#: inc/admin-dashboard.php:763
+#: inc/admin-dashboard.php:548
+#: inc/admin-dashboard.php:911
+#: inc/woocommerce.php:138
 #: patterns/services-02.php:54
 msgid "Support"
 msgstr ""
 
-#: inc/admin-dashboard.php:479
+#: inc/admin-dashboard.php:549
 msgid "Have a question? We are happy to help! Get in touch with our support team on the WordPress.org forum."
 msgstr ""
 
-#: inc/admin-dashboard.php:480
+#: inc/admin-dashboard.php:550
 msgid "Submit a Ticket"
 msgstr ""
 
-#: inc/admin-dashboard.php:493
+#: inc/admin-dashboard.php:563
 msgid "Optional front-end extras. Every module is off by default and its files load only when at least one module is on."
 msgstr ""
 
-#: inc/admin-dashboard.php:512
+#: inc/admin-dashboard.php:582
 msgid "Module settings"
 msgstr ""
 
-#: inc/admin-dashboard.php:516
+#: inc/admin-dashboard.php:586
 msgid "Default color scheme for new visitors"
 msgstr ""
 
-#: inc/admin-dashboard.php:518
+#: inc/admin-dashboard.php:588
 msgid "Light"
 msgstr ""
 
-#: inc/admin-dashboard.php:519
+#: inc/admin-dashboard.php:589
 msgid "Dark"
 msgstr ""
 
-#: inc/admin-dashboard.php:520
+#: inc/admin-dashboard.php:590
 msgid "Follow the visitor's device"
 msgstr ""
 
-#: inc/admin-dashboard.php:524
+#: inc/admin-dashboard.php:594
 msgid "Phone number (floating contact)"
 msgstr ""
 
-#: inc/admin-dashboard.php:528
+#: inc/admin-dashboard.php:598
 msgid "Email address (floating contact)"
 msgstr ""
 
-#: inc/admin-dashboard.php:532
+#: inc/admin-dashboard.php:602
 msgid "WhatsApp number with country code, digits only"
 msgstr ""
 
-#: inc/admin-dashboard.php:536
+#: inc/admin-dashboard.php:606
 msgid "Announcement text"
 msgstr ""
 
-#: inc/admin-dashboard.php:537
+#: inc/admin-dashboard.php:607
 msgid "Free shipping on all orders this week!"
 msgstr ""
 
-#: inc/admin-dashboard.php:540
+#: inc/admin-dashboard.php:610
 msgid "Announcement link (optional)"
 msgstr ""
 
-#: inc/admin-dashboard.php:544
+#: inc/admin-dashboard.php:614
 msgid "Announcement link text"
 msgstr ""
 
-#: inc/admin-dashboard.php:545
+#: inc/admin-dashboard.php:615
 #: inc/modules.php:422
 msgid "Learn more"
 msgstr ""
 
-#: inc/admin-dashboard.php:547
+#: inc/admin-dashboard.php:617
 msgid "Tip: while dark mode is on, any Button block can become a light/dark switch — pick the \"Dark mode toggle\" style in its Styles panel."
 msgstr ""
 
-#: inc/admin-dashboard.php:549
+#: inc/admin-dashboard.php:619
 msgid "Save modules"
 msgstr ""
 
-#: inc/admin-dashboard.php:558
+#: inc/admin-dashboard.php:628
 msgid "Each starter site stacks the theme's own patterns into ready-made pages and sets your homepage. Nothing is downloaded and your posts are never changed. Importing again updates the same pages instead of duplicating them."
 msgstr ""
 
-#: inc/admin-dashboard.php:561
+#: inc/admin-dashboard.php:631
 msgid "Also apply the matching style and header (replaces your current Global Styles colors and fonts, and your header design)"
 msgstr ""
 
-#: inc/admin-dashboard.php:565
+#: inc/admin-dashboard.php:635
 msgid "Create a navigation menu with the new pages"
 msgstr ""
 
-#: inc/admin-dashboard.php:596
+#: inc/admin-dashboard.php:655
+msgid "Filter starter sites"
+msgstr ""
+
+#: inc/admin-dashboard.php:656
+#: inc/admin-dashboard.php:659
+msgid "Search starter sites"
+msgstr ""
+
+#: inc/admin-dashboard.php:662
+#: patterns/template-sidebar.php:54
+msgid "Categories"
+msgstr ""
+
+#: inc/admin-dashboard.php:666
+msgid "All sites"
+msgstr ""
+
+#: inc/admin-dashboard.php:685
+msgid "Status"
+msgstr ""
+
+#: inc/admin-dashboard.php:687
+msgid "All starter sites"
+msgstr ""
+
+#: inc/admin-dashboard.php:688
+#: inc/admin-dashboard.php:726
 msgid "Imported"
 msgstr ""
 
-#: inc/admin-dashboard.php:603
-#: inc/admin-dashboard.php:636
+#: inc/admin-dashboard.php:689
+msgid "Not imported yet"
+msgstr ""
+
+#: inc/admin-dashboard.php:733
+#: inc/admin-dashboard.php:784
 msgid "Style"
 msgstr ""
 
-#: inc/admin-dashboard.php:606
-#: inc/admin-dashboard.php:643
+#: inc/admin-dashboard.php:736
+#: inc/admin-dashboard.php:791
 #: inc/design.php:138
 #: inc/design.php:168
 #: inc/design.php:177
 #: inc/design.php:194
-#: inc/starter-sites.php:401
+#: inc/starter-sites.php:462
 msgid "Default"
 msgstr ""
 
-#: inc/admin-dashboard.php:610
+#: inc/admin-dashboard.php:740
 msgid "Pages"
 msgstr ""
 
-#: inc/admin-dashboard.php:624
+#: inc/admin-dashboard.php:754
 msgid "Re-import"
 msgstr ""
 
-#: inc/admin-dashboard.php:624
+#: inc/admin-dashboard.php:754
 msgid "Import"
 msgstr ""
 
-#: inc/admin-dashboard.php:638
+#: inc/admin-dashboard.php:762
+msgid "No starter sites match your search. Try another word or category."
+msgstr ""
+
+#: inc/admin-dashboard.php:766
+msgid "Starter sites pages"
+msgstr ""
+
+#: inc/admin-dashboard.php:768
+msgid "Per page:"
+msgstr ""
+
+#: inc/admin-dashboard.php:773
+msgid "All"
+msgstr ""
+
+#: inc/admin-dashboard.php:786
 msgid "Apply a complete style — colors, fonts and buttons — in one click. This replaces the colors and fonts in your Global Styles; separate color palettes and font pairings are also available in the Site Editor under Styles."
 msgstr ""
 
-#: inc/admin-dashboard.php:657
+#: inc/admin-dashboard.php:805
 msgid "Apply"
 msgstr ""
 
-#: inc/admin-dashboard.php:667
+#: inc/admin-dashboard.php:815
 msgid "Choose the header shown on every page. You can still edit it afterwards in the Site Editor; picking the first design restores the theme's original header."
 msgstr ""
 
-#: inc/admin-dashboard.php:668
+#: inc/admin-dashboard.php:816
 msgid "Choose the footer shown on every page. Picking the first design restores the theme's original footer."
 msgstr ""
 
-#: inc/admin-dashboard.php:679
+#: inc/admin-dashboard.php:827
 msgid "Your current design has been edited in the Site Editor — applying another one replaces those edits (a revision is kept)."
 msgstr ""
 
-#: inc/admin-dashboard.php:690
+#: inc/admin-dashboard.php:838
 msgid "Use this"
 msgstr ""
 
-#: inc/admin-dashboard.php:697
+#: inc/admin-dashboard.php:845
 msgid "Edit it in the Site Editor"
 msgstr ""
 
-#: inc/admin-dashboard.php:709
+#: inc/admin-dashboard.php:857
 msgid "All Features — Included Free"
 msgstr ""
 
-#: inc/admin-dashboard.php:711
+#: inc/admin-dashboard.php:859
 msgid "Everything below is part of the free theme. There is nothing to unlock."
 msgstr ""
 
-#: inc/admin-dashboard.php:716
+#: inc/admin-dashboard.php:864
 msgid "Feature"
 msgstr ""
 
-#: inc/admin-dashboard.php:717
+#: inc/admin-dashboard.php:865
 msgid "What you get"
 msgstr ""
 
-#: inc/admin-dashboard.php:718
+#: inc/admin-dashboard.php:866
 msgid "Availability"
 msgstr ""
 
 #. translators: %d: number of patterns.
-#: inc/admin-dashboard.php:727
+#: inc/admin-dashboard.php:875
 #, php-format
 msgid "%d sections: hero, about, features, services, team, testimonials, pricing, call to action, contact and blog"
 msgstr ""
 
 #. translators: %d: number of templates.
-#: inc/admin-dashboard.php:732
+#: inc/admin-dashboard.php:880
 #, php-format
 msgid "%d templates, including a full-width landing page, page with sidebar and page without title"
 msgstr ""
 
 #. translators: 1: number of headers, 2: number of footers.
-#: inc/admin-dashboard.php:737
+#: inc/admin-dashboard.php:885
 #, php-format
 msgid "%1$d headers and %2$d footers, all swappable template parts"
 msgstr ""
 
-#: inc/admin-dashboard.php:740
+#: inc/admin-dashboard.php:888
 msgid "Styles"
 msgstr ""
 
 #. translators: %d: number of style variations.
-#: inc/admin-dashboard.php:742
+#: inc/admin-dashboard.php:890
 #, php-format
 msgid "%d one-click style variations and a named design system in Global Styles"
 msgstr ""
 
 #. translators: %d: number of modules.
-#: inc/admin-dashboard.php:747
+#: inc/admin-dashboard.php:895
 #, php-format
 msgid "%d optional modules: back to top, dark mode, reading progress, smart header, scroll animations, footer reveal, floating contact, announcement bar and table of contents"
 msgstr ""
 
 #. translators: %d: number of starter sites.
-#: inc/admin-dashboard.php:752
+#: inc/admin-dashboard.php:900
 #, php-format
 msgid "%d one-click starter sites built from the bundled patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:755
+#: inc/admin-dashboard.php:903
 msgid "Fonts"
 msgstr ""
 
-#: inc/admin-dashboard.php:756
+#: inc/admin-dashboard.php:904
 msgid "Self-hosted Inter, Poppins, Manrope and Playfair Display — no requests to third-party font services"
 msgstr ""
 
-#: inc/admin-dashboard.php:759
+#: inc/admin-dashboard.php:907
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/admin-dashboard.php:760
-msgid "Basic compatibility with WooCommerce's block templates and product gallery"
+#: inc/admin-dashboard.php:908
+msgid "Shop, product, cart, checkout and order templates that follow your style, plus two WooCommerce starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:764
+#: inc/admin-dashboard.php:912
 msgid "Community support forum on WordPress.org"
 msgstr ""
 
-#: inc/admin-dashboard.php:772
+#: inc/admin-dashboard.php:920
 #: inc/recommended-plugins.php:240
 msgid "Free"
 msgstr ""
 
-#: inc/admin-dashboard.php:785
+#: inc/admin-dashboard.php:933
 msgid "What changed in each version of the theme."
 msgstr ""
 
 #. translators: %s: Theme version number.
-#: inc/admin-dashboard.php:795
+#: inc/admin-dashboard.php:943
 #, php-format
 msgid "Version %s"
 msgstr ""
 
-#: inc/admin-dashboard.php:798
+#: inc/admin-dashboard.php:946
 msgid "Current"
 msgstr ""
 
-#: inc/admin-dashboard.php:810
+#: inc/admin-dashboard.php:958
 msgid "The changelog could not be loaded. You can find it in the theme's readme.txt file."
 msgstr ""
 
@@ -1356,12 +1494,6 @@ msgstr ""
 msgid "See recommended plugins"
 msgstr ""
 
-#: inc/starter-sites.php:30
-#: patterns/site-consulting-marquee.php:17
-#: patterns/site-education-courses.php:22
-msgid "Business"
-msgstr ""
-
 #: inc/starter-sites.php:31
 msgid "Classic company site with a split hero, services, story, testimonials and a contact page."
 msgstr ""
@@ -1384,7 +1516,12 @@ msgstr ""
 #: inc/starter-sites.php:272
 #: inc/starter-sites.php:288
 #: inc/starter-sites.php:305
-#: inc/starter-sites.php:482
+#: inc/starter-sites.php:323
+#: inc/starter-sites.php:341
+#: inc/starter-sites.php:359
+#: inc/starter-sites.php:543
+#: inc/woocommerce.php:120
+#: inc/woocommerce.php:137
 msgid "Home"
 msgstr ""
 
@@ -1399,6 +1536,10 @@ msgstr ""
 #: inc/starter-sites.php:274
 #: inc/starter-sites.php:291
 #: inc/starter-sites.php:308
+#: inc/starter-sites.php:326
+#: inc/starter-sites.php:344
+#: inc/starter-sites.php:362
+#: inc/woocommerce.php:121
 #: patterns/site-spa-about.php:28
 msgid "About"
 msgstr ""
@@ -1422,6 +1563,9 @@ msgstr ""
 #: inc/starter-sites.php:226
 #: inc/starter-sites.php:243
 #: inc/starter-sites.php:275
+#: inc/starter-sites.php:346
+#: inc/starter-sites.php:363
+#: inc/woocommerce.php:139
 msgid "Blog"
 msgstr ""
 
@@ -1441,6 +1585,11 @@ msgstr ""
 #: inc/starter-sites.php:276
 #: inc/starter-sites.php:293
 #: inc/starter-sites.php:310
+#: inc/starter-sites.php:327
+#: inc/starter-sites.php:345
+#: inc/starter-sites.php:364
+#: inc/woocommerce.php:123
+#: inc/woocommerce.php:140
 #: patterns/site-architecture-contact.php:36
 #: patterns/site-spa-contact.php:26
 msgid "Contact"
@@ -1457,6 +1606,7 @@ msgstr ""
 #: inc/starter-sites.php:55
 #: inc/starter-sites.php:129
 #: inc/starter-sites.php:209
+#: inc/woocommerce.php:122
 msgid "Journal"
 msgstr ""
 
@@ -1522,6 +1672,7 @@ msgid "Browse Themes"
 msgstr ""
 
 #: inc/starter-sites.php:114
+#: inc/woocommerce-patterns/woo-gadget-faq.php:18
 #: patterns/site-education-faq.php:32
 #: patterns/site-medical-faq.php:32
 msgid "FAQ"
@@ -1659,6 +1810,7 @@ msgid "Agents"
 msgstr ""
 
 #: inc/starter-sites.php:259
+#: inc/starter-sites.php:328
 msgid "News"
 msgstr ""
 
@@ -1712,28 +1864,657 @@ msgstr ""
 msgid "Insights"
 msgstr ""
 
-#: inc/starter-sites.php:494
+#: inc/starter-sites.php:314
+#: patterns/site-commercial-hero.php:23
+msgid "Summit Ridge Commercial"
+msgstr ""
+
+#: inc/starter-sites.php:315
+msgid "Commercial brokerage and property management site with a skyscraper hero, portfolio stats, service cards, a client testimonial, a recognized-leader story, a consultation cover and partner logos."
+msgstr ""
+
+#: inc/starter-sites.php:324
+#: patterns/site-commercial-hero.php:37
+#: patterns/site-commercial-services.php:20
+msgid "Brokerage"
+msgstr ""
+
+#: inc/starter-sites.php:325
+#: patterns/site-commercial-hero.php:41
+#: patterns/site-commercial-services.php:29
+#: patterns/site-realestate-services.php:21
+msgid "Property Management"
+msgstr ""
+
+#: inc/starter-sites.php:332
+msgid "Harbor Lane Rentals"
+msgstr ""
+
+#: inc/starter-sites.php:333
+msgid "Family-owned apartment and commercial rental company with an aerial town hero and quick links, a family-owned story, a listings grid, resident services, neighborhoods and an inquiry call to action."
+msgstr ""
+
+#: inc/starter-sites.php:342
+#: patterns/site-rentals-hero.php:18
+#: patterns/site-rentals-listings.php:45
+msgid "Apartments"
+msgstr ""
+
+#: inc/starter-sites.php:343
+#: patterns/site-photography-packages.php:35
+#: patterns/site-rentals-hero.php:19
+#: patterns/site-rentals-listings.php:21
+#: patterns/site-rentals-listings.php:23
+#: patterns/site-rentals-listings.php:49
+msgid "Commercial"
+msgstr ""
+
+#: inc/starter-sites.php:350
+msgid "QuickKey Home Buyers"
+msgstr ""
+
+#: inc/starter-sites.php:351
+msgid "Local cash home buyer site with a dark photo hero, situation cards, a three-step process, a dark benefits band, a red cash offer section, FAQ and contact."
+msgstr ""
+
+#: inc/starter-sites.php:360
+msgid "Get an Offer"
+msgstr ""
+
+#: inc/starter-sites.php:361
+#: patterns/site-homebuyer-hero.php:46
+msgid "How It Works"
+msgstr ""
+
+#: inc/starter-sites.php:555
 msgid "Starter site menu"
 msgstr ""
 
-#: inc/starter-sites.php:528
+#: inc/starter-sites.php:589
 msgid "Unknown starter site."
 msgstr ""
 
-#: inc/starter-sites.php:604
+#: inc/starter-sites.php:676
 msgid "You are not allowed to import starter sites."
 msgstr ""
 
 #. translators: %d: number of pages created or updated.
-#: inc/starter-sites.php:619
+#: inc/starter-sites.php:691
 #, php-format
 msgid "Starter site imported: %d page created or updated."
 msgid_plural "Starter site imported: %d pages created or updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/starter-sites.php:624
+#: inc/starter-sites.php:696
 msgid "The matching style was applied."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:4
+#: patterns/site-shop-features.php:18
+msgid "Free shipping"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:4
+msgid "Complimentary delivery on every order over $100."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:5
+#: patterns/site-shop-features.php:19
+msgid "Easy returns"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:5
+msgid "Changed your mind? Return within 30 days, free of charge."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:6
+msgid "Secure payment"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:6
+msgid "Pay safely by card, wallet or bank transfer."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:7
+msgid "Personal support"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:7
+msgid "Our stylists answer every message within one day."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-benefits.php:13
+msgid "Why shop with us"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-best-sellers.php:14
+msgid "Most loved"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-best-sellers.php:18
+msgid "Best sellers"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-best-sellers.php:22
+msgid "The pieces our customers come back for again and again, chosen by your orders."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-best-sellers.php:43
+msgid "Our best sellers will appear here as soon as the first orders come in."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-best-sellers.php:52
+#: inc/woocommerce-patterns/woo-fashion-categories.php:33
+msgid "View all products"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:10
+msgid "Women"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:10
+msgid "Blush skirt, soft knit and a leather handbag"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:11
+msgid "Men"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:11
+msgid "Navy tailored suit with a polka-dot tie"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:12
+msgid "Shoes"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:12
+#: inc/woocommerce-patterns/woo-fashion-sale.php:48
+msgid "Polished leather shoes and boots on a shelf"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:13
+#: inc/woocommerce-patterns/woo-gadget-categories.php:15
+msgid "Accessories"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:13
+msgid "Brown leather weekend bag"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:23
+#: inc/woocommerce-patterns/woo-gadget-categories.php:23
+#: patterns/site-shop-categories.php:29
+msgid "Shop by category"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-categories.php:27
+msgid "Find your fit"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-hero.php:14
+msgid "The Autumn Edit"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-hero.php:18
+msgid "Quiet luxury, made to last"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-hero.php:22
+msgid "Soft tailoring, natural fibres and timeless shapes for every day of the season. Discover the new lookbook."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-hero.php:28
+msgid "Shop the collection"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-hero.php:32
+#: inc/woocommerce-patterns/woo-fashion-story.php:24
+#: patterns/about-01.php:26
+#: patterns/site-commercial-leader.php:43
+#: patterns/site-shop-about.php:38
+msgid "Our story"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-new-arrivals.php:16
+msgid "Just landed"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-new-arrivals.php:20
+msgid "New arrivals"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-new-arrivals.php:28
+msgid "Shop all new in"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-new-arrivals.php:51
+msgid "New pieces are on their way. Check back soon to see the latest arrivals."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-sale.php:16
+msgid "End of season sale"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-sale.php:20
+msgid "Up to 40% off"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-sale.php:24
+msgid "Selected knitwear, tailoring and leather goods are marked down for a limited time. Take an extra 10% off at checkout with this code:"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-sale.php:30
+msgctxt "Discount code shown in the sale banner"
+msgid "MODISTA10"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-sale.php:38
+#: patterns/site-shop-promo.php:47
+msgid "Shop the sale"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:4
+msgctxt "Year the fashion store was founded"
+msgid "2012"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:4
+msgid "Founded in a small studio"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:5
+msgid "90%"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:5
+msgid "Natural and recycled fibres"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:6
+msgid "24"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:6
+msgid "Family-run partner workshops"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:16
+msgid "Wooden hangers lined up on a clothing rail in the studio"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:28
+msgid "Made to be worn, loved and kept"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:32
+msgid "Modista began with a simple idea: fewer, better clothes. We design every piece in our studio and work with small workshops that share our love of honest materials and careful finishing."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:36
+msgid "The result is a wardrobe of quiet essentials that look better with every wear, season after season."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-fashion-story.php:60
+msgid "Read our story"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:10
+msgid "Laptops"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:10
+msgid "Work, study and create"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:11
+msgid "Phones"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:11
+msgid "Flagships and best value"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:12
+msgid "Audio"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:12
+msgid "Headphones and speakers"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:13
+msgid "Wearables"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:13
+msgid "Watches and fitness bands"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:14
+msgid "Gaming"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:14
+msgid "Consoles and controllers"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:15
+msgid "Chargers, cases and cables"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-categories.php:27
+msgid "Browse all products →"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-deals.php:16
+msgid "Deals of the week"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-deals.php:22
+msgid "⏱ Deal ends soon"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-deals.php:30
+msgid "See all deals →"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-deals.php:55
+msgid "No deals are running right now. New offers drop every week, so check back soon."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:4
+msgid "How long does shipping take?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:4
+msgid "In-stock orders placed before 3 pm ship the same day. Standard delivery takes 1–3 business days and is free on orders over $49; express next-day delivery is available at checkout."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:5
+msgid "What does the 2-year warranty cover?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:5
+msgid "Our warranty covers manufacturing faults and hardware failures for two years from delivery, including parts and labour. Accidental damage is not covered, but you can add protection at checkout."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:6
+msgid "How do I return a product?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:6
+msgid "Start a return from your account within 30 days of delivery and print the free label. Once we receive the item in its original condition, we refund you within five business days."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:7
+msgid "Which payment methods do you accept?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:7
+msgid "We accept all major credit and debit cards, digital wallets and bank transfer. Every payment is encrypted and processed securely; we never store your full card details."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:8
+msgid "Can I get help choosing the right device?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:8
+msgid "Of course. Our product specialists are available by chat, phone and email seven days a week and will happily compare models for you."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:22
+msgid "Questions before you buy?"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:26
+msgid "Quick answers about shipping, warranty, returns and payment. Still unsure? Our team is one message away."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-faq.php:32
+#: patterns/site-education-contact.php:25
+msgid "Contact us"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:10
+msgid "Audio week"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:10
+msgid "Studio sound, anywhere you go"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:10
+msgid "Shop audio"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:11
+msgid "Trade in and save"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:11
+msgid "Upgrade your phone for less"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:11
+msgid "Shop phones"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:21
+msgid "Staff picks"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:25
+msgid "Featured products"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:29
+msgid "Hand-picked gear our team uses and recommends every day."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:35
+msgid "View all products →"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-featured.php:60
+msgid "Featured products will appear here once you mark some products as featured."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:10
+msgid "Free 2-day delivery"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:11
+#: inc/woocommerce-patterns/woo-gadget-support.php:4
+msgid "2-year warranty"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:12
+#: inc/woocommerce-patterns/woo-gadget-support.php:6
+msgid "30-day returns"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:26
+#: patterns/site-realestate-listings.php:23
+#: patterns/site-shop-products.php:19
+#: patterns/site-shop-products.php:23
+msgid "New"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:30
+msgid "The spring tech drop is here"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:38
+msgid "Smarter tech at sharper prices"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:42
+msgid "Laptops, phones, audio and accessories from the brands you trust, tested by our team and delivered fast."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:48
+msgid "Shop deals"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:52
+msgid "Ask an expert"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-hero.php:72
+msgid "Open laptop next to a cup of coffee on a light wooden desk"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:4
+msgid "Every device is covered for two full years, parts and labour included."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:5
+msgid "Fast delivery"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:5
+msgid "Order by 3 pm for free next-day delivery on in-stock items."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:6
+msgid "Not the right fit? Send it back within 30 days for a full refund."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:7
+msgid "Expert support"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:7
+msgid "Real product specialists on chat and phone, seven days a week."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:19
+msgid "Voltix care"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:23
+msgid "Support that has your back"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:51
+msgid "Visit the support centre"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-support.php:61
+msgid "Tidy desk with a monitor, phone dock, headphones and wireless mouse"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-top-rated.php:16
+msgid "Loved by customers"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-top-rated.php:20
+msgid "Top rated"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-top-rated.php:24
+msgid "The highest-rated products in the store, based on real customer reviews."
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-top-rated.php:30
+msgid "Shop all products →"
+msgstr ""
+
+#: inc/woocommerce-patterns/woo-gadget-top-rated.php:57
+msgid "Top-rated products will appear here as soon as customers start leaving reviews."
+msgstr ""
+
+#: inc/woocommerce.php:45
+msgid "Fashion Store: Hero"
+msgstr ""
+
+#: inc/woocommerce.php:46
+msgid "Fashion Store: Shop by Category"
+msgstr ""
+
+#: inc/woocommerce.php:47
+msgid "Fashion Store: New Arrivals"
+msgstr ""
+
+#: inc/woocommerce.php:48
+msgid "Fashion Store: Sale Banner"
+msgstr ""
+
+#: inc/woocommerce.php:49
+msgid "Fashion Store: Best Sellers"
+msgstr ""
+
+#: inc/woocommerce.php:50
+msgid "Fashion Store: Brand Story"
+msgstr ""
+
+#: inc/woocommerce.php:51
+msgid "Fashion Store: Store Benefits"
+msgstr ""
+
+#: inc/woocommerce.php:52
+msgid "Electronics Store: Hero"
+msgstr ""
+
+#: inc/woocommerce.php:53
+msgid "Electronics Store: Categories"
+msgstr ""
+
+#: inc/woocommerce.php:54
+msgid "Electronics Store: Deals"
+msgstr ""
+
+#: inc/woocommerce.php:55
+msgid "Electronics Store: Featured Products"
+msgstr ""
+
+#: inc/woocommerce.php:56
+msgid "Electronics Store: Top Rated"
+msgstr ""
+
+#: inc/woocommerce.php:57
+msgid "Electronics Store: Support and Warranty"
+msgstr ""
+
+#: inc/woocommerce.php:58
+msgid "Electronics Store: FAQ"
+msgstr ""
+
+#: inc/woocommerce.php:69
+msgctxt "Block pattern category"
+msgid "bBlocks — Shop"
+msgstr ""
+
+#: inc/woocommerce.php:70
+msgid "WooCommerce sections: product grids, categories, offers and store benefits."
+msgstr ""
+
+#: inc/woocommerce.php:95
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Fashion Store"
+msgstr ""
+
+#: inc/woocommerce.php:96
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Electronics Store"
+msgstr ""
+
+#: inc/woocommerce.php:111
+msgid "Modista Fashion Store"
+msgstr ""
+
+#: inc/woocommerce.php:112
+msgid "WooCommerce fashion shop with a lookbook hero, shop-by-category tiles, new arrivals and best sellers from your store, a sale banner, brand story and store benefits."
+msgstr ""
+
+#: inc/woocommerce.php:128
+msgid "Voltix Electronics Store"
+msgstr ""
+
+#: inc/woocommerce.php:129
+msgid "WooCommerce electronics shop with a product spotlight hero, category grid, deals with sale prices, featured and top-rated products from your store, a support band and FAQ."
 msgstr ""
 
 #: patterns/about-01.php
@@ -1744,11 +2525,6 @@ msgstr ""
 #: patterns/about-01.php
 msgctxt "Pattern description"
 msgid "An about-page introduction pairing a story paragraph with a visual panel, followed by a row of three key statistics."
-msgstr ""
-
-#: patterns/about-01.php:26
-#: patterns/site-shop-about.php:38
-msgid "Our story"
 msgstr ""
 
 #: patterns/about-01.php:30
@@ -1942,6 +2718,7 @@ msgstr ""
 #: patterns/contact-01.php:25
 #: patterns/footer-columns.php:47
 #: patterns/footer-social.php:67
+#: patterns/site-homebuyer-contact.php:36
 #: patterns/site-magazine-team.php:47
 #: patterns/site-shop-about.php:74
 msgid "Get in touch"
@@ -1965,6 +2742,7 @@ msgstr ""
 #: patterns/site-architecture-contact.php:20
 #: patterns/site-education-contact.php:39
 #: patterns/site-fitness-contact.php:49
+#: patterns/site-homebuyer-contact.php:19
 #: patterns/site-law-consultation.php:52
 #: patterns/site-photography-contact.php:33
 #: patterns/site-realestate-agents.php:60
@@ -2020,14 +2798,17 @@ msgid "Reach us any way you like"
 msgstr ""
 
 #: patterns/contact-02.php:32
+#: patterns/site-homebuyer-contact.php:19
 msgid "Email"
 msgstr ""
 
 #: patterns/contact-02.php:44
+#: patterns/site-homebuyer-contact.php:18
 msgid "Phone"
 msgstr ""
 
 #: patterns/contact-02.php:56
+#: patterns/site-homebuyer-contact.php:20
 msgid "Office"
 msgstr ""
 
@@ -2050,6 +2831,8 @@ msgid "Let's talk about what a new site could do for your business."
 msgstr ""
 
 #: patterns/cta-01.php:33
+#: patterns/site-rentals-about.php:111
+#: patterns/site-rentals-hero.php:21
 msgid "Get in Touch"
 msgstr ""
 
@@ -2072,6 +2855,7 @@ msgid "View FAQ"
 msgstr ""
 
 #: patterns/cta-02.php:31
+#: patterns/site-commercial-hero.php:45
 #: patterns/site-medical-faq.php:46
 msgid "Contact Us"
 msgstr ""
@@ -2504,6 +3288,7 @@ msgstr ""
 #: patterns/site-medical-cta.php:37
 #: patterns/site-medical-hero.php:49
 #: patterns/site-realestate-cta.php:45
+#: patterns/site-rentals-cta.php:37
 msgid "Call +1 555 010 0199"
 msgstr ""
 
@@ -3047,6 +3832,7 @@ msgid "Our services"
 msgstr ""
 
 #: patterns/services-03.php:29
+#: patterns/site-commercial-services.php:19
 #: patterns/site-education-features.php:18
 #: patterns/site-fitness-programs.php:18
 #: patterns/site-law-practice.php:18
@@ -3063,6 +3849,7 @@ msgid "A short discovery call to map out the right approach."
 msgstr ""
 
 #: patterns/services-03.php:43
+#: patterns/site-commercial-services.php:28
 #: patterns/site-education-features.php:19
 #: patterns/site-fitness-programs.php:19
 #: patterns/site-law-practice.php:19
@@ -3137,6 +3924,7 @@ msgid "Contact Now"
 msgstr ""
 
 #: patterns/site-architecture-about.php:69
+#: patterns/site-rentals-about.php:67
 msgid "About us"
 msgstr ""
 
@@ -3361,6 +4149,218 @@ msgstr ""
 
 #: patterns/site-architecture-testimonial.php:43
 msgid "\"They listened to every idea, turned it into a clear plan and delivered a building that feels even better than the drawings. Our team loves coming to work every day.\""
+msgstr ""
+
+#: patterns/site-commercial-cta.php
+msgctxt "Pattern title"
+msgid "Commercial: Consultation Cover"
+msgstr ""
+
+#: patterns/site-commercial-cta.php
+msgctxt "Pattern description"
+msgid "A dark boardroom photo cover inviting visitors to schedule a consultation, with a short paragraph and an outline button."
+msgstr ""
+
+#: patterns/site-commercial-cta.php:23
+msgid "Schedule a consultation"
+msgstr ""
+
+#: patterns/site-commercial-cta.php:27
+msgid "Every successful property starts with a conversation. Whether you are leasing new space, buying or selling a building, or looking for reliable management, tell us where you are headed and we will map out the next steps together."
+msgstr ""
+
+#: patterns/site-commercial-cta.php:33
+msgid "Book a meeting"
+msgstr ""
+
+#: patterns/site-commercial-hero.php
+msgctxt "Pattern title"
+msgid "Commercial: Hero"
+msgstr ""
+
+#: patterns/site-commercial-hero.php
+msgctxt "Pattern description"
+msgid "A tall office tower cover with a large left-aligned serif headline, a short line and three outline buttons."
+msgstr ""
+
+#: patterns/site-commercial-hero.php:27
+msgid "Commercial brokerage and property management built on trust since 1995."
+msgstr ""
+
+#: patterns/site-commercial-hero.php:31
+msgid "Clear advice, careful stewardship and people who answer the phone."
+msgstr ""
+
+#: patterns/site-commercial-leader.php
+msgctxt "Pattern title"
+msgid "Commercial: Recognized Leader"
+msgstr ""
+
+#: patterns/site-commercial-leader.php
+msgctxt "Pattern description"
+msgid "A split section with a large green serif statement on the left and an office photo, a short paragraph and a button on the right."
+msgstr ""
+
+#: patterns/site-commercial-leader.php:25
+msgid "A recognized leader in integrity, insight and lasting results"
+msgstr ""
+
+#: patterns/site-commercial-leader.php:33
+msgid "A bright open office lounge with sofas and a long meeting table by tall windows"
+msgstr ""
+
+#: patterns/site-commercial-leader.php:37
+msgid "For three decades, owners, investors and tenants have relied on Summit Ridge to put their interests first. That steady focus on service has earned industry honors, community awards and, most importantly, clients who stay with us for years."
+msgstr ""
+
+#: patterns/site-commercial-partners.php
+msgctxt "Pattern title"
+msgid "Commercial: Partners and Associations"
+msgstr ""
+
+#: patterns/site-commercial-partners.php
+msgctxt "Pattern description"
+msgid "A short title above a wrapping row of six partner and association logos."
+msgstr ""
+
+#: patterns/site-commercial-partners.php:18
+#: patterns/testimonials-03.php:18
+msgid "Northwind"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:19
+#: patterns/testimonials-03.php:19
+msgid "Mixwell"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:20
+#: patterns/testimonials-03.php:20
+msgid "Futurestack"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:21
+#: patterns/testimonials-03.php:21
+msgid "Fortuna"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:22
+#: patterns/testimonials-03.php:22
+msgid "Heartline"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:23
+#: patterns/testimonials-03.php:23
+msgid "Brightclick"
+msgstr ""
+
+#: patterns/site-commercial-partners.php:29
+msgid "Proud members and partners"
+msgstr ""
+
+#: patterns/site-commercial-services.php
+msgctxt "Pattern title"
+msgid "Commercial: Service Cards"
+msgstr ""
+
+#: patterns/site-commercial-services.php
+msgctxt "Pattern description"
+msgid "Two side-by-side grey service cards for brokerage and property management, each with a photo, a numbered badge, a serif title, text and a solid button."
+msgstr ""
+
+#: patterns/site-commercial-services.php:21
+msgid "Leasing, sales and acquisitions guided by brokers who know every block of the market and negotiate as if it were their own building."
+msgstr ""
+
+#: patterns/site-commercial-services.php:22
+msgid "Meet our brokers"
+msgstr ""
+
+#: patterns/site-commercial-services.php:25
+msgid "A bright meeting room with a long white table and black chairs"
+msgstr ""
+
+#: patterns/site-commercial-services.php:30
+msgid "Day-to-day operations, tenant care, maintenance and transparent reporting that protect your asset and grow its value."
+msgstr ""
+
+#: patterns/site-commercial-services.php:31
+msgid "Explore management"
+msgstr ""
+
+#: patterns/site-commercial-services.php:34
+msgid "A modern glass office building with a curved facade"
+msgstr ""
+
+#: patterns/site-commercial-services.php:41
+msgid "Two services, one dedicated team"
+msgstr ""
+
+#: patterns/site-commercial-stats.php
+msgctxt "Pattern title"
+msgid "Commercial: Stats Band"
+msgstr ""
+
+#: patterns/site-commercial-stats.php
+msgctxt "Pattern description"
+msgid "A light grey band with three large serif figures and short labels describing the managed portfolio."
+msgstr ""
+
+#: patterns/site-commercial-stats.php:18
+msgid "$1.8B"
+msgstr ""
+
+#: patterns/site-commercial-stats.php:18
+msgid "In client assets under management"
+msgstr ""
+
+#: patterns/site-commercial-stats.php:19
+msgid "2,400+"
+msgstr ""
+
+#: patterns/site-commercial-stats.php:19
+msgid "Tenants who call our buildings home"
+msgstr ""
+
+#: patterns/site-commercial-stats.php:20
+msgid "11M sq ft"
+msgstr ""
+
+#: patterns/site-commercial-stats.php:20
+msgid "Of office, retail and industrial space"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php
+msgctxt "Pattern title"
+msgid "Commercial: Client Testimonial"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php
+msgctxt "Pattern description"
+msgid "A centered long client letter on a light grey band with the client's name, role and company and an outline button."
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:21
+msgid "What our clients say"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:25
+msgid "“When we bought our first medical office building, we had tenants with expiring leases, a roof that needed attention and no idea where to start. The Summit Ridge team walked the property with us the same week, built a clear plan and handled every vendor, inspection and tenant conversation. Two years later the building is fully leased, our operating costs are down and the monthly reports are the easiest thing I read all month. Having people we trust on the ground has made all the difference.”"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:31
+msgid "Elena Marquez"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:35
+msgid "Managing Partner"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:39
+msgid "Lakeview Medical Partners"
+msgstr ""
+
+#: patterns/site-commercial-testimonial.php:47
+msgid "Why clients stay with us"
 msgstr ""
 
 #: patterns/site-consulting-blog.php
@@ -3757,10 +4757,6 @@ msgctxt "Pattern description"
 msgid "A contact section with a heading, email, phone and campus address beside a campus photo and a support-hours card."
 msgstr ""
 
-#: patterns/site-education-contact.php:25
-msgid "Contact us"
-msgstr ""
-
 #: patterns/site-education-contact.php:29
 msgid "We are here to help you learn"
 msgstr ""
@@ -3776,6 +4772,8 @@ msgstr ""
 
 #: patterns/site-education-contact.php:43
 #: patterns/site-fitness-contact.php:45
+#: patterns/site-homebuyer-contact.php:18
+#: patterns/site-homebuyer-offer.php:50
 #: patterns/site-law-consultation.php:48
 #: patterns/site-medical-hours.php:63
 #: patterns/site-photography-contact.php:33
@@ -4233,6 +5231,7 @@ msgstr ""
 
 #. translators: Plan price, including the currency symbol.
 #: patterns/site-education-pricing.php:22
+#: patterns/site-homebuyer-about.php:20
 msgid "$0"
 msgstr ""
 
@@ -4915,6 +5914,467 @@ msgstr ""
 msgid "Trainers who get results"
 msgstr ""
 
+#: patterns/site-homebuyer-about.php
+msgctxt "Pattern title"
+msgid "Home Buyer: About Us"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php
+msgctxt "Pattern description"
+msgid "A rounded house photo beside a short company story, three key figures and a button to request an offer."
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:18
+msgid "600+"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:18
+msgid "Homes purchased"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:19
+msgid "14 days"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:19
+msgid "Typical closing"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:20
+msgid "Fees to sellers"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:30
+msgid "A white two-story house with a wide front porch on a green lawn"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:38
+msgid "About QuickKey"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:42
+msgid "Neighbors Buying Homes, Not a Faraway Fund"
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:46
+msgid "QuickKey Home Buyers is a small, locally owned team. We buy houses with our own funds, renovate them with local trades and give them a second life in the community."
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:50
+msgid "Every offer is explained line by line, so you can see how we reached the number and decide with confidence, whether you sell to us or not."
+msgstr ""
+
+#: patterns/site-homebuyer-about.php:74
+msgid "Get My Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php
+msgctxt "Pattern title"
+msgid "Home Buyer: Direct Sale Benefits"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php
+msgctxt "Pattern description"
+msgid "A dark charcoal band with a centered heading and intro, then four divided columns that explain what a direct cash sale makes simpler."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:18
+msgid "Condition"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:18
+msgid "We buy as-is. No repairs, deep cleaning, painting or staging before you sell."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:19
+msgid "Privacy"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:19
+msgid "No open houses, no yard sign and no strangers walking through your rooms."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:20
+msgid "Costs"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:20
+msgid "No agent commissions and no hidden fees. We usually cover standard closing costs too."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:21
+msgid "Timeline"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:21
+msgid "A cash purchase does not wait on a buyer’s loan approval. Close in two weeks or two months."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:29
+msgid "Know your options"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:33
+msgid "What a Direct Sale Makes Simpler"
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:37
+msgid "Listing with an agent is right for some homes. For others, selling straight to a local buyer removes most of the work, the waiting and the worry."
+msgstr ""
+
+#: patterns/site-homebuyer-benefits.php:37
+msgid "Compare both ways to sell →"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php
+msgctxt "Pattern title"
+msgid "Home Buyer: Contact"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php
+msgctxt "Pattern description"
+msgid "A split contact section with a heading, intro and a list of contact details with icons, beside a surface card with a house photo, a short checklist and a send-a-message button."
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:20
+msgid "128 Maple Avenue, Suite 4, Springfield"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:21
+msgid "Hours"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:21
+msgid "Mon–Sat, 8am–7pm"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:24
+msgid "Questions about a specific property"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:25
+msgid "Help comparing your selling options"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:26
+msgid "A visit at a time that suits you"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:40
+msgid "Let’s Talk About Your House"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:44
+msgid "Whether you are ready to sell this week or just exploring, we are glad to help. Call, email or stop by the office."
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:80
+msgid "A white single-story house with a green lawn and tall trees"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:84
+msgid "Send Us a Message"
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:88
+msgid "Prefer to write? Drop us a note and a local team member will reply within one business day."
+msgstr ""
+
+#: patterns/site-homebuyer-contact.php:104
+msgid "Email Us Now"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php
+msgctxt "Pattern title"
+msgid "Home Buyer: FAQ"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php
+msgctxt "Pattern description"
+msgid "A heading, intro, contact button and photo of an older house beside five expandable seller questions built from the core Details block."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:18
+msgid "How do you decide on my offer?"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:18
+msgid "We look at recent sales of similar homes nearby, the repairs the house needs and current market conditions. We share that math with you so the offer is never a mystery."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:19
+msgid "Are there any fees or commissions?"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:19
+msgid "No. There are no agent commissions and no service fees. In most sales we also pay the standard closing costs, so the offer you accept is the amount you receive."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:20
+msgid "Do I need to clean or fix anything first?"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:20
+msgid "Not at all. Leave the repairs, the clutter and any items you do not want. We buy the house exactly as it stands today."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:21
+msgid "How fast can we close?"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:21
+msgid "Many sales close in about two weeks once the title is clear. If you need more time to plan a move, we can set a later date that works for you."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:22
+msgid "Am I obligated to accept the offer?"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:22
+msgid "Never. Our offer is free and comes with no strings attached. Take your time, ask questions and compare it with other options before you decide."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:32
+msgid "Seller questions"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:36
+msgid "Answers Before You Decide"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:40
+msgid "Selling a home is a big step. Here is what owners ask us most. Still unsure? A real person will happily walk you through it."
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:46
+msgid "Ask Us Anything"
+msgstr ""
+
+#: patterns/site-homebuyer-faq.php:52
+msgid "An old weathered farmhouse that needs repairs"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php
+msgctxt "Pattern title"
+msgid "Home Buyer: Cash Offer Hero"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php
+msgctxt "Pattern description"
+msgid "A dark neighborhood photo cover with a red eyebrow, a large serif headline, a short intro, a cash offer button and three quick promises."
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:18
+msgid "No agent fees"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:19
+msgid "Sell as-is"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:20
+msgid "Close on your date"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:28
+msgid "Local cash home buyers"
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:32
+msgid "Sell Your House Fast. Get a Fair Cash Offer."
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:36
+msgid "QuickKey Home Buyers purchases homes directly from owners. Skip the listing, the showings and the repairs, and pick a closing date that suits you."
+msgstr ""
+
+#: patterns/site-homebuyer-hero.php:42
+#: patterns/site-homebuyer-situations.php:69
+msgid "Get My Free Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php
+msgctxt "Pattern title"
+msgid "Home Buyer: Free Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php
+msgctxt "Pattern description"
+msgid "A bold red section with a heading, a checklist of seller benefits and a phone link, beside a white card that invites visitors to request their cash offer."
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:18
+msgid "No agent commissions or listing fees"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:19
+msgid "No repairs, cleaning or staging"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:20
+msgid "No open houses or showings"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:21
+msgid "A closing date that fits your plans"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:22
+msgid "Private and confidential, with no pressure"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:32
+msgid "Get Your Free, No-Obligation Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:36
+msgid "We buy houses across the whole metro area and the surrounding towns. Any condition, any situation, any timeline."
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:50
+msgid "Or call us:"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:60
+msgid "Request Your Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:64
+msgid "Tell us a little about your house and we will get back to you with a fair, written offer within one business day."
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:70
+msgid "Request My Offer →"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:76
+msgid "How it works"
+msgstr ""
+
+#: patterns/site-homebuyer-offer.php:76
+msgid "Ask a question"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php
+msgctxt "Pattern title"
+msgid "Home Buyer: Situations We Help With"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php
+msgctxt "Pattern description"
+msgid "A centered intro about buying houses in any condition, followed by a responsive grid of six situation cards with icons and a red top accent."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:18
+msgid "Money Is Tight"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:18
+msgid "Behind on payments or worried about foreclosure? Talk to us early. A quick, as-is sale can give you breathing room and more choices."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:19
+msgid "Moving Away"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:19
+msgid "A new job, a transfer or a fresh start somewhere else? We work around your moving date so an empty house never holds you back."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:20
+msgid "Inherited a House"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:20
+msgid "Settling an estate is hard enough. We can buy an inherited home with its contents and work patiently with the estate timeline."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:21
+msgid "Divorce or Separation"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:21
+msgid "Dividing property is stressful. A fast, private cash sale removes one of the biggest decisions from an already difficult time."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:22
+msgid "Needs Major Repairs"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:22
+msgid "Leaky roof, old wiring or a dated kitchen? We buy houses exactly as they are, with no repairs, cleaning or staging required."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:23
+msgid "Tired Landlord"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:23
+msgid "Done with late rent and midnight repair calls? We buy rental homes, including ones that still have tenants living in them."
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:31
+msgid "Whatever you are facing"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:35
+msgid "We Buy Houses in Any Condition, in Any Situation"
+msgstr ""
+
+#: patterns/site-homebuyer-situations.php:39
+msgid "Homeowners come to us for many different reasons. Whatever brought you here, you will get a straight answer, a fair number and zero pressure to accept it."
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php
+msgctxt "Pattern title"
+msgid "Home Buyer: How It Works Steps"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php
+msgctxt "Pattern description"
+msgid "A centered heading and three numbered steps with solid red circles explaining how a direct cash sale works, with a button below."
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:18
+msgid "Tell Us About Your House"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:18
+msgid "Share the address, its condition and your ideal timeline by phone or online. It takes about five minutes and costs nothing."
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:19
+msgid "Get Your Cash Offer"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:19
+msgid "We look over the details, walk through the home with you and present a written, no-obligation offer within 24 hours."
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:20
+msgid "Close When You Are Ready"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:20
+msgid "Accept, and a local title company handles the paperwork. You choose the closing day and walk away with cash."
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:28
+msgid "Simple and transparent"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:32
+msgid "How It Works in 3 Easy Steps"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:66
+msgid "Start Step One"
+msgstr ""
+
+#: patterns/site-homebuyer-steps.php:70
+msgid "See the Full Process"
+msgstr ""
+
 #: patterns/site-law-about.php
 msgctxt "Pattern title"
 msgid "Law: About the Firm"
@@ -4927,6 +6387,7 @@ msgstr ""
 
 #: patterns/site-law-about.php:18
 #: patterns/site-medical-why.php:25
+#: patterns/site-rentals-about.php:45
 msgid "25+"
 msgstr ""
 
@@ -6579,10 +8040,6 @@ msgstr ""
 msgid "Print-ready high-resolution files"
 msgstr ""
 
-#: patterns/site-photography-packages.php:35
-msgid "Commercial"
-msgstr ""
-
 #: patterns/site-photography-packages.php:36
 msgid "$2,400"
 msgstr ""
@@ -7076,12 +8533,6 @@ msgid "Balconies on a modern residential building"
 msgstr ""
 
 #: patterns/site-realestate-listings.php:23
-#: patterns/site-shop-products.php:19
-#: patterns/site-shop-products.php:23
-msgid "New"
-msgstr ""
-
-#: patterns/site-realestate-listings.php:23
 msgid "$375,000"
 msgstr ""
 
@@ -7144,6 +8595,7 @@ msgid "24 homes · from $390,000"
 msgstr ""
 
 #: patterns/site-realestate-neighborhoods.php:20
+#: patterns/site-rentals-areas.php:18
 msgid "Riverside"
 msgstr ""
 
@@ -7222,10 +8674,6 @@ msgid "See rentals"
 msgstr ""
 
 #: patterns/site-realestate-services.php:21
-msgid "Property Management"
-msgstr ""
-
-#: patterns/site-realestate-services.php:21
 msgid "Tenant screening, rent collection and maintenance handled for you, with a monthly report you can read in minutes."
 msgstr ""
 
@@ -7297,6 +8745,551 @@ msgstr ""
 
 #: patterns/site-realestate-testimonials.php:32
 msgid "Our clients say it best"
+msgstr ""
+
+#: patterns/site-rentals-about.php
+msgctxt "Pattern title"
+msgid "Rentals: Family-Owned About"
+msgstr ""
+
+#: patterns/site-rentals-about.php
+msgctxt "Pattern description"
+msgid "A photo collage with a years-in-business badge beside an eyebrow, heading, two paragraphs, a four-item icon checklist and a contact button."
+msgstr ""
+
+#: patterns/site-rentals-about.php:18
+msgid "Online resident portal"
+msgstr ""
+
+#: patterns/site-rentals-about.php:18
+msgid "Pay rent and log repairs any time"
+msgstr ""
+
+#: patterns/site-rentals-about.php:19
+msgid "24/7 maintenance line"
+msgstr ""
+
+#: patterns/site-rentals-about.php:19
+msgid "A real person answers, day or night"
+msgstr ""
+
+#: patterns/site-rentals-about.php:20
+msgid "Fair, simple screening"
+msgstr ""
+
+#: patterns/site-rentals-about.php:20
+msgid "Clear criteria shared up front"
+msgstr ""
+
+#: patterns/site-rentals-about.php:21
+msgid "Seasonal inspections"
+msgstr ""
+
+#: patterns/site-rentals-about.php:21
+msgid "Small fixes before they grow"
+msgstr ""
+
+#: patterns/site-rentals-about.php:35
+msgid "Two-storey brick apartment buildings with a path through a green lawn"
+msgstr ""
+
+#: patterns/site-rentals-about.php:49
+msgid "Years in Millbrook"
+msgstr ""
+
+#: patterns/site-rentals-about.php:55
+msgid "A bright apartment living room with a white sofa and colorful cushions"
+msgstr ""
+
+#: patterns/site-rentals-about.php:71
+msgid "A Family-Owned Rental Company Rooted in Millbrook"
+msgstr ""
+
+#: patterns/site-rentals-about.php:75
+msgid "Harbor Lane Rentals began with one riverside duplex and a toolbox. Today our family owns and cares for apartments across Millbrook, a few rental houses near the park and a row of shop and office units downtown."
+msgstr ""
+
+#: patterns/site-rentals-about.php:79
+msgid "Because we live here too, we keep things personal: clear leases, quick repairs and people you can actually reach. Whether you need a furnished place for a season or a storefront for your new business, we will help you find the right fit."
+msgstr ""
+
+#: patterns/site-rentals-areas.php
+msgctxt "Pattern title"
+msgid "Rentals: Neighborhoods We Serve"
+msgstr ""
+
+#: patterns/site-rentals-areas.php
+msgctxt "Pattern description"
+msgid "A centered heading above three rounded photo cards for the neighborhoods served, each with a title and a short description over a dark overlay."
+msgstr ""
+
+#: patterns/site-rentals-areas.php:18
+msgid "Our oldest streets, right on the water. Walk to cafés, the boat launch and the summer concerts in the park."
+msgstr ""
+
+#: patterns/site-rentals-areas.php:19
+msgid "Old Mill District"
+msgstr ""
+
+#: patterns/site-rentals-areas.php:19
+msgid "The busy heart of Millbrook, with upstairs apartments, Main Street shops and offices above the market square."
+msgstr ""
+
+#: patterns/site-rentals-areas.php:20
+msgid "North Hill"
+msgstr ""
+
+#: patterns/site-rentals-areas.php:20
+msgid "Quiet, leafy blocks of garden apartments and family homes close to schools, trails and the community pool."
+msgstr ""
+
+#: patterns/site-rentals-areas.php:28
+msgid "Where we rent"
+msgstr ""
+
+#: patterns/site-rentals-areas.php:32
+msgid "Homes in Every Corner of Millbrook"
+msgstr ""
+
+#: patterns/site-rentals-areas.php:36
+msgid "Our buildings sit in three friendly neighborhoods, each with its own pace and plenty of local favorites nearby."
+msgstr ""
+
+#: patterns/site-rentals-cta.php
+msgctxt "Pattern title"
+msgid "Rentals: Call to Action Band"
+msgstr ""
+
+#: patterns/site-rentals-cta.php
+msgctxt "Pattern description"
+msgid "A full-width red band with a heading, a short line of text and two buttons for a rental inquiry and a phone call."
+msgstr ""
+
+#: patterns/site-rentals-cta.php:23
+msgid "Ready to Find Your Next Place?"
+msgstr ""
+
+#: patterns/site-rentals-cta.php:27
+msgid "Send us a quick rental inquiry to check what is open and book a viewing. Current residents can reach the office the same way for rent and repair questions."
+msgstr ""
+
+#: patterns/site-rentals-cta.php:33
+msgid "Send a Rental Inquiry"
+msgstr ""
+
+#: patterns/site-rentals-hero.php
+msgctxt "Pattern title"
+msgid "Rentals: Hero"
+msgstr ""
+
+#: patterns/site-rentals-hero.php
+msgctxt "Pattern description"
+msgid "An aerial town photo cover with an eyebrow, a large serif headline, a short intro and two buttons, above a dark strip of four quick links."
+msgstr ""
+
+#: patterns/site-rentals-hero.php:18
+msgid "Studios to three bedrooms"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:19
+msgid "Downtown shops & offices"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:20
+#: patterns/site-restaurant-about.php:38
+msgid "Our Story"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:20
+msgid "Family-owned since 1998"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:21
+msgid "Book a viewing today"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:29
+msgid "Millbrook · Riverside · Old Mill District"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:33
+msgid "Rental Homes & Workspaces in Millbrook"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:37
+msgid "Family-owned since 1998, Harbor Lane Rentals offers studio to three-bedroom apartments along the river and flexible shop and office space in the historic downtown, all looked after by a local team."
+msgstr ""
+
+#: patterns/site-rentals-hero.php:43
+msgid "Browse Apartments"
+msgstr ""
+
+#: patterns/site-rentals-hero.php:47
+msgid "Send an Inquiry"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php
+msgctxt "Pattern title"
+msgid "Rentals: Highlight Cards"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php
+msgctxt "Pattern description"
+msgid "Three edge-to-edge photo cards for apartments, commercial space and rental inquiries, each with an icon, title, short text and a link button."
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:18
+msgid "Apartments by the River"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:18
+msgid "Bright studios, one-, two- and three-bedroom homes, furnished or unfurnished, with leases that fit your plans."
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:18
+msgid "View Apartments"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:19
+msgid "Downtown Commercial Space"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:19
+msgid "Street-level shops, upstairs offices and small studios on Main Street, a short walk from the river."
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:19
+msgid "View Commercial"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:20
+msgid "Looking for a Place?"
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:20
+msgid "Tell us what you need and when you want to move. We reply within one business day with what is open."
+msgstr ""
+
+#: patterns/site-rentals-highlights.php:20
+msgid "Start an Inquiry"
+msgstr ""
+
+#: patterns/site-rentals-listings.php
+msgctxt "Pattern title"
+msgid "Rentals: Listings Grid"
+msgstr ""
+
+#: patterns/site-rentals-listings.php
+msgctxt "Pattern description"
+msgid "A centered heading with an Apartments / Commercial button row, a grid of six listing cards with a photo, status badge, title, text, beds and baths line and a viewing button, and a closing note."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:18
+msgid "Brick garden apartments set around a shared lawn"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:18
+#: patterns/site-rentals-listings.php:20
+msgid "Available now"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:18
+msgid "Two-Bedroom Garden Apartment, Riverside"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:18
+msgid "Ground-floor home with its own entrance, on-site laundry and parking a few steps away."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:18
+msgid "2 beds · 1 bath · $1,450 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:19
+msgid "A furnished living room with a white sofa and colorful cushions"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:19
+msgid "Furnished"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:19
+msgid "Furnished One-Bedroom, Old Mill District"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:19
+msgid "Move in with just a suitcase. Ideal for visiting nurses, teachers and seasonal work."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:19
+msgid "1 bed · 1 bath · $1,290 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:20
+msgid "A white kitchen with a blue island and pendant lights"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:20
+msgid "Renovated Three-Bedroom, North Hill"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:20
+msgid "New kitchen, two full baths and a small yard close to the elementary school."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:20
+msgid "3 beds · 2 baths · $1,980 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:21
+msgid "A corner commercial building with shops on the ground floor"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:21
+msgid "Corner Retail Unit, Main Street"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:21
+msgid "Large display windows, high ceilings and steady foot traffic from the Saturday market."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:21
+msgid "1,100 sq ft · 1 restroom · $1,850 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:22
+msgid "Old stone houses along a river at dusk"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:22
+#: patterns/utility-coming-soon.php:25
+msgid "Coming soon"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:22
+msgid "Waterfront Studio, Riverside"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:22
+msgid "Cozy top-floor studio with river views, a new bathroom and heat included in the rent."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:22
+msgid "Studio · 1 bath · $980 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:23
+msgid "A row of downtown buildings with offices on the upper floors"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:23
+msgid "Upstairs Office Suite, Downtown"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:23
+msgid "Three private offices and a meeting room above the shops, with flexible lease terms."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:23
+msgid "850 sq ft · 1 restroom · $1,200 / month"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:31
+msgid "Available rentals"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:35
+msgid "Apartments and Commercial Space for Rent in Millbrook"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:39
+msgid "From riverside studios to family-size homes and Main Street storefronts, here is a look at what is open now and what is coming up next."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:84
+msgid "Request a Viewing"
+msgstr ""
+
+#: patterns/site-rentals-listings.php:97
+msgid "Not seeing the right fit? New units open up every month."
+msgstr ""
+
+#: patterns/site-rentals-listings.php:103
+msgid "Join the Waiting List"
+msgstr ""
+
+#: patterns/site-rentals-paths.php
+msgctxt "Pattern title"
+msgid "Rentals: Three Paths"
+msgstr ""
+
+#: patterns/site-rentals-paths.php
+msgctxt "Pattern description"
+msgid "A centered heading above three dark cards for renting a home, leasing a workspace and current residents, each with a title, text and a link button."
+msgstr ""
+
+#: patterns/site-rentals-paths.php:18
+msgid "Rent a Home"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:18
+msgid "Browse furnished and unfurnished apartments across Millbrook, then send an inquiry to check dates and book a viewing."
+msgstr ""
+
+#: patterns/site-rentals-paths.php:18
+msgid "See Apartments"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:19
+msgid "Lease a Workspace"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:19
+msgid "Share your square footage and budget and we will show you shop fronts, studios and office suites downtown."
+msgstr ""
+
+#: patterns/site-rentals-paths.php:19
+msgid "See Commercial"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:20
+msgid "Already a Resident"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:20
+msgid "Pay rent, ask a question or request a repair. Our office team and maintenance crew are a message away."
+msgstr ""
+
+#: patterns/site-rentals-paths.php:20
+msgid "Contact the Office"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:28
+msgid "How can we help?"
+msgstr ""
+
+#: patterns/site-rentals-paths.php:32
+msgid "Pick the Path That Fits You"
+msgstr ""
+
+#: patterns/site-rentals-services.php
+msgctxt "Pattern title"
+msgid "Rentals: Resident Services (Dark)"
+msgstr ""
+
+#: patterns/site-rentals-services.php
+msgctxt "Pattern description"
+msgid "A dark charcoal band with a centered heading and six resident services, each with an icon, a title and a short description."
+msgstr ""
+
+#: patterns/site-rentals-services.php:18
+msgid "Friendly Screening"
+msgstr ""
+
+#: patterns/site-rentals-services.php:18
+msgid "A simple application, clear criteria and a decision within two business days, with a real conversation along the way."
+msgstr ""
+
+#: patterns/site-rentals-services.php:19
+msgid "Easy Online Rent"
+msgstr ""
+
+#: patterns/site-rentals-services.php:19
+msgid "Pay from your phone with the resident portal, set up autopay or drop a check at our Main Street office."
+msgstr ""
+
+#: patterns/site-rentals-services.php:20
+msgid "Round-the-Clock Repairs"
+msgstr ""
+
+#: patterns/site-rentals-services.php:20
+msgid "Our own maintenance crew answers the emergency line every hour of the day and fixes most issues the same week."
+msgstr ""
+
+#: patterns/site-rentals-services.php:21
+msgid "Twice-Yearly Checkups"
+msgstr ""
+
+#: patterns/site-rentals-services.php:21
+msgid "Spring and fall visits catch worn seals, slow drains and smoke alarm batteries before they become problems."
+msgstr ""
+
+#: patterns/site-rentals-services.php:22
+msgid "Quick Replies"
+msgstr ""
+
+#: patterns/site-rentals-services.php:22
+msgid "Questions by phone, email or text get an answer from our office team within one business day."
+msgstr ""
+
+#: patterns/site-rentals-services.php:23
+msgid "Online Inquiries"
+msgstr ""
+
+#: patterns/site-rentals-services.php:23
+msgid "Tell us your move-in date and wish list, and we will match you with open units and book a viewing."
+msgstr ""
+
+#: patterns/site-rentals-services.php:31
+msgid "Resident services"
+msgstr ""
+
+#: patterns/site-rentals-services.php:35
+msgid "Renting Made Calm and Simple"
+msgstr ""
+
+#: patterns/site-rentals-services.php:39
+msgid "From the first viewing to the day you hand back the keys, we take care of the details so home feels like home."
+msgstr ""
+
+#: patterns/site-rentals-why.php
+msgctxt "Pattern title"
+msgid "Rentals: Local Owners Cards"
+msgstr ""
+
+#: patterns/site-rentals-why.php
+msgctxt "Pattern description"
+msgid "A centered heading above four small cards with a red top border, an icon, a title and a short reason to rent from a local owner."
+msgstr ""
+
+#: patterns/site-rentals-why.php:18
+msgid "Owner-Run"
+msgstr ""
+
+#: patterns/site-rentals-why.php:18
+msgid "Two generations of one family own and manage every building we rent."
+msgstr ""
+
+#: patterns/site-rentals-why.php:19
+msgid "Right Downtown"
+msgstr ""
+
+#: patterns/site-rentals-why.php:19
+msgid "Our office sits on Main Street, minutes from every property we look after."
+msgstr ""
+
+#: patterns/site-rentals-why.php:20
+msgid "Straight Answers"
+msgstr ""
+
+#: patterns/site-rentals-why.php:20
+msgid "You talk with the people who make decisions, never a distant call center."
+msgstr ""
+
+#: patterns/site-rentals-why.php:21
+msgid "Part of the Town"
+msgstr ""
+
+#: patterns/site-rentals-why.php:21
+msgid "We sponsor the river cleanup and support local businesses all year."
+msgstr ""
+
+#: patterns/site-rentals-why.php:29
+msgid "Why rent local"
+msgstr ""
+
+#: patterns/site-rentals-why.php:33
+msgid "Neighbors, Not a Faceless Landlord"
 msgstr ""
 
 #: patterns/site-resort-about.php
@@ -7669,10 +9662,6 @@ msgstr ""
 
 #: patterns/site-restaurant-about.php:30
 msgid "A bright bistro dining room with set tables and fresh flowers"
-msgstr ""
-
-#: patterns/site-restaurant-about.php:38
-msgid "Our Story"
 msgstr ""
 
 #: patterns/site-restaurant-about.php:42
@@ -8136,10 +10125,6 @@ msgstr ""
 msgid "61 products"
 msgstr ""
 
-#: patterns/site-shop-categories.php:29
-msgid "Shop by category"
-msgstr ""
-
 #: patterns/site-shop-categories.php:35
 msgid "View all"
 msgstr ""
@@ -8159,15 +10144,7 @@ msgid "A row of four store perks (free shipping, easy returns, secure checkout a
 msgstr ""
 
 #: patterns/site-shop-features.php:18
-msgid "Free shipping"
-msgstr ""
-
-#: patterns/site-shop-features.php:18
 msgid "On every order over $50, delivered in two to four business days."
-msgstr ""
-
-#: patterns/site-shop-features.php:19
-msgid "Easy returns"
 msgstr ""
 
 #: patterns/site-shop-features.php:19
@@ -8401,10 +10378,6 @@ msgstr ""
 
 #: patterns/site-shop-promo.php:41
 msgid "Code: SUMMER10"
-msgstr ""
-
-#: patterns/site-shop-promo.php:47
-msgid "Shop the sale"
 msgstr ""
 
 #: patterns/site-shop-promo.php:59
@@ -8921,6 +10894,19 @@ msgstr ""
 msgid "Written by"
 msgstr ""
 
+#: patterns/template-product-meta.php
+msgctxt "Pattern title"
+msgid "Product meta (WooCommerce)"
+msgstr ""
+
+#: patterns/template-product-meta.php:21
+msgid "Category: "
+msgstr ""
+
+#: patterns/template-product-meta.php:23
+msgid "Tags: "
+msgstr ""
+
 #: patterns/template-related-posts.php
 msgctxt "Pattern title"
 msgid "Related posts"
@@ -8946,10 +10932,6 @@ msgstr ""
 
 #: patterns/template-sidebar.php:40
 msgid "Recent posts"
-msgstr ""
-
-#: patterns/template-sidebar.php:54
-msgid "Categories"
 msgstr ""
 
 #: patterns/template-sidebar.php:68
@@ -9026,30 +11008,6 @@ msgctxt "Pattern description"
 msgid "A featured client story with a tall portrait, a large pull quote, the full testimonial and a row of client logos underneath."
 msgstr ""
 
-#: patterns/testimonials-03.php:18
-msgid "Northwind"
-msgstr ""
-
-#: patterns/testimonials-03.php:19
-msgid "Mixwell"
-msgstr ""
-
-#: patterns/testimonials-03.php:20
-msgid "Futurestack"
-msgstr ""
-
-#: patterns/testimonials-03.php:21
-msgid "Fortuna"
-msgstr ""
-
-#: patterns/testimonials-03.php:22
-msgid "Heartline"
-msgstr ""
-
-#: patterns/testimonials-03.php:23
-msgid "Brightclick"
-msgstr ""
-
 #: patterns/testimonials-03.php:35
 msgid "Portrait of Aaron Astra"
 msgstr ""
@@ -9112,10 +11070,6 @@ msgstr ""
 
 #: patterns/utility-coming-soon.php:21
 msgid "Something new is on the way"
-msgstr ""
-
-#: patterns/utility-coming-soon.php:25
-msgid "Coming soon"
 msgstr ""
 
 #: patterns/utility-coming-soon.php:29
@@ -9270,10 +11224,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9281,6 +11239,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9297,10 +11256,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9308,6 +11271,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9324,10 +11288,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9335,6 +11303,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9351,10 +11320,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9362,6 +11335,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9378,10 +11352,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9389,6 +11367,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9405,10 +11384,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9416,6 +11399,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9432,10 +11416,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9443,6 +11431,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9459,10 +11448,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9470,6 +11463,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9486,10 +11480,14 @@ msgstr ""
 #: styles/colors/ocean.json
 #: styles/colors/rose.json
 #: styles/colors/sunset.json
+#: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
 #: styles/education.json
+#: styles/fashion.json
 #: styles/fitness.json
+#: styles/gadget.json
+#: styles/homebuyer.json
 #: styles/law.json
 #: styles/magazine.json
 #: styles/marketplace.json
@@ -9497,6 +11495,7 @@ msgstr ""
 #: styles/modern.json
 #: styles/photography.json
 #: styles/realestate.json
+#: styles/rentals.json
 #: styles/resort.json
 #: styles/restaurant.json
 #: styles/shop.json
@@ -9615,6 +11614,11 @@ msgctxt "Style variation name"
 msgid "Sunset"
 msgstr ""
 
+#: styles/commercial.json
+msgctxt "Style variation name"
+msgid "Summit Ridge"
+msgstr ""
+
 #: styles/consulting.json
 msgctxt "Style variation name"
 msgid "Conselta"
@@ -9630,9 +11634,24 @@ msgctxt "Style variation name"
 msgid "Edunova"
 msgstr ""
 
+#: styles/fashion.json
+msgctxt "Style variation name"
+msgid "Modista"
+msgstr ""
+
 #: styles/fitness.json
 msgctxt "Style variation name"
 msgid "Pulsefit"
+msgstr ""
+
+#: styles/gadget.json
+msgctxt "Style variation name"
+msgid "Voltix"
+msgstr ""
+
+#: styles/homebuyer.json
+msgctxt "Style variation name"
+msgid "QuickKey"
 msgstr ""
 
 #: styles/law.json
@@ -9668,6 +11687,11 @@ msgstr ""
 #: styles/realestate.json
 msgctxt "Style variation name"
 msgid "Homely"
+msgstr ""
+
+#: styles/rentals.json
+msgctxt "Style variation name"
+msgid "Harbor Lane"
 msgstr ""
 
 #: styles/resort.json

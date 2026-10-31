@@ -1,0 +1,135 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Summit Ridge",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "surface",
+					"color": "#f2f2f2",
+					"name": "Surface"
+				},
+				{
+					"slug": "border-color",
+					"color": "#dcdcdc",
+					"name": "Border"
+				},
+				{
+					"slug": "foreground",
+					"color": "#2b2f33",
+					"name": "Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "#5f6469",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "primary",
+					"color": "#0b6b3a",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#33393f",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#3fae6a",
+					"name": "Accent"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #0b6b3a 0%, #33393f 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--secondary)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)",
+					"fontWeight": "400",
+					"letterSpacing": "0",
+					"textTransform": "none"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"border": {
+					"radius": "0"
+				},
+				"typography": {
+					"fontSize": "0.8125rem",
+					"fontWeight": "600",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.12em"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)"
+				}
+			}
+		}
+	}
+}

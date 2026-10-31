@@ -205,6 +205,18 @@ if ( ! function_exists( 'bblocks_pattern_categories' ) ) {
 				'label'       => _x( 'bBlocks Site — Shop', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Sections from the Shoplane online store starter site.', 'bblocks' ),
 			),
+			'bblocks-site-rentals'      => array(
+				'label'       => _x( 'bBlocks Site — Rental Homes', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Harbor Lane rental homes starter site.', 'bblocks' ),
+			),
+			'bblocks-site-commercial'   => array(
+				'label'       => _x( 'bBlocks Site — Commercial Real Estate', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Summit Ridge commercial real estate starter site.', 'bblocks' ),
+			),
+			'bblocks-site-homebuyer'    => array(
+				'label'       => _x( 'bBlocks Site — Cash Home Buyer', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the QuickKey cash home buyer starter site.', 'bblocks' ),
+			),
 			'bblocks-site-magazine'     => array(
 				'label'       => _x( 'bBlocks Site — Magazine', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Sections from the Daily Ink magazine starter site.', 'bblocks' ),
@@ -290,3 +302,7 @@ require_once get_template_directory() . '/inc/starter-sites.php';
 require_once get_template_directory() . '/inc/design.php';
 require_once get_template_directory() . '/inc/recommended-plugins.php';
 require_once get_template_directory() . '/inc/admin-dashboard.php';
+
+if ( class_exists( 'WooCommerce' ) ) {
+	require_once get_template_directory() . '/inc/woocommerce.php';
+}

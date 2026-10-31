@@ -8,44 +8,23 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, e-commerce, portfolio, one-column, two-columns, right-sidebar, grid-layout, custom-colors, custom-menu, editor-style, featured-images, featured-image-header, full-site-editing, full-width-template, block-patterns, block-styles, style-variations, template-editing, threaded-comments, rtl-language-support, translation-ready, wide-blocks
 
-Multipurpose block theme with 18 one-click starter sites, 150+ patterns and 17 styles for business, restaurant, clinic, law, school, gym, real estate, shop, magazine and portfolio sites.
+Fast block theme with 23 one-click starter sites, 150+ patterns, 22 styles and full WooCommerce support. No page builder needed.
 
 == Description ==
 
-bBlocks is a lightweight, multipurpose full-site-editing (FSE) block theme. It gives you a coherent design system, eighteen one-click starter sites and a library of more than 150 ready-to-use block patterns — hero, about, features, services, menu, team, testimonials, pricing, call-to-action, contact, blog, FAQ and portfolio sections — that snap together in the Site Editor to assemble the site you actually need.
+bBlocks is a fast, lightweight block theme for building any website with the WordPress Site Editor — no page builder needed. Import one of 23 one-click starter sites for a business, agency, restaurant, clinic, school, real estate agency, blog or WooCommerce store, then make it yours with 150+ patterns, 22 style variations and ready-made headers and footers. Built entirely with core blocks, bBlocks is accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce.
 
-Every pattern, template and template part in bBlocks is built entirely from WordPress core blocks. There is no page builder, no bundled plugin, and no external service required for the theme to work correctly. The free companion bBlocks plugin adds extra blocks if you want them; it is never required to install, activate or use this theme.
+= Features =
 
-= Starter sites =
-
-The theme dashboard (Appearance → bBlocks) imports a complete site in one click: Business, Creative Agency, SaaS Product, Freelancer, Nirman Architecture, DigiMagnet Marketplace, Naturexplo Eco Resort, Sweet Pixie Spa, Conselta Consulting, Savora Restaurant, Lumen Photography Studio, Carely Clinic, Justica Law, Edunova Academy, Pulsefit Gym, Homely Realty, Shoplane Store and Daily Ink Magazine. Starter sites build their pages from the theme's own patterns — nothing is downloaded, your posts are never changed and importing again updates the same pages. Each one can also apply its matching style and header.
-
-= Design =
-
-* 17 style variations — Default, Modern, Dark and one for each niche starter site — switchable in one click from the dashboard's Design tab or from Styles in the Site Editor.
-* 6 color palettes (Ocean, Forest, Sunset, Midnight, Rose, Monochrome) and 5 font pairings (Modern Sans, Friendly, Editorial, Geometric, Classic) that you can mix with any style in the Site Editor.
-* 5 header designs (logo and navigation; navigation and button; centered; top bar with contact details; navigation and search) and 3 footer designs. Pick one from the dashboard's Design tab or from "Replace" in the Site Editor — the choice is saved as a normal template part, so you can keep editing it.
-* Self-hosted Inter, Poppins, Manrope and Playfair Display fonts (no requests to third-party font services) and fluid typography.
-
-= Templates =
-
-Seventeen templates: blog home, index, single post, page, archive, category, tag, author, search, 404, and the custom templates Landing Page (Full Width), Blank Canvas (No Header or Footer), Page No Title, Page with Sidebar, Page with Wide Image, Post with Sidebar and Post with Cover Image. Single posts show the author card and related posts from the same categories.
-
-= Modules =
-
-Nine optional front-end modules, all off by default and loading nothing until you switch one on: back to top, dark mode toggle, reading progress bar, smart sticky header, scroll animations, footer reveal, floating contact buttons (call, email, WhatsApp), announcement bar and table of contents.
-
-= Getting started =
-
-After activation, Appearance → bBlocks shows a short "Get your site ready" checklist: import a starter site, add your logo, pick your colors and fonts, choose a header and footer, set up your menu and switch on the extras you need.
-
-= WooCommerce =
-
-bBlocks includes basic WooCommerce compatibility: product galleries and the shop, product, cart and checkout pages display using WooCommerce's own block templates. The Shoplane starter site is a product showcase built from core blocks and does not need a shop plugin.
-
-= Accessibility =
-
-Visible focus states, a skip link, semantic headings, keyboard-operable navigation (parent menu items stay links; submenus open with their own toggle button and close with Escape), reduced-motion support and color contrast checked in every style variation.
+* 23 one-click starter sites: Business, Agency, SaaS, Freelancer, Restaurant, Photography, Medical Clinic, Law Firm, Education, Gym, Real Estate, Rental Homes, Commercial Real Estate, Cash Home Buyer, Online Store, Magazine, Architecture, Marketplace, Eco Resort, Spa, Consulting, plus Fashion and Electronics WooCommerce stores (WooCommerce active).
+* 150+ block patterns: hero, services, menu, pricing, team, testimonials, FAQ, portfolio, contact, blog and shop sections.
+* 22 style variations, 6 color palettes and 5 font pairings — switch with one click.
+* 5 header and 3 footer designs, swappable from the dashboard or the Site Editor.
+* 23 templates, including Blank Canvas, Landing Page, Page or Post with Sidebar, Post with Cover Image and WooCommerce shop, product, cart and checkout.
+* WooCommerce ready: shop, product, cart, checkout and order templates styled to match every style variation.
+* 9 optional modules: dark mode, sticky header, announcement bar, table of contents, back to top, reading progress, scroll animations, footer reveal and WhatsApp / call buttons.
+* Theme dashboard with a setup checklist, starter sites and one-click design changes.
+* Fast and accessible: core blocks only, self-hosted fonts, keyboard-friendly navigation, reduced-motion support, translation and RTL ready.
 
 == Installation ==
 
@@ -88,7 +67,7 @@ Modules are optional front-end extras (Appearance → bBlocks → Modules). All 
 
 = Is this theme compatible with WooCommerce? =
 
-bBlocks includes basic WooCommerce support (product gallery features) so standard shop, product, cart and checkout pages display correctly using WooCommerce's own templates. It does not include a custom-designed WooCommerce experience.
+Yes. bBlocks ships its own shop, product, search results, cart, checkout and order confirmation templates that follow your chosen style, and adds two WooCommerce starter sites (Fashion and Electronics) while WooCommerce is active. Without WooCommerce, the Shoplane starter site still gives you a product showcase built from core blocks.
 
 = Can I change the colors, fonts and spacing? =
 
@@ -105,6 +84,11 @@ Please use the theme's support forum on WordPress.org.
 == Changelog ==
 
 = 1.1.0 =
+* WooCommerce: added theme templates for the shop, product, product search results, cart, checkout and order confirmation pages, and a stylesheet that makes WooCommerce blocks follow every style variation.
+* WooCommerce: added two starter sites, Modista Fashion Store and Voltix Electronics Store (14 patterns, 2 style variations), shown while WooCommerce is active. Their menus include the WooCommerce shop, cart and account pages.
+* Shorter, clearer theme description.
+* Added three real estate starter sites: Harbor Lane Rentals, Summit Ridge Commercial and QuickKey Home Buyers (24 patterns, 3 style variations).
+* Starter Sites tab: search, categories with counts, status filter and pagination.
 * Added nine starter sites with matching style variations: Savora Restaurant, Lumen Photography Studio, Carely Clinic, Justica Law, Edunova Academy, Pulsefit Gym, Homely Realty, Shoplane Store and Daily Ink Magazine (68 new patterns).
 * Added utility patterns: Coming Soon, Maintenance, Newsletter and an alternative 404 section.
 * Added two header designs (top bar with contact details; navigation with search). All headers and footers are now patterns too, so they appear under "Replace" in the Site Editor.
@@ -251,8 +235,32 @@ Photographs in assets/images (*.jpg) are from Wikimedia Commons and are released
 * shop-sneakers.jpg — CC0, https://commons.wikimedia.org/wiki/File:A_girl_wearing_white_shoes_and_skirt;_April_2016_(02).jpg
 * shop-bag.jpg — CC0, https://commons.wikimedia.org/wiki/File:Duffel_bag_on_the_floor_next_to_a_chair_(9XiN0r2NWSM).jpg
 * shop-sunglasses.jpg — CC0, https://commons.wikimedia.org/wiki/File:At_the_beach_(Unsplash).jpg
+* fashion-hero.jpg — CC0, https://commons.wikimedia.org/wiki/File:Clothes_hangers_on_railing_(Unsplash).jpg
+* fashion-women.jpg — CC0, https://commons.wikimedia.org/wiki/File:Fashionable_woman_in_a_skirt_(Unsplash).jpg
+* fashion-men.jpg — CC0, https://commons.wikimedia.org/wiki/File:Confident_elegant_man_(Unsplash).jpg
+* fashion-shoes.jpg — CC0, https://commons.wikimedia.org/wiki/File:Leather_shoes_and_boots_(Unsplash).jpg
+* fashion-accessories.jpg — CC0, https://commons.wikimedia.org/wiki/File:Leather_duffel_bag_on_the_ground.jpg
+* gadget-hero.jpg — CC0, https://commons.wikimedia.org/wiki/File:Laptop_and_coffee_on_a_desk.jpg
+* gadget-desk.jpg — CC0, https://commons.wikimedia.org/wiki/File:Black_and_white_computer_desk_(Unsplash).jpg (a small logo in the background was blurred)
+* gadget-phone.jpg — CC0, https://commons.wikimedia.org/wiki/File:Black_and_red_tech_(Unsplash_twE-bTk0BnM).jpg
+* gadget-headphones.jpg — CC0, https://commons.wikimedia.org/wiki/File:Headphones_and_smartphone_(Unsplash).jpg
+* rentals-hero.jpg — CC0, https://commons.wikimedia.org/wiki/File:Franklin,_Pennsylvania,_USA_aerial_October_2024_04.jpg
+* rentals-exterior.jpg — CC0, https://commons.wikimedia.org/wiki/File:Apartment_buildings_-_Arlington,_MA_-_01.jpg
+* rentals-living.jpg — CC0, https://commons.wikimedia.org/wiki/File:Artchapiz1_artchapiz.es_apartment_rental_granada_01.jpg
+* rentals-kitchen.jpg — CC0, https://commons.wikimedia.org/wiki/File:Blue_white_kitchen_interior_(Unsplash).jpg
+* rentals-commercial.jpg — CC0, https://commons.wikimedia.org/wiki/File:Central_Avenue,_Connersville,_IN_(48483681261).jpg
+* rentals-town.jpg — CC0, https://commons.wikimedia.org/wiki/File:Quaint_river_town_(Unsplash).jpg
+* commercial-hero.jpg — CC0, https://commons.wikimedia.org/wiki/File:Vaper_in_da_House_(Unsplash).jpg
+* commercial-building.jpg — CC0, https://commons.wikimedia.org/wiki/File:Glass_wall_(Unsplash).jpg
+* commercial-boardroom.jpg — CC0, https://commons.wikimedia.org/wiki/File:Small_conference_room_(Unsplash).jpg
+* commercial-meeting.jpg — CC0, https://commons.wikimedia.org/wiki/File:Minimalist_meeting_room_(Unsplash).jpg
+* commercial-office.jpg — CC0, https://commons.wikimedia.org/wiki/File:120_E_8th_St,_Los_Angeles,_United_States_(Unsplash).jpg
+* homebuyer-street.jpg — CC0, https://commons.wikimedia.org/wiki/File:23rd_and_24th_Streets_Historic_District_La_Crosse.jpg
+* homebuyer-house.jpg — CC0, https://commons.wikimedia.org/wiki/File:Cozy_white_house_(Unsplash).jpg
+* homebuyer-fixer.jpg — CC0, https://commons.wikimedia.org/wiki/File:Abandoned_rural_house_(Unsplash).jpg
+* homebuyer-porch.jpg — CC0, https://commons.wikimedia.org/wiki/File:Lucius_Coleman_Hall_House,_Webster,_NC_(46563095632).jpg
 
-All other code, markup, patterns, templates and images in this theme — including the SVG illustrations, portraits and client logos in assets/images (the brand names in the logos are fictional) — are original work created for bBlocks and are licensed under the GPLv2 (or later), the same as WordPress. The screenshot (screenshot.jpg) shows the Savora starter site; it uses the CC0 photograph restaurant-table.jpg listed above, and everything else in it is part of this theme (GPLv2 or later).
+All other code, markup, patterns, templates and images in this theme — including the SVG illustrations, portraits and client logos in assets/images (the brand names in the logos are fictional) — are original work created for bBlocks and are licensed under the GPLv2 (or later), the same as WordPress. The screenshot (screenshot.jpg) shows the theme in its Default style with the "Hero: Centered Statement" and "Features: Image Cards" patterns; it uses the CC0 photographs scene-meeting.jpg, scene-cafe.jpg and scene-shop.jpg listed above, and everything else in it is part of this theme (GPLv2 or later).
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.

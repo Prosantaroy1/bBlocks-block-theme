@@ -76,6 +76,122 @@
 			openTab( 'starter-sites', true, true );
 		} );
 
+		// Starter site browser: search, category and status filters, pagination.
+		( function () {
+			var $cards = $( '.bblocks-starter-card' );
+
+			if ( ! $cards.length ) {
+				return;
+			}
+
+			var state = { cat: '', query: '', status: '', page: 1, perPage: parseInt( $( '#bblocks-starter-per-page' ).val(), 10 ) || 0 };
+			var $pagination = $( '.bblocks-starter-pagination' );
+			var $count = $( '.bblocks-starter-count' );
+			var $empty = $( '.bblocks-starter-empty' );
+			var searchTimer;
+
+			function format( text, values ) {
+				var i = 0;
+				return String( text || '' ).replace( /%(\d+)\$s|%s/g, function ( match, index ) {
+					var value = index ? values[ index - 1 ] : values[ i++ ];
+					return undefined === value ? match : value;
+				} );
+			}
+
+			function pageButton( label, page, current, ariaLabel ) {
+				var $btn = $( '<button type="button" class="bblocks-page-btn">' ).text( label ).attr( 'data-page', page );
+
+				if ( ariaLabel ) {
+					$btn.attr( 'aria-label', ariaLabel );
+				}
+				if ( current ) {
+					$btn.addClass( 'is-current' ).attr( 'aria-current', 'page' );
+				}
+				return $btn;
+			}
+
+			function render() {
+				var matches = $cards.filter( function () {
+					var $card = $( this );
+					var cats = ' ' + ( $card.attr( 'data-cats' ) || '' ) + ' ';
+
+					if ( state.cat && -1 === cats.indexOf( ' ' + state.cat + ' ' ) ) {
+						return false;
+					}
+					if ( 'imported' === state.status && '1' !== $card.attr( 'data-imported' ) ) {
+						return false;
+					}
+					if ( 'new' === state.status && '1' === $card.attr( 'data-imported' ) ) {
+						return false;
+					}
+					return ! state.query || -1 !== ( $card.attr( 'data-search' ) || '' ).indexOf( state.query );
+				} );
+
+				var total = matches.length;
+				var perPage = state.perPage > 0 ? state.perPage : total || 1;
+				var pages = Math.max( 1, Math.ceil( total / perPage ) );
+
+				state.page = Math.min( Math.max( 1, state.page ), pages );
+
+				var start = ( state.page - 1 ) * perPage;
+
+				$cards.attr( 'hidden', true );
+				matches.slice( start, start + perPage ).removeAttr( 'hidden' );
+
+				$empty.prop( 'hidden', total > 0 );
+				$count.text( total ? format( i18n.showing, [ start + 1, Math.min( start + perPage, total ), total ] ) : '' );
+
+				$pagination.empty();
+				if ( pages > 1 ) {
+					$pagination.append( pageButton( '‹', state.page - 1, false, i18n.prevPage ).prop( 'disabled', 1 === state.page ) );
+					for ( var p = 1; p <= pages; p++ ) {
+						$pagination.append( pageButton( String( p ), p, p === state.page, format( i18n.pageN, [ p ] ) ) );
+					}
+					$pagination.append( pageButton( '›', state.page + 1, false, i18n.nextPage ).prop( 'disabled', pages === state.page ) );
+				}
+			}
+
+			$( '.bblocks-starter-cat' ).on( 'click', function () {
+				$( '.bblocks-starter-cat' ).removeClass( 'is-active' ).attr( 'aria-pressed', 'false' );
+				$( this ).addClass( 'is-active' ).attr( 'aria-pressed', 'true' );
+				state.cat = $( this ).attr( 'data-cat' ) || '';
+				state.page = 1;
+				render();
+			} );
+
+			$( '#bblocks-starter-search' ).on( 'input', function () {
+				var value = $( this ).val();
+
+				window.clearTimeout( searchTimer );
+				searchTimer = window.setTimeout( function () {
+					state.query = String( value ).trim().toLowerCase();
+					state.page = 1;
+					render();
+				}, 150 );
+			} );
+
+			$( '#bblocks-starter-status' ).on( 'change', function () {
+				state.status = $( this ).val();
+				state.page = 1;
+				render();
+			} );
+
+			$( '#bblocks-starter-per-page' ).on( 'change', function () {
+				state.perPage = parseInt( $( this ).val(), 10 ) || 0;
+				state.page = 1;
+				render();
+			} );
+
+			$pagination.on( 'click', '.bblocks-page-btn', function () {
+				state.page = parseInt( $( this ).attr( 'data-page' ), 10 ) || 1;
+				render();
+				var top = $( '.bblocks-starter-browser' ).offset().top - 60;
+				window.scrollTo( { top: top, behavior: window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches ? 'auto' : 'smooth' } );
+			} );
+
+			render();
+		} )();
+
 		// Checklist steps that point to another dashboard tab.
 		$( document ).on( 'click', '.bblocks-open-tab', function ( e ) {
 			e.preventDefault();

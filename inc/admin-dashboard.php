@@ -62,6 +62,12 @@ function bblocks_admin_assets( $hook_suffix ) {
 				/* translators: %s: style, header or footer design name. */
 				'confirmDesign' => __( 'Apply "%s"? This changes the design of your whole site. You can switch back at any time.', 'bblocks' ),
 				'applying'      => __( 'Applying…', 'bblocks' ),
+				/* translators: 1: first item shown, 2: last item shown, 3: total number of starter sites. */
+				'showing'       => __( 'Showing %1$s–%2$s of %3$s', 'bblocks' ),
+				'prevPage'      => __( 'Previous page', 'bblocks' ),
+				'nextPage'      => __( 'Next page', 'bblocks' ),
+				/* translators: %s: page number. */
+				'pageN'         => __( 'Page %s', 'bblocks' ),
 			),
 		)
 	);
@@ -323,6 +329,70 @@ function bblocks_starter_mockup( $layout, $logo ) {
 }
 
 /**
+ * Starter site categories for the browser's sidebar.
+ *
+ * @return array<string, string> Category key => label.
+ */
+function bblocks_starter_site_categories() {
+	return array(
+		'business'   => __( 'Business', 'bblocks' ),
+		'creative'   => __( 'Agency & Portfolio', 'bblocks' ),
+		'ecommerce'  => __( 'eCommerce', 'bblocks' ),
+		'food'       => __( 'Food & Hospitality', 'bblocks' ),
+		'health'     => __( 'Health & Fitness', 'bblocks' ),
+		'education'  => __( 'Education', 'bblocks' ),
+		'realestate' => __( 'Real Estate & Architecture', 'bblocks' ),
+		'services'   => __( 'Professional Services', 'bblocks' ),
+		'blog'       => __( 'Blog & Magazine', 'bblocks' ),
+		'dark'       => __( 'Dark Designs', 'bblocks' ),
+	);
+}
+
+/**
+ * Categories of one starter site. Sites can set their own 'categories' key;
+ * the bundled ones are mapped here.
+ *
+ * @param string $slug Starter site key.
+ * @return string[]
+ */
+function bblocks_starter_site_category_keys( $slug ) {
+	static $sites = null;
+
+	if ( null === $sites ) {
+		$sites = bblocks_starter_sites();
+	}
+
+	if ( ! empty( $sites[ $slug ]['categories'] ) ) {
+		return (array) $sites[ $slug ]['categories'];
+	}
+
+	$map = array(
+		'business'      => array( 'business' ),
+		'agency'        => array( 'business', 'creative' ),
+		'saas'          => array( 'business', 'creative' ),
+		'freelancer'    => array( 'creative', 'blog', 'dark' ),
+		'architecture'  => array( 'realestate', 'creative', 'dark' ),
+		'marketplace'   => array( 'ecommerce', 'business' ),
+		'resort'        => array( 'food' ),
+		'spa'           => array( 'health' ),
+		'consulting'    => array( 'services', 'business', 'dark' ),
+		'magazine'      => array( 'blog' ),
+		'restaurant'    => array( 'food' ),
+		'photography'   => array( 'creative', 'dark' ),
+		'education'     => array( 'education' ),
+		'fitness'       => array( 'health', 'dark' ),
+		'realestate'    => array( 'realestate', 'business' ),
+		'shop'          => array( 'ecommerce' ),
+		'medical'       => array( 'health', 'services' ),
+		'law'           => array( 'services', 'business' ),
+		'fashion-store' => array( 'ecommerce' ),
+		'gadget-store'  => array( 'ecommerce' ),
+	);
+
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : array( 'business' );
+}
+
+/**
  * Render the main theme dashboard page.
  */
 function bblocks_admin_page_render() {
@@ -565,15 +635,75 @@ function bblocks_admin_page_render() {
 				<?php esc_html_e( 'Create a navigation menu with the new pages', 'bblocks' ); ?>
 			</label>
 
+			<?php
+			$imported_sites  = get_option( 'bblocks_imported_pages', array() );
+			$imported_sites  = is_array( $imported_sites ) ? $imported_sites : array();
+			$site_name       = get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'bBlocks';
+			$starter_sites   = bblocks_starter_sites();
+			$site_categories = bblocks_starter_site_categories();
+			$category_counts = array_fill_keys( array_keys( $site_categories ), 0 );
+
+			foreach ( $starter_sites as $slug => $site ) {
+				foreach ( bblocks_starter_site_category_keys( $slug ) as $category ) {
+					if ( isset( $category_counts[ $category ] ) ) {
+						++$category_counts[ $category ];
+					}
+				}
+			}
+			?>
+			<div class="bblocks-starter-browser">
+				<aside class="bblocks-starter-sidebar" aria-label="<?php esc_attr_e( 'Filter starter sites', 'bblocks' ); ?>">
+					<label class="screen-reader-text" for="bblocks-starter-search"><?php esc_html_e( 'Search starter sites', 'bblocks' ); ?></label>
+					<div class="bblocks-starter-search">
+						<span class="dashicons dashicons-search" aria-hidden="true"></span>
+						<input type="search" id="bblocks-starter-search" placeholder="<?php esc_attr_e( 'Search starter sites', 'bblocks' ); ?>" autocomplete="off">
+					</div>
+
+					<h3 class="bblocks-starter-filter-title" id="bblocks-starter-categories-title"><?php esc_html_e( 'Categories', 'bblocks' ); ?></h3>
+					<ul class="bblocks-starter-categories" aria-labelledby="bblocks-starter-categories-title">
+						<li>
+							<button type="button" class="bblocks-starter-cat is-active" data-cat="" aria-pressed="true">
+								<span><?php esc_html_e( 'All sites', 'bblocks' ); ?></span>
+								<span class="bblocks-starter-cat-count"><?php echo esc_html( number_format_i18n( count( $starter_sites ) ) ); ?></span>
+							</button>
+						</li>
+						<?php foreach ( $site_categories as $category => $label ) : ?>
+							<?php
+							if ( empty( $category_counts[ $category ] ) ) {
+								continue;
+							}
+							?>
+							<li>
+								<button type="button" class="bblocks-starter-cat" data-cat="<?php echo esc_attr( $category ); ?>" aria-pressed="false">
+									<span><?php echo esc_html( $label ); ?></span>
+									<span class="bblocks-starter-cat-count"><?php echo esc_html( number_format_i18n( $category_counts[ $category ] ) ); ?></span>
+								</button>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+
+					<h3 class="bblocks-starter-filter-title"><label for="bblocks-starter-status"><?php esc_html_e( 'Status', 'bblocks' ); ?></label></h3>
+					<select id="bblocks-starter-status">
+						<option value=""><?php esc_html_e( 'All starter sites', 'bblocks' ); ?></option>
+						<option value="imported"><?php esc_html_e( 'Imported', 'bblocks' ); ?></option>
+						<option value="new"><?php esc_html_e( 'Not imported yet', 'bblocks' ); ?></option>
+					</select>
+				</aside>
+
+				<div class="bblocks-starter-main">
 			<div class="bblocks-starter-grid">
 				<?php
-				$imported_sites = get_option( 'bblocks_imported_pages', array() );
-				$imported_sites = is_array( $imported_sites ) ? $imported_sites : array();
-				$site_name      = get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'bBlocks';
-
-				foreach ( bblocks_starter_sites() as $slug => $site ) :
+				foreach ( $starter_sites as $slug => $site ) :
 					$tokens   = bblocks_starter_site_tokens( $site['style'] );
 					$imported = ! empty( $imported_sites[ $slug ] );
+					$cat_keys = bblocks_starter_site_category_keys( $slug );
+					$haystack = array( $site['title'], $site['description'], $site['style'] );
+					foreach ( $cat_keys as $category ) {
+						$haystack[] = isset( $site_categories[ $category ] ) ? $site_categories[ $category ] : '';
+					}
+					foreach ( $site['pages'] as $page ) {
+						$haystack[] = $page[0];
+					}
 					$vars     = sprintf(
 						'--bb-bg:%1$s;--bb-bg2:%2$s;--bb-fg:%3$s;--bb-fg2:%4$s;--bb-ac:%5$s;--bb-ac2:%6$s;--bb-r:%7$s',
 						$tokens['background'],
@@ -585,7 +715,7 @@ function bblocks_admin_page_render() {
 						$tokens['radius']
 					);
 					?>
-					<article class="bblocks-starter-card<?php echo $imported ? ' is-imported' : ''; ?>" style="<?php echo esc_attr( $vars ); ?>" aria-labelledby="bblocks-starter-<?php echo esc_attr( $slug ); ?>">
+					<article class="bblocks-starter-card<?php echo $imported ? ' is-imported' : ''; ?>" style="<?php echo esc_attr( $vars ); ?>" aria-labelledby="bblocks-starter-<?php echo esc_attr( $slug ); ?>" data-cats="<?php echo esc_attr( implode( ' ', $cat_keys ) ); ?>" data-search="<?php echo esc_attr( strtolower( implode( ' ', $haystack ) ) ); ?>" data-imported="<?php echo $imported ? '1' : '0'; ?>">
 						<div class="bblocks-starter-preview-wrap" aria-hidden="true">
 							<?php bblocks_starter_mockup( $site['layout'], $site_name ); ?>
 						</div>
@@ -628,6 +758,24 @@ function bblocks_admin_page_render() {
 					</article>
 				<?php endforeach; ?>
 			</div>
+
+			<p class="bblocks-starter-empty" hidden><?php esc_html_e( 'No starter sites match your search. Try another word or category.', 'bblocks' ); ?></p>
+
+			<div class="bblocks-starter-toolbar">
+				<p class="bblocks-starter-count" role="status" aria-live="polite"></p>
+				<nav class="bblocks-starter-pagination" aria-label="<?php esc_attr_e( 'Starter sites pages', 'bblocks' ); ?>"></nav>
+				<p class="bblocks-starter-per-page">
+					<label for="bblocks-starter-per-page"><?php esc_html_e( 'Per page:', 'bblocks' ); ?></label>
+					<select id="bblocks-starter-per-page">
+						<option value="6">6</option>
+						<option value="9" selected>9</option>
+						<option value="12">12</option>
+						<option value="0"><?php esc_html_e( 'All', 'bblocks' ); ?></option>
+					</select>
+				</p>
+			</div>
+				</div><!-- .bblocks-starter-main -->
+			</div><!-- .bblocks-starter-browser -->
 		</div>
 
 		<!-- TAB: DESIGN -->
@@ -757,7 +905,7 @@ function bblocks_admin_page_render() {
 						),
 						array(
 							__( 'WooCommerce', 'bblocks' ),
-							__( 'Basic compatibility with WooCommerce\'s block templates and product gallery', 'bblocks' ),
+							__( 'Shop, product, cart, checkout and order templates that follow your style, plus two WooCommerce starter sites', 'bblocks' ),
 						),
 						array(
 							__( 'Support', 'bblocks' ),

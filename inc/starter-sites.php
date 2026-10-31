@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return array<string, array<string, mixed>>
  */
 function bblocks_starter_sites() {
-	return array(
+	$sites = array(
 		'business'   => array(
 			'title'       => __( 'Business', 'bblocks' ),
 			'description' => __( 'Classic company site with a split hero, services, story, testimonials and a contact page.', 'bblocks' ),
@@ -310,7 +310,68 @@ function bblocks_starter_sites() {
 				'contact'        => array( __( 'Contact', 'bblocks' ), array( 'site-law-consultation' ), 'page-landing' ),
 			),
 		),
+		'commercial'   => array(
+			'title'       => __( 'Summit Ridge Commercial', 'bblocks' ),
+			'description' => __( 'Commercial brokerage and property management site with a skyscraper hero, portfolio stats, service cards, a client testimonial, a recognized-leader story, a consultation cover and partner logos.', 'bblocks' ),
+			'style'       => 'Summit Ridge',
+			'header'      => 'header-cta',
+			'categories'  => array( 'realestate', 'business' ),
+			'layout'      => 'business',
+			'front'       => 'home',
+			'posts'       => 'news',
+			'pages'       => array(
+				'home'                => array( __( 'Home', 'bblocks' ), array( 'site-commercial-hero', 'site-commercial-stats', 'site-commercial-services', 'site-commercial-testimonial', 'site-commercial-leader', 'site-commercial-cta', 'site-commercial-partners' ), 'page-landing' ),
+				'brokerage'           => array( __( 'Brokerage', 'bblocks' ), array( 'site-commercial-services', 'site-commercial-stats', 'site-commercial-testimonial', 'site-commercial-cta' ), 'page-landing' ),
+				'property-management' => array( __( 'Property Management', 'bblocks' ), array( 'site-commercial-services', 'site-commercial-leader', 'site-commercial-stats', 'site-commercial-cta' ), 'page-landing' ),
+				'about'               => array( __( 'About', 'bblocks' ), array( 'site-commercial-leader', 'site-commercial-stats', 'site-commercial-testimonial', 'site-commercial-partners' ), 'page-landing' ),
+				'contact'             => array( __( 'Contact', 'bblocks' ), array( 'contact-01' ), 'page-landing' ),
+				'news'                => array( __( 'News', 'bblocks' ), array(), '' ),
+			),
+		),
+		'rentals'      => array(
+			'title'       => __( 'Harbor Lane Rentals', 'bblocks' ),
+			'description' => __( 'Family-owned apartment and commercial rental company with an aerial town hero and quick links, a family-owned story, a listings grid, resident services, neighborhoods and an inquiry call to action.', 'bblocks' ),
+			'style'       => 'Harbor Lane',
+			'header'      => 'header-topbar',
+			'categories'  => array( 'realestate' ),
+			'layout'      => 'architecture',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'       => array( __( 'Home', 'bblocks' ), array( 'site-rentals-hero', 'site-rentals-highlights', 'site-rentals-about', 'site-rentals-why', 'site-rentals-listings', 'site-rentals-services', 'site-rentals-areas', 'site-rentals-paths', 'site-rentals-cta' ), 'page-landing' ),
+				'apartments' => array( __( 'Apartments', 'bblocks' ), array( 'site-rentals-listings', 'site-rentals-areas', 'site-rentals-cta' ), 'page-landing' ),
+				'commercial' => array( __( 'Commercial', 'bblocks' ), array( 'site-rentals-listings', 'site-rentals-paths', 'site-rentals-cta' ), 'page-landing' ),
+				'about'      => array( __( 'About', 'bblocks' ), array( 'site-rentals-about', 'site-rentals-why', 'site-rentals-services', 'site-rentals-cta' ), 'page-landing' ),
+				'contact'    => array( __( 'Contact', 'bblocks' ), array( 'site-rentals-cta', 'contact-01' ), 'page-landing' ),
+				'blog'       => array( __( 'Blog', 'bblocks' ), array(), '' ),
+			),
+		),
+		'homebuyer'    => array(
+			'title'       => __( 'QuickKey Home Buyers', 'bblocks' ),
+			'description' => __( 'Local cash home buyer site with a dark photo hero, situation cards, a three-step process, a dark benefits band, a red cash offer section, FAQ and contact.', 'bblocks' ),
+			'style'       => 'QuickKey',
+			'header'      => 'header-cta',
+			'categories'  => array( 'realestate', 'services' ),
+			'layout'      => 'business',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'         => array( __( 'Home', 'bblocks' ), array( 'site-homebuyer-hero', 'site-homebuyer-situations', 'site-homebuyer-steps', 'site-homebuyer-benefits', 'site-homebuyer-offer', 'site-homebuyer-faq', 'site-homebuyer-contact' ), 'page-landing' ),
+				'get-an-offer' => array( __( 'Get an Offer', 'bblocks' ), array( 'site-homebuyer-offer', 'site-homebuyer-benefits', 'site-homebuyer-faq' ), 'page-landing' ),
+				'how-it-works' => array( __( 'How It Works', 'bblocks' ), array( 'site-homebuyer-steps', 'site-homebuyer-benefits', 'site-homebuyer-situations', 'site-homebuyer-offer' ), 'page-landing' ),
+				'about'        => array( __( 'About', 'bblocks' ), array( 'site-homebuyer-about', 'site-homebuyer-situations', 'site-homebuyer-offer' ), 'page-landing' ),
+				'blog'         => array( __( 'Blog', 'bblocks' ), array(), '' ),
+				'contact'      => array( __( 'Contact', 'bblocks' ), array( 'site-homebuyer-contact', 'site-homebuyer-faq' ), 'page-landing' ),
+			),
+		),
 	);
+
+	/**
+	 * Filters the starter sites shown in the theme dashboard.
+	 *
+	 * @param array $sites Starter site definitions.
+	 */
+	return apply_filters( 'bblocks_starter_sites', $sites );
 }
 
 /**
@@ -566,6 +627,17 @@ function bblocks_import_starter_site( $slug, $apply_style = false, $with_menu = 
 
 	$imported[ $slug ] = $page_ids;
 	update_option( 'bblocks_imported_pages', $imported, false );
+
+	// WooCommerce's own pages (shop, cart, account) join the menu; their content is not touched.
+	if ( ! empty( $site['woo_pages'] ) && function_exists( 'wc_get_page_id' ) ) {
+		foreach ( $site['woo_pages'] as $woo_page ) {
+			$woo_page_id = wc_get_page_id( $woo_page );
+
+			if ( $woo_page_id > 0 && 'publish' === get_post_status( $woo_page_id ) ) {
+				$page_ids[ 'woo-' . $woo_page ] = $woo_page_id;
+			}
+		}
+	}
 
 	$front_id = isset( $page_ids[ $site['front'] ] ) ? $page_ids[ $site['front'] ] : 0;
 
