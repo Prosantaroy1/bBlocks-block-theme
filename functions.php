@@ -51,11 +51,10 @@ if ( ! function_exists( 'bblocks_setup' ) ) {
 		add_editor_style( 'assets/css/custom.css' );
 
 		/*
-		 * Basic WooCommerce compatibility. WooCommerce ships its own
-		 * block templates and blocks for the shop, product archive,
-		 * single product, cart and checkout pages on a block theme, so
-		 * no custom WooCommerce templates are bundled here — this only
-		 * declares support and enables the standard gallery features.
+		 * WooCommerce support and the standard product gallery features.
+		 * The theme's own shop, product, cart and checkout templates live
+		 * in /templates, and the extra styles and starter sites load from
+		 * inc/woocommerce.php while WooCommerce is active.
 		 */
 		add_theme_support( 'woocommerce' );
 		add_theme_support( 'wc-product-gallery-zoom' );

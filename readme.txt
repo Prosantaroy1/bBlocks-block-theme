@@ -3,16 +3,26 @@ Contributors: bplugins
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.1.0
+Version: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, e-commerce, portfolio, one-column, two-columns, right-sidebar, grid-layout, custom-colors, custom-menu, editor-style, featured-images, featured-image-header, full-site-editing, full-width-template, block-patterns, block-styles, style-variations, template-editing, threaded-comments, rtl-language-support, translation-ready, wide-blocks
 
-Fast block theme with 23 one-click starter sites, 150+ patterns, 22 styles and full WooCommerce support. No page builder needed.
+Small business website in minutes, no page builder needed. 23 one-click starter sites, 150+ patterns and full WooCommerce support.
 
 == Description ==
 
-bBlocks is a fast, lightweight block theme for building any website with the WordPress Site Editor — no page builder needed. Import one of 23 one-click starter sites for a business, agency, restaurant, clinic, school, real estate agency, blog or WooCommerce store, then make it yours with 150+ patterns, 22 style variations and ready-made headers and footers. Built entirely with core blocks, bBlocks is accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce.
+bBlocks is a fast block theme that gives small businesses a professional website without a page builder. Import one of 23 one-click starter sites — restaurant, clinic, law firm, gym, real estate, agency, consulting, school, online store and more — then edit every page visually in the WordPress Site Editor. 150+ patterns, 22 style variations and ready-made headers and footers make it yours in minutes. Built only with core blocks, so your site stays lightweight, accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce.
+
+Live demos: [bblocks-theme.netlify.app](https://bblocks-theme.netlify.app/)
+
+= No page builder needed =
+
+Page builders add extra plugins, heavy scripts and lock-in. bBlocks uses only the blocks that ship with WordPress, so there is nothing extra to install, pages load fast, and your content keeps working if you ever switch themes. Every section is edited directly in the Site Editor: click, type, replace the image, publish.
+
+= Built for small businesses =
+
+Each starter site is a complete, realistic website for a real kind of business — home, about, services, pricing, team, testimonials, FAQ and contact pages, with copy you only need to adjust. Call and WhatsApp buttons, an announcement bar and a sticky header are one switch away, and WooCommerce templates are ready when you want to sell online.
 
 = Features =
 
@@ -55,7 +65,7 @@ No. Every template, template part and pattern in bBlocks is built entirely from 
 
 = Does bBlocks include demo content or a one-click importer? =
 
-Yes. Go to Appearance → bBlocks → Starter Sites and import any of the eighteen starter sites. Each one creates its pages from the theme's own patterns, sets your homepage and blog page, and can create a navigation menu and apply the matching style and header. Nothing is downloaded and your existing posts are never changed; importing again updates the same pages instead of duplicating them.
+Yes. Go to Appearance → bBlocks → Starter Sites and import any of the 23 starter sites (two of them appear while WooCommerce is active). You can preview every starter site at https://bblocks-theme.netlify.app/ before importing. Each one creates its pages from the theme's own patterns, sets your homepage and blog page, and can create a navigation menu and apply the matching style and header. Nothing is downloaded and your existing posts are never changed; importing again updates the same pages instead of duplicating them.
 
 = Is the bBlocks plugin required? =
 
@@ -71,7 +81,7 @@ Yes. bBlocks ships its own shop, product, search results, cart, checkout and ord
 
 = Can I change the colors, fonts and spacing? =
 
-Yes. Apply one of the seventeen styles from Appearance → bBlocks → Design, or open Styles in the Site Editor to pick a style, a color palette or a font pairing and fine-tune colors, typography and layout.
+Yes. Apply one of the 22 styles from Appearance → bBlocks → Design, or open Styles in the Site Editor to pick a style, a color palette or a font pairing and fine-tune colors, typography and layout.
 
 = How do I change the header or footer? =
 
@@ -82,6 +92,12 @@ Use Appearance → bBlocks → Design, or select the header in the Site Editor a
 Please use the theme's support forum on WordPress.org.
 
 == Changelog ==
+
+= 1.1.1 =
+* New theme description focused on small businesses and building without a page builder.
+* Added the theme homepage (Theme URI) with live demos: https://bblocks-theme.netlify.app/
+* Readme: added "No page builder needed" and "Built for small businesses" sections and a live demo link; corrected the number of starter sites (23) and styles (22) in the FAQ.
+* Corrected an outdated code comment about WooCommerce templates.
 
 = 1.1.0 =
 * WooCommerce: added theme templates for the shop, product, product search results, cart, checkout and order confirmation pages, and a stylesheet that makes WooCommerce blocks follow every style variation.
