@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — Savora Restaurant · bBlocks starter site</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../css/wp-block-library.css">
+<link rel="stylesheet" href="../../css/style-restaurant.css">
+<link rel="stylesheet" href="../../css/theme.css">
+<style id="block-supports">
+
+.wp-container-core-group-is-layout-f56f613f{flex-wrap:nowrap;}.wp-container-core-navigation-is-layout-0110ef3e{gap:1.75rem;justify-content:flex-end;}.wp-container-core-buttons-is-layout-c1f912b2{gap:0;}.wp-container-core-group-is-layout-70196fb6{justify-content:space-between;}.wp-container-core-group-is-layout-b3bb72d3 > * + *{margin-block-start:var(--wp--preset--spacing--small);margin-block-end:0;}.wp-container-core-group-is-layout-4d767749 > * + *{margin-block-start:0.25rem;margin-block-end:0;}.wp-container-core-group-is-layout-b15589d5 > * + *{margin-block-start:var(--wp--preset--spacing--medium);margin-block-end:0;}.wp-container-core-group-is-layout-ec42d112{grid-template-columns:repeat(auto-fill, minmax(max(min(18rem, 100%), (100% - (var(--wp--preset--spacing--large) * (3 - 1))) /3), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--large);}.wp-container-core-buttons-is-layout-20959078{justify-content:center;}.wp-container-core-group-is-layout-c266b068 > * + *{margin-block-start:var(--wp--preset--spacing--large);margin-block-end:0;}.wp-container-core-group-is-layout-b1232dbe > * + *{margin-block-start:0.75rem;margin-block-end:0;}.wp-container-core-group-is-layout-6e524d7a{grid-template-columns:repeat(auto-fill, minmax(max(min(17rem, 100%), (100% - (var(--wp--preset--spacing--medium) * (3 - 1))) /3), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--medium);}.wp-elements-94 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--background);}.wp-container-core-group-is-layout-9dcb92b0{flex-wrap:nowrap;gap:var(--wp--preset--spacing--small);justify-content:space-between;}.wp-container-core-group-is-layout-76e84ec5 > * + *{margin-block-start:0.5rem;margin-block-end:0;}.wp-container-core-columns-is-layout-7bc352e5{flex-wrap:nowrap;gap:var(--wp--preset--spacing--large) var(--wp--preset--spacing--x-large);}.wp-container-core-group-is-layout-635b8118 > .alignfull,.wp-container-core-group-is-layout-c266b068 > .alignfull,.wp-container-core-group-is-layout-3ef5688d > .alignfull,.wp-container-core-group-is-layout-ce30c4e3 > .alignfull{margin-right:calc(var(--wp--preset--spacing--small) * -1);margin-left:calc(var(--wp--preset--spacing--small) * -1);}.wp-container-core-group-is-layout-b3bb72d3 > *,.wp-container-core-group-is-layout-4d767749 > *,.wp-container-core-group-is-layout-b15589d5 > *,.wp-container-core-group-is-layout-c266b068 > *,.wp-container-core-group-is-layout-b1232dbe > *,.wp-container-core-group-is-layout-76e84ec5 > *,.wp-container-core-group-is-layout-b25a519e > *,.wp-container-core-group-is-layout-b25a519e > * + *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-is-layout-8a1b8ff9,.wp-container-core-group-is-layout-fc24a536{flex-wrap:nowrap;gap:var(--wp--preset--spacing--small);justify-content:space-between;align-items:flex-start;}
+</style>
+</head>
+<body class="wp-site-blocks-body site-restaurant">
+<div class="wp-site-blocks">
+<header class="wp-block-template-part">
+<header class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-635b8118 wp-block-group-is-layout-constrained" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-70196fb6 wp-block-group-is-layout-flex">
+
+		
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-f56f613f wp-block-group-is-layout-flex">
+			
+
+			<p class="wp-block-site-title"><a href="index.html" target="_self" rel="home" aria-current="page">Savora</a></p>
+		</div>
+		
+
+		<nav class="has-small-font-size is-responsive items-justified-right wp-block-navigation is-content-justification-right is-layout-flex wp-container-core-navigation-is-layout-0110ef3e wp-block-navigation-is-layout-flex" aria-label=" 51" 
+		 data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'><button aria-haspopup="dialog" aria-label="Open menu" class="wp-block-navigation__responsive-container-open" 
+				data-wp-on--click="actions.openMenuOnClick"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+			><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7.5h16v1.5H4z"></path><path d="M4 15h16v1.5H4z"></path></svg></button>
+				<div class="wp-block-navigation__responsive-container"  id="modal-96" 
+				data-wp-class--has-modal-open="state.isMenuOpen"
+				data-wp-class--is-menu-open="state.isMenuOpen"
+				data-wp-watch="callbacks.initMenu"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+				data-wp-on--focusout="actions.handleMenuFocusout"
+				tabindex="-1"
+			>
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" 
+				data-wp-bind--aria-modal="state.ariaModal"
+				data-wp-bind--aria-label="state.ariaLabel"
+				data-wp-bind--role="state.roleAttribute"
+			>
+							<button aria-label="Close menu" class="wp-block-navigation__responsive-container-close" 
+				data-wp-on--click="actions.closeMenuOnClick"
+			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button>
+							<div class="wp-block-navigation__responsive-container-content" 
+				data-wp-watch="callbacks.focusFirstElement"
+			 id="modal-96-content">
+								<ul class="wp-block-navigation__container has-small-font-size is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="index.html"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="menu.html"><span class="wp-block-navigation-item__label">Menu</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="about.html"><span class="wp-block-navigation-item__label">About</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="reservations.html"><span class="wp-block-navigation-item__label">Reservations</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="blog.html"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+								
+							</div>
+						</div>
+					</div>
+				</div></nav>
+
+		
+		<div class="wp-block-buttons is-layout-flex wp-container-core-buttons-is-layout-c1f912b2 wp-block-buttons-is-layout-flex">
+			
+			<div class="wp-block-button"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button" href="#">Get Started</a></div>
+			
+		</div>
+		
+
+	</div>
+	
+</header>
+
+
+</header>
+<main id="main" class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-b25a519e wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0">
+<div class="wp-block-group alignfull has-surface-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-c266b068 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-b3bb72d3 wp-block-group-is-layout-constrained">
+		
+		<p class="has-text-align-center has-primary-color has-text-color has-small-font-size wp-block-paragraph" style="font-weight:600;letter-spacing:0.2em;text-transform:uppercase">Taste of the Season</p>
+		
+
+		
+		<h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">Our Menu</h2>
+		
+
+		
+		<p class="has-text-align-center has-muted-text-color has-text-color wp-block-paragraph">A short menu that changes with the market. Please tell us about any allergies when you book.</p>
+		
+	</div>
+	
+
+	
+	<div class="wp-block-group alignwide is-layout-grid wp-container-core-group-is-layout-ec42d112 wp-block-group-is-layout-grid">
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b15589d5 wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
+			
+			<h3 class="wp-block-heading has-text-align-center has-x-large-font-size" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--small)">Starters</h3>
+			
+
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Burrata &amp; Heirloom Tomato</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$14</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Basil oil, sea salt and grilled sourdough.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Charred Octopus</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$17</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Smoked paprika, potato crema and lemon.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Wild Mushroom Soup</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$11</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Thyme, crème fraîche and toasted hazelnuts.</p>
+				
+			</div>
+			
+					</div>
+		
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b15589d5 wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
+			
+			<h3 class="wp-block-heading has-text-align-center has-x-large-font-size" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--small)">Mains</h3>
+			
+
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Slow-Braised Short Rib</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$32</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Red wine jus, root vegetables and polenta.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Hand-Rolled Tagliatelle</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$24</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Brown butter, sage and aged parmesan.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Market Fish of the Day</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$29</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Fennel, capers, olives and citrus.</p>
+				
+			</div>
+			
+					</div>
+		
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b15589d5 wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
+			
+			<h3 class="wp-block-heading has-text-align-center has-x-large-font-size" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--small)">Desserts</h3>
+			
+
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Raspberry Panna Cotta</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$10</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Fresh berries and almond crumble.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Dark Chocolate Torte</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$11</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Sea salt caramel and vanilla cream.</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-4d767749 wp-block-group-is-layout-flow">
+				
+				<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8a1b8ff9 wp-block-group-is-layout-flex">
+					
+					<p class="wp-block-paragraph" style="font-weight:600">Lemon Olive Oil Cake</p>
+					
+
+					
+					<p class="has-primary-color has-text-color wp-block-paragraph" style="font-weight:600">$9</p>
+					
+				</div>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Mascarpone and candied peel.</p>
+				
+			</div>
+			
+					</div>
+		
+			</div>
+	
+
+	
+	<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-20959078 wp-block-buttons-is-layout-flex">
+		
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="reservations.html">Book a Table</a></div>
+		
+	</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-c266b068 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-b3bb72d3 wp-block-group-is-layout-constrained">
+		
+		<p class="has-text-align-center has-primary-color has-text-color has-small-font-size wp-block-paragraph" style="font-weight:600;letter-spacing:0.2em;text-transform:uppercase">From the Kitchen</p>
+		
+
+		
+		<h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">Chef’s Specials</h2>
+		
+	</div>
+	
+
+	
+	<div class="wp-block-group alignwide is-layout-grid wp-container-core-group-is-layout-6e524d7a wp-block-group-is-layout-grid">
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b1232dbe wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/restaurant-main.jpg" alt="A plated main course with beef, vegetables and sauce" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-fc24a536 wp-block-group-is-layout-flex" style="padding-top:0.5rem;padding-right:0.5rem;padding-left:0.5rem">
+				
+				<h3 class="wp-block-heading has-large-font-size">Chef’s Tasting Plate</h3>
+				
+
+				
+				<p class="has-primary-color has-text-color has-large-font-size wp-block-paragraph" style="font-weight:600">$34</p>
+				
+			</div>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph" style="padding-right:0.5rem;padding-left:0.5rem">Slow-cooked beef, crisp potato and a glossy red wine reduction.</p>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b1232dbe wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/restaurant-pizza.jpg" alt="A wood-fired flatbread topped with rocket on a wooden board" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-fc24a536 wp-block-group-is-layout-flex" style="padding-top:0.5rem;padding-right:0.5rem;padding-left:0.5rem">
+				
+				<h3 class="wp-block-heading has-large-font-size">Wood-Fired Flatbread</h3>
+				
+
+				
+				<p class="has-primary-color has-text-color has-large-font-size wp-block-paragraph" style="font-weight:600">$21</p>
+				
+			</div>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph" style="padding-right:0.5rem;padding-left:0.5rem">Blistered dough, cured ham, rocket and shaved parmesan.</p>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-style-card is-layout-flow wp-container-core-group-is-layout-b1232dbe wp-block-group-is-layout-flow" style="padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/restaurant-dessert.jpg" alt="A pink panna cotta dessert with fresh raspberries" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-fc24a536 wp-block-group-is-layout-flex" style="padding-top:0.5rem;padding-right:0.5rem;padding-left:0.5rem">
+				
+				<h3 class="wp-block-heading has-large-font-size">Raspberry Panna Cotta</h3>
+				
+
+				
+				<p class="has-primary-color has-text-color has-large-font-size wp-block-paragraph" style="font-weight:600">$10</p>
+				
+			</div>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph" style="padding-right:0.5rem;padding-left:0.5rem">Silky vanilla cream, fresh raspberries and almond crumble.</p>
+			
+		</div>
+		
+			</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-background-color has-secondary-background-color has-text-color has-background has-link-color wp-elements-94 has-global-padding is-layout-constrained wp-container-core-group-is-layout-3ef5688d wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-7bc352e5 wp-block-columns-is-layout-flex">
+		
+		<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+			
+			<h3 class="wp-block-heading has-background-color has-text-color has-x-large-font-size">Opening Hours</h3>
+			
+
+			
+			<div class="wp-block-group is-layout-flow wp-container-core-group-is-layout-76e84ec5 wp-block-group-is-layout-flow">
+						
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-9dcb92b0 wp-block-group-is-layout-flex">
+				
+				<p class="wp-block-paragraph">Monday</p>
+				
+
+				
+				<p class="wp-block-paragraph" style="font-weight:600">Closed</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-9dcb92b0 wp-block-group-is-layout-flex">
+				
+				<p class="wp-block-paragraph">Tuesday – Thursday</p>
+				
+
+				
+				<p class="wp-block-paragraph" style="font-weight:600">5 pm – 10 pm</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-9dcb92b0 wp-block-group-is-layout-flex">
+				
+				<p class="wp-block-paragraph">Friday – Saturday</p>
+				
+
+				
+				<p class="wp-block-paragraph" style="font-weight:600">12 pm – 11 pm</p>
+				
+			</div>
+			
+						
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-9dcb92b0 wp-block-group-is-layout-flex">
+				
+				<p class="wp-block-paragraph">Sunday</p>
+				
+
+				
+				<p class="wp-block-paragraph" style="font-weight:600">12 pm – 9 pm</p>
+				
+			</div>
+			
+						</div>
+			
+		</div>
+		
+
+		
+		<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+			
+			<h3 class="wp-block-heading has-background-color has-text-color has-x-large-font-size">Find Us</h3>
+			
+
+			
+			<p class="wp-block-paragraph">24 Market Lane, Old Town<br>Springfield, ST 10101</p>
+			
+
+			
+			<p class="wp-block-paragraph"><a href="tel:+15550100199">+1 555 010 0199</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+			
+		</div>
+		
+
+		
+		<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+			
+			<h2 class="wp-block-heading has-background-color has-text-color has-xx-large-font-size">Reserve Your Table</h2>
+			
+
+			
+			<p class="wp-block-paragraph">Book online in a minute. For groups of eight or more, private dining or special occasions, give us a call and we will plan it with you.</p>
+			
+
+			
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				
+				<div class="wp-block-button"><a class="wp-block-button__link has-foreground-color has-background-background-color has-text-color has-background wp-element-button" href="reservations.html">Book a Table</a></div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</main>
+<footer class="wp-block-template-part">
+<footer class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-ce30c4e3 wp-block-group-is-layout-constrained" style="border-top-color:var(--wp--preset--color--border-color);border-top-width:1px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-70196fb6 wp-block-group-is-layout-flex">
+
+		<p style="font-size:clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.409), 1.1rem)" class="wp-block-site-title"><a href="index.html" target="_self" rel="home" aria-current="page">Savora</a></p>
+
+		
+		<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">© 2026 Business. All rights reserved.</p>
+		
+
+	</div>
+	
+</footer>
+
+
+</footer>
+</div>
+<script src="../../js/preview.js" defer></script>
+</body>
+</html>

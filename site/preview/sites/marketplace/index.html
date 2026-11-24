@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — DigiMagnet Marketplace · bBlocks starter site</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../../css/wp-block-library.css">
+<link rel="stylesheet" href="../../css/style-marketplace.css">
+<link rel="stylesheet" href="../../css/theme.css">
+<style id="block-supports">
+
+.wp-container-core-group-is-layout-f56f613f{flex-wrap:nowrap;}.wp-container-core-navigation-is-layout-0110ef3e{gap:1.75rem;justify-content:flex-end;}.wp-container-core-group-is-layout-70196fb6{justify-content:space-between;}.wp-container-core-group-is-layout-cacfe9d4 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:920px;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-is-layout-cacfe9d4 > .alignwide{max-width:920px;}.wp-container-core-columns-is-layout-1072a8e4{flex-wrap:nowrap;gap:var(--wp--preset--spacing--medium) var(--wp--preset--spacing--large);}.wp-container-core-group-is-layout-d62794ec{gap:0;flex-direction:column;align-items:flex-start;}.wp-container-core-group-is-layout-83594699{flex-wrap:nowrap;gap:0.75rem;}.wp-container-core-group-is-layout-ab872a46{gap:var(--wp--preset--spacing--large);justify-content:center;}.wp-container-core-group-is-layout-1d809f32 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:480px;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-is-layout-1d809f32 > .alignwide{max-width:480px;}.wp-container-core-group-is-layout-73d85c4d{flex-wrap:nowrap;justify-content:space-between;}.wp-container-core-group-is-layout-ea361988{grid-template-columns:repeat(auto-fill, minmax(min(28rem, 100%), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--medium);}.wp-container-core-group-is-layout-568ef003 > * + *{margin-block-start:var(--wp--preset--spacing--medium);margin-block-end:0;}.wp-container-content-91a7d886{grid-column:span 2;grid-row:span 1;}@container (max-width: 27.5rem ){.wp-container-content-91a7d886{grid-column:1/-1;grid-row:auto;}}.wp-container-core-group-is-layout-ea14d8bd{gap:var(--wp--preset--spacing--small);flex-direction:column;align-items:flex-start;}.wp-container-core-group-is-layout-17d3ec30{flex-wrap:nowrap;gap:0.5rem;}.wp-container-core-group-is-layout-c960d635{gap:0.6rem;flex-direction:column;align-items:flex-start;}.wp-container-core-group-is-layout-35f7fc40{grid-template-columns:repeat(auto-fill, minmax(max(min(13rem, 100%), (100% - (var(--wp--preset--spacing--large) * (4 - 1))) /4), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--large);}.wp-container-core-group-is-layout-e2730af4{grid-template-columns:repeat(auto-fill, minmax(max(min(16rem, 100%), (100% - (var(--wp--preset--spacing--small) * (3 - 1))) /3), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--small);}.wp-container-core-columns-is-layout-54ad6ef0{flex-wrap:nowrap;gap:var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);}.wp-container-core-post-template-is-layout-1f1efb1b{grid-template-columns:repeat(auto-fill, minmax(min(28rem, 100%), 1fr));container-type:inline-size;gap:var(--wp--preset--spacing--large);}.wp-container-core-group-is-layout-6dc73264 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:560px;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-is-layout-6dc73264 > .alignwide{max-width:560px;}.wp-container-core-group-is-layout-6dc73264 > .alignfull{margin-right:calc(var(--wp--preset--spacing--large) * -1);margin-left:calc(var(--wp--preset--spacing--large) * -1);}.wp-container-core-group-is-layout-635b8118 > .alignfull,.wp-container-core-group-is-layout-ce30c4e3 > .alignfull{margin-right:calc(var(--wp--preset--spacing--small) * -1);margin-left:calc(var(--wp--preset--spacing--small) * -1);}.wp-container-core-buttons-is-layout-20959078,.wp-container-core-buttons-is-layout-3ef301c0{justify-content:center;}.wp-container-core-group-is-layout-cacfe9d4 .alignfull,.wp-container-core-group-is-layout-1d809f32 .alignfull,.wp-container-core-group-is-layout-6dc73264 .alignfull{max-width:none;}.wp-container-core-group-is-layout-cacfe9d4 > *,.wp-container-core-group-is-layout-befa76d9 > *,.wp-container-core-group-is-layout-db3ca942 > *,.wp-container-core-group-is-layout-568ef003 > *,.wp-container-core-column-is-layout-5d1a32fe > *,.wp-container-core-group-is-layout-0d318b74 > *,.wp-container-core-group-is-layout-6dc73264 > *,.wp-container-core-group-is-layout-b25a519e > *,.wp-container-core-group-is-layout-b25a519e > * + *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-is-layout-cacfe9d4 > * + *,.wp-container-core-group-is-layout-db3ca942 > * + *,.wp-container-core-column-is-layout-5d1a32fe > * + *,.wp-container-core-group-is-layout-6dc73264 > * + *{margin-block-start:var(--wp--preset--spacing--small);margin-block-end:0;}.wp-container-core-group-is-layout-befa76d9 > * + *,.wp-container-core-group-is-layout-0d318b74 > * + *{margin-block-start:var(--wp--preset--spacing--large);margin-block-end:0;}.wp-elements-35 a:where(:not(.wp-element-button)),.wp-elements-36 a:where(:not(.wp-element-button)),.wp-elements-37 a:where(:not(.wp-element-button)),.wp-elements-38 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--foreground);}
+:root :where(.wp-block-button.is-style-outline--44 .wp-block-button__link){background: transparent none;border-color: currentColor;border-width: 2px;border-style: solid;color: currentColor;padding-top: 0.667em;padding-right: 1.33em;padding-bottom: 0.667em;padding-left: 1.33em;}
+</style>
+</head>
+<body class="wp-site-blocks-body site-marketplace">
+<div class="wp-site-blocks">
+<header class="wp-block-template-part">
+<header class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-635b8118 wp-block-group-is-layout-constrained" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-70196fb6 wp-block-group-is-layout-flex">
+
+		
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-f56f613f wp-block-group-is-layout-flex">
+			
+
+			<p class="wp-block-site-title"><a href="index.html" target="_self" rel="home" aria-current="page">DigiMagnet</a></p>
+		</div>
+		
+
+		<nav class="has-small-font-size is-responsive items-justified-right wp-block-navigation is-content-justification-right is-layout-flex wp-container-core-navigation-is-layout-0110ef3e wp-block-navigation-is-layout-flex" aria-label=" 26" 
+		 data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'><button aria-haspopup="dialog" aria-label="Open menu" class="wp-block-navigation__responsive-container-open" 
+				data-wp-on--click="actions.openMenuOnClick"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+			><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7.5h16v1.5H4z"></path><path d="M4 15h16v1.5H4z"></path></svg></button>
+				<div class="wp-block-navigation__responsive-container"  id="modal-43" 
+				data-wp-class--has-modal-open="state.isMenuOpen"
+				data-wp-class--is-menu-open="state.isMenuOpen"
+				data-wp-watch="callbacks.initMenu"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+				data-wp-on--focusout="actions.handleMenuFocusout"
+				tabindex="-1"
+			>
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" 
+				data-wp-bind--aria-modal="state.ariaModal"
+				data-wp-bind--aria-label="state.ariaLabel"
+				data-wp-bind--role="state.roleAttribute"
+			>
+							<button aria-label="Close menu" class="wp-block-navigation__responsive-container-close" 
+				data-wp-on--click="actions.closeMenuOnClick"
+			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button>
+							<div class="wp-block-navigation__responsive-container-content" 
+				data-wp-watch="callbacks.focusFirstElement"
+			 id="modal-43-content">
+								<ul class="wp-block-navigation__container has-small-font-size is-responsive items-justified-right wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="index.html"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="themes.html"><span class="wp-block-navigation-item__label">Browse Themes</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="faq.html"><span class="wp-block-navigation-item__label">FAQ</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="blog.html"><span class="wp-block-navigation-item__label">Blog</span></a></li></ul>
+								
+							</div>
+						</div>
+					</div>
+				</div></nav>
+
+	</div>
+	
+</header>
+
+
+</header>
+<main id="main" class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-b25a519e wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0">
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-befa76d9 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--large)">
+	
+	<div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-cacfe9d4 wp-block-group-is-layout-constrained">
+		
+		<h1 class="wp-block-heading has-text-align-center has-xx-large-font-size">Enhance Website Aesthetics With The Best Solutions</h1>
+		
+
+		
+		<p class="has-text-align-center has-muted-text-color has-text-color wp-block-paragraph">Transform your digital space with beautifully crafted themes. From sleek minimalism to vibrant creativity, find the perfect style to amplify your online presence.</p>
+		
+
+		
+		<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-20959078 wp-block-buttons-is-layout-flex">
+			
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Browse 15K+ Themes</a></div>
+			
+		</div>
+		
+	</div>
+	
+
+	
+	<div class="wp-block-group alignwide has-border-color has-border-color-border-color is-layout-flow wp-block-group-is-layout-flow" style="border-width:1px;border-radius:1rem;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
+		
+		<div class="wp-block-columns are-vertically-aligned-center is-layout-flex wp-container-core-columns-is-layout-1072a8e4 wp-block-columns-is-layout-flex">
+			
+			<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="padding-right:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium);flex-basis:45%">
+				
+				<h2 class="wp-block-heading has-large-font-size">Redefining Elegance In The Digital Runway</h2>
+				
+
+				
+				<ul class="wp-block-list has-muted-text-color has-text-color has-small-font-size" style="padding-left:1rem">
+					
+					<li>Refined layouts and sophisticated typography</li>
+					
+
+					
+					<li>Looks sharp on every device</li>
+					
+
+					
+					<li>Featured looks, zoomable images and sliders</li>
+					
+				</ul>
+				
+
+				
+				<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+					
+					<div class="wp-block-button is-style-outline is-style-outline--44"><a class="wp-block-button__link wp-element-button" href="#">Add to cart</a></div>
+					
+				</div>
+				
+			</div>
+			
+
+			
+			<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:55%">
+				
+				<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-1.svg" alt="Preview of the Conscious Luxury theme" style="border-radius:0.75rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
+	
+	<div class="wp-block-group alignwide is-content-justification-center is-layout-flex wp-container-core-group-is-layout-ab872a46 wp-block-group-is-layout-flex">
+				
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-83594699 wp-block-group-is-layout-flex">
+			
+			<p class="bblocks-icon wp-block-paragraph">▦</p>
+			
+
+			
+			<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-d62794ec wp-block-group-is-layout-flex">
+				
+				<p class="has-large-font-size wp-block-paragraph" style="font-weight:700;line-height:1.1">848+</p>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Templates</p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-83594699 wp-block-group-is-layout-flex">
+			
+			<p class="bblocks-icon wp-block-paragraph">☺</p>
+			
+
+			
+			<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-d62794ec wp-block-group-is-layout-flex">
+				
+				<p class="has-large-font-size wp-block-paragraph" style="font-weight:700;line-height:1.1">10M+</p>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Active users</p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-83594699 wp-block-group-is-layout-flex">
+			
+			<p class="bblocks-icon wp-block-paragraph">↗</p>
+			
+
+			
+			<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-d62794ec wp-block-group-is-layout-flex">
+				
+				<p class="has-large-font-size wp-block-paragraph" style="font-weight:700;line-height:1.1">19%</p>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Company growth</p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-83594699 wp-block-group-is-layout-flex">
+			
+			<p class="bblocks-icon wp-block-paragraph">✦</p>
+			
+
+			
+			<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-d62794ec wp-block-group-is-layout-flex">
+				
+				<p class="has-large-font-size wp-block-paragraph" style="font-weight:700;line-height:1.1">2K+</p>
+				
+
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Five-star reviews</p>
+				
+			</div>
+			
+		</div>
+		
+			</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-568ef003 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
+	
+	<h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">Browse 15K+ Themes</h2>
+	
+
+	
+	<div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-1d809f32 wp-block-group-is-layout-constrained">
+		<form role="search" method="get" action="#" class="wp-block-search__button-inside wp-block-search__icon-button wp-block-search" ><label class="wp-block-search__label screen-reader-text" for="wp-block-search__input-45" >Search themes</label><div class="wp-block-search__inside-wrapper" ><input class="wp-block-search__input" id="wp-block-search__input-45" placeholder="Search for a theme…" value="" type="search" name="s" required /><button aria-label="Search" class="wp-block-search__button has-icon wp-element-button" type="submit" ><svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+					<path d="M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
+				</svg></button></div></form>
+	</div>
+	
+
+	
+	<div class="wp-block-group alignwide is-layout-grid wp-container-core-group-is-layout-ea361988 wp-block-group-is-layout-grid">
+				
+		<div class="wp-block-group has-border-color has-border-color-border-color is-layout-flow wp-container-core-group-is-layout-db3ca942 wp-block-group-is-layout-flow" style="border-width:1px;border-radius:0.75rem;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-73d85c4d wp-block-group-is-layout-flex">
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Personal Portfolio Theme</p>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">$59.00</p>
+				
+			</div>
+			
+
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-1.svg" alt="Preview of a luxury portfolio theme" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				
+				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button" href="#">View Options</a></div>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group has-border-color has-border-color-border-color is-layout-flow wp-container-core-group-is-layout-db3ca942 wp-block-group-is-layout-flow" style="border-width:1px;border-radius:0.75rem;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-73d85c4d wp-block-group-is-layout-flex">
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Digital Agency Theme</p>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">$49.00</p>
+				
+			</div>
+			
+
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-6.svg" alt="Preview of a digital agency theme" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				
+				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button" href="#">View Options</a></div>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group has-border-color has-border-color-border-color is-layout-flow wp-container-core-group-is-layout-db3ca942 wp-block-group-is-layout-flow" style="border-width:1px;border-radius:0.75rem;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-73d85c4d wp-block-group-is-layout-flex">
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Pet Adoption Theme</p>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">$39.00</p>
+				
+			</div>
+			
+
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-2.svg" alt="Preview of a pet adoption theme" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				
+				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button" href="#">View Options</a></div>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group has-border-color has-border-color-border-color is-layout-flow wp-container-core-group-is-layout-db3ca942 wp-block-group-is-layout-flow" style="border-width:1px;border-radius:0.75rem;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+			
+			<div class="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-73d85c4d wp-block-group-is-layout-flex">
+				
+				<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Software Product Theme</p>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">$69.00</p>
+				
+			</div>
+			
+
+			
+			<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-3.svg" alt="Preview of a software product theme" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+			
+
+			
+			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				
+				<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-background-color has-secondary-background-color has-text-color has-background wp-element-button" href="#">View Options</a></div>
+				
+			</div>
+			
+		</div>
+		
+			</div>
+	
+
+	
+	<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-3ef301c0 wp-block-buttons-is-layout-flex" style="margin-top:var(--wp--preset--spacing--medium)">
+		
+		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Browse 15K+ Themes ↗</a></div>
+		
+	</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
+	
+	<div class="wp-block-group alignwide has-border-color has-border-color-border-color is-layout-grid wp-container-core-group-is-layout-35f7fc40 wp-block-group-is-layout-grid" style="border-width:1px;border-radius:1rem;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+		
+		<div class="wp-block-group wp-container-content-91a7d886 is-vertical is-layout-flex wp-container-core-group-is-layout-ea14d8bd wp-block-group-is-layout-flex">
+			
+			<p class="has-surface-background-color has-background has-small-font-size wp-block-paragraph" style="border-radius:999px;padding-top:0.25rem;padding-right:0.75rem;padding-bottom:0.25rem;padding-left:0.75rem">★ 10K+ Five Star Reviews</p>
+			
+
+			
+			<h2 class="wp-block-heading has-xx-large-font-size">A Happy Customer&#039;s Hub For Success</h2>
+			
+		</div>
+		
+
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">Clean code, fast support</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Setting up took minutes and every page looked right on mobile straight away.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-1.svg" alt="Portrait of Laura T." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Laura T. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">Great product and support!</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">The demos were easy to adapt to our brand, and questions were answered the same day.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-2.svg" alt="Portrait of Marcus M." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Marcus M. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">Worth every penny</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Our new shop launched a week early thanks to the ready-made templates.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-3.svg" alt="Portrait of Jon G." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Jon G. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">Beautiful and flexible</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">Every section is a block I can edit, so I never need a developer for small changes.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-4.svg" alt="Portrait of Meena J." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Meena J. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">A joy to work with</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">The typography and spacing feel premium — clients notice the difference.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-5.svg" alt="Portrait of Amy G." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Amy G. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+				
+		<div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-c960d635 wp-block-group-is-layout-flex">
+			
+			<p class="has-small-font-size wp-block-paragraph" style="font-weight:700">Simply the best</p>
+			
+
+			
+			<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">We tried several marketplaces; this is the one our whole team sticks with.</p>
+			
+
+			
+			<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-17d3ec30 wp-block-group-is-layout-flex">
+				
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="../../assets/images/portrait-6.svg" alt="Portrait of Andy A." style="border-radius:999px;aspect-ratio:1;object-fit:cover;width:32px"/></figure>
+				
+
+				
+				<p class="has-small-font-size wp-block-paragraph">Andy A. <span class="bblocks-stars">★★★★★</span></p>
+				
+			</div>
+			
+		</div>
+		
+			</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-secondary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
+	
+	<div class="wp-block-group alignwide is-layout-grid wp-container-core-group-is-layout-e2730af4 wp-block-group-is-layout-grid">
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-2.svg" alt="Pet adoption theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-3.svg" alt="Software company theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-4.svg" alt="Car rental theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-5.svg" alt="Creative studio theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-1.svg" alt="Luxury fashion theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+				
+		<figure class="wp-block-image size-full has-custom-border"><img src="../../assets/images/theme-preview-6.svg" alt="Digital agency theme preview" style="border-radius:0.5rem;aspect-ratio:4/3;object-fit:cover"/></figure>
+		
+			</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-0d318b74 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
+	
+	<h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">Frequently Asked Questions</h2>
+	
+
+	
+	<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-54ad6ef0 wp-block-columns-is-layout-flex">
+				
+		<div class="wp-block-column is-layout-flow wp-container-core-column-is-layout-5d1a32fe wp-block-column-is-layout-flow">
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>How do I install a theme from the marketplace?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">Download the theme zip, then go to Appearance → Themes → Add New → Upload Theme in your dashboard and activate it.</p>
+				
+			</details>
+			
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>Can I customize a theme to match my brand?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">Yes. Every theme uses Global Styles, so colors, fonts and spacing can be changed for the whole site in a few clicks.</p>
+				
+			</details>
+			
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>What kind of support do you provide?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">Every purchase includes help with installation, setup questions and bug fixes for the life of the product.</p>
+				
+			</details>
+			
+					</div>
+		
+				
+		<div class="wp-block-column is-layout-flow wp-container-core-column-is-layout-5d1a32fe wp-block-column-is-layout-flow">
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>Are the themes compatible with popular page builders?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">They are built for the block editor and work with the core blocks — no page builder is required.</p>
+				
+			</details>
+			
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>Do the themes support online stores?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">Yes, they include WooCommerce compatibility so shop, cart and checkout pages display correctly.</p>
+				
+			</details>
+			
+						
+			<details class="wp-block-details has-border-color has-border-color-border-color has-small-font-size is-layout-flow wp-block-details-is-layout-flow" style="border-width:1px;border-radius:0.6rem;padding-top:1rem;padding-right:1.25rem;padding-bottom:1rem;padding-left:1.25rem"><summary>Is there a refund policy?</summary>
+				
+				<p class="has-muted-text-color has-text-color wp-block-paragraph">If a theme does not work as described, contact us within 30 days for a full refund.</p>
+				
+			</details>
+			
+					</div>
+		
+			</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-0d318b74 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)">
+	
+	<h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">Recent Blog Posts</h2>
+	
+
+	
+	<div class="wp-block-query alignwide is-layout-flow wp-block-query-is-layout-flow">
+		<ul class="wp-block-post-template is-layout-grid wp-container-core-post-template-is-layout-1f1efb1b wp-block-post-template-is-layout-grid"><li class="wp-block-post post-9001 post type-post status-publish format-design has-post-thumbnail hentry category-design tag-tips post_format-design">
+			<figure class="wp-block-post-featured-image"><a href="#" target="_self" ><img src="../../assets/images/scene-meeting.jpg" alt="" loading="lazy" decoding="async" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" style="border-radius:0.75rem;aspect-ratio:16/9;width:100%;object-fit:cover;"></a></figure>
+
+			<h3 style="font-weight:600" class="has-link-color wp-elements-35 wp-block-post-title has-large-font-size"><a href="#" target="_self" >Designing a homepage that converts</a></h3>
+
+			<div class="wp-block-post-excerpt has-text-color has-muted-text-color has-small-font-size"><p class="wp-block-post-excerpt__excerpt">Practical, plain-language advice to help small businesses build better websites and reach more customers. </p></div>
+		</li><li class="wp-block-post post-9002 post type-post status-publish format-guides has-post-thumbnail hentry category-guides tag-tips post_format-guides">
+			<figure class="wp-block-post-featured-image"><a href="#" target="_self" ><img src="../../assets/images/gadget-desk.jpg" alt="" loading="lazy" decoding="async" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" style="border-radius:0.75rem;aspect-ratio:16/9;width:100%;object-fit:cover;"></a></figure>
+
+			<h3 style="font-weight:600" class="has-link-color wp-elements-36 wp-block-post-title has-large-font-size"><a href="#" target="_self" >Ten small changes for a faster website</a></h3>
+
+			<div class="wp-block-post-excerpt has-text-color has-muted-text-color has-small-font-size"><p class="wp-block-post-excerpt__excerpt">Practical, plain-language advice to help small businesses build better websites and reach more customers. </p></div>
+		</li><li class="wp-block-post post-9003 post type-post status-publish format-process has-post-thumbnail hentry category-process tag-tips post_format-process">
+			<figure class="wp-block-post-featured-image"><a href="#" target="_self" ><img src="../../assets/images/scene-cafe.jpg" alt="" loading="lazy" decoding="async" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" style="border-radius:0.75rem;aspect-ratio:16/9;width:100%;object-fit:cover;"></a></figure>
+
+			<h3 style="font-weight:600" class="has-link-color wp-elements-37 wp-block-post-title has-large-font-size"><a href="#" target="_self" >How we plan a project from brief to launch</a></h3>
+
+			<div class="wp-block-post-excerpt has-text-color has-muted-text-color has-small-font-size"><p class="wp-block-post-excerpt__excerpt">Practical, plain-language advice to help small businesses build better websites and reach more customers. </p></div>
+		</li><li class="wp-block-post post-9004 post type-post status-publish format-design has-post-thumbnail hentry category-design tag-tips post_format-design">
+			<figure class="wp-block-post-featured-image"><a href="#" target="_self" ><img src="../../assets/images/architecture-2.jpg" alt="" loading="lazy" decoding="async" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" style="border-radius:0.75rem;aspect-ratio:16/9;width:100%;object-fit:cover;"></a></figure>
+
+			<h3 style="font-weight:600" class="has-link-color wp-elements-38 wp-block-post-title has-large-font-size"><a href="#" target="_self" >Choosing colors and fonts that fit your brand</a></h3>
+
+			<div class="wp-block-post-excerpt has-text-color has-muted-text-color has-small-font-size"><p class="wp-block-post-excerpt__excerpt">Practical, plain-language advice to help small businesses build better websites and reach more customers. </p></div>
+		</li></ul>
+
+		
+	</div>
+	
+</div>
+
+
+
+<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--x-large)">
+	
+	<div class="wp-block-group alignwide has-background-color has-secondary-background-color has-text-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-6dc73264 wp-block-group-is-layout-constrained" style="border-radius:1.25rem;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--large)">
+		
+		<h2 class="wp-block-heading has-text-align-center has-background-color has-text-color has-xx-large-font-size">Stay In The Loop!</h2>
+		
+
+		
+		<p class="has-text-align-center has-small-font-size wp-block-paragraph">Subscribe to our newsletter for exclusive updates, product releases and insider tips on digital trends and themes.</p>
+		
+
+		
+		<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-3ef301c0 wp-block-buttons-is-layout-flex" style="margin-top:var(--wp--preset--spacing--medium)">
+			
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="blog.html">Subscribe now</a></div>
+			
+		</div>
+		
+	</div>
+	
+</div>
+
+</main>
+<footer class="wp-block-template-part">
+<footer class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-ce30c4e3 wp-block-group-is-layout-constrained" style="border-top-color:var(--wp--preset--color--border-color);border-top-width:1px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--small)">
+	
+	<div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-70196fb6 wp-block-group-is-layout-flex">
+
+		<p style="font-size:clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.409), 1.1rem)" class="wp-block-site-title"><a href="index.html" target="_self" rel="home" aria-current="page">DigiMagnet</a></p>
+
+		
+		<p class="has-muted-text-color has-text-color has-small-font-size wp-block-paragraph">© 2026 Business. All rights reserved.</p>
+		
+
+	</div>
+	
+</footer>
+
+
+</footer>
+</div>
+<script src="../../js/preview.js" defer></script>
+</body>
+</html>

@@ -13,6 +13,7 @@
 	<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232954e3'/%3E%3Cstop offset='1' stop-color='%230ea5a4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial' font-weight='800' font-size='38' fill='%23fff'%3Eb%3C/text%3E%3C/svg%3E">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/library.css">
 	<script>
 		/* Apply saved theme before paint to avoid a flash. */
 		try {
@@ -40,12 +41,12 @@
 
 		<nav class="main-nav" id="main-nav" aria-label="Main">
 			<ul>
+				<li><a href="index.html" aria-current="page" class="is-active">Home</a></li>
+				<li><a href="starter-sites.html">Starter Sites</a></li>
+				<li><a href="patterns.html">Patterns</a></li>
 				<li><a href="#design">Features</a></li>
-				<li><a href="#starter-sites">Starter Sites</a></li>
-				<li><a href="#patterns">Patterns</a></li>
-				<li><a href="#modules">Modules</a></li>
 				<li><a href="#woocommerce">WooCommerce</a></li>
-				<li><a href="#faq">FAQ</a></li>
+				<li><a href="docs.html">Documentation</a></li>
 				<li><a href="#contact">Support</a></li>
 			</ul>
 		</nav>
@@ -76,7 +77,7 @@
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
 					Download bBlocks Free
 				</a>
-				<a class="btn btn-ghost" href="#starter-sites">Browse 23 Starter Sites</a>
+				<a class="btn btn-ghost" href="starter-sites.html">Browse 23 Starter Sites</a>
 			</div>
 			<div class="hero-note">
 				<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>GPL licensed</span>
@@ -84,23 +85,21 @@
 				<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>WooCommerce ready</span>
 			</div>
 
-			<div class="showcase" aria-hidden="true">
-				<div class="browser b-left">
+			<div class="showcase">
+				<div class="browser b-left" data-live-hover>
 					<div class="browser-bar"><i></i><i></i><i></i><span>savora.restaurant</span></div>
-					<img src="assets/img/restaurant-table.jpg" alt="" loading="eager">
+					<div class="live" data-src="preview/sites/restaurant/index.html" data-title="Savora Restaurant preview"></div>
+					<a class="browser-link" href="preview.html?site=restaurant" aria-label="Live preview: Savora Restaurant"></a>
 				</div>
-				<div class="browser b-main">
+				<div class="browser b-main" data-live-hover>
 					<div class="browser-bar"><i></i><i></i><i></i><span>naturexplo.resort</span></div>
-					<img src="assets/img/resort-hero.jpg" alt="" loading="eager">
-					<div class="mock-hero">
-						<small>Eco Resort · Starter Site</small>
-						<strong>Stay close to nature, far from noise.</strong>
-						<em>Book your cottage</em>
-					</div>
+					<div class="live" data-src="preview/sites/resort/index.html" data-title="Naturexplo Eco Resort preview"></div>
+					<a class="browser-link" href="preview.html?site=resort" aria-label="Live preview: Naturexplo Eco Resort"></a>
 				</div>
-				<div class="browser b-right">
+				<div class="browser b-right" data-live-hover>
 					<div class="browser-bar"><i></i><i></i><i></i><span>carely.clinic</span></div>
-					<img src="assets/img/medical-stethoscope.jpg" alt="" loading="eager">
+					<div class="live" data-src="preview/sites/medical/index.html" data-title="Carely Clinic preview"></div>
+					<a class="browser-link" href="preview.html?site=medical" aria-label="Live preview: Carely Clinic"></a>
 				</div>
 			</div>
 		</div>
@@ -146,7 +145,7 @@
 			<ul>
 				<li><a href="#design">Design System</a></li>
 				<li><a href="#starter-sites">Starter Sites</a></li>
-				<li><a href="#patterns">Patterns</a></li>
+				<li><a href="patterns.html">Pattern library</a></li>
 				<li><a href="#modules">Modules</a></li>
 				<li><a href="#dashboard">Dashboard</a></li>
 				<li><a href="#woocommerce">WooCommerce</a></li>
@@ -236,48 +235,122 @@
 			<div class="section-head">
 				<span class="kicker">One-click starter sites</span>
 				<h2>23 complete websites. All free.</h2>
-				<p>Import a whole site from Appearance → bBlocks → Starter Sites. Pages, homepage, menu, style and header are set up for you — nothing is downloaded and your posts are never touched.</p>
+				<p>Every card below is the real site, rendered from the theme — hover to scroll it, click to open a full live preview on desktop, tablet or mobile. Import any of them from Appearance → bBlocks → Starter Sites.</p>
 			</div>
-			<div class="tabs" role="tablist" aria-label="Filter starter sites" id="site-filters"></div>
-			<div class="sites-grid" id="sites-grid" aria-live="polite"></div>
-			<div class="sites-more">
-				<a class="btn btn-primary" href="https://wordpress.org/themes/bblocks/" target="_blank" rel="noopener">Get all 23 starter sites free</a>
+			<div class="sites-grid" id="sites-featured" data-sites="resort,restaurant,architecture,medical,fitness,fashion-store"></div>
+			<div class="sites-more hero-cta">
+				<a class="btn btn-primary" href="starter-sites.html">Browse all <span data-bb-count="sites">23</span> starter sites</a>
+				<a class="btn btn-ghost" href="https://wordpress.org/themes/bblocks/" target="_blank" rel="noopener">Download free</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Pattern library -->
-	<section class="section" id="patterns">
+	<section class="section section-dark" id="patterns">
 		<div class="wrap">
-			<div class="section-head">
-				<span class="kicker">Pattern library</span>
-				<h2>150+ pixel-perfect patterns</h2>
-				<p>Drop in a hero, pricing table or FAQ from the inserter's bBlocks categories. Every pattern is built from core blocks and follows your chosen style.</p>
+			<div class="split-head reveal">
+				<h2>Pixel-perfect pattern library</h2>
+				<p>bBlocks gives you <span data-bb-count="patterns">194</span> professionally crafted sections and complete page layouts that look great on every device — just drop them in, make them yours, and publish. All free.</p>
 			</div>
-			<div class="tabs" role="tablist" aria-label="Filter patterns" id="pattern-filters"></div>
-			<div class="pattern-grid" id="pattern-grid"></div>
 
-			<div class="split-band">
-				<div class="band-card reveal">
-					<span class="free-tag">Free</span>
-					<h3 style="margin-top:12px">Skip the blank canvas</h3>
-					<p>Start every page from a ready-made section, swap the text and images, and publish. Utility patterns for Coming Soon, Maintenance, Newsletter and 404 are included too.</p>
+			<div class="showpanel reveal" id="pattern-showcase">
+				<div class="sp-tabs" role="tablist" aria-label="Pattern collections">
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-agency" aria-controls="pc-agency" aria-selected="true">Agency</button>
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-saas" aria-controls="pc-saas" aria-selected="false">Startup</button>
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-store" aria-controls="pc-store" aria-selected="false">eCommerce</button>
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-restaurant" aria-controls="pc-restaurant" aria-selected="false">Restaurant</button>
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-clinic" aria-controls="pc-clinic" aria-selected="false">Clinic</button>
+					<button class="sp-tab" role="tab" type="button" id="pc-tab-realestate" aria-controls="pc-realestate" aria-selected="false">Real Estate</button>
 				</div>
-				<div class="band-card reveal">
-					<span class="free-tag">Free</span>
-					<h3 style="margin-top:12px">5 headers &amp; 3 footers</h3>
-					<p>Swap designs from the theme dashboard or with "Replace" in the Site Editor.</p>
-					<div class="hf-grid" aria-hidden="true">
-						<div class="hf"><div class="bar"><i class="lg"></i><i class="sp"></i><i></i><i></i><i></i></div><b>Default</b></div>
-						<div class="hf"><div class="bar center"><i></i><i></i><i class="lg"></i><i></i><i></i></div><b>Centered</b></div>
-						<div class="hf"><div class="bar"><i class="lg"></i><i class="sp"></i><i></i><i></i><i class="bt"></i></div><b>With CTA</b></div>
-						<div class="hf"><div class="bar"><i class="lg"></i><i class="sp"></i><i></i><i class="srch"></i></div><b>With Search</b></div>
-						<div class="hf"><div class="bar top"></div><div class="bar"><i class="lg"></i><i class="sp"></i><i></i><i></i></div><b>Top Bar</b></div>
-						<div class="hf"><div class="foot"><i></i><i></i><i></i><i></i></div><b>Footer</b></div>
-						<div class="hf"><div class="foot"><i></i><i></i><i></i></div><b>Footer Columns</b></div>
-						<div class="hf"><div class="foot social"><i></i></div><b>Footer Social</b></div>
+
+				<div class="sp-panel" id="pc-agency" role="tabpanel" aria-labelledby="pc-tab-agency">
+					<div class="sp-text">
+						<h3>Agency</h3>
+						<p>Bold, striking designs built for agencies and creative professionals. Whether you're building a portfolio, a services page or a full agency site, these patterns make a strong first impression and help you win more clients.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=agency"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?site=agency">Browse patterns</a>
+						</div>
 					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="agency"></div></div>
 				</div>
+
+				<div class="sp-panel" id="pc-saas" role="tabpanel" aria-labelledby="pc-tab-saas" hidden>
+					<div class="sp-text">
+						<h3>Startup</h3>
+						<p>Product landing pages that explain what you do in one scroll: a clear hero, feature grids, social proof and pricing tables — plus Features, Pricing and About pages ready for launch day.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=saas"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?type=pricing">Pricing patterns</a>
+						</div>
+					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="saas"></div></div>
+				</div>
+
+				<div class="sp-panel" id="pc-store" role="tabpanel" aria-labelledby="pc-tab-store" hidden>
+					<div class="sp-text">
+						<h3>eCommerce</h3>
+						<p>Lookbook heroes, shop-by-category tiles, product grids, sale banners and store benefits. Built for WooCommerce, and styled to match every style variation in the theme.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=fashion-store"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?site=fashion-store">Browse patterns</a>
+						</div>
+					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="fashion-store"></div></div>
+				</div>
+
+				<div class="sp-panel" id="pc-restaurant" role="tabpanel" aria-labelledby="pc-tab-restaurant" hidden>
+					<div class="sp-text">
+						<h3>Restaurant</h3>
+						<p>Warm, appetising sections for restaurants, cafés and bars: a three-course menu, chef specials, guest reviews, a photo gallery and opening hours with a booking button.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=restaurant"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?site=restaurant">Browse patterns</a>
+						</div>
+					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="restaurant"></div></div>
+				</div>
+
+				<div class="sp-panel" id="pc-clinic" role="tabpanel" aria-labelledby="pc-tab-clinic" hidden>
+					<div class="sp-text">
+						<h3>Clinic</h3>
+						<p>Calm, trustworthy layouts for clinics and practices: departments, doctor profiles, opening hours, an emergency band, patient reviews and an FAQ that answers questions before they're asked.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=medical"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?site=medical">Browse patterns</a>
+						</div>
+					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="medical"></div></div>
+				</div>
+
+				<div class="sp-panel" id="pc-realestate" role="tabpanel" aria-labelledby="pc-tab-realestate" hidden>
+					<div class="sp-text">
+						<h3>Real Estate</h3>
+						<p>Property search heroes, listing grids, agent cards, neighbourhood guides and valuation calls to action — the building blocks for agencies, rentals and brokers.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="preview.html?site=realestate"><span aria-hidden="true">↗</span> View demo</a>
+							<a class="pill-btn" href="patterns.html?site=realestate">Browse patterns</a>
+						</div>
+					</div>
+					<div class="sp-visual"><div class="sp-stack" data-site="realestate"></div></div>
+				</div>
+			</div>
+
+			<div class="feature-pair">
+				<div class="reveal">
+					<h3>Skip the blank canvas</h3>
+					<p>With <span data-bb-count="patterns">194</span> patterns organised into categories and collections, you can go from empty page to polished design in minutes — not hours. Just find, preview and insert.</p>
+				</div>
+				<div class="reveal">
+					<h3>Designs that just work</h3>
+					<p>Every pattern is responsive and built on the bBlocks design system, so no matter how you mix and match — including the 5 headers and 3 footers — everything looks cohesive on every screen size.</p>
+				</div>
+			</div>
+
+			<nav class="cat-tiles" id="pattern-cats" aria-label="Pattern categories"></nav>
+			<div class="sites-more hero-cta">
+				<a class="btn btn-light" href="patterns.html">Browse all <span data-bb-count="patterns">194</span> patterns</a>
+				<a class="btn btn-outline-light" href="docs.html#using-patterns">How to use patterns</a>
 			</div>
 		</div>
 	</section>
@@ -341,45 +414,87 @@
 	</section>
 
 	<!-- Dashboard -->
-	<section class="section" id="dashboard">
+	<section class="section section-dark" id="dashboard">
 		<div class="wrap">
-			<div class="section-head">
-				<span class="kicker">Theme dashboard</span>
-				<h2>Delete hours of tedious setup</h2>
-				<p>Everything you need lives under Appearance → bBlocks — a guided checklist, one-click starter sites, design switching and modules.</p>
+			<div class="split-head reveal">
+				<h2>Delete hours of tedious tasks</h2>
+				<p>Automate the time-consuming parts of launching a new site with the bBlocks dashboard: a guided setup checklist, one-click starter sites, and design and module switches — all under Appearance → bBlocks.</p>
 			</div>
 
-			<div class="dash">
-				<div class="dash-tabs" role="tablist" aria-label="Dashboard features">
-					<button class="dash-tab" role="tab" id="dt-1" aria-controls="dp-1" aria-selected="true"><b>Setup checklist</b><span>"Get your site ready" walks you from logo to launch.</span></button>
-					<button class="dash-tab" role="tab" id="dt-2" aria-controls="dp-2" aria-selected="false"><b>Starter site importer</b><span>Search, filter by category and import in one click.</span></button>
-					<button class="dash-tab" role="tab" id="dt-3" aria-controls="dp-3" aria-selected="false"><b>Design tab</b><span>Apply a style, header and footer without opening the editor.</span></button>
-					<button class="dash-tab" role="tab" id="dt-4" aria-controls="dp-4" aria-selected="false"><b>Recommended plugins</b><span>Eight optional free plugins from bPlugins.</span></button>
+			<div class="showpanel reveal" id="dash-showcase">
+				<div class="sp-tabs" role="tablist" aria-label="Dashboard features">
+					<button class="sp-tab" role="tab" type="button" id="dt-1" aria-controls="dp-1" aria-selected="true">bBlocks Dashboard</button>
+					<button class="sp-tab" role="tab" type="button" id="dt-2" aria-controls="dp-2" aria-selected="false">Setup Checklist</button>
+					<button class="sp-tab" role="tab" type="button" id="dt-3" aria-controls="dp-3" aria-selected="false">Starter Sites</button>
+					<button class="sp-tab" role="tab" type="button" id="dt-4" aria-controls="dp-4" aria-selected="false">Design &amp; Modules</button>
 				</div>
 
-				<div>
-					<div class="dash-panel" id="dp-1" role="tabpanel" aria-labelledby="dt-1">
-						<div class="wp-shell">
+				<div class="sp-panel" id="dp-1" role="tabpanel" aria-labelledby="dt-1">
+					<div class="sp-text">
+						<h3>bBlocks Dashboard</h3>
+						<p>Your command centre for everything bBlocks. Import starter sites, apply styles, switch modules on and off, install recommended plugins and read the changelog — all without jumping around the WordPress admin.</p>
+						<div class="sp-actions"><a class="pill-btn" href="docs.html#dashboard"><span aria-hidden="true">▸</span> Read the guide</a></div>
+					</div>
+					<div class="sp-visual sp-glow">
+						<div class="light-scope wp-shell">
+							<div class="wp-side" aria-hidden="true"><div>Dashboard</div><div>Posts</div><div>Pages</div><div class="on">Appearance</div><div>Plugins</div><div>Settings</div></div>
+							<div class="wp-main">
+								<div class="wp-tabs"><span class="on">Welcome</span><span>Starter Sites</span><span>Design</span><span>Modules</span><span>Plugins</span></div>
+								<h4>Welcome to bBlocks</h4>
+								<div class="mock-stats">
+									<div><b data-bb-count="sites">23</b><small>Starter sites</small></div>
+									<div><b data-bb-count="patterns">194</b><small>Patterns</small></div>
+									<div><b data-bb-count="styles">22</b><small>Styles</small></div>
+									<div><b>9</b><small>Modules</small></div>
+								</div>
+								<div class="mock-cards">
+									<div><b>Get your site ready</b><small>4 of 6 done</small><div class="meter"><i></i></div></div>
+									<div><b>Need help?</b><small>Docs, support forum and community</small></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sp-panel" id="dp-2" role="tabpanel" aria-labelledby="dt-2" hidden>
+					<div class="sp-text">
+						<h3>Setup Checklist</h3>
+						<p>"Get your site ready" walks you from a fresh install to launch in six steps — starter site, logo, colors, header and footer, menu and extras. Each step opens exactly the screen you need and ticks itself off when done.</p>
+						<div class="sp-actions"><a class="pill-btn" href="docs.html#setup-checklist"><span aria-hidden="true">▸</span> Read the guide</a></div>
+					</div>
+					<div class="sp-visual sp-glow">
+						<div class="light-scope wp-shell">
 							<div class="wp-side" aria-hidden="true"><div>Dashboard</div><div>Posts</div><div>Pages</div><div class="on">Appearance</div><div>Plugins</div><div>Settings</div></div>
 							<div class="wp-main">
 								<div class="wp-tabs"><span class="on">Welcome</span><span>Starter Sites</span><span>Design</span><span>Modules</span><span>Plugins</span></div>
 								<h4>Get your site ready</h4>
 								<div class="meter"><i></i></div>
-								<div class="check done"><i></i><span>Activate bBlocks</span></div>
 								<div class="check done"><i></i><span>Import a starter site</span></div>
-								<div class="check done"><i></i><span>Choose a style</span></div>
-								<div class="check"><i></i><span>Add your logo and site title</span><em>Open →</em></div>
-								<div class="check"><i></i><span>Update your navigation menu</span><em>Open →</em></div>
+								<div class="check done"><i></i><span>Add your logo and site title</span></div>
+								<div class="check done"><i></i><span>Pick your colors and fonts</span></div>
+								<div class="check done"><i></i><span>Choose a header and footer</span></div>
+								<div class="check"><i></i><span>Set up your menu</span><em>Edit navigation →</em></div>
+								<div class="check"><i></i><span>Switch on the extras you need</span><em>Open Modules →</em></div>
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="dash-panel" id="dp-2" role="tabpanel" aria-labelledby="dt-2" hidden>
-						<div class="wp-shell">
+				<div class="sp-panel" id="dp-3" role="tabpanel" aria-labelledby="dt-3" hidden>
+					<div class="sp-text">
+						<h3>Starter Sites</h3>
+						<p>Search, filter by category and import a complete website in one click. Pages, homepage, blog page, menu, style and header are set up for you — nothing is downloaded and your existing posts are never touched.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="starter-sites.html"><span aria-hidden="true">↗</span> See all sites</a>
+							<a class="pill-btn" href="docs.html#import-starter-site">Read the guide</a>
+						</div>
+					</div>
+					<div class="sp-visual sp-glow">
+						<div class="light-scope wp-shell">
 							<div class="wp-side" aria-hidden="true"><div>Dashboard</div><div>Posts</div><div>Pages</div><div class="on">Appearance</div><div>Plugins</div><div>Settings</div></div>
 							<div class="wp-main">
 								<div class="wp-tabs"><span>Welcome</span><span class="on">Starter Sites</span><span>Design</span><span>Modules</span><span>Plugins</span></div>
-								<h4>Starter Sites <small style="color:var(--muted);font-weight:500">· 23</small></h4>
+								<h4>Starter Sites <small style="color:var(--muted);font-weight:500">· <span data-bb-count="sites">23</span></small></h4>
 								<div class="mini-sites">
 									<div><img src="assets/img/spa-hero.jpg" alt="" loading="lazy"><b>Sweet Pixie <small>Import</small></b></div>
 									<div><img src="assets/img/law-library.jpg" alt="" loading="lazy"><b>Justica Law <small>Import</small></b></div>
@@ -391,9 +506,19 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="dash-panel" id="dp-3" role="tabpanel" aria-labelledby="dt-3" hidden>
-						<div class="wp-shell">
+				<div class="sp-panel" id="dp-4" role="tabpanel" aria-labelledby="dt-4" hidden>
+					<div class="sp-text">
+						<h3>Design &amp; Modules</h3>
+						<p>Apply any of the <span data-bb-count="styles">22</span> styles, pick a header and footer, and switch on extras like dark mode, a sticky header or WhatsApp buttons — without opening the Site Editor. Modules load nothing until you turn them on.</p>
+						<div class="sp-actions">
+							<a class="pill-btn" href="docs.html#style-variations"><span aria-hidden="true">▸</span> Styles guide</a>
+							<a class="pill-btn" href="docs.html#modules">Modules guide</a>
+						</div>
+					</div>
+					<div class="sp-visual sp-glow">
+						<div class="light-scope wp-shell">
 							<div class="wp-side" aria-hidden="true"><div>Dashboard</div><div>Posts</div><div>Pages</div><div class="on">Appearance</div><div>Plugins</div><div>Settings</div></div>
 							<div class="wp-main">
 								<div class="wp-tabs"><span>Welcome</span><span>Starter Sites</span><span class="on">Design</span><span>Modules</span><span>Plugins</span></div>
@@ -404,29 +529,24 @@
 									<div>Dark<div class="sw"><i style="background:#0f1115"></i><i style="background:#5b8def"></i><i style="background:#fbbf24"></i></div></div>
 									<div>Savora<div class="sw"><i style="background:#a13f2b"></i><i style="background:#9a8a3c"></i><i style="background:#faf6ef"></i></div></div>
 								</div>
-								<h4>Header &amp; footer</h4>
-								<div class="design-opts">
-									<div class="on">Header · With CTA</div>
-									<div>Footer · Columns</div>
+								<h4>Modules</h4>
+								<div class="mock-toggles">
+									<span class="on">Dark mode</span><span class="on">Sticky header</span><span>Announcement bar</span><span class="on">WhatsApp buttons</span><span>Back to top</span><span>Table of contents</span>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
 
-					<div class="dash-panel" id="dp-4" role="tabpanel" aria-labelledby="dt-4" hidden>
-						<div class="wp-shell">
-							<div class="wp-side" aria-hidden="true"><div>Dashboard</div><div>Posts</div><div>Pages</div><div class="on">Appearance</div><div>Plugins</div><div>Settings</div></div>
-							<div class="wp-main">
-								<div class="wp-tabs"><span>Welcome</span><span>Starter Sites</span><span>Design</span><span>Modules</span><span class="on">Plugins</span></div>
-								<h4>Recommended plugins <small style="color:var(--muted);font-weight:500">· optional</small></h4>
-								<div class="check"><i></i><span>bBlocks Plugin — extra blocks</span><em>Install</em></div>
-								<div class="check"><i></i><span>Advanced Post Block</span><em>Install</em></div>
-								<div class="check done"><i></i><span>bSlider</span></div>
-								<div class="check"><i></i><span>Awesome FAQ</span><em>Install</em></div>
-								<div class="check"><i></i><span>HTML5 Video Player</span><em>Install</em></div>
-							</div>
-						</div>
-					</div>
+			<div class="feature-pair">
+				<div class="reveal">
+					<h3>Launch in an afternoon</h3>
+					<p>Import a starter site, swap in your logo, text and photos, and publish. The checklist keeps track of what's left so nothing gets forgotten.</p>
+				</div>
+				<div class="reveal">
+					<h3>Change your mind any time</h3>
+					<p>Styles, headers, footers and modules can be switched again whenever you like. Re-importing a starter site updates its pages instead of duplicating them.</p>
 				</div>
 			</div>
 		</div>
@@ -441,16 +561,16 @@
 				<p>Shop, product, cart, checkout and order templates follow every style variation — plus two store starter sites that appear when WooCommerce is active.</p>
 			</div>
 			<div class="woo-grid">
-				<a class="woo-card reveal" href="#starter-sites" data-filter-link="shop">
-					<img src="assets/img/fashion-hero.jpg" alt="" loading="lazy">
+				<a class="woo-card is-live reveal" href="preview.html?site=fashion-store" data-live-hover>
+					<div class="thumb-wrap"><div class="live" data-src="preview/sites/fashion-store/index.html" data-title="Modista Fashion Store preview"></div><span class="view-cta"><b>Live preview</b></span></div>
 					<div class="woo-body">
 						<span class="free-tag">Free</span>
 						<h3 style="margin-top:10px">Modista Fashion Store</h3>
 						<p>Categories, best sellers, new arrivals, a sale banner and brand story.</p>
 					</div>
 				</a>
-				<a class="woo-card reveal" href="#starter-sites" data-filter-link="shop">
-					<img src="assets/img/gadget-hero.jpg" alt="" loading="lazy">
+				<a class="woo-card is-live reveal" href="preview.html?site=gadget-store" data-live-hover>
+					<div class="thumb-wrap"><div class="live" data-src="preview/sites/gadget-store/index.html" data-title="Voltix Electronics Store preview"></div><span class="view-cta"><b>Live preview</b></span></div>
 					<div class="woo-body">
 						<span class="free-tag">Free</span>
 						<h3 style="margin-top:10px">Voltix Electronics Store</h3>
@@ -683,9 +803,10 @@
 				<h2>bBlocks</h2>
 				<ul>
 					<li><a href="https://wordpress.org/themes/bblocks/" target="_blank" rel="noopener">Download free</a></li>
-					<li><a href="#starter-sites">Starter sites</a></li>
-					<li><a href="#patterns">Patterns</a></li>
+					<li><a href="starter-sites.html">Starter sites</a></li>
+					<li><a href="patterns.html">Pattern library</a></li>
 					<li><a href="#design">Style variations</a></li>
+					<li><a href="docs.html">Documentation</a></li>
 				</ul>
 			</div>
 			<div>
@@ -702,6 +823,7 @@
 				<ul>
 					<li><a href="https://wordpress.org/support/theme/bblocks/" target="_blank" rel="noopener">Support forum</a></li>
 					<li><a href="https://wordpress.org/support/theme/bblocks/reviews/#new-post" target="_blank" rel="noopener">Write a review</a></li>
+					<li><a href="docs.html#getting-started">Getting started</a></li>
 					<li><a href="#faq">FAQ</a></li>
 					<li><a href="mailto:royprosanta140@gmail.com">royprosanta140@gmail.com</a></li>
 				</ul>
@@ -736,6 +858,7 @@
 	</a>
 </div>
 
+<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
