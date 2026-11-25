@@ -3,7 +3,7 @@ Contributors: bplugins
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.1.1
+Version: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, e-commerce, portfolio, one-column, two-columns, three-columns, four-columns, right-sidebar, grid-layout, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, threaded-comments, translation-ready
@@ -94,20 +94,23 @@ Please use the theme's support forum on WordPress.org.
 
 == Changelog ==
 
+= 1.2.0 =
+* New: two starter sites with matching style variations. Fluxpay Startup (Home, About, Pricing, Help Center, Blog and Contact; 14 patterns, "Fluxpay" style) and Kindred Studio digital agency (Home, Work, Services, About, Journal and Contact; 11 patterns, "Kindred" style). Every page has a single h1 and every photo has descriptive alt text. The theme now has 25 starter sites and 24 style variations.
+* New: "Mega Menu" block style for Navigation submenus, a wide multi-column dropdown built only on the core Navigation block (no plugin, no extra JavaScript). Nested submenus become columns, plain links become cards and link descriptions are shown. On mobile the links stay in the normal overlay menu.
+* New: three mega menu headers, Services (three columns with descriptions), Shop (four product-category columns with search) and Solutions (six link cards plus a regular dropdown), available in the Design tab and under "Replace" in the Site Editor. The theme now has 8 headers.
+* New: redesigned Welcome tab in the theme dashboard, with a hero, Quick Access cards, the latest changelog entries, a Getting Started checklist and help links.
+* WooCommerce: the Shop, Single Product, Product Search Results, Cart, Checkout and Order Confirmation templates are hidden while WooCommerce is inactive, so they no longer show in the Site Editor or apply to ordinary pages named "Cart" or "Checkout". They come back as soon as WooCommerce is activated; templates you edited yourself always stay visible.
+* Performance: images bundled with the theme now get width and height attributes when they render, so WordPress lazy-loads images below the fold and gives the main image a high fetch priority.
+* Performance: the theme's style.css (which only holds the theme header) is no longer loaded on the front end; a child theme's style.css still is.
+* Accessibility: icon tiles use a lighter tint so their symbols meet the 4.5:1 contrast ratio.
+* New theme screenshot (Kindred Studio starter site), updated description and tags (added three-columns, four-columns, custom-logo and theme-options).
+* Translation: updated the languages/bblocks.pot translation template.
+
 = 1.1.1 =
 * New theme description focused on small businesses and building without a page builder.
 * Added the theme website (Theme URI): https://bblocks-theme.netlify.app/
 * Readme: added "No page builder needed" and "Built for small businesses" sections and a link to the theme website; corrected the number of starter sites (23) and styles (22) in the FAQ.
 * Corrected an outdated code comment about WooCommerce templates.
-* Added a "Mega Menu" block style for Navigation submenus: a wide, multi-column dropdown built only on the core Navigation block (no plugin, no extra JavaScript). Nested submenus become columns, plain links become cards and link descriptions are shown. On mobile the links stay in the normal overlay menu.
-* Added three mega menu headers: Services (three columns with descriptions), Shop (four product-category columns with search) and Solutions (six link cards plus a regular dropdown). They are available as template parts in the Design tab and under "Replace" in the Site Editor.
-* Added two starter sites with matching style variations: Fluxpay Startup (Home, About, Pricing, Help Center, Blog and Contact; 14 patterns, "Fluxpay" style) and Kindred Studio digital agency (Home, Work, Services, About, Journal and Contact; 11 patterns, "Kindred" style). Every page has a single h1 and every photo has descriptive alt text.
-* Performance: images bundled with the theme now get width and height attributes when they render, so WordPress lazy-loads images below the fold and gives the main image a high fetch priority.
-* Performance: the theme's style.css (which only holds the theme header) is no longer loaded on the front end; a child theme's style.css still is.
-* Accessibility: icon tiles use a lighter tint so their symbols meet the 4.5:1 contrast ratio.
-* Redesigned the Welcome tab of the theme dashboard.
-* WooCommerce templates (Shop, Single Product, Product Search Results, Cart, Checkout and Order Confirmation) are now hidden while WooCommerce is inactive, so they no longer show in the Site Editor or apply to ordinary pages named "Cart" or "Checkout". They come back as soon as WooCommerce is activated; templates you edited yourself always stay visible.
-* New theme screenshot (Kindred Studio starter site), updated description and tags (added three-columns, four-columns, custom-logo and theme-options).
 
 = 1.1.0 =
 * WooCommerce: added theme templates for the shop, product, product search results, cart, checkout and order confirmation pages, and a stylesheet that makes WooCommerce blocks follow every style variation.
