@@ -41,8 +41,8 @@ $bblocks_points = array(
 				<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:42%">
 					<!-- wp:group {"backgroundColor":"primary","textColor":"background","style":{"border":{"radius":"0.75rem"},"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|small","right":"var:preset|spacing|small"},"blockGap":"0.25rem"}},"layout":{"type":"default"}} -->
 					<div class="wp-block-group has-background-color has-primary-background-color has-text-color has-background" style="border-radius:0.75rem;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--small)">
-						<!-- wp:paragraph {"align":"center","fontSize":"xx-large","fontFamily":"playfair-display","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}}} -->
-						<p class="has-text-align-center has-playfair-display-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html__( '25+', 'bblocks' ); ?></p>
+						<!-- wp:paragraph {"align":"center","fontSize":"xx-large","fontFamily":"mona-sans-expanded","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}}} -->
+						<p class="has-text-align-center has-mona-sans-expanded-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html__( '25+', 'bblocks' ); ?></p>
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.75rem","fontWeight":"600","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->

@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-rentals-hero
  * Categories: bblocks, bblocks-site-rentals, bblocks-hero, banner
  * Keywords: rentals, apartments, commercial, property, hero, cover, town
- * Description: An aerial town photo cover with an eyebrow, a large serif headline, a short intro and two buttons, above a dark strip of four quick links.
+ * Description: An aerial town photo cover with an eyebrow, a large display headline, a short intro and two buttons, above a dark strip of four quick links.
  * Inserter: true
  *
  * @package bBlocks
@@ -60,8 +60,8 @@ $bblocks_links = array(
 		<?php foreach ( $bblocks_links as $bblocks_link ) : ?>
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"playfair-display","style":{"typography":{"fontWeight":"700"}}} -->
-			<p class="has-text-align-center has-playfair-display-font-family has-large-font-size" style="font-weight:700"><a href="<?php echo esc_url( home_url( $bblocks_link[2] ) ); ?>"><?php echo esc_html( $bblocks_link[0] ); ?></a></p>
+			<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"mona-sans-expanded","style":{"typography":{"fontWeight":"700"}}} -->
+			<p class="has-text-align-center has-mona-sans-expanded-font-family has-large-font-size" style="font-weight:700"><a href="<?php echo esc_url( home_url( $bblocks_link[2] ) ); ?>"><?php echo esc_html( $bblocks_link[0] ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"border-color","style":{"typography":{"fontSize":"0.75rem","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->

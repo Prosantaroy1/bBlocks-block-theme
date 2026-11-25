@@ -39,12 +39,12 @@ $bblocks_quotes = array(
 		<?php foreach ( $bblocks_quotes as $bblocks_quote ) : ?>
 		<!-- wp:group {"borderColor":"border-color","style":{"border":{"width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|large","left":"var:preset|spacing|medium","right":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
 		<div class="wp-block-group has-border-color has-border-color-border-color" style="border-width:1px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--medium)">
-			<!-- wp:paragraph {"textColor":"accent","style":{"typography":{"fontSize":"4rem","lineHeight":"0.8"}},"fontFamily":"playfair-display"} -->
-			<p class="has-accent-color has-text-color has-playfair-display-font-family" style="font-size:4rem;line-height:0.8">“</p>
+			<!-- wp:paragraph {"textColor":"accent","style":{"typography":{"fontSize":"4rem","lineHeight":"0.8"}},"fontFamily":"mona-sans-expanded"} -->
+			<p class="has-accent-color has-text-color has-mona-sans-expanded-font-family" style="font-size:4rem;line-height:0.8">“</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"fontSize":"large","fontFamily":"playfair-display"} -->
-			<p class="has-playfair-display-font-family has-large-font-size"><?php echo esc_html( $bblocks_quote[0] ); ?></p>
+			<!-- wp:paragraph {"fontSize":"large","fontFamily":"mona-sans-expanded"} -->
+			<p class="has-mona-sans-expanded-font-family has-large-font-size"><?php echo esc_html( $bblocks_quote[0] ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|medium"}}},"layout":{"type":"default"}} -->

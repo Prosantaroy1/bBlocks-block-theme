@@ -70,12 +70,19 @@ if ( ! function_exists( 'bblocks_styles' ) ) {
 	 * states and other interactive details that theme.json cannot set.
 	 */
 	function bblocks_styles() {
-		wp_enqueue_style(
-			'bblocks-style',
-			get_stylesheet_uri(),
-			array(),
-			wp_get_theme()->get( 'Version' )
-		);
+		/*
+		 * The theme's own style.css only holds the theme header, so it is
+		 * not loaded (one less render-blocking request). A child theme's
+		 * style.css is loaded so child themes keep working as expected.
+		 */
+		if ( is_child_theme() ) {
+			wp_enqueue_style(
+				'bblocks-style',
+				get_stylesheet_uri(),
+				array(),
+				wp_get_theme()->get( 'Version' )
+			);
+		}
 
 		wp_enqueue_style(
 			'bblocks-custom',
@@ -216,6 +223,14 @@ if ( ! function_exists( 'bblocks_pattern_categories' ) ) {
 				'label'       => _x( 'bBlocks Site — Cash Home Buyer', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Sections from the QuickKey cash home buyer starter site.', 'bblocks' ),
 			),
+			'bblocks-site-startup'      => array(
+				'label'       => _x( 'bBlocks Site — Startup', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Fluxpay startup starter site.', 'bblocks' ),
+			),
+			'bblocks-site-agency'       => array(
+				'label'       => _x( 'bBlocks Site — Agency', 'Block pattern category', 'bblocks' ),
+				'description' => __( 'Sections from the Kindred Studio agency starter site.', 'bblocks' ),
+			),
 			'bblocks-site-magazine'     => array(
 				'label'       => _x( 'bBlocks Site — Magazine', 'Block pattern category', 'bblocks' ),
 				'description' => __( 'Sections from the Daily Ink magazine starter site.', 'bblocks' ),
@@ -258,6 +273,19 @@ if ( ! function_exists( 'bblocks_block_styles' ) ) {
 				'label' => _x( 'FAQ', 'Block style', 'bblocks' ),
 			)
 		);
+
+		/*
+		 * Mega menu: a wide, multi-column dropdown for a top-level submenu
+		 * of the core Navigation block. Pure CSS (assets/css/custom.css);
+		 * nested submenus become columns and link descriptions are shown.
+		 */
+		register_block_style(
+			'core/navigation-submenu',
+			array(
+				'name'  => 'mega',
+				'label' => _x( 'Mega Menu', 'Block style', 'bblocks' ),
+			)
+		);
 	}
 }
 add_action( 'init', 'bblocks_block_styles' );
@@ -295,6 +323,89 @@ if ( ! function_exists( 'bblocks_related_posts_query' ) ) {
 	}
 }
 add_filter( 'render_block_data', 'bblocks_related_posts_query' );
+
+if ( ! function_exists( 'bblocks_theme_image_size' ) ) {
+	/**
+	 * Intrinsic width and height of an image bundled in assets/images.
+	 *
+	 * @param string $url Image URL.
+	 * @return int[]|null Width and height, or null when unknown.
+	 */
+	function bblocks_theme_image_size( $url ) {
+		static $cache = array();
+
+		$base = get_template_directory_uri() . '/assets/images/';
+
+		if ( ! is_string( $url ) || 0 !== strpos( $url, $base ) ) {
+			return null;
+		}
+
+		$name = basename( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+
+		if ( array_key_exists( $name, $cache ) ) {
+			return $cache[ $name ];
+		}
+
+		$file           = get_template_directory() . '/assets/images/' . $name;
+		$cache[ $name ] = null;
+
+		if ( ! is_readable( $file ) ) {
+			return null;
+		}
+
+		if ( '.svg' === strtolower( substr( $name, -4 ) ) ) {
+			$head = (string) file_get_contents( $file, false, null, 0, 512 ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- Reading a local theme file.
+
+			if ( preg_match( '/<svg[^>]*\swidth="(\d+)"[^>]*\sheight="(\d+)"/', $head, $match ) ) {
+				$cache[ $name ] = array( (int) $match[1], (int) $match[2] );
+			}
+		} else {
+			$size = wp_getimagesize( $file );
+
+			if ( $size ) {
+				$cache[ $name ] = array( (int) $size[0], (int) $size[1] );
+			}
+		}
+
+		return $cache[ $name ];
+	}
+}
+
+if ( ! function_exists( 'bblocks_add_theme_image_dimensions' ) ) {
+	/**
+	 * Add width and height attributes to images that come from the theme
+	 * (pattern photos, illustrations and logos). WordPress only lazy-loads
+	 * images, and gives the main image a high fetch priority, when both
+	 * attributes are present; CSS keeps the rendered size unchanged.
+	 *
+	 * @param string $block_content Rendered block.
+	 * @return string
+	 */
+	function bblocks_add_theme_image_dimensions( $block_content ) {
+		if ( false === strpos( $block_content, '/assets/images/' ) || ! class_exists( 'WP_HTML_Tag_Processor' ) ) {
+			return $block_content;
+		}
+
+		$tags = new WP_HTML_Tag_Processor( $block_content );
+
+		while ( $tags->next_tag( 'img' ) ) {
+			if ( null !== $tags->get_attribute( 'width' ) || null !== $tags->get_attribute( 'height' ) ) {
+				continue;
+			}
+
+			$size = bblocks_theme_image_size( $tags->get_attribute( 'src' ) );
+
+			if ( $size ) {
+				$tags->set_attribute( 'width', (string) $size[0] );
+				$tags->set_attribute( 'height', (string) $size[1] );
+			}
+		}
+
+		return $tags->get_updated_html();
+	}
+}
+add_filter( 'render_block_core/image', 'bblocks_add_theme_image_dimensions' );
+add_filter( 'render_block_core/cover', 'bblocks_add_theme_image_dimensions' );
 
 require_once get_template_directory() . '/inc/modules.php';
 require_once get_template_directory() . '/inc/starter-sites.php';

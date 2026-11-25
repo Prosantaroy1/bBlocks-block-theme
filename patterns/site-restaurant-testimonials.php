@@ -43,8 +43,8 @@ $bblocks_reviews = array(
 			<p class="bblocks-stars has-small-font-size">★★★★★</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"fontSize":"medium","fontFamily":"playfair-display","style":{"typography":{"fontStyle":"italic","lineHeight":"1.6"}}} -->
-			<p class="has-playfair-display-font-family has-medium-font-size" style="font-style:italic;line-height:1.6"><?php echo esc_html( $bblocks_review[0] ); ?></p>
+			<!-- wp:paragraph {"fontSize":"medium","fontFamily":"mona-sans-expanded","style":{"typography":{"fontStyle":"italic","lineHeight":"1.6"}}} -->
+			<p class="has-mona-sans-expanded-font-family has-medium-font-size" style="font-style:italic;line-height:1.6"><?php echo esc_html( $bblocks_review[0] ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small","style":{"typography":{"fontWeight":"600"}}} -->

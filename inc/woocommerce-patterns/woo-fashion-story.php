@@ -41,8 +41,8 @@ $bblocks_facts = array(
 				<?php foreach ( $bblocks_facts as $bblocks_fact ) : ?>
 				<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
-					<!-- wp:paragraph {"fontSize":"x-large","style":{"typography":{"fontWeight":"500"}},"fontFamily":"playfair-display"} -->
-					<p class="has-playfair-display-font-family has-x-large-font-size" style="font-weight:500"><?php echo esc_html( $bblocks_fact[0] ); ?></p>
+					<!-- wp:paragraph {"fontSize":"x-large","style":{"typography":{"fontWeight":"500"}},"fontFamily":"mona-sans-expanded"} -->
+					<p class="has-mona-sans-expanded-font-family has-x-large-font-size" style="font-weight:500"><?php echo esc_html( $bblocks_fact[0] ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} -->

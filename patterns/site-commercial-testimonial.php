@@ -27,8 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"playfair-display"} -->
-		<p class="has-text-align-center has-playfair-display-font-family has-large-font-size"><?php echo esc_html__( 'Elena Marquez', 'bblocks' ); ?></p>
+		<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"mona-sans-expanded"} -->
+		<p class="has-text-align-center has-mona-sans-expanded-font-family has-large-font-size"><?php echo esc_html__( 'Elena Marquez', 'bblocks' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"align":"center","textColor":"muted-text","fontSize":"small"} -->

@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-homebuyer-hero
  * Categories: bblocks, bblocks-site-homebuyer, bblocks-hero, banner
  * Keywords: home buyer, cash offer, sell house, real estate, hero, cover
- * Description: A dark neighborhood photo cover with a red eyebrow, a large serif headline, a short intro, a cash offer button and three quick promises.
+ * Description: A dark neighborhood photo cover with a red eyebrow, a large display headline, a short intro, a cash offer button and three quick promises.
  * Inserter: true
  *
  * @package bBlocks

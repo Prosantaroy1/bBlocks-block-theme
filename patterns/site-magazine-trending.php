@@ -42,8 +42,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="wp-block-columns is-not-stacked-on-mobile" style="border-bottom-color:var(--wp--preset--color--border-color);border-bottom-width:1px;margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)">
 				<!-- wp:column {"width":"3.5rem"} -->
 				<div class="wp-block-column" style="flex-basis:3.5rem">
-				<!-- wp:paragraph {"textColor":"primary","style":{"typography":{"fontSize":"2.5rem","fontWeight":"800","lineHeight":"1"}},"fontFamily":"playfair-display"} -->
-				<p class="has-primary-color has-text-color has-playfair-display-font-family" style="font-size:2.5rem;font-weight:800;line-height:1"><?php echo esc_html( zeroise( $bblocks_n, 2 ) ); ?></p>
+				<!-- wp:paragraph {"textColor":"primary","style":{"typography":{"fontSize":"2.5rem","fontWeight":"800","lineHeight":"1"}},"fontFamily":"mona-sans-expanded"} -->
+				<p class="has-primary-color has-text-color has-mona-sans-expanded-font-family" style="font-size:2.5rem;font-weight:800;line-height:1"><?php echo esc_html( zeroise( $bblocks_n, 2 ) ); ?></p>
 				<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->

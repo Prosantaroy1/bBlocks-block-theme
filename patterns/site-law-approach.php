@@ -47,8 +47,8 @@ $bblocks_steps = array(
 			<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border-color);border-top-width:1px;padding-top:var(--wp--preset--spacing--medium)">
 				<!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"3.5rem"}},"layout":{"type":"default"}} -->
 				<div class="wp-block-group">
-					<!-- wp:paragraph {"textColor":"primary","fontSize":"x-large","style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"fontFamily":"playfair-display"} -->
-					<p class="has-primary-color has-text-color has-playfair-display-font-family has-x-large-font-size" style="font-weight:700;line-height:1"><?php echo esc_html( $bblocks_step[0] ); ?></p>
+					<!-- wp:paragraph {"textColor":"primary","fontSize":"x-large","style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"fontFamily":"mona-sans-expanded"} -->
+					<p class="has-primary-color has-text-color has-mona-sans-expanded-font-family has-x-large-font-size" style="font-weight:700;line-height:1"><?php echo esc_html( $bblocks_step[0] ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

@@ -40,8 +40,8 @@ $bblocks_results = array(
 		<?php foreach ( $bblocks_results as $bblocks_result ) : ?>
 		<!-- wp:group {"style":{"border":{"left":{"color":"var:preset|color|accent","width":"2px"}},"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|medium","right":"var:preset|spacing|small"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
 		<div class="wp-block-group" style="border-left-color:var(--wp--preset--color--accent);border-left-width:2px;padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--medium)">
-			<!-- wp:paragraph {"textColor":"accent","fontSize":"xx-large","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontFamily":"playfair-display"} -->
-			<p class="has-accent-color has-text-color has-playfair-display-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html( $bblocks_result[0] ); ?></p>
+			<!-- wp:paragraph {"textColor":"accent","fontSize":"xx-large","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontFamily":"mona-sans-expanded"} -->
+			<p class="has-accent-color has-text-color has-mona-sans-expanded-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html( $bblocks_result[0] ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium","style":{"typography":{"fontWeight":"700"}}} -->

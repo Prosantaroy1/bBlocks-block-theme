@@ -364,6 +364,44 @@ function bblocks_starter_sites() {
 				'contact'      => array( __( 'Contact', 'bblocks' ), array( 'site-homebuyer-contact', 'site-homebuyer-faq' ), 'page-landing' ),
 			),
 		),
+		'startup'        => array(
+			'title'       => __( 'Fluxpay Startup', 'bblocks' ),
+			'description' => __( 'Fintech and SaaS startup site with a dark hero and product cards, partner logos, a feature grid, stats, a customer story, blog cards, pricing plans, a leadership team and a help center.', 'bblocks' ),
+			'style'       => 'Fluxpay',
+			'header'      => 'header-cta',
+			'categories'  => array( 'business', 'dark' ),
+			'layout'      => 'saas',
+			'front'       => 'home',
+			'posts'       => 'blog',
+			'pages'       => array(
+				'home'        => array( __( 'Home', 'bblocks' ), array( 'site-startup-hero', 'site-startup-logos', 'site-startup-intro', 'site-startup-features', 'site-startup-stats', 'site-startup-testimonial', 'site-startup-blog', 'site-startup-cta', 'site-startup-newsletter' ), 'page-landing' ),
+				'about'       => array( __( 'About', 'bblocks' ), array( 'site-startup-about', 'site-startup-stats', 'site-startup-team', 'site-startup-newsletter' ), 'page-landing' ),
+				'pricing'     => array( __( 'Pricing', 'bblocks' ), array( 'site-startup-pricing', 'site-startup-features', 'site-startup-reviews', 'site-startup-newsletter' ), 'page-landing' ),
+				'help-center' => array( __( 'Help Center', 'bblocks' ), array( 'site-startup-docs', 'site-startup-newsletter' ), 'page-landing' ),
+				'blog'        => array( __( 'Blog', 'bblocks' ), array(), '' ),
+				// The default page template shows the page title as the page's h1.
+				'contact'     => array( __( 'Contact', 'bblocks' ), array( 'contact-01', 'site-startup-logos' ), '' ),
+			),
+		),
+		'digital-agency' => array(
+			'title'       => __( 'Kindred Studio', 'bblocks' ),
+			'description' => __( 'Design and branding agency with a bold headline hero, client logos, numbered services, selected work, a dark process band, stats, a bright testimonial, the team and a dark project call to action.', 'bblocks' ),
+			'style'       => 'Kindred',
+			'header'      => 'header-cta',
+			'categories'  => array( 'creative', 'business' ),
+			'layout'      => 'agency',
+			'front'       => 'home',
+			'posts'       => 'journal',
+			'pages'       => array(
+				'home'     => array( __( 'Home', 'bblocks' ), array( 'site-agency-hero', 'site-agency-clients', 'site-agency-services', 'site-agency-work', 'site-agency-process', 'site-agency-testimonial', 'site-agency-stats', 'site-agency-cta' ), 'page-landing' ),
+				// Work, Services and Contact use the default page template, which shows the page title as the h1.
+				'work'     => array( __( 'Work', 'bblocks' ), array( 'site-agency-work', 'site-agency-stats', 'site-agency-testimonial' ), '' ),
+				'services' => array( __( 'Services', 'bblocks' ), array( 'site-agency-services', 'site-agency-process', 'site-agency-clients' ), '' ),
+				'about'    => array( __( 'About', 'bblocks' ), array( 'site-agency-about', 'site-agency-stats', 'site-agency-team', 'site-agency-cta' ), 'page-landing' ),
+				'journal'  => array( __( 'Journal', 'bblocks' ), array(), '' ),
+				'contact'  => array( __( 'Contact', 'bblocks' ), array( 'site-agency-contact' ), '' ),
+			),
+		),
 	);
 
 	/**

@@ -24,8 +24,8 @@ $bblocks_benefits = array(
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 			<div class="wp-block-group">
-				<!-- wp:heading {"level":3,"fontSize":"medium","style":{"typography":{"fontWeight":"600"}},"fontFamily":"inter"} -->
-				<h3 class="wp-block-heading has-inter-font-family has-medium-font-size" style="font-weight:600"><?php echo esc_html( $bblocks_benefit[1] ); ?></h3>
+				<!-- wp:heading {"level":3,"fontSize":"medium","style":{"typography":{"fontWeight":"600"}},"fontFamily":"mona-sans"} -->
+				<h3 class="wp-block-heading has-mona-sans-font-family has-medium-font-size" style="font-weight:600"><?php echo esc_html( $bblocks_benefit[1] ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} -->

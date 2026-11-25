@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-commercial-services
  * Categories: bblocks, bblocks-site-commercial, bblocks-services, services
  * Keywords: commercial, brokerage, property management, services, cards
- * Description: Two side-by-side grey service cards for brokerage and property management, each with a photo, a numbered badge, a serif title, text and a solid button.
+ * Description: Two side-by-side grey service cards for brokerage and property management, each with a photo, a numbered badge, a display title, text and a solid button.
  * Inserter: true
  *
  * @package bBlocks
@@ -52,8 +52,8 @@ $bblocks_services = array(
 
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
-				<!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"letterSpacing":"0.12em","lineHeight":"1"},"border":{"width":"1px"},"spacing":{"padding":{"top":"0.6rem","bottom":"0.6rem","left":"0.75rem","right":"0.75rem"}}},"borderColor":"primary","fontFamily":"playfair-display"} -->
-				<p class="has-text-align-center has-border-color has-primary-border-color has-primary-color has-text-color has-playfair-display-font-family has-small-font-size" style="border-width:1px;padding-top:0.6rem;padding-right:0.75rem;padding-bottom:0.6rem;padding-left:0.75rem;letter-spacing:0.12em;line-height:1"><?php echo esc_html( $bblocks_service[0] ); ?></p>
+				<!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"letterSpacing":"0.12em","lineHeight":"1"},"border":{"width":"1px"},"spacing":{"padding":{"top":"0.6rem","bottom":"0.6rem","left":"0.75rem","right":"0.75rem"}}},"borderColor":"primary","fontFamily":"mona-sans-expanded"} -->
+				<p class="has-text-align-center has-border-color has-primary-border-color has-primary-color has-text-color has-mona-sans-expanded-font-family has-small-font-size" style="border-width:1px;padding-top:0.6rem;padding-right:0.75rem;padding-bottom:0.6rem;padding-left:0.75rem;letter-spacing:0.12em;line-height:1"><?php echo esc_html( $bblocks_service[0] ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"x-large"} -->

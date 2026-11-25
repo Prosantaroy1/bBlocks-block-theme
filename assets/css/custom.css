@@ -186,7 +186,7 @@ summary:focus-visible {
 	height: 2.5rem;
 	margin-bottom: 0;
 	border-radius: 0.6rem;
-	background: color-mix( in srgb, var( --wp--preset--color--primary, #2954e3 ) 22%, var( --wp--preset--color--background, #fff ) );
+	background: color-mix( in srgb, var( --wp--preset--color--primary, #2954e3 ) 12%, var( --wp--preset--color--background, #fff ) ); /* 12% keeps primary-colored icons above 4.5:1 contrast. */
 	color: var( --wp--preset--color--primary, #2954e3 );
 	font-size: 1.1rem;
 	line-height: 1;
@@ -476,5 +476,210 @@ summary:focus-visible {
 	.bblocks-portfolio .wp-block-image:hover img,
 	.bblocks-portfolio .wp-block-cover:hover .wp-block-cover__image-background {
 		transform: none;
+	}
+}
+
+/* ---------- Mega menu ----------
+ * Select a submenu in a Navigation block and pick Styles → "Mega Menu".
+ * Built only on the core Navigation block: no plugin and no extra
+ * JavaScript. Core still opens and closes the panel (hover, the arrow
+ * button, Escape), so keyboard support is unchanged.
+ *
+ * Inside the panel:
+ * - a nested submenu becomes a column: its label is the column heading
+ *   and its links are listed underneath;
+ * - a plain link becomes a card, with its "Description" under the label.
+ *
+ * Desktop only (600px and up, menu not in the overlay). In the mobile
+ * overlay WordPress lists the same links as an ordinary expanded menu.
+ *
+ * Every desktop selector starts with the same scope:
+ * :where( nav without overlay, overlay container while closed ) +
+ * the top-level submenu item with the Mega Menu style. The class is
+ * repeated so these rules outrank core's open/close rules regardless
+ * of stylesheet order.
+ */
+/* Link descriptions only appear in the desktop panel; the mobile menu stays a compact list. */
+.wp-block-navigation .is-style-mega .wp-block-navigation-item__description {
+	display: none;
+}
+
+@media ( min-width: 600px ) {
+
+	/*
+	 * Anchor the panel to the whole header, not the menu item, so it sits
+	 * centred under the header at the wide content width: the navigation
+	 * wrappers below are made static, so the nearest positioned ancestor
+	 * is the full-width header group (constrained groups are positioned
+	 * by core) or the header template part. :where() keeps this rule at
+	 * zero specificity, so the sticky header module still wins.
+	 */
+	:where( header.wp-block-template-part:has( .is-style-mega ) ) {
+		position: relative;
+	}
+
+	.wp-block-navigation:has( .is-style-mega ),
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open):has( .is-style-mega ),
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open):has( .is-style-mega ) .wp-block-navigation__responsive-dialog,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega {
+		position: static;
+	}
+
+	/* The panel. */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container {
+		top: calc( 100% + 0.5rem );
+		left: 50%;
+		right: auto;
+		transform: translate( -50%, 0.5rem );
+		width: min( var( --wp--style--global--wide-size, 1200px ), calc( 100vw - 2rem ) );
+		min-width: 0;
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+		align-items: start;
+		gap: 0.25rem 1.5rem;
+		padding: var( --wp--preset--spacing--medium, 1.5rem );
+		border: 1px solid var( --wp--preset--color--border-color, #e3e6ea );
+		border-radius: 0.85rem;
+		box-shadow: 0 24px 48px rgba( 20, 23, 26, 0.12 );
+		z-index: 100;
+		transition: opacity 0.15s ease, transform 0.15s ease;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container:not(.has-background) {
+		background-color: var( --wp--preset--color--background, #fff );
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container:not(.has-text-color) {
+		color: var( --wp--preset--color--foreground, #14171a );
+	}
+
+	/* Invisible bridge over the gap between the menu item and the panel, so moving the mouse down does not close it. */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 100%;
+		height: calc( var( --wp--preset--spacing--small, 1rem ) + 2rem );
+	}
+
+	/* Open: slide into place. */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega:not(.open-on-click):hover > .wp-block-navigation__submenu-container,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega:not(.open-on-click):not(.open-on-hover-click):focus-within > .wp-block-navigation__submenu-container,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation-submenu__toggle[aria-expanded="true"] ~ .wp-block-navigation__submenu-container {
+		transform: translate( -50%, 0 );
+	}
+
+	/* Items inside the panel. */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-item {
+		display: block;
+		position: static;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-item > .wp-block-navigation-item__content {
+		display: block;
+		padding: 0.6em 0.75em;
+		border-radius: 0.5rem;
+		white-space: normal;
+		text-decoration: none;
+		transition: background-color 0.15s ease;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-link > .wp-block-navigation-item__content:hover,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-link > .wp-block-navigation-item__content:focus-visible {
+		background-color: var( --wp--preset--color--surface, #f5f6f8 );
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-item__label {
+		font-weight: 600;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-link > .wp-block-navigation-item__content:hover .wp-block-navigation-item__label {
+		color: var( --wp--preset--color--primary, #2954e3 );
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation-item__description {
+		display: block;
+		margin-top: 0.2em;
+		font-size: 0.8125em;
+		font-weight: 400;
+		line-height: 1.45;
+		color: var( --wp--preset--color--muted-text, #666e75 );
+	}
+
+	/* A nested submenu is a column: heading + links, always shown. */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container > .wp-block-navigation-submenu > .wp-block-navigation-item__content {
+		padding-bottom: 0.4em;
+		padding-inline: 1em; /* = 0.75em of the link text, so headings line up with the links. */
+		font-size: 0.75em;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		background: none;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container > .wp-block-navigation-submenu > .wp-block-navigation-item__content .wp-block-navigation-item__label {
+		font-weight: 700;
+		color: var( --wp--preset--color--muted-text, #666e75 );
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation__submenu-icon {
+		display: none;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container {
+		position: static;
+		visibility: inherit;
+		opacity: 1;
+		width: auto;
+		height: auto;
+		min-width: 0;
+		overflow: visible;
+		display: flex;
+		flex-direction: column;
+		gap: 0.125rem;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		background: transparent;
+		transform: none;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container::before {
+		display: none;
+	}
+
+	/*
+	 * Site Editor: every block is positioned there, so keep the panel
+	 * attached to its menu item, opening towards the left.
+	 */
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega.block-editor-block-list__block {
+		position: relative;
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega.block-editor-block-list__block > .wp-block-navigation__submenu-container,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega.block-editor-block-list__block:hover > .wp-block-navigation__submenu-container,
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega.block-editor-block-list__block:focus-within > .wp-block-navigation__submenu-container {
+		left: auto;
+		right: 0;
+		transform: none;
+		width: min( 56rem, 80vw );
+	}
+}
+
+@media ( min-width: 960px ) {
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container {
+		grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
+	}
+
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega > .wp-block-navigation__submenu-container:has( > .wp-block-navigation-submenu:nth-child(4) ) {
+		grid-template-columns: repeat( 4, minmax( 0, 1fr ) );
+	}
+}
+
+@media ( min-width: 600px ) and ( prefers-reduced-motion: reduce ) {
+	:where( .wp-block-navigation:not(.is-responsive), .wp-block-navigation__responsive-container:not(.is-menu-open) ) .wp-block-navigation__container > .wp-block-navigation-item.wp-block-navigation-submenu.has-child.is-style-mega.is-style-mega:not(.block-editor-block-list__block) > .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+		transform: translate( -50%, 0 );
+		transition: none;
 	}
 }
