@@ -106,6 +106,7 @@ Please use the theme's support forum on WordPress.org.
 * Performance: the theme's style.css (which only holds the theme header) is no longer loaded on the front end; a child theme's style.css still is.
 * Accessibility: icon tiles use a lighter tint so their symbols meet the 4.5:1 contrast ratio.
 * Redesigned the Welcome tab of the theme dashboard.
+* WooCommerce templates (Shop, Single Product, Product Search Results, Cart, Checkout and Order Confirmation) are now hidden while WooCommerce is inactive, so they no longer show in the Site Editor or apply to ordinary pages named "Cart" or "Checkout". They come back as soon as WooCommerce is activated; templates you edited yourself always stay visible.
 * New theme screenshot (Kindred Studio starter site), updated description and tags (added three-columns, four-columns, custom-logo and theme-options).
 
 = 1.1.0 =

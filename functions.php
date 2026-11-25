@@ -407,6 +407,43 @@ if ( ! function_exists( 'bblocks_add_theme_image_dimensions' ) ) {
 add_filter( 'render_block_core/image', 'bblocks_add_theme_image_dimensions' );
 add_filter( 'render_block_core/cover', 'bblocks_add_theme_image_dimensions' );
 
+if ( ! function_exists( 'bblocks_hide_woocommerce_templates' ) ) {
+	/**
+	 * Hide the theme's WooCommerce templates while WooCommerce is inactive.
+	 *
+	 * Every file in /templates is a template, so without this the Site
+	 * Editor lists Shop, Single Product, Cart and Checkout on sites that do
+	 * not sell anything, and page-cart / page-checkout would be applied to
+	 * any ordinary page with the slug "cart" or "checkout". Front-end
+	 * template resolution uses the same query, so both are fixed here.
+	 * Copies the user edited in the Site Editor (source "custom") stay
+	 * visible, so no work ever seems lost. Activating WooCommerce brings
+	 * the templates back automatically.
+	 *
+	 * @param WP_Block_Template[] $query_result  Found templates.
+	 * @param array               $query         Query arguments.
+	 * @param string              $template_type wp_template or wp_template_part.
+	 * @return WP_Block_Template[]
+	 */
+	function bblocks_hide_woocommerce_templates( $query_result, $query, $template_type ) {
+		if ( 'wp_template' !== $template_type || class_exists( 'WooCommerce' ) ) {
+			return $query_result;
+		}
+
+		$woo_templates = array( 'archive-product', 'single-product', 'product-search-results', 'page-cart', 'page-checkout', 'order-confirmation' );
+
+		return array_values(
+			array_filter(
+				$query_result,
+				static function ( $template ) use ( $woo_templates ) {
+					return ! ( 'theme' === $template->source && in_array( $template->slug, $woo_templates, true ) );
+				}
+			)
+		);
+	}
+}
+add_filter( 'get_block_templates', 'bblocks_hide_woocommerce_templates', 10, 3 );
+
 require_once get_template_directory() . '/inc/modules.php';
 require_once get_template_directory() . '/inc/starter-sites.php';
 require_once get_template_directory() . '/inc/design.php';
