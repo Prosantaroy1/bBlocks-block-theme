@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-commercial-hero
  * Categories: bblocks, bblocks-site-commercial, bblocks-hero, banner
  * Keywords: commercial, real estate, brokerage, property management, office, hero, cover
- * Description: A tall office tower cover with a large left-aligned serif headline, a short line and three outline buttons.
+ * Description: A tall office tower cover with a large left-aligned display headline, a short line and three outline buttons.
  * Inserter: true
  *
  * @package bBlocks

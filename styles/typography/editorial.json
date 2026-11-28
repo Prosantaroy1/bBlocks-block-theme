@@ -4,13 +4,13 @@
 	"title": "Editorial",
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--inter)"
+			"fontFamily": "var(--wp--preset--font-family--mona-sans-narrow)"
 		},
 		"elements": {
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--playfair-display)",
-					"fontWeight": "700"
+					"fontFamily": "var(--wp--preset--font-family--mona-sans-condensed)",
+					"fontWeight": "600"
 				}
 			}
 		}

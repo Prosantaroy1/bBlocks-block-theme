@@ -55,8 +55,8 @@ $bblocks_stats = array(
 				<?php foreach ( $bblocks_stats as $bblocks_stat ) : ?>
 				<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem","padding":{"top":"var:preset|spacing|small"}},"border":{"top":{"color":"var:preset|color|border-color","width":"1px"}}},"layout":{"type":"default"}} -->
 				<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border-color);border-top-width:1px;padding-top:var(--wp--preset--spacing--small)">
-					<!-- wp:paragraph {"textColor":"primary","fontSize":"xx-large","style":{"typography":{"fontWeight":"600","lineHeight":"1.1"}},"fontFamily":"playfair-display"} -->
-					<p class="has-primary-color has-text-color has-playfair-display-font-family has-xx-large-font-size" style="font-weight:600;line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
+					<!-- wp:paragraph {"textColor":"primary","fontSize":"xx-large","style":{"typography":{"fontWeight":"600","lineHeight":"1.1"}},"fontFamily":"mona-sans-expanded"} -->
+					<p class="has-primary-color has-text-color has-mona-sans-expanded-font-family has-xx-large-font-size" style="font-weight:600;line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} -->

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bBlocks 1.1.1\n"
+"Project-Id-Version: bBlocks 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bblocks\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-31T11:29:25+00:00\n"
+"POT-Creation-Date: 2026-11-25T06:30:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bblocks\n"
@@ -18,14 +18,19 @@ msgstr ""
 #: style.css
 #: inc/admin-dashboard.php:20
 #: inc/admin-dashboard.php:21
-#: inc/admin-dashboard.php:408
-#: inc/admin-dashboard.php:413
+#: inc/admin-dashboard.php:460
+#: inc/admin-dashboard.php:465
 msgid "bBlocks"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://bblocks-theme.netlify.app/"
 msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "bBlocks is a fast, lightweight block theme for building any website with the WordPress Site Editor — no page builder needed. Import one of 23 one-click starter sites for a business, agency, restaurant, clinic, school, real estate agency, blog or WooCommerce store, then make it yours with 150+ patterns, 22 style variations and ready-made headers and footers. Built entirely with core blocks, bBlocks is accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce."
+msgid "Launch a fast, professional website without a page builder. bBlocks is a block theme for small businesses, agencies and startups: import one of 25 one-click starter sites — restaurant, clinic, law firm, gym, real estate, agency, startup, online store and more — then make it yours with 200+ patterns, 24 style variations, mega menus and ready-made headers and footers, all edited visually in the Site Editor. Built only with core blocks, bBlocks is lightweight, accessible, translation-ready and fully compatible with WooCommerce. Learn more at https://bblocks-theme.netlify.app/"
 msgstr ""
 
 #. Author of the theme
@@ -38,298 +43,321 @@ msgstr ""
 msgid "https://bplugins.com"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:106
 msgctxt "Block pattern category"
 msgid "bBlocks — All"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:107
 msgid "Every section bundled with the bBlocks theme."
 msgstr ""
 
-#: functions.php:104
+#: functions.php:110
 msgctxt "Block pattern category"
 msgid "bBlocks — Hero"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:111
 msgid "Opening sections with a headline, intro and call to action."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:114
 msgctxt "Block pattern category"
 msgid "bBlocks — About"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:115
 msgid "Company story, mission, values and key numbers."
 msgstr ""
 
-#: functions.php:112
+#: functions.php:118
 msgctxt "Block pattern category"
 msgid "bBlocks — Features"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:119
 msgid "Feature grids, image cards and alternating feature rows."
 msgstr ""
 
-#: functions.php:116
+#: functions.php:122
 msgctxt "Block pattern category"
 msgid "bBlocks — Services"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:123
 msgid "Service cards and numbered service lists."
 msgstr ""
 
-#: functions.php:120
+#: functions.php:126
 msgctxt "Block pattern category"
 msgid "bBlocks — Team"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:127
 msgid "Team member grids and introductions."
 msgstr ""
 
-#: functions.php:124
+#: functions.php:130
 msgctxt "Block pattern category"
 msgid "bBlocks — Testimonials"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:131
 msgid "Customer quotes, reviews and client logos."
 msgstr ""
 
-#: functions.php:128
+#: functions.php:134
 msgctxt "Block pattern category"
 msgid "bBlocks — Pricing"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:135
 msgid "Pricing tables and plan comparisons."
 msgstr ""
 
-#: functions.php:132
+#: functions.php:138
 msgctxt "Block pattern category"
 msgid "bBlocks — Call to Action"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:139
 msgid "Banners and strips that ask visitors to take the next step."
 msgstr ""
 
-#: functions.php:136
+#: functions.php:142
 msgctxt "Block pattern category"
 msgid "bBlocks — Contact"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:143
 msgid "Contact details and ways to get in touch."
 msgstr ""
 
-#: functions.php:140
+#: functions.php:146
 msgctxt "Block pattern category"
 msgid "bBlocks — Blog"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:147
 msgid "Latest posts in grids and lists."
 msgstr ""
 
-#: functions.php:144
+#: functions.php:150
 msgctxt "Block pattern category"
 msgid "bBlocks — FAQ"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:151
 msgid "Frequently asked questions in accordions."
 msgstr ""
 
-#: functions.php:148
+#: functions.php:154
 msgctxt "Block pattern category"
 msgid "bBlocks — Portfolio"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:155
 msgid "Project galleries and case study showcases."
 msgstr ""
 
-#: functions.php:152
+#: functions.php:158
 msgctxt "Block pattern category"
 msgid "bBlocks — Utility"
 msgstr ""
 
-#: functions.php:153
+#: functions.php:159
 msgid "Coming soon, maintenance, newsletter and not-found sections."
 msgstr ""
 
-#: functions.php:157
+#: functions.php:163
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Architecture"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:164
 msgid "Sections from the Nirman architecture starter site."
 msgstr ""
 
-#: functions.php:161
+#: functions.php:167
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Theme Marketplace"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:168
 msgid "Sections from the DigiMagnet marketplace starter site."
 msgstr ""
 
-#: functions.php:165
+#: functions.php:171
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Eco Resort"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:172
 msgid "Sections from the Naturexplo resort starter site."
 msgstr ""
 
-#: functions.php:169
+#: functions.php:175
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Spa"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:176
 msgid "Sections from the Sweet Pixie spa starter site."
 msgstr ""
 
-#: functions.php:173
+#: functions.php:179
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Consulting"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:180
 msgid "Sections from the Conselta consulting starter site."
 msgstr ""
 
-#: functions.php:177
+#: functions.php:183
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Restaurant"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:184
 msgid "Sections from the Savora restaurant starter site."
 msgstr ""
 
-#: functions.php:181
+#: functions.php:187
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Photography"
 msgstr ""
 
-#: functions.php:182
+#: functions.php:188
 msgid "Sections from the Lumen photography starter site."
 msgstr ""
 
-#: functions.php:185
+#: functions.php:191
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Medical Clinic"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:192
 msgid "Sections from the Carely medical clinic starter site."
 msgstr ""
 
-#: functions.php:189
+#: functions.php:195
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Law Firm"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:196
 msgid "Sections from the Justica law firm starter site."
 msgstr ""
 
-#: functions.php:193
+#: functions.php:199
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Education"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:200
 msgid "Sections from the Edunova online academy starter site."
 msgstr ""
 
-#: functions.php:197
+#: functions.php:203
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Gym & Fitness"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:204
 msgid "Sections from the Pulsefit gym starter site."
 msgstr ""
 
-#: functions.php:201
+#: functions.php:207
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Real Estate"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:208
 msgid "Sections from the Homely real estate starter site."
 msgstr ""
 
-#: functions.php:205
+#: functions.php:211
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Shop"
 msgstr ""
 
-#: functions.php:206
+#: functions.php:212
 msgid "Sections from the Shoplane online store starter site."
 msgstr ""
 
-#: functions.php:209
+#: functions.php:215
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Rental Homes"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:216
 msgid "Sections from the Harbor Lane rental homes starter site."
 msgstr ""
 
-#: functions.php:213
+#: functions.php:219
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Commercial Real Estate"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:220
 msgid "Sections from the Summit Ridge commercial real estate starter site."
 msgstr ""
 
-#: functions.php:217
+#: functions.php:223
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Cash Home Buyer"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:224
 msgid "Sections from the QuickKey cash home buyer starter site."
 msgstr ""
 
-#: functions.php:221
+#: functions.php:227
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Startup"
+msgstr ""
+
+#: functions.php:228
+msgid "Sections from the Fluxpay startup starter site."
+msgstr ""
+
+#: functions.php:231
+msgctxt "Block pattern category"
+msgid "bBlocks Site — Agency"
+msgstr ""
+
+#: functions.php:232
+msgid "Sections from the Kindred Studio agency starter site."
+msgstr ""
+
+#: functions.php:235
 msgctxt "Block pattern category"
 msgid "bBlocks Site — Magazine"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:236
 msgid "Sections from the Daily Ink magazine starter site."
 msgstr ""
 
-#: functions.php:243
+#: functions.php:257
 msgctxt "Block style"
 msgid "Card"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:265
 msgctxt "Block style"
 msgid "Pill"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:273
 msgctxt "Block style"
 msgid "FAQ"
+msgstr ""
+
+#: functions.php:286
+msgctxt "Block style"
+msgid "Mega Menu"
 msgstr ""
 
 #. translators: %s: starter site name.
@@ -367,8 +395,8 @@ msgid "Activating…"
 msgstr ""
 
 #: inc/admin-dashboard.php:60
-#: inc/admin-dashboard.php:802
-#: inc/admin-dashboard.php:835
+#: inc/admin-dashboard.php:939
+#: inc/admin-dashboard.php:972
 #: inc/recommended-plugins.php:258
 msgid "Active"
 msgstr ""
@@ -407,574 +435,690 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/admin-dashboard.php:182
+#: inc/admin-dashboard.php:199
+#: inc/admin-dashboard.php:501
+#: inc/admin-dashboard.php:534
+#: inc/admin-dashboard.php:667
 msgid "(opens in a new tab)"
 msgstr ""
 
-#: inc/admin-dashboard.php:225
+#: inc/admin-dashboard.php:277
 msgid "We build brands people remember"
 msgstr ""
 
-#: inc/admin-dashboard.php:237
+#: inc/admin-dashboard.php:289
 msgid "Ship faster with less busywork"
 msgstr ""
 
-#: inc/admin-dashboard.php:252
+#: inc/admin-dashboard.php:304
 msgid "Architecture Solution"
 msgstr ""
 
-#: inc/admin-dashboard.php:262
+#: inc/admin-dashboard.php:314
 msgid "Enhance Website Aesthetics"
 msgstr ""
 
-#: inc/admin-dashboard.php:272
+#: inc/admin-dashboard.php:324
 #: patterns/site-resort-cta.php:46
 #: patterns/site-resort-hero.php:21
 msgid "Naturexplo"
 msgstr ""
 
-#: inc/admin-dashboard.php:274
+#: inc/admin-dashboard.php:326
 #: inc/starter-sites.php:98
+#: patterns/header-mega-solutions.php:80
 #: patterns/site-resort-about.php:31
 msgid "About Us"
 msgstr ""
 
-#: inc/admin-dashboard.php:282
+#: inc/admin-dashboard.php:334
 msgid "Gain The Peace"
 msgstr ""
 
-#: inc/admin-dashboard.php:291
+#: inc/admin-dashboard.php:343
 #: patterns/site-consulting-hero.php:25
 msgid "With Strategic Direction"
 msgstr ""
 
-#: inc/admin-dashboard.php:300
+#: inc/admin-dashboard.php:352
 msgid "Hi, I design and build"
 msgstr ""
 
-#: inc/admin-dashboard.php:300
+#: inc/admin-dashboard.php:352
 msgid "websites."
 msgstr ""
 
-#: inc/admin-dashboard.php:316
+#: inc/admin-dashboard.php:368
 msgid "Grow your business with confidence"
 msgstr ""
 
-#: inc/admin-dashboard.php:324
+#: inc/admin-dashboard.php:376
 #: patterns/cta-01.php:23
 msgid "Ready to get started?"
 msgstr ""
 
-#: inc/admin-dashboard.php:338
+#: inc/admin-dashboard.php:390
 #: inc/starter-sites.php:30
 #: patterns/site-consulting-marquee.php:17
 #: patterns/site-education-courses.php:22
 msgid "Business"
 msgstr ""
 
-#: inc/admin-dashboard.php:339
+#: inc/admin-dashboard.php:391
 msgid "Agency & Portfolio"
 msgstr ""
 
-#: inc/admin-dashboard.php:340
+#: inc/admin-dashboard.php:392
 msgid "eCommerce"
 msgstr ""
 
-#: inc/admin-dashboard.php:341
+#: inc/admin-dashboard.php:393
 msgid "Food & Hospitality"
 msgstr ""
 
-#: inc/admin-dashboard.php:342
+#: inc/admin-dashboard.php:394
 msgid "Health & Fitness"
 msgstr ""
 
-#: inc/admin-dashboard.php:343
+#: inc/admin-dashboard.php:395
 msgid "Education"
 msgstr ""
 
-#: inc/admin-dashboard.php:344
+#: inc/admin-dashboard.php:396
 msgid "Real Estate & Architecture"
 msgstr ""
 
-#: inc/admin-dashboard.php:345
+#: inc/admin-dashboard.php:397
 msgid "Professional Services"
 msgstr ""
 
-#: inc/admin-dashboard.php:346
+#: inc/admin-dashboard.php:398
 msgid "Blog & Magazine"
 msgstr ""
 
-#: inc/admin-dashboard.php:347
+#: inc/admin-dashboard.php:399
 msgid "Dark Designs"
 msgstr ""
 
-#: inc/admin-dashboard.php:415
-msgid "Theme dashboard sections"
-msgstr ""
-
-#: inc/admin-dashboard.php:418
-msgid "Welcome"
-msgstr ""
-
-#: inc/admin-dashboard.php:419
-#: inc/admin-dashboard.php:626
-msgid "Starter Sites"
-msgstr ""
-
-#: inc/admin-dashboard.php:420
-#: patterns/services-02.php:38
-#: patterns/services-03.php:46
-#: patterns/site-education-courses.php:18
-msgid "Design"
-msgstr ""
-
-#: inc/admin-dashboard.php:421
-#: inc/admin-dashboard.php:528
-#: inc/admin-dashboard.php:561
-#: inc/admin-dashboard.php:893
-msgid "Modules"
-msgstr ""
-
-#: inc/admin-dashboard.php:422
-#: inc/recommended-plugins.php:224
-msgid "Recommended Plugins"
-msgstr ""
-
-#: inc/admin-dashboard.php:423
-msgid "All Features"
-msgstr ""
-
-#: inc/admin-dashboard.php:424
-#: inc/admin-dashboard.php:931
-msgid "Changelog"
-msgstr ""
-
-#: inc/admin-dashboard.php:450
-msgid "Welcome to bBlocks"
-msgstr ""
-
 #. translators: %s: Theme version number.
-#: inc/admin-dashboard.php:454
+#: inc/admin-dashboard.php:469
+#: inc/admin-dashboard.php:608
 #, php-format
 msgid "v%s"
 msgstr ""
 
-#: inc/admin-dashboard.php:458
-msgid "Build a business, agency or SaaS site from core blocks — start from a starter site or mix the patterns yourself."
+#: inc/admin-dashboard.php:473
+msgid "Theme dashboard sections"
 msgstr ""
 
-#: inc/admin-dashboard.php:461
+#: inc/admin-dashboard.php:476
+msgid "Welcome"
+msgstr ""
+
+#: inc/admin-dashboard.php:477
+#: inc/admin-dashboard.php:763
+msgid "Starter Sites"
+msgstr ""
+
+#: inc/admin-dashboard.php:478
+#: patterns/services-02.php:38
+#: patterns/services-03.php:46
+#: patterns/site-agency-process.php:20
+#: patterns/site-education-courses.php:18
+msgid "Design"
+msgstr ""
+
+#: inc/admin-dashboard.php:479
+#: inc/admin-dashboard.php:698
+#: inc/admin-dashboard.php:1030
+msgid "Modules"
+msgstr ""
+
+#: inc/admin-dashboard.php:480
+#: inc/recommended-plugins.php:224
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/admin-dashboard.php:481
+msgid "All Features"
+msgstr ""
+
+#: inc/admin-dashboard.php:482
+#: inc/admin-dashboard.php:1068
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin-dashboard.php:499
+#: inc/admin-dashboard.php:666
+msgid "Visit Website"
+msgstr ""
+
+#: inc/admin-dashboard.php:521
+msgid "Theme active"
+msgstr ""
+
+#: inc/admin-dashboard.php:522
+msgid "100% free"
+msgstr ""
+
+#: inc/admin-dashboard.php:524
+msgid "Welcome to bBlocks"
+msgstr ""
+
+#: inc/admin-dashboard.php:525
+msgid "Build a professional small business website without a page builder. Start from a ready-made starter site, or mix the patterns yourself."
+msgstr ""
+
+#: inc/admin-dashboard.php:529
 msgid "Browse Starter Sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:474
-msgid "Get your site ready"
+#: inc/admin-dashboard.php:533
+msgid "Theme Website"
 msgstr ""
 
-#. translators: 1: completed steps, 2: total steps.
-#: inc/admin-dashboard.php:478
+#: inc/admin-dashboard.php:538
+msgid "No page builder needed"
+msgstr ""
+
+#. translators: %s: number of starter sites.
+#: inc/admin-dashboard.php:542
 #, php-format
-msgid "%1$s of %2$s done"
+msgid "%s starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:490
-msgid "(done)"
+#. translators: %s: number of block patterns.
+#: inc/admin-dashboard.php:548
+#, php-format
+msgid "%s patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:505
-msgid "Quick Actions"
+#: inc/admin-dashboard.php:551
+#: inc/recommended-plugins.php:124
+msgid "WooCommerce ready"
 msgstr ""
 
-#: inc/admin-dashboard.php:509
-msgid "Global styles"
+#: inc/admin-dashboard.php:571
+msgid "sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:509
-msgid "Switch styles, color palettes and font pairings, or fine-tune colors and fonts."
+#: inc/admin-dashboard.php:577
+msgid "Quick Access"
 msgstr ""
 
-#: inc/admin-dashboard.php:510
-#: inc/admin-dashboard.php:525
-#: inc/admin-dashboard.php:878
+#: inc/admin-dashboard.php:578
+msgid "Jump straight to the parts of your site you change most often."
+msgstr ""
+
+#: inc/admin-dashboard.php:581
+msgid "Global Styles"
+msgstr ""
+
+#: inc/admin-dashboard.php:581
+msgid "Switch styles, color palettes and font pairings."
+msgstr ""
+
+#: inc/admin-dashboard.php:582
+#: inc/admin-dashboard.php:1015
 #: patterns/site-marketplace-stats.php:18
 msgid "Templates"
 msgstr ""
 
-#: inc/admin-dashboard.php:510
-msgid "Browse page, post, archive and landing page templates."
+#: inc/admin-dashboard.php:582
+msgid "Page, post, archive and landing page templates."
 msgstr ""
 
-#: inc/admin-dashboard.php:511
+#: inc/admin-dashboard.php:583
 msgid "Patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:511
-msgid "Insert hero, features, pricing, team and other sections."
+#: inc/admin-dashboard.php:583
+msgid "Hero, features, pricing, team and other sections."
 msgstr ""
 
-#: inc/admin-dashboard.php:512
-#: inc/admin-dashboard.php:815
+#: inc/admin-dashboard.php:584
+#: inc/admin-dashboard.php:952
 msgid "Header"
 msgstr ""
 
-#: inc/admin-dashboard.php:512
-msgid "Swap or edit the site header template part."
+#: inc/admin-dashboard.php:584
+msgid "Swap headers, including the new mega menu designs."
 msgstr ""
 
-#: inc/admin-dashboard.php:513
-#: inc/admin-dashboard.php:816
+#: inc/admin-dashboard.php:584
+#: inc/admin-dashboard.php:594
+#: inc/woocommerce-patterns/woo-gadget-hero.php:26
+#: patterns/site-realestate-listings.php:23
+#: patterns/site-shop-products.php:19
+#: patterns/site-shop-products.php:23
+msgid "New"
+msgstr ""
+
+#: inc/admin-dashboard.php:585
+#: inc/admin-dashboard.php:953
 msgid "Footer"
 msgstr ""
 
-#: inc/admin-dashboard.php:513
+#: inc/admin-dashboard.php:585
 msgid "Swap or edit the site footer template part."
 msgstr ""
 
-#: inc/admin-dashboard.php:514
+#: inc/admin-dashboard.php:586
 msgid "Navigation"
 msgstr ""
 
-#: inc/admin-dashboard.php:514
+#: inc/admin-dashboard.php:586
 msgid "Manage the menus used in headers and footers."
 msgstr ""
 
-#: inc/admin-dashboard.php:519
-msgid "What is included"
+#: inc/admin-dashboard.php:594
+msgid "Latest Updates & Changelog"
 msgstr ""
 
-#: inc/admin-dashboard.php:524
-#: inc/admin-dashboard.php:873
-msgid "Block patterns"
+#: inc/admin-dashboard.php:595
+msgid "View All Updates"
 msgstr ""
 
-#: inc/admin-dashboard.php:526
-#: inc/admin-dashboard.php:883
-msgid "Headers & footers"
+#: inc/admin-dashboard.php:619
+msgid "Getting started and resources"
 msgstr ""
 
-#: inc/admin-dashboard.php:527
-msgid "Style variations"
+#: inc/admin-dashboard.php:625
+msgid "Getting Started"
 msgstr ""
 
-#: inc/admin-dashboard.php:529
-#: inc/admin-dashboard.php:898
-msgid "Starter sites"
+#. translators: 1: completed steps, 2: total steps.
+#: inc/admin-dashboard.php:629
+#, php-format
+msgid "%1$s of %2$s steps done"
 msgstr ""
 
-#: inc/admin-dashboard.php:539
-msgid "Community and support"
+#: inc/admin-dashboard.php:648
+msgid "(done)"
 msgstr ""
 
-#: inc/admin-dashboard.php:542
-msgid "Web Creators Community"
+#: inc/admin-dashboard.php:663
+msgid "Visit the bBlocks Website"
 msgstr ""
 
-#: inc/admin-dashboard.php:543
-msgid "Join our community of fellow bBlocks users creating effective websites! Share your site, ask a question and help others."
+#: inc/admin-dashboard.php:664
+msgid "Learn more about bBlocks, see what is new and find tips for building your site."
 msgstr ""
 
-#: inc/admin-dashboard.php:544
-msgid "Join our Facebook Group"
+#: inc/admin-dashboard.php:672
+msgid "Need More Blocks?"
 msgstr ""
 
-#: inc/admin-dashboard.php:548
-#: inc/admin-dashboard.php:911
-#: inc/woocommerce.php:138
-#: patterns/services-02.php:54
-msgid "Support"
+#: inc/admin-dashboard.php:673
+msgid "Free add-ons from bPlugins that match every bBlocks style."
 msgstr ""
 
-#: inc/admin-dashboard.php:549
-msgid "Have a question? We are happy to help! Get in touch with our support team on the WordPress.org forum."
+#: inc/admin-dashboard.php:675
+msgid "Sliders, timelines and FAQ blocks"
 msgstr ""
 
-#: inc/admin-dashboard.php:550
-msgid "Submit a Ticket"
+#: inc/admin-dashboard.php:676
+msgid "Video, PDF and 3D model viewers"
 msgstr ""
 
-#: inc/admin-dashboard.php:563
+#: inc/admin-dashboard.php:677
+msgid "All free on WordPress.org"
+msgstr ""
+
+#: inc/admin-dashboard.php:679
+msgid "View Recommended Plugins"
+msgstr ""
+
+#: inc/admin-dashboard.php:687
+msgid "Need Any Assistance?"
+msgstr ""
+
+#: inc/admin-dashboard.php:687
+msgid "Our support team is happy to help you on the WordPress.org forum."
+msgstr ""
+
+#: inc/admin-dashboard.php:687
+msgid "Contact Support"
+msgstr ""
+
+#: inc/admin-dashboard.php:688
+msgid "Join Our Community"
+msgstr ""
+
+#: inc/admin-dashboard.php:688
+msgid "Share your site, ask questions and learn with other web creators."
+msgstr ""
+
+#: inc/admin-dashboard.php:688
+msgid "Join Community"
+msgstr ""
+
+#: inc/admin-dashboard.php:689
+msgid "Request a Feature"
+msgstr ""
+
+#: inc/admin-dashboard.php:689
+msgid "Have an idea that would make bBlocks better? Let us know!"
+msgstr ""
+
+#: inc/admin-dashboard.php:689
+msgid "Submit Idea"
+msgstr ""
+
+#: inc/admin-dashboard.php:690
+msgid "Loving bBlocks?"
+msgstr ""
+
+#: inc/admin-dashboard.php:690
+msgid "A quick review helps other people find the theme. Thank you!"
+msgstr ""
+
+#: inc/admin-dashboard.php:690
+msgid "Leave a Review"
+msgstr ""
+
+#: inc/admin-dashboard.php:700
 msgid "Optional front-end extras. Every module is off by default and its files load only when at least one module is on."
 msgstr ""
 
-#: inc/admin-dashboard.php:582
+#: inc/admin-dashboard.php:719
 msgid "Module settings"
 msgstr ""
 
-#: inc/admin-dashboard.php:586
+#: inc/admin-dashboard.php:723
 msgid "Default color scheme for new visitors"
 msgstr ""
 
-#: inc/admin-dashboard.php:588
+#: inc/admin-dashboard.php:725
 msgid "Light"
 msgstr ""
 
-#: inc/admin-dashboard.php:589
+#: inc/admin-dashboard.php:726
 msgid "Dark"
 msgstr ""
 
-#: inc/admin-dashboard.php:590
+#: inc/admin-dashboard.php:727
 msgid "Follow the visitor's device"
 msgstr ""
 
-#: inc/admin-dashboard.php:594
+#: inc/admin-dashboard.php:731
 msgid "Phone number (floating contact)"
 msgstr ""
 
-#: inc/admin-dashboard.php:598
+#: inc/admin-dashboard.php:735
 msgid "Email address (floating contact)"
 msgstr ""
 
-#: inc/admin-dashboard.php:602
+#: inc/admin-dashboard.php:739
 msgid "WhatsApp number with country code, digits only"
 msgstr ""
 
-#: inc/admin-dashboard.php:606
+#: inc/admin-dashboard.php:743
 msgid "Announcement text"
 msgstr ""
 
-#: inc/admin-dashboard.php:607
+#: inc/admin-dashboard.php:744
 msgid "Free shipping on all orders this week!"
 msgstr ""
 
-#: inc/admin-dashboard.php:610
+#: inc/admin-dashboard.php:747
 msgid "Announcement link (optional)"
 msgstr ""
 
-#: inc/admin-dashboard.php:614
+#: inc/admin-dashboard.php:751
 msgid "Announcement link text"
 msgstr ""
 
-#: inc/admin-dashboard.php:615
+#: inc/admin-dashboard.php:752
 #: inc/modules.php:422
 msgid "Learn more"
 msgstr ""
 
-#: inc/admin-dashboard.php:617
+#: inc/admin-dashboard.php:754
 msgid "Tip: while dark mode is on, any Button block can become a light/dark switch — pick the \"Dark mode toggle\" style in its Styles panel."
 msgstr ""
 
-#: inc/admin-dashboard.php:619
+#: inc/admin-dashboard.php:756
 msgid "Save modules"
 msgstr ""
 
-#: inc/admin-dashboard.php:628
+#: inc/admin-dashboard.php:765
 msgid "Each starter site stacks the theme's own patterns into ready-made pages and sets your homepage. Nothing is downloaded and your posts are never changed. Importing again updates the same pages instead of duplicating them."
 msgstr ""
 
-#: inc/admin-dashboard.php:631
+#: inc/admin-dashboard.php:768
 msgid "Also apply the matching style and header (replaces your current Global Styles colors and fonts, and your header design)"
 msgstr ""
 
-#: inc/admin-dashboard.php:635
+#: inc/admin-dashboard.php:772
 msgid "Create a navigation menu with the new pages"
 msgstr ""
 
-#: inc/admin-dashboard.php:655
+#: inc/admin-dashboard.php:792
 msgid "Filter starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:656
-#: inc/admin-dashboard.php:659
+#: inc/admin-dashboard.php:793
+#: inc/admin-dashboard.php:796
 msgid "Search starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:662
+#: inc/admin-dashboard.php:799
 #: patterns/template-sidebar.php:54
 msgid "Categories"
 msgstr ""
 
-#: inc/admin-dashboard.php:666
+#: inc/admin-dashboard.php:803
 msgid "All sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:685
+#: inc/admin-dashboard.php:822
 msgid "Status"
 msgstr ""
 
-#: inc/admin-dashboard.php:687
+#: inc/admin-dashboard.php:824
 msgid "All starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:688
-#: inc/admin-dashboard.php:726
+#: inc/admin-dashboard.php:825
+#: inc/admin-dashboard.php:863
 msgid "Imported"
 msgstr ""
 
-#: inc/admin-dashboard.php:689
+#: inc/admin-dashboard.php:826
 msgid "Not imported yet"
 msgstr ""
 
-#: inc/admin-dashboard.php:733
-#: inc/admin-dashboard.php:784
+#: inc/admin-dashboard.php:870
+#: inc/admin-dashboard.php:921
 msgid "Style"
 msgstr ""
 
-#: inc/admin-dashboard.php:736
-#: inc/admin-dashboard.php:791
+#: inc/admin-dashboard.php:873
+#: inc/admin-dashboard.php:928
 #: inc/design.php:138
 #: inc/design.php:168
 #: inc/design.php:177
 #: inc/design.php:194
-#: inc/starter-sites.php:462
+#: inc/starter-sites.php:500
 msgid "Default"
 msgstr ""
 
-#: inc/admin-dashboard.php:740
+#: inc/admin-dashboard.php:877
 msgid "Pages"
 msgstr ""
 
-#: inc/admin-dashboard.php:754
+#: inc/admin-dashboard.php:891
 msgid "Re-import"
 msgstr ""
 
-#: inc/admin-dashboard.php:754
+#: inc/admin-dashboard.php:891
 msgid "Import"
 msgstr ""
 
-#: inc/admin-dashboard.php:762
+#: inc/admin-dashboard.php:899
 msgid "No starter sites match your search. Try another word or category."
 msgstr ""
 
-#: inc/admin-dashboard.php:766
+#: inc/admin-dashboard.php:903
 msgid "Starter sites pages"
 msgstr ""
 
-#: inc/admin-dashboard.php:768
+#: inc/admin-dashboard.php:905
 msgid "Per page:"
 msgstr ""
 
-#: inc/admin-dashboard.php:773
+#: inc/admin-dashboard.php:910
 msgid "All"
 msgstr ""
 
-#: inc/admin-dashboard.php:786
+#: inc/admin-dashboard.php:923
 msgid "Apply a complete style — colors, fonts and buttons — in one click. This replaces the colors and fonts in your Global Styles; separate color palettes and font pairings are also available in the Site Editor under Styles."
 msgstr ""
 
-#: inc/admin-dashboard.php:805
+#: inc/admin-dashboard.php:942
 msgid "Apply"
 msgstr ""
 
-#: inc/admin-dashboard.php:815
+#: inc/admin-dashboard.php:952
 msgid "Choose the header shown on every page. You can still edit it afterwards in the Site Editor; picking the first design restores the theme's original header."
 msgstr ""
 
-#: inc/admin-dashboard.php:816
+#: inc/admin-dashboard.php:953
 msgid "Choose the footer shown on every page. Picking the first design restores the theme's original footer."
 msgstr ""
 
-#: inc/admin-dashboard.php:827
+#: inc/admin-dashboard.php:964
 msgid "Your current design has been edited in the Site Editor — applying another one replaces those edits (a revision is kept)."
 msgstr ""
 
-#: inc/admin-dashboard.php:838
+#: inc/admin-dashboard.php:975
 msgid "Use this"
 msgstr ""
 
-#: inc/admin-dashboard.php:845
+#: inc/admin-dashboard.php:982
 msgid "Edit it in the Site Editor"
 msgstr ""
 
-#: inc/admin-dashboard.php:857
+#: inc/admin-dashboard.php:994
 msgid "All Features — Included Free"
 msgstr ""
 
-#: inc/admin-dashboard.php:859
+#: inc/admin-dashboard.php:996
 msgid "Everything below is part of the free theme. There is nothing to unlock."
 msgstr ""
 
-#: inc/admin-dashboard.php:864
+#: inc/admin-dashboard.php:1001
 msgid "Feature"
 msgstr ""
 
-#: inc/admin-dashboard.php:865
+#: inc/admin-dashboard.php:1002
 msgid "What you get"
 msgstr ""
 
-#: inc/admin-dashboard.php:866
+#: inc/admin-dashboard.php:1003
 msgid "Availability"
 msgstr ""
 
+#: inc/admin-dashboard.php:1010
+msgid "Block patterns"
+msgstr ""
+
 #. translators: %d: number of patterns.
-#: inc/admin-dashboard.php:875
+#: inc/admin-dashboard.php:1012
 #, php-format
 msgid "%d sections: hero, about, features, services, team, testimonials, pricing, call to action, contact and blog"
 msgstr ""
 
 #. translators: %d: number of templates.
-#: inc/admin-dashboard.php:880
+#: inc/admin-dashboard.php:1017
 #, php-format
 msgid "%d templates, including a full-width landing page, page with sidebar and page without title"
 msgstr ""
 
+#: inc/admin-dashboard.php:1020
+msgid "Headers & footers"
+msgstr ""
+
 #. translators: 1: number of headers, 2: number of footers.
-#: inc/admin-dashboard.php:885
+#: inc/admin-dashboard.php:1022
 #, php-format
 msgid "%1$d headers and %2$d footers, all swappable template parts"
 msgstr ""
 
-#: inc/admin-dashboard.php:888
+#: inc/admin-dashboard.php:1025
 msgid "Styles"
 msgstr ""
 
 #. translators: %d: number of style variations.
-#: inc/admin-dashboard.php:890
+#: inc/admin-dashboard.php:1027
 #, php-format
 msgid "%d one-click style variations and a named design system in Global Styles"
 msgstr ""
 
 #. translators: %d: number of modules.
-#: inc/admin-dashboard.php:895
+#: inc/admin-dashboard.php:1032
 #, php-format
 msgid "%d optional modules: back to top, dark mode, reading progress, smart header, scroll animations, footer reveal, floating contact, announcement bar and table of contents"
 msgstr ""
 
+#: inc/admin-dashboard.php:1035
+msgid "Starter sites"
+msgstr ""
+
 #. translators: %d: number of starter sites.
-#: inc/admin-dashboard.php:900
+#: inc/admin-dashboard.php:1037
 #, php-format
 msgid "%d one-click starter sites built from the bundled patterns"
 msgstr ""
 
-#: inc/admin-dashboard.php:903
+#: inc/admin-dashboard.php:1040
 msgid "Fonts"
 msgstr ""
 
-#: inc/admin-dashboard.php:904
-msgid "Self-hosted Inter, Poppins, Manrope and Playfair Display — no requests to third-party font services"
+#: inc/admin-dashboard.php:1041
+msgid "Self-hosted Mona Sans variable font in four widths (normal, narrow, condensed and expanded) — no requests to third-party font services"
 msgstr ""
 
-#: inc/admin-dashboard.php:907
+#: inc/admin-dashboard.php:1044
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/admin-dashboard.php:908
+#: inc/admin-dashboard.php:1045
 msgid "Shop, product, cart, checkout and order templates that follow your style, plus two WooCommerce starter sites"
 msgstr ""
 
-#: inc/admin-dashboard.php:912
+#: inc/admin-dashboard.php:1048
+#: inc/woocommerce.php:138
+#: patterns/header-mega-services.php:83
+#: patterns/services-02.php:54
+msgid "Support"
+msgstr ""
+
+#: inc/admin-dashboard.php:1049
 msgid "Community support forum on WordPress.org"
 msgstr ""
 
-#: inc/admin-dashboard.php:920
+#: inc/admin-dashboard.php:1057
 #: inc/recommended-plugins.php:240
 msgid "Free"
 msgstr ""
 
-#: inc/admin-dashboard.php:933
+#: inc/admin-dashboard.php:1070
 msgid "What changed in each version of the theme."
 msgstr ""
 
 #. translators: %s: Theme version number.
-#: inc/admin-dashboard.php:943
+#: inc/admin-dashboard.php:1080
 #, php-format
 msgid "Version %s"
 msgstr ""
 
-#: inc/admin-dashboard.php:946
+#: inc/admin-dashboard.php:1083
 msgid "Current"
 msgstr ""
 
-#: inc/admin-dashboard.php:958
+#: inc/admin-dashboard.php:1095
 msgid "The changelog could not be loaded. You can find it in the theme's readme.txt file."
 msgstr ""
 
@@ -1044,7 +1188,7 @@ msgid "Choose a header and footer"
 msgstr ""
 
 #: inc/design.php:261
-msgid "Five header and three footer designs, all editable afterwards."
+msgid "Eight header and three footer designs, all editable afterwards."
 msgstr ""
 
 #: inc/design.php:268
@@ -1437,10 +1581,6 @@ msgstr ""
 msgid "Augmented reality"
 msgstr ""
 
-#: inc/recommended-plugins.php:124
-msgid "WooCommerce ready"
-msgstr ""
-
 #: inc/recommended-plugins.php:126
 msgid "Product showcases, shops, architecture and design portfolios"
 msgstr ""
@@ -1519,9 +1659,14 @@ msgstr ""
 #: inc/starter-sites.php:323
 #: inc/starter-sites.php:341
 #: inc/starter-sites.php:359
-#: inc/starter-sites.php:543
+#: inc/starter-sites.php:377
+#: inc/starter-sites.php:396
+#: inc/starter-sites.php:581
 #: inc/woocommerce.php:120
 #: inc/woocommerce.php:137
+#: patterns/header-mega-services.php:59
+#: patterns/header-mega-shop.php:56
+#: patterns/header-mega-solutions.php:59
 msgid "Home"
 msgstr ""
 
@@ -1539,7 +1684,12 @@ msgstr ""
 #: inc/starter-sites.php:326
 #: inc/starter-sites.php:344
 #: inc/starter-sites.php:362
+#: inc/starter-sites.php:378
+#: inc/starter-sites.php:400
 #: inc/woocommerce.php:121
+#: patterns/footer.php:18
+#: patterns/header-mega-services.php:97
+#: patterns/header-mega-shop.php:107
 #: patterns/site-spa-about.php:28
 msgid "About"
 msgstr ""
@@ -1550,6 +1700,9 @@ msgstr ""
 #: inc/starter-sites.php:158
 #: inc/starter-sites.php:257
 #: inc/starter-sites.php:289
+#: inc/starter-sites.php:399
+#: patterns/footer.php:20
+#: patterns/header-mega-services.php:61
 msgid "Services"
 msgstr ""
 
@@ -1565,7 +1718,10 @@ msgstr ""
 #: inc/starter-sites.php:275
 #: inc/starter-sites.php:346
 #: inc/starter-sites.php:363
+#: inc/starter-sites.php:381
 #: inc/woocommerce.php:139
+#: patterns/footer.php:19
+#: patterns/header-mega-services.php:98
 msgid "Blog"
 msgstr ""
 
@@ -1588,8 +1744,15 @@ msgstr ""
 #: inc/starter-sites.php:327
 #: inc/starter-sites.php:345
 #: inc/starter-sites.php:364
+#: inc/starter-sites.php:383
+#: inc/starter-sites.php:402
 #: inc/woocommerce.php:123
 #: inc/woocommerce.php:140
+#: patterns/footer.php:18
+#: patterns/footer.php:23
+#: patterns/header-mega-services.php:99
+#: patterns/header-mega-shop.php:108
+#: patterns/header-mega-solutions.php:87
 #: patterns/site-architecture-contact.php:36
 #: patterns/site-spa-contact.php:26
 msgid "Contact"
@@ -1606,6 +1769,7 @@ msgstr ""
 #: inc/starter-sites.php:55
 #: inc/starter-sites.php:129
 #: inc/starter-sites.php:209
+#: inc/starter-sites.php:401
 #: inc/woocommerce.php:122
 msgid "Journal"
 msgstr ""
@@ -1619,6 +1783,7 @@ msgid "Product landing page with features, social proof and pricing, plus Featur
 msgstr ""
 
 #: inc/starter-sites.php:68
+#: patterns/footer.php:20
 msgid "Features"
 msgstr ""
 
@@ -1626,6 +1791,10 @@ msgstr ""
 #: inc/starter-sites.php:84
 #: inc/starter-sites.php:159
 #: inc/starter-sites.php:223
+#: inc/starter-sites.php:379
+#: patterns/footer.php:20
+#: patterns/header-mega-services.php:87
+#: patterns/header-mega-solutions.php:86
 msgid "Pricing"
 msgstr ""
 
@@ -1673,6 +1842,7 @@ msgstr ""
 
 #: inc/starter-sites.php:114
 #: inc/woocommerce-patterns/woo-gadget-faq.php:18
+#: patterns/footer.php:19
 #: patterns/site-education-faq.php:32
 #: patterns/site-medical-faq.php:32
 msgid "FAQ"
@@ -1823,6 +1993,7 @@ msgid "Online store showcase with a split product hero, categories, product grid
 msgstr ""
 
 #: inc/starter-sites.php:273
+#: patterns/header-mega-shop.php:58
 msgid "Shop"
 msgstr ""
 
@@ -1926,27 +2097,54 @@ msgstr ""
 msgid "How It Works"
 msgstr ""
 
-#: inc/starter-sites.php:555
+#: inc/starter-sites.php:368
+msgid "Fluxpay Startup"
+msgstr ""
+
+#: inc/starter-sites.php:369
+msgid "Fintech and SaaS startup site with a dark hero and product cards, partner logos, a feature grid, stats, a customer story, blog cards, pricing plans, a leadership team and a help center."
+msgstr ""
+
+#: inc/starter-sites.php:380
+#: patterns/footer.php:19
+#: patterns/header-mega-services.php:86
+#: patterns/site-startup-docs.php:34
+msgid "Help Center"
+msgstr ""
+
+#: inc/starter-sites.php:387
+msgid "Kindred Studio"
+msgstr ""
+
+#: inc/starter-sites.php:388
+msgid "Design and branding agency with a bold headline hero, client logos, numbered services, selected work, a dark process band, stats, a bright testimonial, the team and a dark project call to action."
+msgstr ""
+
+#: inc/starter-sites.php:398
+msgid "Work"
+msgstr ""
+
+#: inc/starter-sites.php:593
 msgid "Starter site menu"
 msgstr ""
 
-#: inc/starter-sites.php:589
+#: inc/starter-sites.php:627
 msgid "Unknown starter site."
 msgstr ""
 
-#: inc/starter-sites.php:676
+#: inc/starter-sites.php:714
 msgid "You are not allowed to import starter sites."
 msgstr ""
 
 #. translators: %d: number of pages created or updated.
-#: inc/starter-sites.php:691
+#: inc/starter-sites.php:729
 #, php-format
 msgid "Starter site imported: %d page created or updated."
 msgid_plural "Starter site imported: %d pages created or updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/starter-sites.php:696
+#: inc/starter-sites.php:734
 msgid "The matching style was applied."
 msgstr ""
 
@@ -2010,6 +2208,7 @@ msgid "View all products"
 msgstr ""
 
 #: inc/woocommerce-patterns/woo-fashion-categories.php:10
+#: patterns/header-mega-shop.php:62
 msgid "Women"
 msgstr ""
 
@@ -2018,6 +2217,7 @@ msgid "Blush skirt, soft knit and a leather handbag"
 msgstr ""
 
 #: inc/woocommerce-patterns/woo-fashion-categories.php:11
+#: patterns/header-mega-shop.php:72
 msgid "Men"
 msgstr ""
 
@@ -2026,6 +2226,8 @@ msgid "Navy tailored suit with a polka-dot tie"
 msgstr ""
 
 #: inc/woocommerce-patterns/woo-fashion-categories.php:12
+#: patterns/header-mega-shop.php:67
+#: patterns/header-mega-shop.php:77
 msgid "Shoes"
 msgstr ""
 
@@ -2036,6 +2238,7 @@ msgstr ""
 
 #: inc/woocommerce-patterns/woo-fashion-categories.php:13
 #: inc/woocommerce-patterns/woo-gadget-categories.php:15
+#: patterns/header-mega-shop.php:82
 msgid "Accessories"
 msgstr ""
 
@@ -2074,6 +2277,7 @@ msgstr ""
 #: patterns/about-01.php:26
 #: patterns/site-commercial-leader.php:43
 #: patterns/site-shop-about.php:38
+#: patterns/site-startup-about.php:44
 msgid "Our story"
 msgstr ""
 
@@ -2333,13 +2537,6 @@ msgstr ""
 #: inc/woocommerce-patterns/woo-gadget-hero.php:12
 #: inc/woocommerce-patterns/woo-gadget-support.php:6
 msgid "30-day returns"
-msgstr ""
-
-#: inc/woocommerce-patterns/woo-gadget-hero.php:26
-#: patterns/site-realestate-listings.php:23
-#: patterns/site-shop-products.php:19
-#: patterns/site-shop-products.php:23
-msgid "New"
 msgstr ""
 
 #: inc/woocommerce-patterns/woo-gadget-hero.php:30
@@ -2721,6 +2918,7 @@ msgstr ""
 #: patterns/site-homebuyer-contact.php:36
 #: patterns/site-magazine-team.php:47
 #: patterns/site-shop-about.php:74
+#: patterns/site-startup-about.php:62
 msgid "Get in touch"
 msgstr ""
 
@@ -2739,6 +2937,8 @@ msgstr ""
 #: patterns/footer-columns.php:51
 #: patterns/footer-social.php:71
 #: patterns/header-topbar.php:33
+#: patterns/site-agency-contact.php:17
+#: patterns/site-agency-cta.php:45
 #: patterns/site-architecture-contact.php:20
 #: patterns/site-education-contact.php:39
 #: patterns/site-fitness-contact.php:49
@@ -3179,10 +3379,20 @@ msgstr ""
 
 #. translators: 1: current year, 2: site title.
 #: patterns/footer-columns.php:72
+#: patterns/footer-simple.php:28
 #: patterns/footer-social.php:92
-#: patterns/footer.php:28
 #, php-format
 msgid "© %1$s %2$s. All rights reserved."
+msgstr ""
+
+#: patterns/footer-simple.php
+msgctxt "Pattern title"
+msgid "Footer: Simple"
+msgstr ""
+
+#: patterns/footer-simple.php
+msgctxt "Pattern description"
+msgid "A single-row footer with the site title and a copyright line."
 msgstr ""
 
 #: patterns/footer-social.php
@@ -3200,21 +3410,70 @@ msgid "Building clean, modern websites for businesses, agencies and startups."
 msgstr ""
 
 #: patterns/footer-social.php:47
+#: patterns/footer.php:18
+#: patterns/header-mega-solutions.php:77
 msgid "Company"
 msgstr ""
 
 #: patterns/footer-social.php:57
+#: patterns/footer.php:19
 msgid "Resources"
 msgstr ""
 
 #: patterns/footer.php
 msgctxt "Pattern title"
-msgid "Footer: Simple"
+msgid "Footer: Default"
 msgstr ""
 
 #: patterns/footer.php
 msgctxt "Pattern description"
-msgid "A single-row footer with the site title and a copyright line."
+msgid "The default footer: site title, short intro and social icons, three columns of links, and a bottom bar with the copyright line and legal links."
+msgstr ""
+
+#: patterns/footer.php:18
+#: patterns/header-mega-solutions.php:82
+msgid "Careers"
+msgstr ""
+
+#: patterns/footer.php:18
+#: patterns/header-mega-solutions.php:81
+msgid "Our Team"
+msgstr ""
+
+#: patterns/footer.php:19
+#: patterns/site-startup-blog.php:37
+msgid "Guides"
+msgstr ""
+
+#: patterns/footer.php:20
+msgid "Case Studies"
+msgstr ""
+
+#: patterns/footer.php:20
+#: patterns/header-topbar.php:73
+msgid "Get a Quote"
+msgstr ""
+
+#: patterns/footer.php:23
+msgid "Privacy Policy"
+msgstr ""
+
+#: patterns/footer.php:23
+msgid "Terms of Service"
+msgstr ""
+
+#: patterns/footer.php:36
+msgid "We help small businesses grow with friendly service, honest advice and work we are proud of. Get in touch and tell us what you are planning."
+msgstr ""
+
+#. translators: 1: current year, 2: link to WordPress.org, 3: link to the bBlocks theme.
+#: patterns/footer.php:87
+#, php-format
+msgid "© %1$s · Powered by %2$s and %3$s"
+msgstr ""
+
+#: patterns/footer.php:89
+msgid "https://wordpress.org"
 msgstr ""
 
 #: patterns/header-centered.php
@@ -3238,9 +3497,264 @@ msgid "Site logo and title, navigation and a call-to-action button."
 msgstr ""
 
 #: patterns/header-cta.php:36
+#: patterns/header-mega-services.php:139
 #: patterns/hero-01.php:38
 #: patterns/pricing-03.php:120
 msgid "Get Started"
+msgstr ""
+
+#: patterns/header-mega-services.php
+msgctxt "Pattern title"
+msgid "Header: Mega Menu (Services)"
+msgstr ""
+
+#: patterns/header-mega-services.php
+msgctxt "Pattern description"
+msgid "Logo, navigation with a three-column Services mega menu (links with short descriptions) and a call-to-action button."
+msgstr ""
+
+#: patterns/header-mega-services.php:65
+#: patterns/services-02.php:30
+#: patterns/site-consulting-marquee.php:17
+msgid "Strategy"
+msgstr ""
+
+#: patterns/header-mega-services.php:68
+msgid "Business Planning"
+msgstr ""
+
+#: patterns/header-mega-services.php:68
+msgid "Clear goals and a step-by-step plan."
+msgstr ""
+
+#: patterns/header-mega-services.php:69
+msgid "Market Research"
+msgstr ""
+
+#: patterns/header-mega-services.php:69
+msgid "Know your customers and competitors."
+msgstr ""
+
+#: patterns/header-mega-services.php:70
+#: patterns/site-consulting-services.php:18
+msgid "Growth Consulting"
+msgstr ""
+
+#: patterns/header-mega-services.php:70
+msgid "Find the next best move for your business."
+msgstr ""
+
+#: patterns/header-mega-services.php:74
+#: patterns/site-consulting-marquee.php:17
+#: patterns/site-education-courses.php:21
+msgid "Marketing"
+msgstr ""
+
+#: patterns/header-mega-services.php:77
+msgid "Website Design"
+msgstr ""
+
+#: patterns/header-mega-services.php:77
+msgid "A fast website that turns visitors into leads."
+msgstr ""
+
+#: patterns/header-mega-services.php:78
+msgid "Local SEO"
+msgstr ""
+
+#: patterns/header-mega-services.php:78
+msgid "Get found on Google by customers nearby."
+msgstr ""
+
+#: patterns/header-mega-services.php:79
+msgid "Social Media"
+msgstr ""
+
+#: patterns/header-mega-services.php:79
+msgid "Posts and ads that people notice."
+msgstr ""
+
+#: patterns/header-mega-services.php:86
+msgid "Answers to the most common questions."
+msgstr ""
+
+#: patterns/header-mega-services.php:87
+msgid "Simple plans for every budget."
+msgstr ""
+
+#: patterns/header-mega-services.php:88
+#: patterns/hero-04.php:54
+#: patterns/site-consulting-hero.php:35
+#: patterns/site-consulting-pricing.php:91
+msgid "Book a Call"
+msgstr ""
+
+#: patterns/header-mega-services.php:88
+msgid "Talk to us about your project."
+msgstr ""
+
+#: patterns/header-mega-shop.php
+msgctxt "Pattern title"
+msgid "Header: Mega Menu (Shop)"
+msgstr ""
+
+#: patterns/header-mega-shop.php
+msgctxt "Pattern description"
+msgid "Logo, navigation with a four-column Shop mega menu for product categories, and a search button."
+msgstr ""
+
+#: patterns/header-mega-shop.php:65
+msgid "Dresses"
+msgstr ""
+
+#: patterns/header-mega-shop.php:66
+msgid "Tops & Shirts"
+msgstr ""
+
+#: patterns/header-mega-shop.php:68
+msgid "Bags"
+msgstr ""
+
+#: patterns/header-mega-shop.php:75
+msgid "Shirts"
+msgstr ""
+
+#: patterns/header-mega-shop.php:76
+msgid "Trousers"
+msgstr ""
+
+#: patterns/header-mega-shop.php:78
+#: patterns/site-shop-categories.php:19
+msgid "Watches"
+msgstr ""
+
+#: patterns/header-mega-shop.php:85
+msgid "Sunglasses"
+msgstr ""
+
+#: patterns/header-mega-shop.php:86
+msgid "Jewelry"
+msgstr ""
+
+#: patterns/header-mega-shop.php:87
+msgid "Belts"
+msgstr ""
+
+#: patterns/header-mega-shop.php:88
+msgid "Hats"
+msgstr ""
+
+#: patterns/header-mega-shop.php:92
+msgid "Collections"
+msgstr ""
+
+#: patterns/header-mega-shop.php:95
+#: patterns/site-shop-hero.php:43
+msgid "New Arrivals"
+msgstr ""
+
+#: patterns/header-mega-shop.php:96
+msgid "Best Sellers"
+msgstr ""
+
+#: patterns/header-mega-shop.php:97
+msgid "Sale"
+msgstr ""
+
+#: patterns/header-mega-shop.php:98
+msgid "Gift Cards"
+msgstr ""
+
+#: patterns/header-mega-shop.php:147
+#: patterns/header-search.php:35
+#: patterns/site-marketplace-themes.php:32
+#: patterns/site-realestate-hero.php:34
+#: patterns/site-startup-docs.php:49
+#: patterns/template-404.php:30
+#: patterns/template-no-results.php:19
+#: patterns/template-search-form.php:15
+#: patterns/template-sidebar.php:71
+#: patterns/utility-404.php:32
+msgid "Search"
+msgstr ""
+
+#: patterns/header-mega-shop.php:147
+#: patterns/header-search.php:35
+#: patterns/template-404.php:30
+#: patterns/template-no-results.php:19
+#: patterns/template-search-form.php:15
+#: patterns/template-sidebar.php:71
+#: patterns/utility-404.php:32
+msgid "Search…"
+msgstr ""
+
+#: patterns/header-mega-solutions.php
+msgctxt "Pattern title"
+msgid "Header: Mega Menu (Solutions)"
+msgstr ""
+
+#: patterns/header-mega-solutions.php
+msgctxt "Pattern description"
+msgid "Logo, navigation with a Solutions mega menu of six link cards with descriptions, a regular Company dropdown and a call-to-action button."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:61
+msgid "Solutions"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:64
+msgid "Restaurants & Cafés"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:64
+msgid "Menus, table bookings and opening hours."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:65
+msgid "Clinics & Doctors"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:65
+msgid "Services, doctors and appointment requests."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:66
+msgid "Law Firms"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:66
+msgid "Practice areas, attorneys and free consultations."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:67
+msgid "Gyms & Fitness"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:67
+msgid "Classes, trainers and membership plans."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:68
+#: patterns/site-law-practice.php:21
+msgid "Real Estate"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:68
+msgid "Property listings, agents and valuations."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:69
+msgid "Online Stores"
+msgstr ""
+
+#: patterns/header-mega-solutions.php:69
+msgid "Products, collections and secure checkout."
+msgstr ""
+
+#: patterns/header-mega-solutions.php:127
+#: patterns/site-law-consultation.php:34
+#: patterns/site-law-hero.php:37
+msgid "Free Consultation"
 msgstr ""
 
 #: patterns/header-search.php
@@ -3251,26 +3765,6 @@ msgstr ""
 #: patterns/header-search.php
 msgctxt "Pattern description"
 msgid "Site logo and title, navigation and an expanding search button — a good fit for blogs, magazines and documentation sites."
-msgstr ""
-
-#: patterns/header-search.php:35
-#: patterns/site-marketplace-themes.php:32
-#: patterns/site-realestate-hero.php:34
-#: patterns/template-404.php:30
-#: patterns/template-no-results.php:19
-#: patterns/template-search-form.php:15
-#: patterns/template-sidebar.php:71
-#: patterns/utility-404.php:32
-msgid "Search"
-msgstr ""
-
-#: patterns/header-search.php:35
-#: patterns/template-404.php:30
-#: patterns/template-no-results.php:19
-#: patterns/template-search-form.php:15
-#: patterns/template-sidebar.php:71
-#: patterns/utility-404.php:32
-msgid "Search…"
 msgstr ""
 
 #: patterns/header-topbar.php
@@ -3290,10 +3784,6 @@ msgstr ""
 #: patterns/site-realestate-cta.php:45
 #: patterns/site-rentals-cta.php:37
 msgid "Call +1 555 010 0199"
-msgstr ""
-
-#: patterns/header-topbar.php:73
-msgid "Get a Quote"
 msgstr ""
 
 #: patterns/header.php
@@ -3422,12 +3912,6 @@ msgstr ""
 msgid "You can edit every page yourself afterwards"
 msgstr ""
 
-#: patterns/hero-04.php:54
-#: patterns/site-consulting-hero.php:35
-#: patterns/site-consulting-pricing.php:91
-msgid "Book a Call"
-msgstr ""
-
 #: patterns/portfolio-01.php
 msgctxt "Pattern title"
 msgid "Portfolio: Masonry Projects"
@@ -3487,6 +3971,7 @@ msgstr ""
 
 #: patterns/pricing-01.php:31
 #: patterns/site-education-pricing.php:19
+#: patterns/site-startup-pricing.php:19
 msgid "Starter"
 msgstr ""
 
@@ -3528,6 +4013,8 @@ msgid "Most popular"
 msgstr ""
 
 #: patterns/pricing-01.php:53
+#: patterns/site-startup-blog.php:21
+#: patterns/site-startup-pricing.php:26
 msgid "Growth"
 msgstr ""
 
@@ -3559,11 +4046,13 @@ msgid "Choose Growth"
 msgstr ""
 
 #: patterns/pricing-01.php:75
+#: patterns/site-startup-pricing.php:33
 msgid "Scale"
 msgstr ""
 
 #. translators: Plan price, including the currency symbol.
 #: patterns/pricing-01.php:76
+#: patterns/site-startup-pricing.php:34
 msgid "$99"
 msgstr ""
 
@@ -3625,6 +4114,7 @@ msgstr ""
 #: patterns/site-education-pricing.php:32
 #: patterns/site-fitness-pricing.php:21
 #: patterns/site-restaurant-menu.php:31
+#: patterns/site-startup-pricing.php:27
 msgid "$29"
 msgstr ""
 
@@ -3667,6 +4157,7 @@ msgid "Basic section library"
 msgstr ""
 
 #: patterns/pricing-03.php:23
+#: patterns/site-startup-pricing.php:22
 msgid "Email support"
 msgstr ""
 
@@ -3792,11 +4283,6 @@ msgstr ""
 msgid "How we can help"
 msgstr ""
 
-#: patterns/services-02.php:30
-#: patterns/site-consulting-marquee.php:17
-msgid "Strategy"
-msgstr ""
-
 #: patterns/services-02.php:31
 msgid "Plan the site around your goals."
 msgstr ""
@@ -3875,6 +4361,473 @@ msgstr ""
 
 #: patterns/services-03.php:61
 msgid "Final review, testing, and a smooth go-live."
+msgstr ""
+
+#: patterns/site-agency-about.php
+msgctxt "Pattern title"
+msgid "Agency: About Page Intro"
+msgstr ""
+
+#: patterns/site-agency-about.php
+msgctxt "Pattern description"
+msgid "An about page opening with a large page title, two columns of story text and a wide rounded team photo."
+msgstr ""
+
+#: patterns/site-agency-about.php:23
+msgid "About Kindred"
+msgstr ""
+
+#: patterns/site-agency-about.php:27
+msgid "A small studio with big ideas and a lot of heart."
+msgstr ""
+
+#: patterns/site-agency-about.php:37
+msgid "We started Kindred in 2014 with one belief: good design should be within reach of every ambitious business, not just the biggest brands."
+msgstr ""
+
+#: patterns/site-agency-about.php:45
+msgid "Today we are a team of twelve designers, writers and developers. We keep the team small on purpose, so you always work directly with the people doing the work. No hand-offs, no jargon, just honest advice and careful craft."
+msgstr ""
+
+#: patterns/site-agency-about.php:53
+msgid "Bright studio meeting room with a long table and chairs"
+msgstr ""
+
+#: patterns/site-agency-clients.php
+msgctxt "Pattern title"
+msgid "Agency: Client Logos"
+msgstr ""
+
+#: patterns/site-agency-clients.php
+msgctxt "Pattern description"
+msgid "A short \"trusted by\" line above a row of six client logos, framed by thin top and bottom borders."
+msgstr ""
+
+#: patterns/site-agency-clients.php:31
+msgid "Trusted by teams at"
+msgstr ""
+
+#: patterns/site-agency-contact.php
+msgctxt "Pattern title"
+msgid "Agency: Contact Details"
+msgstr ""
+
+#: patterns/site-agency-contact.php
+msgctxt "Pattern description"
+msgid "A short intro followed by three contact cards for new projects, the studio address and opening hours."
+msgstr ""
+
+#: patterns/site-agency-contact.php:18
+#: patterns/site-education-contact.php:43
+#: patterns/site-fitness-contact.php:45
+#: patterns/site-homebuyer-contact.php:18
+#: patterns/site-homebuyer-offer.php:50
+#: patterns/site-law-consultation.php:48
+#: patterns/site-medical-hours.php:63
+#: patterns/site-photography-contact.php:33
+#: patterns/site-realestate-agents.php:60
+#: patterns/site-restaurant-visit.php:65
+msgid "+1 555 010 0199"
+msgstr ""
+
+#: patterns/site-agency-contact.php:23
+msgid "Tell us about your project, your timeline and your budget. We read every message and reply within one working day."
+msgstr ""
+
+#: patterns/site-agency-contact.php:33
+msgid "New projects"
+msgstr ""
+
+#: patterns/site-agency-contact.php:49
+msgid "Visit the studio"
+msgstr ""
+
+#: patterns/site-agency-contact.php:53
+msgid "24 Harbour Street"
+msgstr ""
+
+#: patterns/site-agency-contact.php:53
+msgid "Bristol, BS1 4RN"
+msgstr ""
+
+#: patterns/site-agency-contact.php:65
+#: patterns/site-fitness-contact.php:61
+#: patterns/site-medical-hours.php:31
+msgid "Opening hours"
+msgstr ""
+
+#: patterns/site-agency-contact.php:69
+msgid "Monday to Friday"
+msgstr ""
+
+#: patterns/site-agency-contact.php:69
+msgid "9:00 am – 5:30 pm"
+msgstr ""
+
+#: patterns/site-agency-cta.php
+msgctxt "Pattern title"
+msgid "Agency: Call to Action"
+msgstr ""
+
+#: patterns/site-agency-cta.php
+msgctxt "Pattern description"
+msgid "A dark closing band with a very large question, a short line, an accent button and an email link."
+msgstr ""
+
+#: patterns/site-agency-cta.php:25
+msgid "Have a project in mind? Let’s talk."
+msgstr ""
+
+#: patterns/site-agency-cta.php:33
+msgid "Tell us a little about your goals and we will reply within one working day with next steps."
+msgstr ""
+
+#: patterns/site-agency-cta.php:39
+#: patterns/site-agency-hero.php:51
+msgid "Start a project"
+msgstr ""
+
+#: patterns/site-agency-cta.php:45
+msgid "Or email us at"
+msgstr ""
+
+#: patterns/site-agency-hero.php
+msgctxt "Pattern title"
+msgid "Agency: Hero"
+msgstr ""
+
+#: patterns/site-agency-hero.php
+msgctxt "Pattern description"
+msgid "A bold agency hero with a pill label, a very large headline, an intro with two buttons and a wide rounded photo below."
+msgstr ""
+
+#: patterns/site-agency-hero.php:25
+msgid "Independent design studio · Since 2014"
+msgstr ""
+
+#: patterns/site-agency-hero.php:31
+msgid "We design brands and websites people remember."
+msgstr ""
+
+#: patterns/site-agency-hero.php:41
+msgid "Kindred is a small team of strategists, designers and developers helping ambitious businesses look as good as they are."
+msgstr ""
+
+#: patterns/site-agency-hero.php:55
+msgid "See our work"
+msgstr ""
+
+#: patterns/site-agency-hero.php:65
+msgid "White arched architecture in bright sunlight"
+msgstr ""
+
+#: patterns/site-agency-process.php
+msgctxt "Pattern title"
+msgid "Agency: Process"
+msgstr ""
+
+#: patterns/site-agency-process.php
+msgctxt "Pattern description"
+msgid "A dark band with a heading and four numbered process steps in columns."
+msgstr ""
+
+#: patterns/site-agency-process.php:18
+msgid "Discover"
+msgstr ""
+
+#: patterns/site-agency-process.php:18
+msgid "We learn about your business, your customers and what success looks like for you."
+msgstr ""
+
+#: patterns/site-agency-process.php:19
+msgid "Define"
+msgstr ""
+
+#: patterns/site-agency-process.php:19
+msgid "Together we agree on a clear plan, scope, timeline and budget before any design starts."
+msgstr ""
+
+#: patterns/site-agency-process.php:20
+msgid "We explore ideas, share progress every week and refine the work with your feedback."
+msgstr ""
+
+#: patterns/site-agency-process.php:21
+msgid "Deliver"
+msgstr ""
+
+#: patterns/site-agency-process.php:21
+msgid "We launch, train your team and stay on hand to measure results and improve."
+msgstr ""
+
+#: patterns/site-agency-process.php:29
+msgid "How we work"
+msgstr ""
+
+#: patterns/site-agency-process.php:33
+msgid "A simple process with no surprises"
+msgstr ""
+
+#: patterns/site-agency-services.php
+msgctxt "Pattern title"
+msgid "Agency: Numbered Services"
+msgstr ""
+
+#: patterns/site-agency-services.php
+msgctxt "Pattern description"
+msgid "An intro column with a heading and button next to six numbered service rows separated by thin lines."
+msgstr ""
+
+#: patterns/site-agency-services.php:18
+msgid "Brand strategy"
+msgstr ""
+
+#: patterns/site-agency-services.php:18
+msgid "Research, positioning and messaging that give your brand a clear reason to be chosen."
+msgstr ""
+
+#: patterns/site-agency-services.php:19
+msgid "Visual identity"
+msgstr ""
+
+#: patterns/site-agency-services.php:19
+msgid "Logos, color, type and guidelines that make you recognisable everywhere."
+msgstr ""
+
+#: patterns/site-agency-services.php:20
+msgid "Website design"
+msgstr ""
+
+#: patterns/site-agency-services.php:20
+msgid "Clear, beautiful websites designed around what your customers need."
+msgstr ""
+
+#: patterns/site-agency-services.php:21
+msgid "Web development"
+msgstr ""
+
+#: patterns/site-agency-services.php:21
+msgid "Fast, accessible WordPress sites your team can update with ease."
+msgstr ""
+
+#: patterns/site-agency-services.php:22
+msgid "Content and campaigns"
+msgstr ""
+
+#: patterns/site-agency-services.php:22
+msgid "Photography, copy and launch campaigns that tell your story well."
+msgstr ""
+
+#: patterns/site-agency-services.php:23
+msgid "Ongoing growth"
+msgstr ""
+
+#: patterns/site-agency-services.php:23
+msgid "Monthly design and development support as your business grows."
+msgstr ""
+
+#: patterns/site-agency-services.php:33
+#: patterns/site-realestate-services.php:29
+msgid "What we do"
+msgstr ""
+
+#: patterns/site-agency-services.php:37
+msgid "Everything your brand needs to grow"
+msgstr ""
+
+#: patterns/site-agency-services.php:41
+msgid "Hire us for one service or let us take care of everything, from the first idea to launch day and beyond."
+msgstr ""
+
+#: patterns/site-agency-services.php:47
+msgid "Book a call"
+msgstr ""
+
+#: patterns/site-agency-stats.php
+msgctxt "Pattern title"
+msgid "Agency: Stats"
+msgstr ""
+
+#: patterns/site-agency-stats.php
+msgctxt "Pattern description"
+msgid "Four large numbers with short labels, each under a thin top border."
+msgstr ""
+
+#: patterns/site-agency-stats.php:18
+msgid "150+"
+msgstr ""
+
+#: patterns/site-agency-stats.php:18
+msgid "Projects launched for brands of every size"
+msgstr ""
+
+#: patterns/site-agency-stats.php:19
+msgid "12"
+msgstr ""
+
+#: patterns/site-agency-stats.php:19
+msgid "Design awards won by our team"
+msgstr ""
+
+#: patterns/site-agency-stats.php:20
+msgid "10 yrs"
+msgstr ""
+
+#: patterns/site-agency-stats.php:20
+msgid "Helping businesses stand out"
+msgstr ""
+
+#: patterns/site-agency-stats.php:21
+msgid "94%"
+msgstr ""
+
+#: patterns/site-agency-stats.php:21
+msgid "Of clients come back for more"
+msgstr ""
+
+#: patterns/site-agency-team.php
+msgctxt "Pattern title"
+msgid "Agency: Team"
+msgstr ""
+
+#: patterns/site-agency-team.php
+msgctxt "Pattern description"
+msgid "A heading row with a careers button above four team members with rounded portraits, names and roles."
+msgstr ""
+
+#: patterns/site-agency-team.php:18
+msgid "Leo Hart"
+msgstr ""
+
+#: patterns/site-agency-team.php:18
+#: patterns/team-01.php:35
+msgid "Founder & Creative Director"
+msgstr ""
+
+#: patterns/site-agency-team.php:19
+msgid "Nina Park"
+msgstr ""
+
+#: patterns/site-agency-team.php:19
+msgid "Head of Strategy"
+msgstr ""
+
+#: patterns/site-agency-team.php:20
+msgid "Sam Ortiz"
+msgstr ""
+
+#: patterns/site-agency-team.php:20
+#: patterns/team-01.php:53
+msgid "Lead Developer"
+msgstr ""
+
+#: patterns/site-agency-team.php:21
+msgid "Ava Turner"
+msgstr ""
+
+#: patterns/site-agency-team.php:21
+msgid "Senior Designer"
+msgstr ""
+
+#: patterns/site-agency-team.php:31
+msgid "The people behind the work"
+msgstr ""
+
+#: patterns/site-agency-team.php:35
+msgid "A close-knit team that cares about every detail."
+msgstr ""
+
+#: patterns/site-agency-team.php:43
+msgid "Join the team"
+msgstr ""
+
+#: patterns/site-agency-testimonial.php
+msgctxt "Pattern title"
+msgid "Agency: Testimonial"
+msgstr ""
+
+#: patterns/site-agency-testimonial.php
+msgctxt "Pattern description"
+msgid "A bright accent-colored band with a large client quote, a portrait, the client's name and company."
+msgstr ""
+
+#: patterns/site-agency-testimonial.php:21
+msgid "“Kindred understood our business better than we did. The new brand and website doubled our enquiries in three months.”"
+msgstr ""
+
+#: patterns/site-agency-testimonial.php:27
+#: patterns/site-agency-testimonial.php:31
+msgid "Hannah Cole"
+msgstr ""
+
+#: patterns/site-agency-testimonial.php:31
+msgid "Founder, Northstar Coffee"
+msgstr ""
+
+#: patterns/site-agency-work.php
+msgctxt "Pattern title"
+msgid "Agency: Selected Work"
+msgstr ""
+
+#: patterns/site-agency-work.php
+msgctxt "Pattern description"
+msgid "A heading row with a button above a two-by-two grid of project cards with rounded photos, titles and service tags."
+msgstr ""
+
+#: patterns/site-agency-work.php:18
+msgid "Coffee being served across a café counter"
+msgstr ""
+
+#: patterns/site-agency-work.php:18
+msgid "Northstar Coffee"
+msgstr ""
+
+#: patterns/site-agency-work.php:18
+msgid "Brand identity · Website"
+msgstr ""
+
+#: patterns/site-agency-work.php:19
+msgid "Red kayaks on the shore of a mountain lake"
+msgstr ""
+
+#: patterns/site-agency-work.php:19
+msgid "Atlas Outdoor"
+msgstr ""
+
+#: patterns/site-agency-work.php:19
+msgid "Campaign · Photography"
+msgstr ""
+
+#: patterns/site-agency-work.php:20
+#: patterns/site-startup-blog.php:28
+msgid "Headphones and a smartphone on a desk"
+msgstr ""
+
+#: patterns/site-agency-work.php:20
+msgid "Mono Audio"
+msgstr ""
+
+#: patterns/site-agency-work.php:20
+msgid "Product launch · E-commerce"
+msgstr ""
+
+#: patterns/site-agency-work.php:21
+msgid "Abstract spiral pattern in soft light"
+msgstr ""
+
+#: patterns/site-agency-work.php:21
+msgid "Spiral Gallery"
+msgstr ""
+
+#: patterns/site-agency-work.php:21
+msgid "Visual identity · Signage"
+msgstr ""
+
+#: patterns/site-agency-work.php:29
+msgid "Selected work"
+msgstr ""
+
+#: patterns/site-agency-work.php:35
+msgid "View all projects"
 msgstr ""
 
 #: patterns/site-architecture-about.php
@@ -4180,7 +5133,7 @@ msgstr ""
 
 #: patterns/site-commercial-hero.php
 msgctxt "Pattern description"
-msgid "A tall office tower cover with a large left-aligned serif headline, a short line and three outline buttons."
+msgid "A tall office tower cover with a large left-aligned display headline, a short line and three outline buttons."
 msgstr ""
 
 #: patterns/site-commercial-hero.php:27
@@ -4198,7 +5151,7 @@ msgstr ""
 
 #: patterns/site-commercial-leader.php
 msgctxt "Pattern description"
-msgid "A split section with a large green serif statement on the left and an office photo, a short paragraph and a button on the right."
+msgid "A split section with a large green display statement on the left and an office photo, a short paragraph and a button on the right."
 msgstr ""
 
 #: patterns/site-commercial-leader.php:25
@@ -4264,7 +5217,7 @@ msgstr ""
 
 #: patterns/site-commercial-services.php
 msgctxt "Pattern description"
-msgid "Two side-by-side grey service cards for brokerage and property management, each with a photo, a numbered badge, a serif title, text and a solid button."
+msgid "Two side-by-side grey service cards for brokerage and property management, each with a photo, a numbered badge, a display title, text and a solid button."
 msgstr ""
 
 #: patterns/site-commercial-services.php:21
@@ -4302,7 +5255,7 @@ msgstr ""
 
 #: patterns/site-commercial-stats.php
 msgctxt "Pattern description"
-msgid "A light grey band with three large serif figures and short labels describing the managed portfolio."
+msgid "A light grey band with three large display figures and short labels describing the managed portfolio."
 msgstr ""
 
 #: patterns/site-commercial-stats.php:18
@@ -4507,11 +5460,6 @@ msgstr ""
 msgid "Personal Growth"
 msgstr ""
 
-#: patterns/site-consulting-marquee.php:17
-#: patterns/site-education-courses.php:21
-msgid "Marketing"
-msgstr ""
-
 #: patterns/site-consulting-pricing.php
 msgctxt "Pattern title"
 msgid "Consulting: Dark Pricing Table"
@@ -4634,10 +5582,6 @@ msgstr ""
 #: patterns/site-consulting-services.php
 msgctxt "Pattern description"
 msgid "A dark rounded card with a heading, four numbered service rows, three result boxes, a discovery-call box and a rating box."
-msgstr ""
-
-#: patterns/site-consulting-services.php:18
-msgid "Growth Consulting"
 msgstr ""
 
 #: patterns/site-consulting-services.php:18
@@ -4768,18 +5712,6 @@ msgstr ""
 #: patterns/site-education-contact.php:43
 #: patterns/site-fitness-contact.php:45
 msgid "+15550100199"
-msgstr ""
-
-#: patterns/site-education-contact.php:43
-#: patterns/site-fitness-contact.php:45
-#: patterns/site-homebuyer-contact.php:18
-#: patterns/site-homebuyer-offer.php:50
-#: patterns/site-law-consultation.php:48
-#: patterns/site-medical-hours.php:63
-#: patterns/site-photography-contact.php:33
-#: patterns/site-realestate-agents.php:60
-#: patterns/site-restaurant-visit.php:65
-msgid "+1 555 010 0199"
 msgstr ""
 
 #: patterns/site-education-contact.php:47
@@ -5232,6 +6164,7 @@ msgstr ""
 #. translators: Plan price, including the currency symbol.
 #: patterns/site-education-pricing.php:22
 #: patterns/site-homebuyer-about.php:20
+#: patterns/site-startup-pricing.php:20
 msgid "$0"
 msgstr ""
 
@@ -5239,6 +6172,7 @@ msgstr ""
 #: patterns/site-education-pricing.php:33
 #: patterns/site-education-pricing.php:43
 #: patterns/site-fitness-pricing.php:86
+#: patterns/site-startup-pricing.php:97
 msgid "/month"
 msgstr ""
 
@@ -5340,6 +6274,7 @@ msgstr ""
 
 #: patterns/site-education-stats.php:19
 #: patterns/site-restaurant-about.php:19
+#: patterns/site-startup-stats.php:20
 msgid "120+"
 msgstr ""
 
@@ -5382,6 +6317,7 @@ msgid "\"Short lessons fit around my shifts, and the instructor answered every q
 msgstr ""
 
 #: patterns/site-education-testimonials.php:19
+#: patterns/site-startup-reviews.php:19
 msgid "Omar Haddad"
 msgstr ""
 
@@ -5461,11 +6397,6 @@ msgstr ""
 
 #: patterns/site-fitness-contact.php:53
 msgid "Address: 88 Iron Street, Riverside"
-msgstr ""
-
-#: patterns/site-fitness-contact.php:61
-#: patterns/site-medical-hours.php:31
-msgid "Opening hours"
 msgstr ""
 
 #: patterns/site-fitness-contact.php:85
@@ -6161,7 +7092,7 @@ msgstr ""
 
 #: patterns/site-homebuyer-hero.php
 msgctxt "Pattern description"
-msgid "A dark neighborhood photo cover with a red eyebrow, a large serif headline, a short intro, a cash offer button and three quick promises."
+msgid "A dark neighborhood photo cover with a red eyebrow, a large display headline, a short intro, a cash offer button and three quick promises."
 msgstr ""
 
 #: patterns/site-homebuyer-hero.php:18
@@ -6624,11 +7555,6 @@ msgstr ""
 msgid "Yes. You can meet your attorney in our office, by phone or by secure video call, whichever suits you best."
 msgstr ""
 
-#: patterns/site-law-consultation.php:34
-#: patterns/site-law-hero.php:37
-msgid "Free Consultation"
-msgstr ""
-
 #: patterns/site-law-consultation.php:38
 msgid "Tell us about your case"
 msgstr ""
@@ -6695,10 +7621,6 @@ msgstr ""
 
 #: patterns/site-law-practice.php:20
 msgid "Vigorous defense at every stage, from investigation through trial and appeal."
-msgstr ""
-
-#: patterns/site-law-practice.php:21
-msgid "Real Estate"
 msgstr ""
 
 #: patterns/site-law-practice.php:21
@@ -8681,10 +9603,6 @@ msgstr ""
 msgid "Talk to us"
 msgstr ""
 
-#: patterns/site-realestate-services.php:29
-msgid "What we do"
-msgstr ""
-
 #: patterns/site-realestate-services.php:33
 msgid "Every move, handled"
 msgstr ""
@@ -8884,7 +9802,7 @@ msgstr ""
 
 #: patterns/site-rentals-hero.php
 msgctxt "Pattern description"
-msgid "An aerial town photo cover with an eyebrow, a large serif headline, a short intro and two buttons, above a dark strip of four quick links."
+msgid "An aerial town photo cover with an eyebrow, a large display headline, a short intro and two buttons, above a dark strip of four quick links."
 msgstr ""
 
 #: patterns/site-rentals-hero.php:18
@@ -10102,10 +11020,6 @@ msgid "48 products"
 msgstr ""
 
 #: patterns/site-shop-categories.php:19
-msgid "Watches"
-msgstr ""
-
-#: patterns/site-shop-categories.php:19
 msgid "22 products"
 msgstr ""
 
@@ -10191,10 +11105,6 @@ msgstr ""
 
 #: patterns/site-shop-hero.php:39
 msgid "Shop Now"
-msgstr ""
-
-#: patterns/site-shop-hero.php:43
-msgid "New Arrivals"
 msgstr ""
 
 #: patterns/site-shop-hero.php:49
@@ -10648,6 +11558,814 @@ msgstr ""
 msgid "Angelina Juli"
 msgstr ""
 
+#: patterns/site-startup-about.php
+msgctxt "Pattern title"
+msgid "Startup: About Page Header and Story"
+msgstr ""
+
+#: patterns/site-startup-about.php
+msgctxt "Pattern description"
+msgid "A dark page header with the page title, followed by a light split section with the company story, a button and a photo."
+msgstr ""
+
+#: patterns/site-startup-about.php:26
+msgid "About Fluxpay"
+msgstr ""
+
+#: patterns/site-startup-about.php:30
+msgid "We help independent businesses get paid fairly, quickly and safely."
+msgstr ""
+
+#: patterns/site-startup-about.php:48
+msgid "Built by shop owners, for shop owners"
+msgstr ""
+
+#: patterns/site-startup-about.php:52
+msgid "Our founders ran a small chain of bike shops and were tired of hidden fees, slow payouts and confusing contracts. So they built the payment tool they wanted: honest pricing, next-day payouts and real people on support."
+msgstr ""
+
+#: patterns/site-startup-about.php:56
+msgid "Today a team of 80 people across three countries helps more than 12,000 businesses get paid."
+msgstr ""
+
+#: patterns/site-startup-about.php:72
+msgid "Empty meeting room with chairs around a table"
+msgstr ""
+
+#: patterns/site-startup-blog.php
+msgctxt "Pattern title"
+msgid "Startup: Blog Cards"
+msgstr ""
+
+#: patterns/site-startup-blog.php
+msgctxt "Pattern description"
+msgid "A heading row with a \"View all posts\" button above three article cards with a photo, category, title, excerpt and date."
+msgstr ""
+
+#: patterns/site-startup-blog.php:20
+msgid "Coffee mug and biscuit on a café table"
+msgstr ""
+
+#: patterns/site-startup-blog.php:22
+msgid "How a local café doubled repeat visits with loyalty rewards"
+msgstr ""
+
+#: patterns/site-startup-blog.php:23
+msgid "Small perks, sent at the right moment, turned first-time guests into regulars."
+msgstr ""
+
+#: patterns/site-startup-blog.php:24
+msgid "March 12, 2026"
+msgstr ""
+
+#: patterns/site-startup-blog.php:29
+msgid "Product"
+msgstr ""
+
+#: patterns/site-startup-blog.php:30
+msgid "Five checkout tweaks that cut abandoned carts"
+msgstr ""
+
+#: patterns/site-startup-blog.php:31
+msgid "Simple changes to your payment page that help more shoppers finish buying."
+msgstr ""
+
+#: patterns/site-startup-blog.php:32
+msgid "February 26, 2026"
+msgstr ""
+
+#: patterns/site-startup-blog.php:36
+msgid "Laptop and a cup of coffee on a wooden desk"
+msgstr ""
+
+#: patterns/site-startup-blog.php:38
+msgid "A plain-English guide to payment fees"
+msgstr ""
+
+#: patterns/site-startup-blog.php:39
+msgid "What you really pay for each card payment, and how to keep costs low."
+msgstr ""
+
+#: patterns/site-startup-blog.php:40
+msgid "February 9, 2026"
+msgstr ""
+
+#: patterns/site-startup-blog.php:51
+msgid "From our blog"
+msgstr ""
+
+#: patterns/site-startup-blog.php:55
+msgid "Product news, customer stories and tips for growing your business."
+msgstr ""
+
+#: patterns/site-startup-blog.php:63
+msgid "View all posts"
+msgstr ""
+
+#: patterns/site-startup-cta.php
+msgctxt "Pattern title"
+msgid "Startup: Call to Action Card"
+msgstr ""
+
+#: patterns/site-startup-cta.php
+msgctxt "Pattern description"
+msgid "A full-width photo with a white card on top holding a heading, a short line and a sign-up button."
+msgstr ""
+
+#: patterns/site-startup-cta.php:25
+msgid "Start taking payments today"
+msgstr ""
+
+#: patterns/site-startup-cta.php:29
+msgid "Open a free account in minutes. No setup fees, no monthly minimums and you can cancel any time."
+msgstr ""
+
+#: patterns/site-startup-cta.php:35
+msgid "Create a free account"
+msgstr ""
+
+#: patterns/site-startup-docs.php
+msgctxt "Pattern title"
+msgid "Startup: Help Center"
+msgstr ""
+
+#: patterns/site-startup-docs.php
+msgctxt "Pattern description"
+msgid "A dark page header, a search bar with topic shortcuts, six help topic cards with article counts and a support row with a button."
+msgstr ""
+
+#: patterns/site-startup-docs.php:18
+msgid "Getting started"
+msgstr ""
+
+#: patterns/site-startup-docs.php:18
+msgid "Create your account, verify your business and take your first payment."
+msgstr ""
+
+#: patterns/site-startup-docs.php:19
+#: patterns/site-startup-docs.php:53
+msgid "Payments"
+msgstr ""
+
+#: patterns/site-startup-docs.php:19
+msgid "Cards, wallets, payment links and everything about checkout."
+msgstr ""
+
+#: patterns/site-startup-docs.php:20
+#: patterns/site-startup-docs.php:53
+msgid "Security"
+msgstr ""
+
+#: patterns/site-startup-docs.php:20
+msgid "How we protect your account and your customers’ data."
+msgstr ""
+
+#: patterns/site-startup-docs.php:21
+#: patterns/site-startup-docs.php:53
+#: patterns/site-startup-features.php:19
+msgid "Subscriptions"
+msgstr ""
+
+#: patterns/site-startup-docs.php:21
+msgid "Set up recurring billing, trials and plan changes."
+msgstr ""
+
+#: patterns/site-startup-docs.php:22
+msgid "Payouts and reports"
+msgstr ""
+
+#: patterns/site-startup-docs.php:22
+msgid "When money reaches your bank and how to read your reports."
+msgstr ""
+
+#: patterns/site-startup-docs.php:23
+#: patterns/site-startup-stats.php:20
+msgid "Integrations"
+msgstr ""
+
+#: patterns/site-startup-docs.php:23
+msgid "Connect your website, shop, accounting and email tools."
+msgstr ""
+
+#: patterns/site-startup-docs.php:38
+msgid "Guides and answers for everything you can do with Fluxpay."
+msgstr ""
+
+#: patterns/site-startup-docs.php:49
+msgid "Search the help center"
+msgstr ""
+
+#: patterns/site-startup-docs.php:49
+msgid "What are you looking for?"
+msgstr ""
+
+#: patterns/site-startup-docs.php:53
+msgid "Payouts"
+msgstr ""
+
+#: patterns/site-startup-docs.php:68
+msgid "Browse by topic"
+msgstr ""
+
+#. translators: 1: topic name, 2: number of articles.
+#: patterns/site-startup-docs.php:94
+#, php-format
+msgid "Browse %1$s (%2$d article)"
+msgid_plural "Browse %1$s (%2$d articles)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: patterns/site-startup-docs.php:115
+msgid "Support around the clock"
+msgstr ""
+
+#: patterns/site-startup-docs.php:119
+msgid "Our team answers by email and chat, every day of the year."
+msgstr ""
+
+#: patterns/site-startup-docs.php:127
+msgid "Talk to a real person"
+msgstr ""
+
+#: patterns/site-startup-docs.php:131
+msgid "Most questions are answered within an hour, no bots and no scripts."
+msgstr ""
+
+#: patterns/site-startup-docs.php:141
+msgid "Contact support"
+msgstr ""
+
+#: patterns/site-startup-features.php
+msgctxt "Pattern title"
+msgid "Startup: Feature Grid"
+msgstr ""
+
+#: patterns/site-startup-features.php
+msgctxt "Pattern description"
+msgid "A heading with a highlighted word above an eight-item feature grid, each with an icon tile, title and short description."
+msgstr ""
+
+#: patterns/site-startup-features.php:19
+msgid "Bill customers monthly or yearly and let payments run on autopilot."
+msgstr ""
+
+#: patterns/site-startup-features.php:20
+msgid "Online payments"
+msgstr ""
+
+#: patterns/site-startup-features.php:20
+msgid "Accept cards and wallets on your website with a few lines of setup."
+msgstr ""
+
+#: patterns/site-startup-features.php:21
+msgid "Instant checkout"
+msgstr ""
+
+#: patterns/site-startup-features.php:21
+msgid "A fast, mobile-friendly checkout that helps more visitors finish buying."
+msgstr ""
+
+#: patterns/site-startup-features.php:22
+msgid "Discount codes"
+msgstr ""
+
+#: patterns/site-startup-features.php:22
+msgid "Create coupons and offers in seconds to reward loyal customers."
+msgstr ""
+
+#: patterns/site-startup-features.php:25
+msgid "Affiliates"
+msgstr ""
+
+#: patterns/site-startup-features.php:25
+msgid "Pay partners who send you customers, tracked automatically."
+msgstr ""
+
+#: patterns/site-startup-features.php:26
+msgid "Smart invoices"
+msgstr ""
+
+#: patterns/site-startup-features.php:26
+msgid "Send branded invoices with a pay button and automatic reminders."
+msgstr ""
+
+#: patterns/site-startup-features.php:27
+msgid "Live reports"
+msgstr ""
+
+#: patterns/site-startup-features.php:27
+msgid "See sales, refunds and payouts in real time from any device."
+msgstr ""
+
+#: patterns/site-startup-features.php:28
+msgid "Fraud protection"
+msgstr ""
+
+#: patterns/site-startup-features.php:28
+msgid "Machine learning checks every payment and blocks risky ones."
+msgstr ""
+
+#: patterns/site-startup-features.php:39
+msgid "Features that"
+msgstr ""
+
+#: patterns/site-startup-features.php:39
+msgid "scale"
+msgstr ""
+
+#: patterns/site-startup-features.php:39
+msgid "with you"
+msgstr ""
+
+#: patterns/site-startup-hero.php
+msgctxt "Pattern title"
+msgid "Startup: Hero"
+msgstr ""
+
+#: patterns/site-startup-hero.php
+msgctxt "Pattern description"
+msgid "A dark hero with a large headline, intro, two buttons and four product cards with photos, labels and short descriptions."
+msgstr ""
+
+#: patterns/site-startup-hero.php:19
+msgid "In-store payments"
+msgstr ""
+
+#: patterns/site-startup-hero.php:22
+msgid "Shop counter with clothing racks, ready to take card payments"
+msgstr ""
+
+#: patterns/site-startup-hero.php:23
+msgid "Sell in person."
+msgstr ""
+
+#: patterns/site-startup-hero.php:24
+msgid "Take cards, wallets and tap-to-pay at the counter in seconds."
+msgstr ""
+
+#: patterns/site-startup-hero.php:27
+msgid "Mobile payments"
+msgstr ""
+
+#: patterns/site-startup-hero.php:30
+msgid "Smartphone on a desk showing a payment app"
+msgstr ""
+
+#: patterns/site-startup-hero.php:31
+msgid "Get paid anywhere."
+msgstr ""
+
+#: patterns/site-startup-hero.php:32
+msgid "Send payment links and invoices your customers pay from their phone."
+msgstr ""
+
+#: patterns/site-startup-hero.php:35
+msgid "Grow your audience"
+msgstr ""
+
+#: patterns/site-startup-hero.php:38
+msgid "Café owner serving coffee to a customer"
+msgstr ""
+
+#: patterns/site-startup-hero.php:39
+msgid "Keep them coming back."
+msgstr ""
+
+#: patterns/site-startup-hero.php:40
+msgid "Loyalty, receipts and offers that turn first visits into regulars."
+msgstr ""
+
+#: patterns/site-startup-hero.php:43
+msgid "Built by experts"
+msgstr ""
+
+#: patterns/site-startup-hero.php:46
+msgid "Tidy workspace with a laptop and keyboard"
+msgstr ""
+
+#: patterns/site-startup-hero.php:47
+msgid "Secure by design."
+msgstr ""
+
+#: patterns/site-startup-hero.php:48
+msgid "Bank-level encryption and fraud checks on every single transaction."
+msgstr ""
+
+#: patterns/site-startup-hero.php:58
+msgid "Fluxpay is the payments platform that grows with your business."
+msgstr ""
+
+#: patterns/site-startup-hero.php:62
+msgid "Accept payments online, in store and on the go, then see every sale in one simple dashboard."
+msgstr ""
+
+#: patterns/site-startup-hero.php:68
+msgid "Get started for free"
+msgstr ""
+
+#: patterns/site-startup-hero.php:72
+msgid "View pricing"
+msgstr ""
+
+#: patterns/site-startup-intro.php
+msgctxt "Pattern title"
+msgid "Startup: Intro with Image"
+msgstr ""
+
+#: patterns/site-startup-intro.php
+msgctxt "Pattern description"
+msgid "A split section with an eyebrow, heading, paragraph and button next to a large rounded photo."
+msgstr ""
+
+#: patterns/site-startup-intro.php:25
+msgid "Why Fluxpay"
+msgstr ""
+
+#: patterns/site-startup-intro.php:29
+msgid "Payments made simple for every business"
+msgstr ""
+
+#: patterns/site-startup-intro.php:33
+msgid "We started Fluxpay because getting paid should not be the hard part of running a business. One account gives you card payments, invoices, payouts and reports, with clear pricing and no long contracts."
+msgstr ""
+
+#: patterns/site-startup-intro.php:39
+msgid "See pricing options"
+msgstr ""
+
+#: patterns/site-startup-intro.php:49
+msgid "Bright open-plan office with people working at long desks"
+msgstr ""
+
+#: patterns/site-startup-logos.php
+msgctxt "Pattern title"
+msgid "Startup: Logos and Partners"
+msgstr ""
+
+#: patterns/site-startup-logos.php
+msgctxt "Pattern description"
+msgid "A light band with six customer logos, a divider and a partner program row with a button."
+msgstr ""
+
+#: patterns/site-startup-logos.php:48
+msgid "Meet our partners"
+msgstr ""
+
+#: patterns/site-startup-logos.php:52
+msgid "We work with trusted banks, card networks and software companies so your payments just work."
+msgstr ""
+
+#: patterns/site-startup-logos.php:60
+msgid "Join our partner program"
+msgstr ""
+
+#: patterns/site-startup-logos.php:64
+msgid "Build an integration or refer clients and earn a share of every payment."
+msgstr ""
+
+#: patterns/site-startup-logos.php:74
+msgid "Become a partner"
+msgstr ""
+
+#: patterns/site-startup-newsletter.php
+msgctxt "Pattern title"
+msgid "Startup: Get Started Row"
+msgstr ""
+
+#: patterns/site-startup-newsletter.php
+msgctxt "Pattern description"
+msgid "A closing row with a heading and short line on the left and two buttons on the right."
+msgstr ""
+
+#: patterns/site-startup-newsletter.php:25
+msgid "Let’s build something great together"
+msgstr ""
+
+#: patterns/site-startup-newsletter.php:29
+msgid "Talk to our team about your business, or start on your own with a free account."
+msgstr ""
+
+#: patterns/site-startup-newsletter.php:39
+msgid "Get started free"
+msgstr ""
+
+#: patterns/site-startup-newsletter.php:43
+#: patterns/site-startup-pricing.php:122
+msgid "Talk to sales"
+msgstr ""
+
+#: patterns/site-startup-pricing.php
+msgctxt "Pattern title"
+msgid "Startup: Pricing Page Header and Plans"
+msgstr ""
+
+#: patterns/site-startup-pricing.php
+msgctxt "Pattern description"
+msgid "A dark page header with the page title, then three pricing plans with feature lists; the top plan is a dark card."
+msgstr ""
+
+#: patterns/site-startup-pricing.php:21
+msgid "For new businesses taking their first payments."
+msgstr ""
+
+#: patterns/site-startup-pricing.php:22
+msgid "Online and in-person payments"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:22
+msgid "Payment links and invoices"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:22
+msgid "Next-day payouts"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:28
+msgid "For growing teams that want more insight and control."
+msgstr ""
+
+#: patterns/site-startup-pricing.php:29
+msgid "Everything in Starter"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:29
+msgid "Subscriptions and discount codes"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:29
+msgid "Advanced reports"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:29
+msgid "Team accounts"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:29
+msgid "Priority chat support"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:35
+msgid "For established businesses with high volumes."
+msgstr ""
+
+#: patterns/site-startup-pricing.php:36
+msgid "Everything in Growth"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:36
+msgid "Lower card rates"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:36
+msgid "Multi-location reporting"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:36
+msgid "Custom integrations"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:36
+msgid "Dedicated account manager"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:49
+msgid "Simple, honest pricing"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:53
+msgid "Start free and only pay more when your business grows. No setup fees, no surprises."
+msgstr ""
+
+#: patterns/site-startup-pricing.php:65
+msgid "Choose the plan that fits"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:69
+msgid "Prices are per month. Save 20% when you pay yearly."
+msgstr ""
+
+#. translators: %s: plan name.
+#: patterns/site-startup-pricing.php:128
+#, php-format
+msgid "Choose %s"
+msgstr ""
+
+#: patterns/site-startup-pricing.php:136
+msgid "30-day money-back guarantee"
+msgstr ""
+
+#: patterns/site-startup-reviews.php
+msgctxt "Pattern title"
+msgid "Startup: Reviews Grid"
+msgstr ""
+
+#: patterns/site-startup-reviews.php
+msgctxt "Pattern description"
+msgid "A light band with an intro block and three customer review cards, each with a portrait, quote, name and company."
+msgstr ""
+
+#: patterns/site-startup-reviews.php:18
+msgid "“Setup took one afternoon and our first payout arrived the next morning. I wish we had switched years ago.”"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:18
+msgid "Lena Brooks"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:18
+msgid "Owner, Fern & Flower"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:19
+msgid "“The reports finally show us which products make money. Our accountant loves the exports too.”"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:19
+msgid "Co-founder, Trailhead Gear"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:20
+msgid "“Whenever we had a question, a real person answered within minutes. That matters when you run a shop.”"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:20
+msgid "Grace Kim"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:20
+msgid "Manager, Little Loaf Bakery"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:30
+msgid "Loved by businesses big and small"
+msgstr ""
+
+#: patterns/site-startup-reviews.php:34
+msgid "Thousands of shops, studios and online stores trust Fluxpay with their payments every day."
+msgstr ""
+
+#: patterns/site-startup-stats.php
+msgctxt "Pattern title"
+msgid "Startup: Stats"
+msgstr ""
+
+#: patterns/site-startup-stats.php
+msgctxt "Pattern description"
+msgid "A light band with three large numbers, each with a small label and a short explanation."
+msgstr ""
+
+#: patterns/site-startup-stats.php:18
+msgid "Businesses"
+msgstr ""
+
+#: patterns/site-startup-stats.php:18
+msgid "12,000+"
+msgstr ""
+
+#: patterns/site-startup-stats.php:18
+msgid "Shops, studios and online stores take payments with Fluxpay every day."
+msgstr ""
+
+#: patterns/site-startup-stats.php:19
+msgid "Processed yearly"
+msgstr ""
+
+#: patterns/site-startup-stats.php:19
+msgid "$480M"
+msgstr ""
+
+#: patterns/site-startup-stats.php:19
+msgid "Payments handled securely across cards, wallets and bank transfers."
+msgstr ""
+
+#: patterns/site-startup-stats.php:20
+msgid "Connect the accounting, shop and email tools you already use."
+msgstr ""
+
+#: patterns/site-startup-team.php
+msgctxt "Pattern title"
+msgid "Startup: Leadership Team"
+msgstr ""
+
+#: patterns/site-startup-team.php
+msgctxt "Pattern description"
+msgid "A heading row with a careers button above a two-column grid of six leaders, each with a portrait, name, role and short bio."
+msgstr ""
+
+#: patterns/site-startup-team.php:18
+msgid "Amara Lewis"
+msgstr ""
+
+#: patterns/site-startup-team.php:18
+msgid "Chief Executive Officer"
+msgstr ""
+
+#: patterns/site-startup-team.php:18
+msgid "Former shop owner who leads our mission to make payments fair for small businesses."
+msgstr ""
+
+#: patterns/site-startup-team.php:19
+msgid "Daniel Reyes"
+msgstr ""
+
+#: patterns/site-startup-team.php:19
+msgid "Chief Technology Officer"
+msgstr ""
+
+#: patterns/site-startup-team.php:19
+msgid "Builds the secure, always-on platform behind every Fluxpay payment."
+msgstr ""
+
+#: patterns/site-startup-team.php:20
+msgid "Priya Shah"
+msgstr ""
+
+#: patterns/site-startup-team.php:20
+msgid "VP of Product"
+msgstr ""
+
+#: patterns/site-startup-team.php:20
+msgid "Turns customer feedback into simple tools people enjoy using."
+msgstr ""
+
+#: patterns/site-startup-team.php:21
+msgid "Tom Becker"
+msgstr ""
+
+#: patterns/site-startup-team.php:21
+msgid "VP of Engineering"
+msgstr ""
+
+#: patterns/site-startup-team.php:21
+msgid "Keeps our systems fast and reliable, even on the busiest shopping days."
+msgstr ""
+
+#: patterns/site-startup-team.php:22
+msgid "Sofia Marin"
+msgstr ""
+
+#: patterns/site-startup-team.php:22
+msgid "Head of Design"
+msgstr ""
+
+#: patterns/site-startup-team.php:22
+msgid "Shapes a clear, friendly experience from checkout to dashboard."
+msgstr ""
+
+#: patterns/site-startup-team.php:23
+msgid "Kwame Mensah"
+msgstr ""
+
+#: patterns/site-startup-team.php:23
+msgid "Head of Customer Success"
+msgstr ""
+
+#: patterns/site-startup-team.php:23
+msgid "Leads the team that answers every support message within the hour."
+msgstr ""
+
+#: patterns/site-startup-team.php:33
+msgid "Meet our leadership team"
+msgstr ""
+
+#: patterns/site-startup-team.php:37
+msgid "The people steering Fluxpay and looking after our customers."
+msgstr ""
+
+#: patterns/site-startup-team.php:45
+msgid "View open roles"
+msgstr ""
+
+#: patterns/site-startup-testimonial.php
+msgctxt "Pattern title"
+msgid "Startup: Testimonial"
+msgstr ""
+
+#: patterns/site-startup-testimonial.php
+msgctxt "Pattern description"
+msgid "A dark photo band with a large customer quote, the customer's name and role, and a button to more stories."
+msgstr ""
+
+#: patterns/site-startup-testimonial.php:23
+msgid "Customer story"
+msgstr ""
+
+#: patterns/site-startup-testimonial.php:27
+msgid "“Since we switched to Fluxpay, checkout takes half the time and our payouts land the next day. It feels like we hired a finance team.”"
+msgstr ""
+
+#: patterns/site-startup-testimonial.php:33
+msgid "Maya Okafor"
+msgstr ""
+
+#: patterns/site-startup-testimonial.php:33
+msgid "Founder, Corner Bakery Co."
+msgstr ""
+
+#: patterns/site-startup-testimonial.php:39
+msgid "More customer stories"
+msgstr ""
+
 #: patterns/team-01.php
 msgctxt "Pattern title"
 msgid "Team: 3-Column Grid"
@@ -10671,10 +12389,6 @@ msgstr ""
 msgid "Jamie Diaz"
 msgstr ""
 
-#: patterns/team-01.php:35
-msgid "Founder & Creative Director"
-msgstr ""
-
 #. translators: Initials of a team member.
 #: patterns/team-01.php:49
 msgid "SK"
@@ -10682,10 +12396,6 @@ msgstr ""
 
 #: patterns/team-01.php:52
 msgid "Sam Kim"
-msgstr ""
-
-#: patterns/team-01.php:53
-msgid "Lead Developer"
 msgstr ""
 
 #. translators: Initials of a team member.
@@ -11168,6 +12878,21 @@ msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
+msgid "Header (Mega Menu: Services)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (Mega Menu: Shop)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (Mega Menu: Solutions)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
 msgid "Footer (Simple)"
 msgstr ""
 
@@ -11227,6 +12952,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11244,6 +12970,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Background"
 msgstr ""
@@ -11259,6 +12986,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11276,6 +13004,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Surface"
 msgstr ""
@@ -11291,6 +13020,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11308,6 +13038,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Border"
 msgstr ""
@@ -11323,6 +13054,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11340,6 +13072,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Text"
 msgstr ""
@@ -11355,6 +13088,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11372,6 +13106,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Muted Text"
 msgstr ""
@@ -11387,6 +13122,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11404,6 +13140,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Primary"
 msgstr ""
@@ -11419,6 +13156,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11436,6 +13174,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Secondary"
 msgstr ""
@@ -11451,6 +13190,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11468,6 +13208,7 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Color name"
 msgid "Accent"
 msgstr ""
@@ -11483,6 +13224,7 @@ msgstr ""
 #: styles/commercial.json
 #: styles/consulting.json
 #: styles/dark.json
+#: styles/digital-agency.json
 #: styles/education.json
 #: styles/fashion.json
 #: styles/fitness.json
@@ -11500,33 +13242,34 @@ msgstr ""
 #: styles/restaurant.json
 #: styles/shop.json
 #: styles/spa.json
+#: styles/startup.json
 msgctxt "Gradient name"
 msgid "Primary to Secondary"
 msgstr ""
 
 #: theme.json
 msgctxt "Font family name"
-msgid "Inter"
+msgid "Mona Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mona Sans Condensed"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mona Sans Expanded"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mona Sans Narrow"
 msgstr ""
 
 #: theme.json
 msgctxt "Font family name"
 msgid "Monospace"
-msgstr ""
-
-#: theme.json
-msgctxt "Font family name"
-msgid "Poppins"
-msgstr ""
-
-#: theme.json
-msgctxt "Font family name"
-msgid "Manrope"
-msgstr ""
-
-#: theme.json
-msgctxt "Font family name"
-msgid "Playfair Display"
 msgstr ""
 
 #: theme.json
@@ -11629,6 +13372,11 @@ msgctxt "Style variation name"
 msgid "Dark"
 msgstr ""
 
+#: styles/digital-agency.json
+msgctxt "Style variation name"
+msgid "Kindred"
+msgstr ""
+
 #: styles/education.json
 msgctxt "Style variation name"
 msgid "Edunova"
@@ -11714,9 +13462,14 @@ msgctxt "Style variation name"
 msgid "Sweet Pixie"
 msgstr ""
 
+#: styles/startup.json
+msgctxt "Style variation name"
+msgid "Fluxpay"
+msgstr ""
+
 #: styles/typography/classic.json
 msgctxt "Style variation name"
-msgid "Classic"
+msgid "Classic Narrow"
 msgstr ""
 
 #: styles/typography/editorial.json
@@ -11726,12 +13479,12 @@ msgstr ""
 
 #: styles/typography/friendly.json
 msgctxt "Style variation name"
-msgid "Friendly"
+msgid "Wide"
 msgstr ""
 
 #: styles/typography/geometric.json
 msgctxt "Style variation name"
-msgid "Geometric"
+msgid "Bold Condensed"
 msgstr ""
 
 #: styles/typography/modern-sans.json

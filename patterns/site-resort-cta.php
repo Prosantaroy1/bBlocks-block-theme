@@ -42,8 +42,8 @@ $bblocks_strip = array( 'resort-hero', 'resort-cottage', 'resort-pool', 'resort-
 
 	<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:paragraph {"className":"bblocks-giant-title","textColor":"background","fontFamily":"playfair-display"} -->
-		<p class="bblocks-giant-title has-background-color has-text-color has-playfair-display-font-family"><?php echo esc_html__( 'Naturexplo', 'bblocks' ); ?></p>
+		<!-- wp:paragraph {"className":"bblocks-giant-title","textColor":"background","fontFamily":"mona-sans-expanded"} -->
+		<p class="bblocks-giant-title has-background-color has-text-color has-mona-sans-expanded-font-family"><?php echo esc_html__( 'Naturexplo', 'bblocks' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

@@ -55,8 +55,8 @@ $bblocks_stats = array(
 				<?php foreach ( $bblocks_stats as $bblocks_stat ) : ?>
 				<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"3px"}},"spacing":{"padding":{"top":"var:preset|spacing|small"},"blockGap":"0.25rem"}},"layout":{"type":"default"}} -->
 				<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--primary);border-top-width:3px;padding-top:var(--wp--preset--spacing--small)">
-					<!-- wp:paragraph {"fontSize":"x-large","style":{"typography":{"fontWeight":"700"}},"fontFamily":"playfair-display"} -->
-					<p class="has-playfair-display-font-family has-x-large-font-size" style="font-weight:700"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
+					<!-- wp:paragraph {"fontSize":"x-large","style":{"typography":{"fontWeight":"700"}},"fontFamily":"mona-sans-expanded"} -->
+					<p class="has-mona-sans-expanded-font-family has-x-large-font-size" style="font-weight:700"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"textColor":"muted-text","fontSize":"small"} -->

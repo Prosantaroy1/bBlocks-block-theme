@@ -1,0 +1,122 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Fluxpay",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "surface",
+					"color": "#f5f6f8",
+					"name": "Surface"
+				},
+				{
+					"slug": "border-color",
+					"color": "#e3e6ec",
+					"name": "Border"
+				},
+				{
+					"slug": "foreground",
+					"color": "#0f1729",
+					"name": "Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "#566074",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "primary",
+					"color": "#1f4fe0",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#0b1220",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#8fb3ff",
+					"name": "Accent"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #1f4fe0 0%, #0b1220 100%)",
+					"name": "Primary to Secondary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--mona-sans)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--mona-sans)",
+					"fontWeight": "600",
+					"letterSpacing": "-0.015em",
+					"lineHeight": "1.15"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"border": {
+					"radius": "6px"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.7rem",
+						"bottom": "0.7rem",
+						"left": "1.25rem",
+						"right": "1.25rem"
+					}
+				},
+				"typography": {
+					"fontSize": "0.875rem",
+					"fontWeight": "600"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "-0.02em"
+				}
+			}
+		}
+	}
+}

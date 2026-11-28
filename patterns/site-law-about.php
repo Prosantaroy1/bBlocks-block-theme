@@ -68,8 +68,8 @@ $bblocks_stats = array(
 		<?php foreach ( $bblocks_stats as $bblocks_stat ) : ?>
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"textColor":"accent","fontSize":"xx-large","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontFamily":"playfair-display"} -->
-			<p class="has-accent-color has-text-color has-playfair-display-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
+			<!-- wp:paragraph {"textColor":"accent","fontSize":"xx-large","style":{"typography":{"fontWeight":"700","lineHeight":"1.1"}},"fontFamily":"mona-sans-expanded"} -->
+			<p class="has-accent-color has-text-color has-mona-sans-expanded-font-family has-xx-large-font-size" style="font-weight:700;line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"fontSize":"small","style":{"typography":{"letterSpacing":"0.06em","textTransform":"uppercase"}}} -->

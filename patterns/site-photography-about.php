@@ -45,8 +45,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p class="has-muted-text-color has-text-color"><?php echo esc_html__( 'Whether it is a portrait session, your event or a commercial brief, I work calmly and carefully, so you get images that feel natural and last for years.', 'bblocks' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"textColor":"primary","fontSize":"x-large","fontFamily":"playfair-display","style":{"typography":{"fontStyle":"italic","fontWeight":"400"}}} -->
-			<p class="has-primary-color has-text-color has-playfair-display-font-family has-x-large-font-size" style="font-style:italic;font-weight:400"><?php echo esc_html__( '— Elena Marlowe', 'bblocks' ); ?></p>
+			<!-- wp:paragraph {"textColor":"primary","fontSize":"x-large","fontFamily":"mona-sans-expanded","style":{"typography":{"fontStyle":"italic","fontWeight":"400"}}} -->
+			<p class="has-primary-color has-text-color has-mona-sans-expanded-font-family has-x-large-font-size" style="font-style:italic;font-weight:400"><?php echo esc_html__( '— Elena Marlowe', 'bblocks' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->

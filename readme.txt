@@ -3,18 +3,18 @@ Contributors: bplugins
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 1.1.1
+Version: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, e-commerce, portfolio, one-column, two-columns, right-sidebar, grid-layout, custom-colors, custom-menu, editor-style, featured-images, featured-image-header, full-site-editing, full-width-template, block-patterns, block-styles, style-variations, template-editing, threaded-comments, rtl-language-support, translation-ready, wide-blocks
+Tags: blog, e-commerce, portfolio, one-column, two-columns, three-columns, four-columns, right-sidebar, grid-layout, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, threaded-comments, translation-ready
 
-Small business website in minutes, no page builder needed. 23 one-click starter sites, 150+ patterns and full WooCommerce support.
+Small business website in minutes, no page builder needed. 25 one-click starter sites, 200+ patterns and full WooCommerce support.
 
 == Description ==
 
-bBlocks is a fast block theme that gives small businesses a professional website without a page builder. Import one of 23 one-click starter sites — restaurant, clinic, law firm, gym, real estate, agency, consulting, school, online store and more — then edit every page visually in the WordPress Site Editor. 150+ patterns, 22 style variations and ready-made headers and footers make it yours in minutes. Built only with core blocks, so your site stays lightweight, accessible, SEO-friendly, translation-ready and fully compatible with WooCommerce.
+Launch a fast, professional website without a page builder. bBlocks is a block theme for small businesses, agencies and startups: import one of 25 one-click starter sites — restaurant, clinic, law firm, gym, real estate, agency, startup, online store and more — then make it yours with 200+ patterns, 24 style variations, mega menus and ready-made headers and footers, all edited visually in the Site Editor. Built only with core blocks, bBlocks is lightweight, accessible, translation-ready and fully compatible with WooCommerce. Learn more at https://bblocks-theme.netlify.app/
 
-Live demos: [bblocks-theme.netlify.app](https://bblocks-theme.netlify.app/)
+Theme website: [bblocks-theme.netlify.app](https://bblocks-theme.netlify.app/)
 
 = No page builder needed =
 
@@ -26,10 +26,11 @@ Each starter site is a complete, realistic website for a real kind of business �
 
 = Features =
 
-* 23 one-click starter sites: Business, Agency, SaaS, Freelancer, Restaurant, Photography, Medical Clinic, Law Firm, Education, Gym, Real Estate, Rental Homes, Commercial Real Estate, Cash Home Buyer, Online Store, Magazine, Architecture, Marketplace, Eco Resort, Spa, Consulting, plus Fashion and Electronics WooCommerce stores (WooCommerce active).
-* 150+ block patterns: hero, services, menu, pricing, team, testimonials, FAQ, portfolio, contact, blog and shop sections.
-* 22 style variations, 6 color palettes and 5 font pairings — switch with one click.
-* 5 header and 3 footer designs, swappable from the dashboard or the Site Editor.
+* 25 one-click starter sites: Business, Agency, SaaS, Freelancer, Restaurant, Photography, Medical Clinic, Law Firm, Education, Gym, Real Estate, Rental Homes, Commercial Real Estate, Cash Home Buyer, Online Store, Magazine, Architecture, Marketplace, Eco Resort, Spa, Consulting, Startup (Fluxpay), Digital Agency (Kindred Studio), plus Fashion and Electronics WooCommerce stores (WooCommerce active).
+* 200+ block patterns: hero, services, menu, pricing, team, testimonials, FAQ, portfolio, contact, blog and shop sections.
+* 24 style variations, 6 color palettes and 5 font pairings — switch with one click.
+* 8 header and 3 footer designs, swappable from the dashboard or the Site Editor.
+* Mega menus without a plugin: give any top-level submenu the "Mega Menu" style and its nested submenus become columns, with optional link descriptions. Three ready-made mega menu headers (Services, Shop, Solutions) included.
 * 23 templates, including Blank Canvas, Landing Page, Page or Post with Sidebar, Post with Cover Image and WooCommerce shop, product, cart and checkout.
 * WooCommerce ready: shop, product, cart, checkout and order templates styled to match every style variation.
 * 9 optional modules: dark mode, sticky header, announcement bar, table of contents, back to top, reading progress, scroll animations, footer reveal and WhatsApp / call buttons.
@@ -65,7 +66,7 @@ No. Every template, template part and pattern in bBlocks is built entirely from 
 
 = Does bBlocks include demo content or a one-click importer? =
 
-Yes. Go to Appearance → bBlocks → Starter Sites and import any of the 23 starter sites (two of them appear while WooCommerce is active). You can preview every starter site at https://bblocks-theme.netlify.app/ before importing. Each one creates its pages from the theme's own patterns, sets your homepage and blog page, and can create a navigation menu and apply the matching style and header. Nothing is downloaded and your existing posts are never changed; importing again updates the same pages instead of duplicating them.
+Yes. Go to Appearance → bBlocks → Starter Sites and import any of the 25 starter sites (two of them appear while WooCommerce is active). Each one creates its pages from the theme's own patterns, sets your homepage and blog page, and can create a navigation menu and apply the matching style and header. Nothing is downloaded and your existing posts are never changed; importing again updates the same pages instead of duplicating them.
 
 = Is the bBlocks plugin required? =
 
@@ -81,7 +82,7 @@ Yes. bBlocks ships its own shop, product, search results, cart, checkout and ord
 
 = Can I change the colors, fonts and spacing? =
 
-Yes. Apply one of the 22 styles from Appearance → bBlocks → Design, or open Styles in the Site Editor to pick a style, a color palette or a font pairing and fine-tune colors, typography and layout.
+Yes. Apply one of the 24 styles from Appearance → bBlocks → Design, or open Styles in the Site Editor to pick a style, a color palette or a font pairing and fine-tune colors, typography and layout.
 
 = How do I change the header or footer? =
 
@@ -93,10 +94,22 @@ Please use the theme's support forum on WordPress.org.
 
 == Changelog ==
 
+= 1.2.0 =
+* New: two starter sites with matching style variations. Fluxpay Startup (Home, About, Pricing, Help Center, Blog and Contact; 14 patterns, "Fluxpay" style) and Kindred Studio digital agency (Home, Work, Services, About, Journal and Contact; 11 patterns, "Kindred" style). Every page has a single h1 and every photo has descriptive alt text. The theme now has 25 starter sites and 24 style variations.
+* New: "Mega Menu" block style for Navigation submenus, a wide multi-column dropdown built only on the core Navigation block (no plugin, no extra JavaScript). Nested submenus become columns, plain links become cards and link descriptions are shown. On mobile the links stay in the normal overlay menu.
+* New: three mega menu headers, Services (three columns with descriptions), Shop (four product-category columns with search) and Solutions (six link cards plus a regular dropdown), available in the Design tab and under "Replace" in the Site Editor. The theme now has 8 headers.
+* New: redesigned Welcome tab in the theme dashboard, with a hero, Quick Access cards, the latest changelog entries, a Getting Started checklist and help links.
+* WooCommerce: the Shop, Single Product, Product Search Results, Cart, Checkout and Order Confirmation templates are hidden while WooCommerce is inactive, so they no longer show in the Site Editor or apply to ordinary pages named "Cart" or "Checkout". They come back as soon as WooCommerce is activated; templates you edited yourself always stay visible.
+* Performance: images bundled with the theme now get width and height attributes when they render, so WordPress lazy-loads images below the fold and gives the main image a high fetch priority.
+* Performance: the theme's style.css (which only holds the theme header) is no longer loaded on the front end; a child theme's style.css still is.
+* Accessibility: icon tiles use a lighter tint so their symbols meet the 4.5:1 contrast ratio.
+* New theme screenshot (Kindred Studio starter site), updated description and tags (added three-columns, four-columns, custom-logo and theme-options).
+* Translation: updated the languages/bblocks.pot translation template.
+
 = 1.1.1 =
 * New theme description focused on small businesses and building without a page builder.
-* Added the theme homepage (Theme URI) with live demos: https://bblocks-theme.netlify.app/
-* Readme: added "No page builder needed" and "Built for small businesses" sections and a live demo link; corrected the number of starter sites (23) and styles (22) in the FAQ.
+* Added the theme website (Theme URI): https://bblocks-theme.netlify.app/
+* Readme: added "No page builder needed" and "Built for small businesses" sections and a link to the theme website; corrected the number of starter sites (23) and styles (22) in the FAQ.
 * Corrected an outdated code comment about WooCommerce templates.
 
 = 1.1.0 =
@@ -174,15 +187,9 @@ bBlocks is distributed under the terms of the GNU GPL v2 (or later).
 
 bBlocks bundles the following third-party resources:
 
-* Inter Variable Font, Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter).
-  License: SIL Open Font License, 1.1. Included at assets/fonts/, license text included at assets/fonts/inter-OFL-1.1.txt.
-  Source: https://fontsource.org/fonts/inter
-* Poppins, Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins).
-  License: SIL Open Font License, 1.1. License text: assets/fonts/poppins-OFL-1.1.txt.
-* Manrope, Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope).
-  License: SIL Open Font License, 1.1. License text: assets/fonts/manrope-OFL-1.1.txt.
-* Playfair Display, Copyright 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display).
-  License: SIL Open Font License, 1.1. License text: assets/fonts/playfair-display-OFL-1.1.txt.
+* Mona Sans, Copyright 2022 The Mona Sans Project Authors (https://github.com/github/mona-sans), with Reserved Font Name "Mona".
+  License: SIL Open Font License, 1.1. Included at assets/fonts/ (mona-sans-vf.woff2, mona-sans-italic-vf.woff2), license text included at assets/fonts/mona-sans-OFL-1.1.txt.
+  Source: https://github.com/github/mona-sans
 
 Photographs in assets/images (*.jpg) are from Wikimedia Commons and are released into the public domain under CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/) or are otherwise in the public domain, as listed below. Some were resized or cropped.
 
@@ -276,7 +283,7 @@ Photographs in assets/images (*.jpg) are from Wikimedia Commons and are released
 * homebuyer-fixer.jpg — CC0, https://commons.wikimedia.org/wiki/File:Abandoned_rural_house_(Unsplash).jpg
 * homebuyer-porch.jpg — CC0, https://commons.wikimedia.org/wiki/File:Lucius_Coleman_Hall_House,_Webster,_NC_(46563095632).jpg
 
-All other code, markup, patterns, templates and images in this theme — including the SVG illustrations, portraits and client logos in assets/images (the brand names in the logos are fictional) — are original work created for bBlocks and are licensed under the GPLv2 (or later), the same as WordPress. The screenshot (screenshot.jpg) shows the theme in its Default style with the "Hero: Centered Statement" and "Features: Image Cards" patterns; it uses the CC0 photographs scene-meeting.jpg, scene-cafe.jpg and scene-shop.jpg listed above, and everything else in it is part of this theme (GPLv2 or later).
+All other code, markup, patterns, templates and images in this theme — including the SVG illustrations, portraits and client logos in assets/images (the brand names in the logos are fictional) — are original work created for bBlocks and are licensed under the GPLv2 (or later), the same as WordPress. The screenshot (screenshot.jpg) shows the home page of the Kindred Studio starter site ("Kindred" style, "Agency: Hero" and "Agency: Client Logos" patterns); it uses the CC0 photograph photography-arches.jpg listed above and the theme's own client logos, and everything else in it is part of this theme (GPLv2 or later).
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.

@@ -25,8 +25,8 @@ $bblocks_logos = array(
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|small","right":"var:preset|spacing|small"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--small)">
-	<!-- wp:heading {"textAlign":"center","textColor":"muted-text","fontSize":"small","style":{"typography":{"letterSpacing":"0.16em","textTransform":"uppercase"}},"fontFamily":"inter"} -->
-	<h2 class="wp-block-heading has-text-align-center has-muted-text-color has-text-color has-inter-font-family has-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase"><?php echo esc_html__( 'Proud members and partners', 'bblocks' ); ?></h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"muted-text","fontSize":"small","style":{"typography":{"letterSpacing":"0.16em","textTransform":"uppercase"}},"fontFamily":"mona-sans"} -->
+	<h2 class="wp-block-heading has-text-align-center has-muted-text-color has-text-color has-mona-sans-font-family has-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase"><?php echo esc_html__( 'Proud members and partners', 'bblocks' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->

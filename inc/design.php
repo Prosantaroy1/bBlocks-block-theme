@@ -258,7 +258,7 @@ function bblocks_onboarding_steps() {
 		array(
 			'done'  => 'header' !== bblocks_current_part_design( 'header' ) || 'footer' !== bblocks_current_part_design( 'footer' ),
 			'title' => __( 'Choose a header and footer', 'bblocks' ),
-			'text'  => __( 'Five header and three footer designs, all editable afterwards.', 'bblocks' ),
+			'text'  => __( 'Eight header and three footer designs, all editable afterwards.', 'bblocks' ),
 			'label' => __( 'Open Design', 'bblocks' ),
 			'tab'   => 'design',
 			'url'   => '',

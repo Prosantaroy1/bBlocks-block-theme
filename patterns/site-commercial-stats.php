@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-commercial-stats
  * Categories: bblocks, bblocks-site-commercial, bblocks-about, about
  * Keywords: commercial, real estate, stats, numbers, portfolio, assets
- * Description: A light grey band with three large serif figures and short labels describing the managed portfolio.
+ * Description: A light grey band with three large display figures and short labels describing the managed portfolio.
  * Inserter: true
  *
  * @package bBlocks
@@ -27,12 +27,12 @@ $bblocks_stats = array(
 		<?php foreach ( $bblocks_stats as $bblocks_stat ) : ?>
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"default"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"xx-large","style":{"typography":{"lineHeight":"1.1"}},"fontFamily":"playfair-display"} -->
-			<p class="has-text-align-center has-primary-color has-text-color has-playfair-display-font-family has-xx-large-font-size" style="line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
+			<!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"xx-large","style":{"typography":{"lineHeight":"1.1"}},"fontFamily":"mona-sans-expanded"} -->
+			<p class="has-text-align-center has-primary-color has-text-color has-mona-sans-expanded-font-family has-xx-large-font-size" style="line-height:1.1"><?php echo esc_html( $bblocks_stat[0] ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"playfair-display"} -->
-			<p class="has-text-align-center has-playfair-display-font-family has-large-font-size"><?php echo esc_html( $bblocks_stat[1] ); ?></p>
+			<!-- wp:paragraph {"align":"center","fontSize":"large","fontFamily":"mona-sans-expanded"} -->
+			<p class="has-text-align-center has-mona-sans-expanded-font-family has-large-font-size"><?php echo esc_html( $bblocks_stat[1] ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

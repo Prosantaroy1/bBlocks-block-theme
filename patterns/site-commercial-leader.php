@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Slug: bblocks/site-commercial-leader
  * Categories: bblocks, bblocks-site-commercial, bblocks-about, about
  * Keywords: commercial, real estate, about, leader, awards, story
- * Description: A split section with a large green serif statement on the left and an office photo, a short paragraph and a button on the right.
+ * Description: A split section with a large green display statement on the left and an office photo, a short paragraph and a button on the right.
  * Inserter: true
  *
  * @package bBlocks
